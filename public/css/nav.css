@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    padding: 10px 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #2042be, #0d2471);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 65px;
+}
+
+.logo img {
+
+    height: 70px;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Center the line */
+    bottom: 0; /* Position the line at the bottom of the li */
+    width: 0; /* Start with a width of 0 */
+    height: 2px; /* Height of the line */
+    background-color: #fff; /* Color of the line */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for width and position */
+}
+
+nav ul li:hover::after {
+    width: 100%; /* Expand the width to 100% on hover */
+    left: 0; /* Ensure the line starts from the left */
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.menu-icon i {
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    nav{
+         padding: 10px 40px;
+    }
+    nav ul {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: linear-gradient(to right, #2042be, #0d2471);
+        gap: 0;
+        overflow: hidden;
+        max-height: 0;
+
+    }
+    nav ul li {
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+     .info-bar {
+        display: none;
+    }
+}
+
+.info-bar {
+    position: absolute;
+    background: linear-gradient(to right, #2042be, #0d2471);
+    color: #fff;
+    padding: 20px;
+    width: 550px; /* Set a fixed width */
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+nav ul li:hover .info-bar {
+    opacity: 1; /* Make it fully visible */
+    visibility: visible; /* Change visibility to visible */
+    pointer-events: auto; /* Allow interaction */
+    transform: translateX(-50%) translateY(0); /* Move it back up into view */
+}
+
+nav ul li:not(:hover) .info-bar {
+    opacity: 0; /* Make it fully transparent */
+    visibility: hidden; /* Hide it */
+    pointer-events: none; /* Prevent interaction */
+}
+
+
+.info-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+
+.info-bar ul li a {
+    color: #ffff;
+    padding: 8px;
+    display: block;
+    font-size: 15px;
+}
+
+
+section {
+    height: 100vh;
+    padding-top: 100px;
+}
