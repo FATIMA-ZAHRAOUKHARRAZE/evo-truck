@@ -29,80 +29,13 @@
             <img src="{{ asset('logo.png') }}" alt="">
         </div>
         <ul id="menuList">
-            <li> <a href="" class="menu-item">Home</a>
-                <div class="info-bar">
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li> <a href="" class="menu-item">About</a>
-                <div class="info-bar">
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-
-                </div>
-            </li>
+            <li> <a href="" class="menu-item">Home</a></li>
+            <li> <a href="" class="menu-item">About</a></li>
             <li><a href="">Services</a>
                 <div class="info-bar">
                     <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-
-                </div>
-            </li>
-            <li><a href="">Product</a>
-                <div class="info-bar">
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
+                        <li><a href="">Machines à béton</a></li>
+                        <li><a href="">Machines de levage</a></li>
                         <li><a href="">link link bla bla bla</a></li>
 
                     </ul>
@@ -119,31 +52,18 @@
 
                     </ul>
 
-                </div>
-            </li>
-            <li><a href="">Contact</a>
-                <div class="info-bar">
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-                    <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
-
-                    </ul>
-
-                </div>
-            </li>
+                </div></li>
+                <li><a href="">Product</a>
+                    <div class="info-bar">
+                        <ul>
+                            @forelse ($categories as $categorie)
+                                <li><a href="{{ url('product/' . $categorie->id) }}">{{ $categorie->nom_cat }}</a></li> 
+                            @empty       
+                            @endforelse
+                        </ul>
+                    </div>
+                </li>
+            <li><a href="">Contact</a></li>
             <li><a style="color: white" href=""><i class="fa-solid fa-language"></i></a>
                 <div class="info-bar" style=" width: auto">
                     <ul>
@@ -180,58 +100,21 @@
             </a>
         </div>
         <!--code pour la partie product--->
-        <div class="container">
+        <div class="container mb-5">
             <h2 class="text-center" style="font-size: 20px;margin-top:20px">PRODUCTS</h2>
             <div class="row justify-content-center">
+                @forelse ($categories as $categorie)
                 <div class="col-12 col-sm-2 ">
                     <div class="card">
                         <img src="{{ asset('images/Original.png') }}" class="card-img-top" alt="Excavators">
                         <div class="card-body">
-                            <h5 class="card-title">Excavators</h5>
-                            <p class="card-text">XCMG is dedicated to its core value of “Taking Great Responsibilities,
-                                Acting With Great Morals.</p>
+                            <h5 class="card-title">{{ $categorie->nom_cat }}</h5>
+                            <p class="card-text"></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-2 ">
-                    <div class="card">
-                        <img src="{{ asset('images/Original.png') }}" class="card-img-top" alt="Hoisting Machinery">
-                        <div class="card-body">
-                            <h5 class="card-title">Hoisting Machinery</h5>
-                            <p class="card-text">XCMG is a champion of righteousness and justice, takes an active
-                                interest in public charities and welfare.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-2 ">
-                    <div class="card">
-                        <img src="{{ asset('images/Original.png') }}" class="card-img-top" alt="Special Vehicle">
-                        <div class="card-body">
-                            <h5 class="card-title">Special Vehicle</h5>
-                            <p class="card-text">As part of its commitment to implementing the “Going Global” strategy,
-                                XCMG has established a product sales.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-2">
-                    <div class="card">
-                        <img src="{{ asset('images/Original.png') }}" class="card-img-top" alt="Loaders">
-                        <div class="card-body">
-                            <h5 class="card-title">Loaders</h5>
-                            <p class="card-text">XCMG has integrated technological innovation.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-2">
-                    <div class="card">
-                        <img src="{{ asset('images/Original.png') }}" class="card-img-top" alt="Road Machinery">
-                        <div class="card-body">
-                            <h5 class="card-title">Road Machinery</h5>
-                            <p class="card-text">Guided by its strategic vision of “achieving revenue of RMB 100
-                                Billion.</p>
-                        </div>
-                    </div>
-                </div>
+                @empty       
+                @endforelse
             </div>
         </div>
         <footer class="text-center text-lg-start text-white mb-0"

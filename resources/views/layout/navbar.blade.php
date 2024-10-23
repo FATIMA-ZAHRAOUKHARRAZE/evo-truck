@@ -1,4 +1,30 @@
- <nav>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href={{ asset('css/nav.css') }}>
+    <link rel="stylesheet" href={{ asset('css/product.css') }}>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Styles / Scripts -->
+    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+    @endif
+</head>
+
+<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+<nav>
      <div class="logo">
          <img   src="{{ asset('logo.png') }}" alt="">
      </div>
@@ -124,9 +150,9 @@
          <i  class="fa-solid fa-bars"></i>
      </div>
  </nav>
-
+ <main class="py-4">
  @yield('content')
-
+ </main>
  <footer class="text-center text-lg-start text-white mb-0"
      style="background: linear-gradient(to right,#2042be ,#0d2471)">
      <div class="container p-4 pb-0">
@@ -200,3 +226,22 @@
          </div>
      </div>
  </footer>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+ </script>
+</body>
+<script>
+let menuList = document.getElementById("menuList")
+menuList.style.maxHeight = "0px";
+
+function toggleMenu() {
+ if (menuList.style.maxHeight == "0px") {
+     menuList.style.maxHeight = "300px ";
+ } else {
+     menuList.style.maxHeight = "0px";
+ }
+}
+</script>
+
+</html>

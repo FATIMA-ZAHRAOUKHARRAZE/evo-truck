@@ -152,3 +152,6 @@ section {
     height: 100vh;
     padding-top: 100px;
 }
+.card {
+    height: 300px; /* Ajustez cette valeur selon vos besoins */
+}
