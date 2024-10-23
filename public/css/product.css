@@ -7,7 +7,7 @@
     cursor: pointer; /* Curseur de main sur le survol */
     transition: background-color 0.3s, transform 0.3s; /* Transition douce */
     background: linear-gradient(to right, #2042be, #0d2471); /* Couleur de fond par défaut */
-    color: white; /* Couleur du texte (blanc) */
+    color: white !important; /* Couleur du texte (blanc) avec priorité */
     margin: 0 10px; /* Marge horizontale entre les boutons */
 }
 

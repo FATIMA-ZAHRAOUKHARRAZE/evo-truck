@@ -34,20 +34,17 @@
             <li><a href="">Services</a>
                 <div class="info-bar">
                     <ul>
-                        <li><a href="">Machines à béton</a></li>
-                        <li><a href="">Machines de levage</a></li>
+                        
                         <li><a href="">link link bla bla bla</a></li>
 
                     </ul>
                     <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
+                        
                         <li><a href="">link link bla bla bla</a></li>
 
                     </ul>
                     <ul>
-                        <li><a href="">link bla bla bla</a></li>
-                        <li><a href="">link link bla bla bla</a></li>
+                       
                         <li><a href="">link link bla bla bla</a></li>
 
                     </ul>
