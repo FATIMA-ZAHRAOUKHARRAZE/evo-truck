@@ -57,8 +57,8 @@
                     <div class="info-bar">
                         <ul>
                             @forelse ($categories as $categorie)
-                                <li><a href="{{ url('product/' . $categorie->id) }}">{{ $categorie->nom_cat }}</a></li> 
-                            @empty       
+                                <li><a href="{{ url('product/' . $categorie->id) }}">{{ $categorie->nom_cat }}</a></li>
+                            @empty
                             @endforelse
                         </ul>
                     </div>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                 </div>
-                @empty       
+                @empty
                 @endforelse
             </div>
         </div>
