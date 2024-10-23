@@ -26,124 +26,39 @@
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
 <nav>
      <div class="logo">
-         <img   src="{{ asset('logo.png') }}" alt="">
+         <a href="/"><img   src="{{ asset('logo.png') }}" alt=""></a>
      </div>
      <ul id="menuList">
-         <li> <a href="" class="menu-item">Home</a>
-             <div class="info-bar">
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-
-             </div>
-         </li>
-         <li> <a href="" class="menu-item">About</a>
-             <div class="info-bar">
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-
-             </div>
-         </li>
+         <li> <a href="{{url('/')}}" class="menu-item">Menu</a></li>
+         <li> <a href="" class="menu-item">A propos</a></li>
          <li><a href="">Services</a>
              <div class="info-bar">
                  <ul>
                      <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
+                    
+                 </ul>
+                 <ul>
+                    
                      <li><a href="">link link bla bla bla</a></li>
 
                  </ul>
                  <ul>
                      <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
+                     
                  </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-
              </div>
          </li>
-         <li><a href="">Product</a>
+         <li><a href="">Produits</a>
              <div class="info-bar">
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-
-             </div>
+                        <ul>
+                            @forelse ($categories as $categorie)
+                                <li><a href="{{ url('product/' . $categorie->id) }}">{{ $categorie->nom_cat }}</a></li>
+                            @empty
+                            @endforelse
+                        </ul>
+                    </div>
          </li>
-         <li><a href="">Contact</a>
-             <div class="info-bar">
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-                 <ul>
-                     <li><a href="">link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-                     <li><a href="">link link bla bla bla</a></li>
-
-                 </ul>
-
-             </div>
-         </li>
+         <li><a href="">Contact</a></li>
         <li><a style="display:block,color: white" href=""><i class="fa-solid fa-language"></i></a></li>
      </ul>
      <div class="menu-icon" onclick="toggleMenu()">
