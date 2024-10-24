@@ -54,11 +54,10 @@
                 <!-- Partie pour afficher "MONDE DE PRODUIT" et la flèche au-dessus -->
                 <div class="produit-header" style="display: flex; justify-content: space-between; align-items: center;">
                     <h5 style="margin: 0;">MONDE DE PRODUIT</h5>
-                    <span>produit<a href=""><i class="fa-solid fa-arrow-right"></i></a></span>
+                    <span>produit<a href="{{ route('product.liste')}}"><i class="fa-solid fa-arrow-right"></i></a></span>
                 </div>
             
                 <!-- Liste des catégories avec regroupement par 3 -->
-                @if($categories->isNotEmpty())
                     @foreach ($categories->chunk(3) as $chunk)
                         <ul style="list-style: none; padding-left: 0;">
                             @foreach ($chunk as $categorie)
@@ -68,9 +67,6 @@
                             @endforeach
                         </ul>
                     @endforeach
-                @else
-                    <p>Aucune catégorie disponible</p>
-                @endif
             </div>
             
         </li>

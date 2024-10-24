@@ -61,13 +61,82 @@
         </div>
     </section>
     <section>
-    <div style="height: 70px; background-color: #2a42cf; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-    <ul style="list-style: none; padding: 0; display: flex; gap: 60px;margin-right:60px">
-        <li style="margin-right: 60px ">{{ $product->nom_pro }}</li>
-        <li style="margin-left: 20px ">Product facture</li>
-        <li style="margin-left: 20px ; color: blue;">Parametres</li>
-        <li style="margin-left: 20px ">Constructions cases</li>
+ <div id="navbar" style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2a42cf; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+    <ul style="list-style: none; padding-righ: 40px; display: flex; gap: 60px; margin-right: 60px;">
+        <li style="font-size: 20px;">{{ $product->nom_pro }}</li>
+        <li style="font-size: 20px;"><a style="color: white;" href="#Product_facture">Product facture</a></li>
+        <li style="font-size: 20px;"><a style="color: white;" href="#parameter">Parametres</a></li>
+        <li style="font-size: 20px;"><a style="color: white;" href="">Constructions cases</a></li>
     </ul>
 </div>
+<div  id="Product_facture" class="mt-5 text-white">margin</div>
+        {{-- Product fetures --}}
+        <div style="margin-top: 10px" class="container mt-5 ">
+            <h2 style="font-weight: bold;color:blue">Product feature</h2>
+            <span class="mt-2 ">
+                 {{ $product->dec_pro }}
+            </span>
+        </div>
+
+<div  id="parameter" class="mt-5 text-white">margin</div>
+        {{-- parametre --}}
+        <div style="margin-top: 10px" class="container mt-5 ">
+            <h2 style="font-weight: bold;color:blue">Parametere</h2>
+            <span class="mt-2 ">
+                <table class="table table-striped">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                </tr>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                </tr>
+                <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                </tr>
+            </tbody>
+            </table>
+                    </span>
+                </div>
+
+
+        
         </section>
+
+        
+        
+
+   <script>
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        if (window.pageYOffset > sticky) {
+            navbar.style.position = "fixed";
+            navbar.style.top = "0";
+            navbar.style.width = "100%"; 
+        } else {
+            navbar.style.position = "relative";
+            navbar.style.width = "auto";
+        }
+    };
+</script>
+
+
     @endsection
