@@ -155,3 +155,16 @@ section {
 .card {
     height: 300px; /* Ajustez cette valeur selon vos besoins */
 }
+.carousel-custom {
+    height: 200px !important; /* Ajustez la hauteur ici */
+}
+
+.carousel-custom .carousel-inner, 
+.carousel-custom .carousel-item {
+    height: 50% !important;
+}
+
+.carousel-custom .carousel-item img {
+    height: 50% !important;
+    object-fit: cover;
+}

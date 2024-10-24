@@ -9,7 +9,7 @@
         }
     </style>
     <section class="py-5 mt-5 mb-5">
-        <div class="container">
+        <div class="">
             <div class="row gx-5">
                 <aside class="col-lg-6">
                     <div class="border rounded-4 mb-3 d-flex justify-content-center">
@@ -60,4 +60,14 @@
         </div>
         </div>
     </section>
-@endsection
+    <section>
+    <div style="height: 70px; background-color: #2a42cf; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+    <ul style="list-style: none; padding: 0; display: flex; gap: 60px;margin-right:60px">
+        <li style="margin-right: 60px ">{{ $product->nom_pro }}</li>
+        <li style="margin-left: 20px ">Product facture</li>
+        <li style="margin-left: 20px ; color: blue;">Parametres</li>
+        <li style="margin-left: 20px ">Constructions cases</li>
+    </ul>
+</div>
+        </section>
+    @endsection

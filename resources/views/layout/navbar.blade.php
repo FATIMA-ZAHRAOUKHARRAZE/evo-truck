@@ -29,7 +29,7 @@
          <a href="/"><img   src="{{ asset('logo.png') }}" alt=""></a>
      </div>
      <ul id="menuList">
-         <li> <a href="{{url('/')}}" class="menu-item">Menu</a></li>
+         
          <li> <a href="" class="menu-item">A propos</a></li>
          <li><a href="">Services</a>
              <div class="info-bar">
@@ -48,16 +48,32 @@
                  </ul>
              </div>
          </li>
-         <li><a href="">Produits</a>
-             <div class="info-bar">
-                        <ul>
-                            @forelse ($categories as $categorie)
-                                <li><a href="{{ url('product/' . $categorie->id) }}">{{ $categorie->nom_cat }}</a></li>
-                            @empty
-                            @endforelse
+         <li>
+            <a href="">Produits</a>
+            <div class="info-bar">
+                <!-- Partie pour afficher "MONDE DE PRODUIT" et la flèche au-dessus -->
+                <div class="produit-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h5 style="margin: 0;">MONDE DE PRODUIT</h5>
+                    <span>produit<a href=""><i class="fa-solid fa-arrow-right"></i></a></span>
+                </div>
+            
+                <!-- Liste des catégories avec regroupement par 3 -->
+                @if($categories->isNotEmpty())
+                    @foreach ($categories->chunk(3) as $chunk)
+                        <ul style="list-style: none; padding-left: 0;">
+                            @foreach ($chunk as $categorie)
+                                <li style="padding: 5px 0;">
+                                    <a href="{{ url('product/' . $categorie->id) }}">{{ $categorie->nom_cat }}</a>
+                                </li>
+                            @endforeach
                         </ul>
-                    </div>
-         </li>
+                    @endforeach
+                @else
+                    <p>Aucune catégorie disponible</p>
+                @endif
+            </div>
+            
+        </li>
          <li><a href="">Contact</a></li>
         <li><a style="display:block,color: white" href=""><i class="fa-solid fa-language"></i></a></li>
      </ul>

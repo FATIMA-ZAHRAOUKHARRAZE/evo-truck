@@ -5,10 +5,10 @@
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="{{ asset('images/Original.png') }}" alt="First slide">
+                    <img class="d-block w-100" src="{{ asset('images/AERIAL WORKING EQUIPMENT/EFY16YVI(VI).jpg') }}" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset('images/Original.png') }}" alt="Second slide">
+                    <img class="d-block w-100" src="{{ asset('images/AERIAL WORKING EQUIPMENT/EF0807JC.jpg') }}" alt="Second slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
