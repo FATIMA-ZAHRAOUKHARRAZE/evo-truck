@@ -22,9 +22,11 @@
                 <div class="mb-3">
                     <label for="category-select" class="form-label">Select Category</label>
                     <select class="form-select" id="category-select">
-                        <option selected disabled>Select a category</option>
+                        <option disabled>Select a category</option>
                         @forelse ($categories as $categorie)
-                            <option value="{{ $categorie->id }}">{{ $categorie->nom_cat }}</option>
+                            <option value="{{ $categorie->id }}" {{ isset($id) && $id == $categorie->id ? 'selected' : '' }}>
+                                {{ $categorie->nom_cat }}
+                            </option>
                         @empty
                             <option disabled>No categories exist</option>
                         @endforelse
@@ -50,12 +52,15 @@
 
                         document.getElementById('filter-link').href = route;
                     }
+
                     document.getElementById('category-select').addEventListener('change', updateFilterLink);
                     document.getElementById('product-name').addEventListener('input', updateFilterLink);
                 </script>
+
                 <h2 class="mt-4">View related product solutions</h2>
                 <h4>It uses a YANMAR engine, featuring low noise and excellent economical efficiency.</h4>
             </div>
+
             <!-- Content Column -->
             <div class="col-md-9 col-12">
                 <div class="row">
@@ -72,6 +77,7 @@
                                                 <div class="bbb_deals_item_name">{{ $item['product']->nom_pro }}</div>
                                                 <div class="bbb_deals_item_price">{{ $item['product']->price }}</div>
                                             </div>
+
                                             @foreach ($item['details'] as $detail)
                                                 <div class="bbb_deals_item_details">
                                                     @foreach ($detail as $column => $value)

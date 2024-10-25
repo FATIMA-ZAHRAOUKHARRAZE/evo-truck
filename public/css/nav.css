@@ -9,6 +9,11 @@ html, body {
     height: 100%;
     width: 100%;
 }
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 
 nav {
     padding: 10px 180px;
@@ -156,15 +161,34 @@ section {
     height: 300px; /* Ajustez cette valeur selon vos besoins */
 }
 .carousel-custom {
-    height: 200px !important; /* Ajustez la hauteur ici */
+    height: 700px;
+    /* Ajustez la hauteur globale ici */
 }
 
-.carousel-custom .carousel-inner, 
+.carousel-custom .carousel-inner,
 .carousel-custom .carousel-item {
-    height: 50% !important;
+    height: 100%;
+    /* Utilisation de 100% pour occuper toute la hauteur définie */
 }
 
 .carousel-custom .carousel-item img {
-    height: 50% !important;
+    height: 100%;
+    /* Assure que l'image prend toute la hauteur du container */
     object-fit: cover;
+    /* Ajuste l'image pour qu'elle s'adapte */
+}
+main {
+    flex: 1;
+    /* Permet au contenu principal de prendre tout l'espace disponible */
+}
+footer {
+    position: relative;
+    /* or absolute */
+    z-index: 10;
+    flex-shrink: 0;
+    /* Ensure it’s higher than other overlapping elements */
+        width: 100%;
+        background: linear-gradient(to right, #2042be, #0d2471);
+        color: white;
+      
 }
