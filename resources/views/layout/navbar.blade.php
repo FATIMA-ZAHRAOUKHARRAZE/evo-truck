@@ -32,18 +32,10 @@
             </div>
             <ul id="menuList">
 
-                <li> <a href="{{ url('/about') }}" class="menu-item">A propos</a></li>
-                <li><a href="">Solution</a>
+                <li> <a href="{{ url('/about') }}"
+                        class="menu-item">{{ GoogleTranslate::trans('A propos', \App::getLocale()) }}</a></li>
+                <li><a href="">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
                     <div class="info-bar">
-                        <ul>
-                            <li><a href="">link bla bla bla</a></li>
-
-                        </ul>
-                        <ul>
-
-                            <li><a href="">link link bla bla bla</a></li>
-
-                        </ul>
                         <ul>
                             <li><a href="">link bla bla bla</a></li>
 
@@ -51,13 +43,14 @@
                     </div>
                 </li>
                 <li>
-                    <a href="">Produits</a>
+                    <a href="">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</a>
                     <div class="info-bar">
                         <!-- Partie pour afficher "MONDE DE PRODUIT" et la flèche au-dessus -->
                         <div class="produit-header"
                             style="display: flex; justify-content: space-between; align-items: center;">
-                            <h5 style="margin: 0;">MONDE DE PRODUIT</h5>
-                            <span>produit<a href="{{ route('category.liste') }}"><i
+                            <h5 style="margin: 0;">{{ GoogleTranslate::trans('MONDE DE PRODUIT', \App::getLocale()) }}
+                            </h5>
+                            <span>{{ GoogleTranslate::trans('produit', \App::getLocale()) }}<a href="{{ route('category.liste') }}"><i
                                         class="fa-solid fa-arrow-right"></i></a></span>
                         </div>
 
@@ -66,7 +59,7 @@
                             <ul style="list-style: none; padding-left: 0;">
                                 @foreach ($chunk as $categorie)
                                     <li>
-                                        <a href="{{ url('product/' . $categorie->id) }}">{{ $categorie->nom_cat }}</a>
+                                        <a href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat , \App::getLocale()) }} </a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -74,11 +67,26 @@
                     </div>
 
                 </li>
-                <li><a href="">Contact</a></li>
-                <li><a style="display:block,color: white" href=""><i class="fa-solid fa-language"></i></a></li>
+                <li><a href="">Contact</a>
+             <li>
+                    <div class="col-md-4 w-100">
+                        <select style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px" class="form-select pe-5 changeLanguage" aria-label="Language select">
+                            <option style="background-color:#000099" >
+                               {{ GoogleTranslate::trans('Sélectionner la langue' , \App::getLocale()) }}
+                            </option>
+                            <option style="background-color:#000099" value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                            <option style="background-color:#000099" value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>Français</option>
+                        </select>
+                    </div>
+            </li>
+                {{-- <select class="form-select changeLanguage">
+                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : ''}}>English</option>
+                            <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : ''}}>France</option>
+                        </select> --}}
             </ul>
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
+
             </div>
         </nav>
         <main class="py-2 flex-grow-1">
@@ -103,13 +111,11 @@
 
                     <!-- Products -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-                        <p><a class="text-white" href="#">MDBootstrap</a></p>
-                        <p><a class="text-white" href="#">MDWordPress</a></p>
-                        <p><a class="text-white" href="#">BrandFlow</a></p>
-                        <p><a class="text-white" href="#">Bootstrap Angular</a></p>
+                        <h6 class="text-uppercase mb-4 font-weight-bold">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</h6>
+                        @foreach ($categories as $categorie)
+                        <p><a class="text-white" href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat , \App::getLocale()) }}</a></p>
+                        @endforeach
                     </div>
-
                     <hr class="w-100 clearfix d-md-none" />
 
                     <!-- Useful Links -->
@@ -165,7 +171,15 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
     <script>
+        $('.changeLanguage').change(function(event) {
+            var url = "{{ route('translate.change') }}";
+            window.location.href = url + "?lang=" + $(this).val()
+        })
         let menuList = document.getElementById("menuList")
         menuList.style.maxHeight = "0px";
 
@@ -177,8 +191,7 @@
             }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+
+
 
 </html>

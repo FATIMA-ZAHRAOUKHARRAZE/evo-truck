@@ -5,7 +5,8 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Detail;
-
+use App;
+use Session;
 class ProductController extends Controller
 {
     // code pour index.product
@@ -66,6 +67,14 @@ class ProductController extends Controller
     
         // Passer les produits et leurs détails à la vue
         return view('product.index', compact('categories', 'filteredDetails','id'));
+    }
+    public function googleTranslateChange(Request $request)
+    {
+        App::setLocale($request->lang);
+
+        Session::put('locale',$request->lang);
+
+        return redirect()->back();
     }
 
    public function filter($id , $productname = null)
@@ -145,6 +154,5 @@ class ProductController extends Controller
 
     return view("product.filtered", compact('id', 'categories', 'filteredDetails'));
 }
-
     }
     

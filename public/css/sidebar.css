@@ -37,7 +37,8 @@ footer {
     margin-top: 50px;
     /* Ensure it’s higher than other overlapping elements */
 }
-@media (max-width: 600px) {
+
+@media (max-width: 800px) {
     .sidebar {
         margin-left: 0;
         padding: 10px;
@@ -48,11 +49,5 @@ footer {
         /* Space between deals on mobile */
     }
 
-    footer {
-        position: relative;
-        /* or absolute */
-        z-index: 10;
-        margin-top: 150vh;
-        /* Ensure it’s higher than other overlapping elements */
-    }
+  
 }

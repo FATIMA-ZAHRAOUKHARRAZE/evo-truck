@@ -5,14 +5,14 @@
             src="https://www.xcmg.com/en-ap/upload/images/2020/08/04/a35d6d08748249069143a07c1bfb604f.jpg" alt="">
         <div
             style="font-weight:bold;position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
-            <span style="font-size:50px;"> Produits</span>
+            <span style="font-size:50px;">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</span>
             <div style="font-weight:200;top:20px">
                 </p>
             </div>
         </div>
     </div>
     <div class="container mb-5">
-        <h2 class="text-center" style="font-size: 28px; margin-top: 20px; font-weight: bold; color: #333;">PRODUCTS</h2>
+        <h2 class="text-center" style="font-size: 28px; margin-top: 20px; font-weight: bold; color: #333;">{{ GoogleTranslate::trans('PRODUCTS', \App::getLocale()) }}</h2>
 
         <!-- Barre de recherche -->
         <div class="search-bar col-12 text-center mt-4 mb-4">
@@ -30,7 +30,7 @@
             @forelse ($categories as $categorie)
                 <li class="category-item">
                     <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                        {{ $categorie->nom_cat }}
+                        {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale())  }}
                     </a>
                 </li>
             @empty
@@ -46,7 +46,7 @@
                                 style="border-radius: 15px 15px 0 0; height: 300px; object-fit: cover;">
                             <div class="card-body text-center">
                                 <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #333;">
-                                    {{ $categorie->nom_cat }}
+                                    {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale())  }}
                                 </h5>
                             </div>
                         </a>

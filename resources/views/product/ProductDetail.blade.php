@@ -22,32 +22,26 @@
                 <main class="col-lg-6">
                     <div class="ps-lg-3">
                         <h4 class="title text-dark">
-                            <h1>{{ $product->nom_pro }}</h1> <br> {{ $product->dec_pro }}
+                            <h1>{{ GoogleTranslate::trans($product->nom_pro , \App::getLocale()) }}</h1> <br> {{ GoogleTranslate::trans($product->dec_pro, \App::getLocale()) }} 
 
                         </h4>
                     </div>
 
                     <hr style="margin-top: 60px">
-
-                    <div class="row " style="margin-top: 40px">
-                        <dt class="col-3">Operating weight(Kg)</dt>
-                        <dd class="col-9">5900</dd>
-
-                        <dt class="col-3 mt-2">Bucket capacity(m³)</dt>
-                        <dd class="col-9">0.23</dd>
-
-                        <dt class="col-3 mt-2">Material</dt>
-                        <dd class="col-9">Cotton, Jeans</dd>
-
-                        <dt class="col-3 mt-2">Engine Model</dt>
-                        <dd class="col-9">Yanmar 4TNV98</dd>
-                    </div>
-
+                    @foreach ($filteredDetails as $detail)
+                        <div class="row" style="margin-top: 40px">
+                            @foreach ($detail as $column => $value)
+                                <dt class="col-3">{{ GoogleTranslate::trans(ucfirst($column) , \App::getLocale()) }}</dt>
+                                <dd class="col-9">{{ GoogleTranslate::trans($value, \App::getLocale()) }}</dd>
+                            @endforeach
+                        </div>
+                    @endforeach
                     <hr style="margin-top: 30px" />
 
-                    <a href="#" class="btn btn-warning shadow-0 " style=""><i
-                            class="me-1 fa fa-shopping-basket"></i> order
-                        online </a>
+                    <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
+                        class="btn btn-warning shadow-0">
+                        <i class="me-1 fa fa-shopping-basket"></i>{{ GoogleTranslate::trans( 'Commander en ligne', \App::getLocale()) }}
+                    </a>
                     <a href="#" class="btn btn-primary shadow-0 " style=""><i class="fa-solid fa-phone"></i>
                         00-00-00-00 </a>
             </div>
@@ -57,18 +51,18 @@
     </section>
     <section>
         <div id="navbar"
-            style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2a42cf; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2042be; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
             <ul style="list-style: none; padding-righ: 40px; display: flex; gap: 60px; margin-right: 60px;">
-                <li style="font-size: 20px;">{{ $product->nom_pro }}</li>
-                <li style="font-size: 20px;"><a style="color: white;" href="#Product_facture">Product facture</a></li>
-                <li style="font-size: 20px;"><a style="color: white;" href="#parameter">Parametres</a></li>
-                <li style="font-size: 20px;"><a style="color: white;" href="">Constructions cases</a></li>
+                <li style="font-size: 20px;">{{ GoogleTranslate::trans($product->nom_pro, \App::getLocale()) }}</li>
+                <li style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a>
+                </li>
+                <li style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#parameter">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</a></li>
             </ul>
         </div>
         <div id="Product_facture" class="mt-5 text-white">margin</div>
         {{-- Product fetures --}}
-        <div style="margin-top: 10px" class="container mt-5 ">
-            <h2 style="font-weight: bold;color:blue">Product feature</h2>
+        <div style="margin-top: 10px" class="container mt-3 ">
+            <h2 style="font-weight: bold;color:#2042be">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</h2>
             <span class="mt-2 ">
                 {{ $product->dec_pro }}
             </span>
@@ -76,45 +70,31 @@
 
         <div id="parameter" class="mt-5 text-white">margin</div>
         {{-- parametre --}}
-        <div style="margin-top: 10px" class="container mt-5 ">
-            <h2 style="font-weight: bold;color:blue">Parametere</h2>
+        <div style="margin-top: 10px" class="container mt-3 ">
+            <h2 style="font-weight: bold;color:#2042be">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</h2>
             <span class="mt-2 ">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">{{ GoogleTranslate::trans('Article', \App::getLocale()) }}</th>
+                            <th scope="col">{{ GoogleTranslate::trans('Unité', \App::getLocale()) }}</th>
+                            <th scope="col">{{ GoogleTranslate::trans('Paramètre', \App::getLocale()) }}</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @foreach ($parametres as $parametre)
+                            <tr>
+                                <th scope="row">{{ GoogleTranslate::trans($parametre->Article , \App::getLocale()) }}</th>
+                                <td>{{ GoogleTranslate::trans( $parametre->Unité , \App::getLocale()) }}</td>
+                                <td>{{ GoogleTranslate::trans( $parametre->Paramètre , \App::getLocale()) }}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </span>
         </div>
-
-
-
     </section>
-
+<br>
 
 
 

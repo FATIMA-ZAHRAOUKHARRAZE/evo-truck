@@ -35,4 +35,5 @@ Route::get('/category/search', [CategoryController::class, 'search'])->name('cat
 Route::post('/form/order', [OrderController::class, 'insert'])->name('order.inser');
 // filtrer les produit par category
 Route::get('/product/filter/{id}/{productname?}', [ProductController::class, 'filter'])->name('product.filter');
-
+// traduction de navbar 
+Route::get('/translate/change',[ProductController::class,'googleTranslateChange'])->name('translate.change');

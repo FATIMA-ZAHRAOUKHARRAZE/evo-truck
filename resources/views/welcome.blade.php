@@ -14,11 +14,9 @@
     </div>
     <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
     </a>
 </div>
 
@@ -32,7 +30,7 @@
                             style="border-radius: 15px 15px 0 0; height: 300px; object-fit: cover;">
                         <div class="card-body text-center">
                             <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #333;">
-                                {{ $categorie->nom_cat }}
+                                {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }} 
                             </h5>
                         </div>
                     </a>
