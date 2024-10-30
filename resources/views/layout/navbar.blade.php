@@ -4,11 +4,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
+        <title>EVO</title>
+        <meta name="description" content="">
+        <meta name="keywords">
         <!-- Fonts -->
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         <link rel="stylesheet" href={{ asset('css/product.css') }}>
         <link rel="stylesheet" href={{ asset('css/liste.css') }}>
+        <link rel="icon"  href="{{ asset('images/Original.png') }}">
         @yield('url')
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -45,40 +48,41 @@
                 <li>
                     <a href="">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</a>
                     <div class="info-bar">
-                        <!-- Partie pour afficher "MONDE DE PRODUIT" et la flèche au-dessus -->
                         <div class="produit-header"
                             style="display: flex; justify-content: space-between; align-items: center;">
                             <h5 style="margin: 0;">{{ GoogleTranslate::trans('MONDE DE PRODUIT', \App::getLocale()) }}
                             </h5>
-                            <span>{{ GoogleTranslate::trans('produit', \App::getLocale()) }}<a href="{{ route('category.liste') }}"><i
+                            <span>{{ GoogleTranslate::trans('produit', \App::getLocale()) }}<a
+                                    href="{{ route('category.liste') }}"><i
                                         class="fa-solid fa-arrow-right"></i></a></span>
                         </div>
 
                         <!-- Liste des catégories avec regroupement par 3 -->
-                        @foreach ($categories->chunk(3) as $chunk)
-                            <ul style="list-style: none; padding-left: 0;">
-                                @foreach ($chunk as $categorie)
-                                    <li>
-                                        <a href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat , \App::getLocale()) }} </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        @endforeach
+                        <ul class="products-list" style="list-style: none; padding-left: 0;">
+                            @foreach ($categories as $categorie)
+                                <li>
+                                    <a href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
-
                 </li>
                 <li><a href="">Contact</a>
-             <li>
+                <li>
                     <div class="col-md-4 w-100">
-                        <select style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px" class="form-select pe-5 changeLanguage" aria-label="Language select">
-                            <option style="background-color:#000099" >
-                               {{ GoogleTranslate::trans('Sélectionner la langue' , \App::getLocale()) }}
+                        <select style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
+                            class="form-select pe-5 changeLanguage" aria-label="Language select">
+                            <option style="background-color:#000099">
+                                {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
                             </option>
-                            <option style="background-color:#000099" value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                            <option style="background-color:#000099" value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>Français</option>
+                            <option style="background-color:#000099" value="en"
+                                {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                            <option style="background-color:#000099" value="fr"
+                                {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>Français</option>
                         </select>
                     </div>
-            </li>
+                </li>
                 {{-- <select class="form-select changeLanguage">
                             <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : ''}}>English</option>
                             <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : ''}}>France</option>
@@ -111,9 +115,11 @@
 
                     <!-- Products -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</h6>
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</h6>
                         @foreach ($categories as $categorie)
-                        <p><a class="text-white" href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat , \App::getLocale()) }}</a></p>
+                            <p><a class="text-white" style="text-decoration: none" href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}</a>
+                            </p>
                         @endforeach
                     </div>
                     <hr class="w-100 clearfix d-md-none" />

@@ -7,7 +7,7 @@
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
         <img style="width: 100%; opacity: .9;"
-            src="https://www.xcmg.com/en-ap/upload/images/2020/08/04/a35d6d08748249069143a07c1bfb604f.jpg" alt="">
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
         <div style="font-weight: bold; position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
         </div>
@@ -60,7 +60,6 @@
                 <h2 class="mt-4">  {{ GoogleTranslate::trans( "Voir les solutions de produits associés.", \App::getLocale()) }}</h2>
                 <h4> {{ GoogleTranslate::trans( "Il utilise un moteur YANMAR, offrant un faible niveau de bruit et une excellente efficacité économique.", \App::getLocale()) }}</h4>
             </div>
-
             <!-- Content Column -->
             <div class="col-md-9 col-12">
                 <div class="row">

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row position-relative">
-        <img src="https://www.xcmg.com/en-ap/upload/images/2020/08/04/a35d6d08748249069143a07c1bfb604f.jpg" class="img-fluid"
+        <img src="{{ asset('images/Original.png') }}" loading="lazy" class="img-fluid"
             alt="Image de fond">
         <div class="overlay-text">
             <h1>{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</h1>
@@ -20,7 +20,7 @@
                                 <div class=" bbb_deals_item">
 
                                     <div class="bbb_deals_image"><img
-                                            src="{{ asset('images/' . $item['product']->img_pro) }}" alt=""></div>
+                                            src="{{ asset('images/' . $item['product']->img_pro) }}" loading="lazy" alt=""></div>
                                     <div class="bbb_deals_content">
 
                                         <div class="bbb_deals_info_line d-flex flex-row justify-content-start">

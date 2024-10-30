@@ -107,7 +107,7 @@
 
         .timeline .timeline-heading h4.subheading {
             text-transform: none;
-             color: #2042be;
+            color: #2042be;
         }
 
         .timeline .timeline-body>ul,
@@ -172,7 +172,7 @@
                 font-size: 18px;
                 line-height: 26px;
                 margin-top: 30px;
-                 color: #2042be;
+                color: #2042be;
             }
 
             .timeline>li.timeline-inverted>.timeline-panel {
@@ -197,7 +197,7 @@
 
             .timeline>li .timeline-image h4 {
                 margin-top: 40px;
-               
+
             }
 
             .timeline>li.timeline-inverted>.timeline-panel {
@@ -248,9 +248,9 @@
         .bg-light {
             background-color: rgba(var(--bs-light-rgb), 1) !important;
         }
-        h4
-        {
-            color:  #2042be;
+
+        h4 {
+            color: #2042be;
         }
     </style>
     <section class="page-section" id="about">
@@ -258,40 +258,52 @@
             <ul class="timeline">
                 <li>
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
-                            alt="..." /></div>
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." />
+                    </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">{{ GoogleTranslate::trans('BIENVENUE CHEZ ETG', \App::getLocale()) }}</h4>
+                            <h4 class="subheading">{{ GoogleTranslate::trans('BIENVENUE CHEZ EVO', \App::getLocale()) }}
+                            </h4>
                         </div>
                         <div class="timeline-body">
-                            <p class="text-muted">{{ GoogleTranslate::trans("Depuis sa création en 2000, Emerging Technologies Group s'est rapidement
-                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
-                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
-                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
-                                de qualité supérieure à notre clientèle mondiale.", \App::getLocale()) }}</p>
+                            <p class="text-muted">
+                                {{ GoogleTranslate::trans(
+                                    "Depuis sa création en 2000, EVO machinery s'est rapidement
+                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
+                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
+                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
+                                                                                                de qualité supérieure à notre clientèle mondiale.",
+                                    \App::getLocale(),
+                                ) }}
+                            </p>
                         </div>
                     </div>
                 </li>
                 <li class="timeline-inverted">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
+                            src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">{{ GoogleTranslate::trans('DÉVOILER NOTRE HÉRITAGE', \App::getLocale()) }}</h4>
+                            <h4 class="subheading">
+                                {{ GoogleTranslate::trans('DÉVOILER NOTRE HÉRITAGE', \App::getLocale()) }}</h4>
                         </div>
                         <div class="timeline-body">
-                            <p class="text-muted">{{ GoogleTranslate::trans("Dans un monde où le progrès se mesure à la robustesse des fondations et à
-                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
-                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
-                                les plus importants et les plus influents du secteur des machines de construction.", \App::getLocale()) }}</p>
+                            <p class="text-muted">
+                                {{ GoogleTranslate::trans(
+                                    "Dans un monde où le progrès se mesure à la robustesse des fondations et à
+                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
+                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
+                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
+                                    \App::getLocale(),
+                                ) }}
+                            </p>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
+                            src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -299,28 +311,39 @@
                             <h4 class="subheading">{{ GoogleTranslate::trans('IMPACT MONDIAL', \App::getLocale()) }}</h4>
                         </div>
                         <div class="timeline-body">
-                            <p class="text-muted">{{ GoogleTranslate::trans("Emerging Technologies Group est fier de figurer parmi les plus grandes
-                                entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
-                                reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.", \App::getLocale()) }}</p>
+                            <p class="text-muted">
+                                {{ GoogleTranslate::trans(
+                                    "Emerging Technologies Group est fier de figurer parmi les plus grandes
+                                                                                                entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
+                                                                                                reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
+                                    \App::getLocale(),
+                                ) }}
+                            </p>
                         </div>
                     </div>
                 </li>
                 <li class="timeline-inverted">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
+                            src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
 
-                            <h4 class="subheading">{{ GoogleTranslate::trans('NOTRE VISION ET NOS VALEURS', \App::getLocale()) }}</h4>
+                            <h4 class="subheading">
+                                {{ GoogleTranslate::trans('NOTRE VISION ET NOS VALEURS', \App::getLocale()) }}</h4>
                         </div>
                         <div class="timeline-body">
-                            <p class="text-muted">{{ GoogleTranslate::trans("Chez Emerging Technologies Group, notre chemin est éclairé par une vision
-                                claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
-                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
-                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
-                                élever continuellement nos performances, en établissant de nouvelles références au sein de
-                                l'industrie.", \App::getLocale()) }}</p>
+                            <p class="text-muted">
+                                {{ GoogleTranslate::trans(
+                                    "Chez Emerging Technologies Group, notre chemin est éclairé par une vision
+                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
+                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
+                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
+                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
+                                                                                                l'industrie.",
+                                    \App::getLocale(),
+                                ) }}
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -330,53 +353,74 @@
 
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase " style="color: #2042be">{{ GoogleTranslate::trans('CE QUE NOUS OFFRONS', \App::getLocale()) }}</h2>
-              
+                <h2 class="section-heading text-uppercase " style="color: #2042be">
+                    {{ GoogleTranslate::trans('CE QUE NOUS OFFRONS', \App::getLocale()) }}</h2>
+
             </div>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
+                            src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('QUALITÉ', \App::getLocale()) }}</h4>
-                        <p class="text-muted">{{ GoogleTranslate::trans("Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                            rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                            conformes aux normes de l'industrie.", \App::getLocale()) }}</p>
+                        <p class="text-muted">
+                            {{ GoogleTranslate::trans(
+                                "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
+                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
+                                                                                    conformes aux normes de l'industrie.",
+                                \App::getLocale(),
+                            ) }}
+                        </p>
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
+                            src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('CONCEPTION ET R&D', \App::getLocale()) }}</h4>
-                        <p class="text-muted">{{ GoogleTranslate::trans("Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                            continus dans l’amélioration et l’innovation des produits.", \App::getLocale()) }}</p>
+                        <p class="text-muted">
+                            {{ GoogleTranslate::trans(
+                                "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
+                                                                                    continus dans l’amélioration et l’innovation des produits.",
+                                \App::getLocale(),
+                            ) }}
+                        </p>
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
+                            src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
-                        <h4>{{ GoogleTranslate::trans("DIVERSITÉ", \App::getLocale()) }}</h4>
-                        <p class="text-muted">{{ GoogleTranslate::trans("ETG fabrique une large gamme d'équipements de construction et de levage,
-                            notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.", \App::getLocale()) }}</p>
+                        <h4>{{ GoogleTranslate::trans('DIVERSITÉ', \App::getLocale()) }}</h4>
+                        <p class="text-muted">
+                            {{ GoogleTranslate::trans(
+                                "ETG fabrique une large gamme d'équipements de construction et de levage,
+                                                                                    notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
+                                \App::getLocale(),
+                            ) }}
+                        </p>
 
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle"
-                            src="https://www.xcmg.com/en-ap/upload/images/2020/09/07/0b5de8e409ef4fbdab5ef0fdae3dbda5.jpg"
+                            src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('SERVICE', \App::getLocale()) }}</h4>
-                        <p class="text-muted">{{ GoogleTranslate::trans("Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                            pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                            pour garantir une qualité de produit de premier ordre.", \App::getLocale()) }}</p>
+                        <p class="text-muted">
+                            {{ GoogleTranslate::trans(
+                                "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
+                                                                                    pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
+                                                                                    pour garantir une qualité de produit de premier ordre.",
+                                \App::getLocale(),
+                            ) }}
+                        </p>
 
                     </div>
                 </div>

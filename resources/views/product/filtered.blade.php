@@ -7,7 +7,7 @@
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
         <img style="width: 100%; opacity: .9;"
-            src="https://www.xcmg.com/en-ap/upload/images/2020/08/04/a35d6d08748249069143a07c1bfb604f.jpg" alt="">
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
         <div style="font-weight: bold; position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
         </div>

@@ -17,11 +17,11 @@ class GoogleTranslate
      */
     public function handle(Request $request, Closure $next): Response
     {
-       if (Session::has('locale')) {
-            
-            App::setLocale(Session::get('locale'));
-        }
+     $locale = Session::get('locale', config('app.locale'));
+    App::setLocale($locale);
 
-        return $next($request);
+    return $next($request);
+
+        
     }
 }
