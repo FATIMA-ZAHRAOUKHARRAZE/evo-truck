@@ -6,20 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>EVO</title>
         <meta name="description" content="">
-        <meta name="keywords">
+        <meta name="keywords" content="">
         <!-- Fonts -->
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         <link rel="stylesheet" href={{ asset('css/product.css') }}>
         <link rel="stylesheet" href={{ asset('css/liste.css') }}>
-        <link rel="icon"  href="{{ asset('images/Original.png') }}">
+        <link rel="icon" href="{{ asset('images/Original.png') }}">
         @yield('url')
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -45,48 +43,90 @@
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <a href="">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</a>
+                {{-- <div style='display:none' class=" list-info col-md-4 w-100">
+                            <select
+                                style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
+                                class="form-select pe-5 " >
+                                    <ul>
+                                 @foreach ($categories as $categorie)
+                                    <li >
+                                        <a href="{{ url('product/' . $categorie->id) }}">
+                                             {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                                        </a>
+                                    </li>
+                            @endforeach</ul>
+                                   </select>
+                        </div> --}}
+                        
+            {{-- web products --}}
+                <li class="web-products">
+                    <a style="color: white;"
+                        href="#">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</a>
                     <div class="info-bar">
-                        <div class="produit-header"
-                            style="display: flex; justify-content: space-between; align-items: center;">
-                            <h5 style="margin: 0;">{{ GoogleTranslate::trans('MONDE DE PRODUIT', \App::getLocale()) }}
-                            </h5>
-                            <span>{{ GoogleTranslate::trans('produit', \App::getLocale()) }}<a
-                                    href="{{ route('category.liste') }}"><i
-                                        class="fa-solid fa-arrow-right"></i></a></span>
-                        </div>
+                        <div class="produit-header d-flex justify-content-between align-items-center flex-wrap">
+                            <h5 style="margin: 0; flex: 1;">
+                                {{ GoogleTranslate::trans('MONDE DE PRODUIT', \App::getLocale()) }}</h5>
+                            <span style="flex: 0 0 auto;">
+                                {{ GoogleTranslate::trans('produit', \App::getLocale()) }}
+                                <a href="{{ route('category.liste') }}">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </span>
 
+                        </div>
                         <!-- Liste des catégories avec regroupement par 3 -->
-                        <ul class="products-list" style="list-style: none; padding-left: 0;">
+                        <ul class="products-list list-unstyled p-0">
                             @foreach ($categories as $categorie)
                                 <li>
-                                    <a href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                                    <a href="{{ url('product/' . $categorie->id) }}">
+                                        {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
                                     </a>
                                 </li>
                             @endforeach
                         </ul>
                     </div>
                 </li>
+
+                {{-- Mobile products --}}
+                    <li  style="display: none;z-index:200;" class=" mobile-products nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
+                        </a>
+                        <ul  style="height:120px;font-size:12px !important;background:#0017acdc" class="dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                    <a class="text-white dropdown-item" href="{{ route('category.liste') }}">
+                                    {{ GoogleTranslate::trans('produit', \App::getLocale()) }}
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            @foreach ($categories as $categorie)
+                                <li>
+                                     <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
+                                            {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                                     </a>
+                                 </li>
+                            @endforeach
+                        </ul>
+                    </li>
+
                 <li><a href="">Contact</a>
                 <li>
                     <div class="col-md-4 w-100">
                         <select style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
-                            class="form-select pe-5 changeLanguage" aria-label="Language select">
+                            class="form-select pe-5 changeLanguage" aria-label="Language select"><i
+                                class="fa-solid fa-language"></i>
                             <option style="background-color:#000099">
                                 {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
                             </option>
                             <option style="background-color:#000099" value="en"
-                                {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                                {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option> 
                             <option style="background-color:#000099" value="fr"
                                 {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>Français</option>
                         </select>
                     </div>
                 </li>
-                {{-- <select class="form-select changeLanguage">
-                            <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : ''}}>English</option>
-                            <option value="fr" {{ session()->get('locale') == 'fr' ? 'selected' : ''}}>France</option>
-                        </select> --}}
+               
+               
             </ul>
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
@@ -105,9 +145,7 @@
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">About Us</h6>
                         <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-                            amet,
-                            consectetur adipisicing elit.
+                           {{ GoogleTranslate::trans(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.", \App::getLocale()) }}
                         </p>
                     </div>
 
@@ -118,26 +156,15 @@
                         <h6 class="text-uppercase mb-4 font-weight-bold">
                             {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</h6>
                         @foreach ($categories as $categorie)
-                            <p><a class="text-white" style="text-decoration: none" href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}</a>
+                            <p><a class="text-white" style="text-decoration: none"
+                                    href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}</a>
                             </p>
                         @endforeach
                     </div>
                     <hr class="w-100 clearfix d-md-none" />
-
-                    <!-- Useful Links -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h6 class="text-uppercase mb-4 font-weight-bold">Useful Links</h6>
-                        <p><a class="text-white" href="#">Solutions</a></p>
-                        <p><a class="text-white" href="#">Become an Affiliate</a></p>
-                        <p><a class="text-white" href="#">Shipping Rates</a></p>
-                        <p><a class="text-white" href="#">Help</a></p>
-                    </div>
-
-                    <hr class="w-100 clearfix d-md-none" />
-
                     <!-- Contact Us -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h6 class="mb-4 font-weight-bold">Contact Us</h6>
+                        <h6 class="mb-4 font-weight-bold"> {{ GoogleTranslate::trans('CONTACT US', \App::getLocale()) }}</h6>
                         <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
                         <p><i class="fas fa-envelope mr-3"></i> evo@gmail.com</p>
                         <p><i class="fas fa-phone mr-3"></i> + 00 00 00 00 00</p>
@@ -152,20 +179,8 @@
                         <!-- Copyright -->
                         <div class="col-md-7 col-lg-8 text-center text-md-start">
                             <div class="p-3">
-                                © 2024 Copyright: <a class="text-white" href="#">EVO.com</a>
+                                © 2024 Copyright: <a class="text-white" href="https://evo-machinery.com">EVO.com</a>
                             </div>
-                        </div>
-
-                        <!-- Social Media Links -->
-                        <div class="col-md-5 col-lg-4 text-center text-md-end">
-                            <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"><i
-                                    class="fab fa-google"></i></a>
-                            <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"><i
-                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>

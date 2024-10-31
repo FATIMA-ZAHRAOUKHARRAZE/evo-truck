@@ -56,7 +56,6 @@
             border-left-width: 0;
         }
 
-        /* Timeline Image */
         .timeline>li .timeline-image {
             position: absolute;
             z-index: 100;
@@ -68,7 +67,6 @@
             color: white;
             border: 7px solid #e9ecef;
             border-radius: 100%;
-            background-color: #e9ecef;
         }
 
         .timeline>li .timeline-image h4 {
@@ -252,13 +250,22 @@
         h4 {
             color: #2042be;
         }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rounded-circle {
+            border-radius: 50% !important;
+        }
     </style>
     <section class="page-section" id="about">
         <div class="container">
             <ul class="timeline">
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." />
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('images/Original.png') }}"
+                            loading="lazy" alt="..." />
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -269,10 +276,10 @@
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
                                     "Depuis sa création en 2000, EVO machinery s'est rapidement
-                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
-                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
-                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
-                                                                                                de qualité supérieure à notre clientèle mondiale.",
+                                                                                                                                                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
+                                                                                                                                                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
+                                                                                                                                                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
+                                                                                                                                                                                                                                de qualité supérieure à notre clientèle mondiale.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -281,8 +288,7 @@
                 </li>
                 <li class="timeline-inverted">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="..." /></div>
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">
@@ -292,9 +298,9 @@
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
                                     "Dans un monde où le progrès se mesure à la robustesse des fondations et à
-                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
-                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
-                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
+                                                                                                                                                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
+                                                                                                                                                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
+                                                                                                                                                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -303,8 +309,7 @@
                 </li>
                 <li>
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="..." /></div>
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
 
@@ -314,8 +319,8 @@
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
                                     "Emerging Technologies Group est fier de figurer parmi les plus grandes
-                                                                                                entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
-                                                                                                reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
+                                                                                                                                                                                                                                entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
+                                                                                                                                                                                                                                reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -324,8 +329,7 @@
                 </li>
                 <li class="timeline-inverted">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="..." /></div>
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
 
@@ -336,11 +340,11 @@
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
                                     "Chez Emerging Technologies Group, notre chemin est éclairé par une vision
-                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
-                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
-                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
-                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
-                                                                                                l'industrie.",
+                                                                                                                                                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
+                                                                                                                                                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
+                                                                                                                                                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
+                                                                                                                                                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
+                                                                                                                                                                                                                                l'industrie.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -360,15 +364,14 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle"
-                            src="{{ asset('images/Original.png') }}" loading="lazy"
+                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('QUALITÉ', \App::getLocale()) }}</h4>
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                                                                    conformes aux normes de l'industrie.",
+                                                                                                                                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
+                                                                                                                                                                                                    conformes aux normes de l'industrie.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -377,14 +380,13 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle"
-                            src="{{ asset('images/Original.png') }}" loading="lazy"
+                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('CONCEPTION ET R&D', \App::getLocale()) }}</h4>
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
                                 "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                                                                                    continus dans l’amélioration et l’innovation des produits.",
+                                                                                                                                                                                                    continus dans l’amélioration et l’innovation des produits.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -393,14 +395,13 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle"
-                            src="{{ asset('images/Original.png') }}" loading="lazy"
+                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('DIVERSITÉ', \App::getLocale()) }}</h4>
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
                                 "ETG fabrique une large gamme d'équipements de construction et de levage,
-                                                                                    notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
+                                                                                                                                                                                                    notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -409,15 +410,14 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle"
-                            src="{{ asset('images/Original.png') }}" loading="lazy"
+                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('SERVICE', \App::getLocale()) }}</h4>
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                                                                                    pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                                                                    pour garantir une qualité de produit de premier ordre.",
+                                                                                                                                                                                                    pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
+                                                                                                                                                                                                    pour garantir une qualité de produit de premier ordre.",
                                 \App::getLocale(),
                             ) }}
                         </p>
