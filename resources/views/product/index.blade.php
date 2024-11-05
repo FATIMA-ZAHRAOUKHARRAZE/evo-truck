@@ -12,7 +12,6 @@
             <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
         </div>
     </div>
-
     <section class="container mt-4">
         <div class="row">
             <!-- Sidebar -->
@@ -32,14 +31,11 @@
                         @endforelse
                     </select>
                 </div>
-
                 <div class="mb-3">
                     <label for="product-name" class="form-label">{{ GoogleTranslate::trans( "le nom de produit.", \App::getLocale()) }} </label>
                     <input type="text" class="form-control" id="product-name" placeholder="Enter part of product">
                 </div>
-
                 <a href="#" id="filter-link" class="btn btn-primary mb-3">{{ GoogleTranslate::trans( "filtre", \App::getLocale()) }}</a>
-
                 <script>
                     function updateFilterLink() {
                         const selectElement = document.getElementById('category-select');
@@ -52,7 +48,6 @@
 
                         document.getElementById('filter-link').href = route;
                     }
-
                     document.getElementById('category-select').addEventListener('change', updateFilterLink);
                     document.getElementById('product-name').addEventListener('input', updateFilterLink);
                 </script>

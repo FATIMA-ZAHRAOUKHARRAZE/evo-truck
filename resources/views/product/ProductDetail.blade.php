@@ -26,7 +26,6 @@
 
                         </h4>
                     </div>
-
                     <hr style="margin-top: 60px">
                     @foreach ($filteredDetails as $detail)
                         <div class="row" style="margin-top: 40px">
@@ -50,8 +49,7 @@
         </div>
     </section>
     <section>
-        <div id="navbar"
-            style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2042be; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <div id="navbar"style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2042be; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
             <ul style="list-style: none; padding-righ: 40px; display: flex; gap: 60px; margin-right: 60px;">
                 <li style="font-size: 20px;">{{ GoogleTranslate::trans($product->nom_pro, \App::getLocale()) }}</li>
                 <li style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a>
