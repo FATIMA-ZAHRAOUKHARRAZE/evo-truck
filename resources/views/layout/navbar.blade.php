@@ -30,7 +30,6 @@
         @else
         @endif
     </head>
-
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
         <nav>
             <!---le logo --->
@@ -40,12 +39,12 @@
             <ul id="menuList">
                 <!--about --->
                 <li> <a href="{{ url('/about') }}"
-                        class="menu-item">{{ GoogleTranslate::trans('A propos', \App::getLocale()) }}</a></li>
+                        class="menu-item">{{ GoogleTranslate::trans('A propos', \App::getLocale()) }}</a>
+                </li>
                 <li><a href="">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
                     <div class="info-bar">
                         <ul>
                             <li><a href="">link bla bla bla</a></li>
-
                         </ul>
                     </div>
                 </li>
@@ -132,7 +131,6 @@
         </div>
         <footer class="text-center text-lg-start text-white mb-0"
             style="background: linear-gradient(to right,#2042be ,#0d2471)">
-
             <div class="container p-4 pb-0">
                 <div class="row">
                     <!-- About Us -->
@@ -177,31 +175,28 @@
                 </div>
             </div>
         </footer>
-
+        </body>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-    </body>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <script>
-        $('.changeLanguage').change(function(event) {
-            var url = "{{ route('translate.change') }}";
-            window.location.href = url + "?lang=" + $(this).val()
-        })
-        let menuList = document.getElementById("menuList")
-        menuList.style.maxHeight = "0px";
-
-        function toggleMenu() {
-            if (menuList.style.maxHeight == "0px") {
-                menuList.style.maxHeight = "300px ";
-            } else {
-                menuList.style.maxHeight = "0px";
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+        <script>
+            $('.changeLanguage').change(function(event) {
+                var url = "{{ route('translate.change') }}";
+                window.location.href = url + "?lang=" + $(this).val()
+            })
+            let menuList = document.getElementById("menuList")
+            menuList.style.maxHeight = "0px";
+            function toggleMenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "300px ";
+                } else {
+                    menuList.style.maxHeight = "0px";
+                }
             }
-        }
-    </script>
-
+        </script>
 </html>

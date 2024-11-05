@@ -2,9 +2,17 @@
 
 @section('content')
     <style>
+    
+        .row {
+            margin-right: 0 !important;
+        }
+   
         @media (max-width: 600px) {
             .fdiv {
                 margin-bottom: 20px
+            }
+            .ps-lg-5{
+                margin-left: 20px
             }
         }
     </style>
@@ -20,7 +28,7 @@
                     </div>
                 </aside>
                 <main class="col-lg-6">
-                    <div class="ps-lg-3">
+                    <div class="ps-lg-5">
                         <h4 class="title text-dark">
                             <h1>{{ GoogleTranslate::trans($product->nom_pro , \App::getLocale()) }}</h1> <br> {{ GoogleTranslate::trans($product->dec_pro, \App::getLocale()) }} 
 
@@ -93,9 +101,6 @@
         </div>
     </section>
 <br>
-
-
-
     <script>
         window.onscroll = function() {
             var navbar = document.getElementById("navbar");

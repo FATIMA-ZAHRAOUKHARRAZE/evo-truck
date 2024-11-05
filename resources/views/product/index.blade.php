@@ -51,7 +51,6 @@
                     document.getElementById('category-select').addEventListener('change', updateFilterLink);
                     document.getElementById('product-name').addEventListener('input', updateFilterLink);
                 </script>
-
                 <h2 class="mt-4">  {{ GoogleTranslate::trans( "Voir les solutions de produits associés.", \App::getLocale()) }}</h2>
                 <h4> {{ GoogleTranslate::trans( "Il utilise un moteur YANMAR, offrant un faible niveau de bruit et une excellente efficacité économique.", \App::getLocale()) }}</h4>
             </div>

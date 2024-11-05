@@ -187,67 +187,69 @@
         margin-bottom: 10px;
         /* Ajoute un espace entre les éléments de la liste */
     }
-          #toggleProducts {
-              display: block;
-              /* Ensure the button is visible on mobile */
-              margin: 10px 0;
+#toggleProducts {
+     display: block;
+     /* Ensure the button is visible on mobile */
+     margin: 10px 0;
           }
     
-          .products-list {
-              margin-top: 10px;
+.products-list {
+    margin-top: 10px;
           }
-          .web-products{
-            display: none;
+.web-products{
+    display: none;
           }
-                  .mobile-products>ul:hover{
-                    background: #0017ac90 !important;
-                  }
-                                  .mobile-products>ul>li>a{
-                                    font-size: 15px !important;
-                                    background: #0017acdc !important;
-                                    padding: 10px;
+        /* MOBILE PRODUCTS*/
+ .mobile-products>ul:hover{
+         background: #0017ac90 !important;
+ }
+ .mobile-products>ul>li>a{
+     font-size: 15px !important;
+    background: #0017acdc !important;
+     padding: 10px;
                                   }
                   .mobile-products>ul>li>a:hover{
                     background: #0017ac !important;
                   }
-                                  .mobile-products>ul{
-                                    min-height: 10vh;
-                                    z-index: 20000;
+ .mobile-products>ul{
+         min-height: 10vh;
+         z-index: 20000;
                                   }
-                  .mobile-products{
-                    display: block !important;
+.mobile-products{
+    display: block !important;
                   }
-                                  .mobile-ul {
-                                      max-height: 150px;
-                                      /* Set a max height */
-                                      overflow-y: auto;
-                                      /* Enable vertical scrolling */
-                                      /* Optional: Customize scrollbar appearance */
-                                      scrollbar-width: thin;
-                                      /* For Firefox */
-                                      scrollbar-color: #2216ca #602cd9;
-                                      /* For Firefox */
+.mobile-ul {
+          max-height: 150px;
+         /* Set a max height */
+          overflow-y: auto;
+          /* Enable vertical scrolling */
+          /* Optional: Customize scrollbar appearance */
+         scrollbar-width: thin;
+         /* For Firefox */
+        scrollbar-color: #2216ca #602cd9;
+         /* For Firefox */
                                   }
                 
-                                  /* For WebKit browsers (Chrome, Safari) */
-                                  .mobile-ul::-webkit-scrollbar {
-                                      width: 4px;
-                                      /* Set scrollbar width */
-                                  }
+     /* For WebKit browsers (Chrome, Safari) */
+    .mobile-ul::-webkit-scrollbar {
+        width: 4px;
+                                    
+    }
                 
-                                  .mobile-ul::-webkit-scrollbar-thumb {
-                                      background: #3308eef5;
-                                      /* Scrollbar color */
-                                      border-radius: 4px;
-                                      /* Round edges */
-                                  }
+ .mobile-ul::-webkit-scrollbar-thumb {
+         background: #3308eef5;
+          /* Scrollbar color */
+         border-radius: 4px;
+         /* Round edges */
+ }
                 
-                                  .mobile-ul::-webkit-scrollbar-thumb:hover {
-                                      background: #555;
-                                      /* Darker color on hover */
-                                  }
+ .mobile-ul::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+            }
       
 }
+/* BUTTON WHATSSAP*/
 .whatsapp-btn-container {
     position: fixed ;
     right: 30px;
