@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\SolutionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,7 @@ use App\Http\Controllers\AboutController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 // page about 
 Route::get('/about',[AboutController::class,'index']);
 // page welcome 
@@ -37,3 +39,8 @@ Route::post('/form/order', [OrderController::class, 'insert'])->name('order.inse
 Route::get('/product/filter/{id}/{productname?}', [ProductController::class, 'filter'])->name('product.filter');
 // traduction de navbar 
 Route::get('/translate/change',[ProductController::class,'googleTranslateChange'])->name('translate.change');
+// solution page
+Route::get('/solution', [SolutionController::class, 'index'])->name('Solution');
+
+
+

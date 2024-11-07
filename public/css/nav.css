@@ -1,13 +1,12 @@
    /* Reset and base styling */
-   * {
+* {
        margin: 0;
        padding: 0;
        box-sizing: border-box;
        font-family: sans-serif;
    }
-
-   html,
-   body {
+html,
+body {
        height: 100%;
        width: 100%;
        margin: 0;
@@ -17,7 +16,7 @@
    }
 
    /* Navbar styling */
-   nav {
+nav {
        padding: 10px 180px;
        display: flex;
        align-items: center;
@@ -31,29 +30,29 @@
        height: 65px;
    }
 
-   .logo img {
+.logo img {
        height: 90px;
    }
 
-   nav ul {
+nav ul {
        display: flex;
        gap: 40px;
        align-items: center;
    }
 
-   nav ul li {
+nav ul li {
        list-style-type: none;
        font-size: 20px;
        position: relative;
    }
 
-   nav ul li a {
+nav ul li a {
        text-decoration: none;
        color: #fff;
        padding: 10px 0;
    }
 
-   nav ul li::after {
+nav ul li::after {
        content: "";
        position: absolute;
        left: 50%;
@@ -64,17 +63,17 @@
        transition: width 0.3s ease, left 0.3s ease;
    }
 
-   nav ul li:hover::after {
+nav ul li:hover::after {
        width: 100%;
        left: 0;
    }
 
-   .menu-icon {
+.menu-icon {
        display: none;
        cursor: pointer;
    }
 
-   .menu-icon i {
+.menu-icon i {
        color: #fff;
        font-size: 30px;
    }
@@ -114,7 +113,7 @@
    }
 
    /* Info-bar dropdown styling */
-   .info-bar {
+.info-bar {
        position: absolute;
        background: linear-gradient(to right, #2042be, #0d2471);
        color: #fff;
@@ -131,26 +130,26 @@
        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
    }
 
-   nav ul li:hover .info-bar {
+nav ul li:hover .info-bar {
        opacity: 1;
        visibility: visible;
        pointer-events: auto;
        transform: translateX(-50%) translateY(0);
    }
 
-   nav ul li:not(:hover) .info-bar {
+nav ul li:not(:hover) .info-bar {
        opacity: 0;
        visibility: hidden;
        pointer-events: none;
    }
 
-   .info-bar ul {
+.info-bar ul {
        list-style-type: none;
        padding: 0;
        margin: 10px 0;
    }
 
-   .info-bar ul li a {
+.info-bar ul li a {
        color: #ffff;
        padding: 8px;
        display: block;
@@ -158,14 +157,14 @@
    }
 
    /* Main content */
-   main {
+main {
        flex-grow: 1;
        padding-top: 100px;
        /* To ensure content starts below the navbar */
    }
 
    /* Footer styling */
-   footer {
+footer {
        background: linear-gradient(to right, #2042be, #0d2471);
        color: white;
        width: 100%;
@@ -200,10 +199,10 @@
     display: none;
           }
         /* MOBILE PRODUCTS*/
- .mobile-products>ul:hover{
+.mobile-products>ul:hover{
          background: #0017ac90 !important;
  }
- .mobile-products>ul>li>a{
+.mobile-products>ul>li>a{
      font-size: 15px !important;
     background: #0017acdc !important;
      padding: 10px;
@@ -211,7 +210,7 @@
                   .mobile-products>ul>li>a:hover{
                     background: #0017ac !important;
                   }
- .mobile-products>ul{
+.mobile-products>ul{
          min-height: 10vh;
          z-index: 20000;
                                   }
@@ -231,12 +230,12 @@
                                   }
                 
      /* For WebKit browsers (Chrome, Safari) */
-    .mobile-ul::-webkit-scrollbar {
+.mobile-ul::-webkit-scrollbar {
         width: 4px;
                                     
     }
                 
- .mobile-ul::-webkit-scrollbar-thumb {
+.mobile-ul::-webkit-scrollbar-thumb {
          background: #3308eef5;
           /* Scrollbar color */
          border-radius: 4px;

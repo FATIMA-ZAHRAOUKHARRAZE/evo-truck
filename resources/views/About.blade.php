@@ -56,19 +56,14 @@
             border-left-width: 0;
         }
 
-        .timeline>li .timeline-image {
-            position: absolute;
-            z-index: 100;
-            left: 0;
-            width: 80px;
-            height: 80px;
-            margin-left: 0;
-            text-align: center;
-            color: white;
-            border: 7px solid #e9ecef;
-            border-radius: 100%;
+        .timeline .timeline-image img {
+            width: 100px; /* Largeur de l'image */
+            height: 100px; /* Hauteur de l'image */
+            border-radius: 50%; /* Bordure ronde */
+            border: 5px solid #e9ecef; /* Contour autour de l'image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour de l'image */
+            transition: all 0.3s ease; /* Transition douce pour les changements */
         }
-
         .timeline>li .timeline-image h4 {
             font-size: 10px;
             line-height: 14px;

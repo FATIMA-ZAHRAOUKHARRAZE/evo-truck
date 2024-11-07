@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family:'Poppins',sans-serif ;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.design-steps {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.design-steps h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2042be;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.step {
+    width: 180px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step .icon {
+font-size: 50px;
+    color: #2042be;
+    margin-bottom: 15px;
+}
+
+.step h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+.contain {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+   
+}
+
+.content-section {
+    width: 55%;
+}
+
+.image-section {
+    width: 40%;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.content-section .title {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #5d5d5d;
+}
+
+.content-section .content p {
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.content-section .content .button {
+    margin-top: 30px;
+}
+
+.content-section .content .button a {
+    background: linear-gradient(to right, #2042be, #0d2471);
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    transition-duration: .3s;
+}
+
+.content-section .content .button a:hover {
+    background: #fff ;
+    color:linear-gradient(to right, #2042be85, #0d247176);
+}
+
+@media (max-width: 768px){
+
+    .content-section .content p {
+            margin-top: 20px;
+            font-family: sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+                .content-section .content .button a {
+                padding: 15px 4px;
+                }
+                                .content-section .content .button{
+                                    margin-bottom: 10px;
+                                }
+}

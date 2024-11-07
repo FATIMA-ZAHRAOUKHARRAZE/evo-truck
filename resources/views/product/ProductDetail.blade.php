@@ -5,14 +5,23 @@
     
         .row {
             margin-right: 0 !important;
+             margin-left: 20px
         }
-   
         @media (max-width: 600px) {
             .fdiv {
                 margin-bottom: 20px
             }
             .ps-lg-5{
                 margin-left: 20px
+            }
+            dd{
+                display: inline-block;
+                margin-right: 20px
+            }
+            .parali{
+                font-size: 14px !important;
+                padding-top: 30px;
+              
             }
         }
     </style>
@@ -38,8 +47,8 @@
                     @foreach ($filteredDetails as $detail)
                         <div class="row" style="margin-top: 40px">
                             @foreach ($detail as $column => $value)
-                                <dt class="col-3">{{ GoogleTranslate::trans(ucfirst($column) , \App::getLocale()) }}</dt>
-                                <dd class="col-9">{{ GoogleTranslate::trans($value, \App::getLocale()) }}</dd>
+                                <dt class="col-3 ">{{ GoogleTranslate::trans(ucfirst($column) , \App::getLocale()) }}</dt>
+                                <dd class="col-9 ">{{ GoogleTranslate::trans($value, \App::getLocale()) }}</dd>
                             @endforeach
                         </div>
                     @endforeach
@@ -57,12 +66,12 @@
         </div>
     </section>
     <section>
-        <div id="navbar"style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2042be; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <div  id="navbar"style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2042be; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
             <ul style="list-style: none; padding-righ: 40px; display: flex; gap: 60px; margin-right: 60px;">
-                <li style="font-size: 20px;">{{ GoogleTranslate::trans($product->nom_pro, \App::getLocale()) }}</li>
-                <li style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a>
+                <li class="parali" style="font-size: 20px;">{{ GoogleTranslate::trans($product->nom_pro, \App::getLocale()) }}</li>
+                <li class="parali" style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a>
                 </li>
-                <li style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#parameter">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</a></li>
+                <li class="parali" style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#parameter">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</a></li>
             </ul>
         </div>
         <div id="Product_facture" class="mt-5 text-white">margin</div>

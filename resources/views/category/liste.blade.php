@@ -1,15 +1,11 @@
 @extends('layout.navbar')
 @section('content')
-    <div style="position: relative; width: 100vw;">
-        <img style="width: 100%;opacity:.9;" src="{{ asset('images/Original.png') }}"loading="lazy"
-            alt="">
-        <div
-            style="font-weight:bold;position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
-            <span style="font-size:50px;">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</span>
-            <div style="font-weight:200;top:20px">
-                </p>
-            </div>
-        </div>
+    <div style="position: relative; width: 100%;">
+    <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .9;"
+         src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
+    <div style="font-weight: bold; position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
+        <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
+    </div>
     </div>
     <div class="container mb-5">
         <h2 class="text-center" style="font-size: 28px; margin-top: 20px; font-weight: bold; color: #333;">
