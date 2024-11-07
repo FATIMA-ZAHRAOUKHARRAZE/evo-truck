@@ -42,14 +42,8 @@
                         class="menu-item">{{ GoogleTranslate::trans('A propos', \App::getLocale()) }}</a>
                 </li>
                 {{-- solution --}}
-                <li><a href="">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
-                    <div class="info-bar">
-                        <ul>
-                            <li>
-                                <a href="{{ url('/solution') }}">solution</a>
-                            </li>
-                        </ul>
-                    </div>
+                <li><a href="{{ url('/solution') }}">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
+                    
                 </li>
                 {{--products --}}
                 <li class="web-products">
@@ -102,6 +96,7 @@
                         @endforeach
                     </ul>
                 </li>
+                
                 <li>
                     <div class="col-md-4 w-100">
                         <select style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"

@@ -313,7 +313,7 @@
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
-                                    "Emerging Technologies Group est fier de figurer parmi les plus grandes
+                                    "EVO machinery est fier de figurer parmi les plus grandes
                                                                                                                                                                                                                                 entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
                                                                                                                                                                                                                                 reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
                                     \App::getLocale(),
@@ -334,7 +334,7 @@
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
-                                    "Chez Emerging Technologies Group, notre chemin est éclairé par une vision
+                                    "Chez EVO machinery, notre chemin est éclairé par une vision
                                                                                                                                                                     claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
                                                                                                                                                                                                                                 de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
                                                                                                                                                                                                                                 pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
@@ -365,8 +365,8 @@
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                                                                                                                                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                                                                                                                                                                                    conformes aux normes de l'industrie.",
+                                rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
+                                 conformes aux normes de l'industrie.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -381,7 +381,7 @@
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
                                 "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                                                                                                                                                                                                    continus dans l’amélioration et l’innovation des produits.",
+                                continus dans l’amélioration et l’innovation des produits.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -395,8 +395,8 @@
                         <h4>{{ GoogleTranslate::trans('DIVERSITÉ', \App::getLocale()) }}</h4>
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
-                                "ETG fabrique une large gamme d'équipements de construction et de levage,
-                                                                                                                                                                                                    notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
+                                "EVO machinery une large gamme d'équipements de construction et de levage,
+                                notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -411,8 +411,8 @@
                         <p class="text-muted">
                             {{ GoogleTranslate::trans(
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                                                                                                                                                                                                    pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                                                                                                                                                                                    pour garantir une qualité de produit de premier ordre.",
+                                pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
+                                pour garantir une qualité de produit de premier ordre.",
                                 \App::getLocale(),
                             ) }}
                         </p>
