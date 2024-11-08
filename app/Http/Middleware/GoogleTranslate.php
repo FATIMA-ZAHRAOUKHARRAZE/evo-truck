@@ -18,10 +18,10 @@ class GoogleTranslate
     public function handle(Request $request, Closure $next): Response
     {
      $locale = Session::get('locale', config('app.locale'));
-    App::setLocale($locale);
+    App::setLocale($locale,'fr');
 
     return $next($request);
 
-        
+
     }
 }

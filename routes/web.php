@@ -19,15 +19,15 @@ use App\Http\Controllers\SolutionController;
 |
 */
 
-// page about 
+// page about
 Route::get('/about',[AboutController::class,'index']);
-// page welcome 
+// page welcome
 Route::get('/', [WelcomeController::class,'index']);
 //liste de produit pour chaque categorie
 Route::get('/product/{id}', [ProductController::class, 'index'])->name('product');
-// detail de produit 
+// detail de produit
 Route::get('/ProductDetail/{id}',[DetailController::class , 'index'])->name('ProductDetail');
-//prendre un ordre pour un produit 
+//prendre un ordre pour un produit
 Route::get('/form/order/{categoryId}/{productName}',[OrderController::class , 'index'])->name('order');
 // liste des category
 Route::get('/category', [CategoryController::class, 'liste'])->name('category.liste');
@@ -37,7 +37,7 @@ Route::get('/category/search', [CategoryController::class, 'search'])->name('cat
 Route::post('/form/order', [OrderController::class, 'insert'])->name('order.inser');
 // filtrer les produit par category
 Route::get('/product/filter/{id}/{productname?}', [ProductController::class, 'filter'])->name('product.filter');
-// traduction de navbar 
+// traduction de navbar
 Route::get('/translate/change',[ProductController::class,'googleTranslateChange'])->name('translate.change');
 // solution page
 Route::get('/solution', [SolutionController::class, 'index'])->name('Solution');

@@ -43,7 +43,7 @@
                 </li>
                 {{-- solution --}}
                 <li><a href="{{ url('/solution') }}">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
-                    
+
                 </li>
                 {{--products --}}
                 <li class="web-products">
@@ -96,7 +96,7 @@
                         @endforeach
                     </ul>
                 </li>
-                
+
                 <li>
                     <div class="col-md-4 w-100">
                         <select style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
@@ -108,7 +108,7 @@
                             <option style="background-color:#000099" value="en"
                                 {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
                             <option style="background-color:#000099" value="fr"
-                                {{ session()->get('locale') == 'fr' ? 'selected' : '' }}>Français</option>
+                                {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>Français</option>
                         </select>
                     </div>
                 </li>
