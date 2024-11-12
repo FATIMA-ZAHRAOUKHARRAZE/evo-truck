@@ -15,45 +15,80 @@
     <section class="container mt-4">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-md-3 col-12 sidebar mb-4">
-                <h3 class="mb-4">{{ GoogleTranslate::trans("Filter les Produits", \App::getLocale()) }}  </h3>
+           <div class="col-md-3 col-12 sidebar mb-4">
+    <h3 class="mb-4">
+        {{ GoogleTranslate::trans("Filter les Produits", \App::getLocale()) }}
+    </h3>
 
-                <div class="mb-3">
-                    <label for="category-select" class="form-label">{{ GoogleTranslate::trans("Sélectionner une catégorie", \App::getLocale()) }}  </label>
-                    <select class="form-select" id="category-select">
-                        <option disabled>{{ GoogleTranslate::trans("Sélectionner une catégorie", \App::getLocale()) }} </option>
-                        @forelse ($categories as $categorie)
-                            <option value="{{ $categorie->id }}" {{ isset($id) && $id == $categorie->id ? 'selected' : '' }}>
-                              {{ GoogleTranslate::trans( $categorie->nom_cat, \App::getLocale()) }} 
-                            </option>
-                        @empty
-                            <option disabled>{{ GoogleTranslate::trans( "Aucune catégorie n'existe.", \App::getLocale()) }}  </option>
-                        @endforelse
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="product-name" class="form-label">{{ GoogleTranslate::trans( "le nom de produit.", \App::getLocale()) }} </label>
-                    <input type="text" class="form-control" id="product-name" placeholder="Enter part of product">
-                </div>
-                <a href="#" id="filter-link" class="btn btn-primary mb-3">{{ GoogleTranslate::trans( "filtre", \App::getLocale()) }}</a>
-                <script>
-                    function updateFilterLink() {
-                        const selectElement = document.getElementById('category-select');
-                        const productName = document.getElementById('product-name').value;
-                        const categoryId = selectElement.value;
+    <!-- Category Selection -->
+    <div class="mb-3">
+        <label for="category-select" class="form-label">
+            {{ GoogleTranslate::trans("Sélectionner une catégorie", \App::getLocale()) }}
+        </label>
+        <select class="form-select" id="category-select">
+            <option disabled>
+                {{ GoogleTranslate::trans("Sélectionner une catégorie", \App::getLocale()) }}
+            </option>
+            @forelse ($scategories as $categorie)
+                <option value="{{ $categorie->id }}">
+                    {{ GoogleTranslate::trans($categorie->name, \App::getLocale()) }}
+                </option>
+            @empty
+                <option disabled>
+                    {{ GoogleTranslate::trans("Aucune catégorie n'existe.", \App::getLocale()) }}
+                </option>
+            @endforelse
+        </select>
+    </div>
 
-                        let route = "{{ route('product.filter', [':id', ':productname']) }}"
-                            .replace(':id', categoryId)
-                            .replace(':productname', encodeURIComponent(productName));
+    <!-- Product Name Input -->
+    <div class="mb-3">
+        <label for="product-name" class="form-label">
+            {{ GoogleTranslate::trans("le nom de produit.", \App::getLocale()) }}
+        </label>
+        <input type="text" class="form-control" id="product-name" placeholder="Enter part of product">
+    </div>
 
-                        document.getElementById('filter-link').href = route;
-                    }
-                    document.getElementById('category-select').addEventListener('change', updateFilterLink);
-                    document.getElementById('product-name').addEventListener('input', updateFilterLink);
-                </script>
-                <h2 class="mt-4">  {{ GoogleTranslate::trans( "Voir les solutions de produits associés.", \App::getLocale()) }}</h2>
-                <h4> {{ GoogleTranslate::trans( "Il utilise un moteur YANMAR, offrant un faible niveau de bruit et une excellente efficacité économique.", \App::getLocale()) }}</h4>
-            </div>
+    <!-- Filter Link Button -->
+    <a href="#" id="filter-link" class="btn btn-primary mb-3">
+        {{ GoogleTranslate::trans("filtre", \App::getLocale()) }}
+    </a>
+
+    <script>
+        // Store the route template with placeholders in JavaScript
+        const routeTemplate = "{{ route('product.filter', [ 'id' => ':id','cid' => ':cid', 'productname' => ':productname']) }}";
+
+        function updateFilterLink() {
+            const selectElement = document.getElementById('category-select');
+            const productName = document.getElementById('product-name').value;
+            const categoryId = selectElement.value;
+
+            // Replace the placeholders with actual values
+            let route = routeTemplate
+                .replace(':cid',"{{ $id }}")  // Replace placeholder for category ID
+                .replace(':id', categoryId )  // Pass server-side $id into JavaScript
+                .replace(':productname', encodeURIComponent(productName)); // URL encode product name
+
+            // Update the filter link's href
+            document.getElementById('filter-link').href = route;
+        }
+
+        // Add event listeners to dynamically update the filter link
+        document.getElementById('category-select').addEventListener('change', updateFilterLink);
+        document.getElementById('product-name').addEventListener('input', updateFilterLink);
+
+        // Initialize the filter link in case the page loads with pre-selected values
+        updateFilterLink();
+    </script>
+
+    <!-- Product Solution Section -->
+    <h2 class="mt-4">
+        {{ GoogleTranslate::trans("Voir les solutions de produits associés.", \App::getLocale()) }}
+    </h2>
+    <h4>
+        {{ GoogleTranslate::trans("Il utilise un moteur YANMAR, offrant un faible niveau de bruit et une excellente efficacité économique.", \App::getLocale()) }}
+    </h4>
+</div>
             <!-- Content Column -->
             <div class="col-md-9 col-12">
                 <div class="row">
@@ -67,7 +102,7 @@
                                         </div>
                                         <div class="bbb_deals_content">
                                             <div class="bbb_deals_info_line d-flex flex-row justify-content-between">
-                                                <div class="bbb_deals_item_name">{{ GoogleTranslate::trans(  $item['product']->nom_pro, \App::getLocale()) }}</div>
+                                                <div class="bbb_deals_item_name">{{ $item['product']->nom_pro}}</div>
                                                 <div class="bbb_deals_item_price">  {{$item['product']->price}}</div>
                                             </div>
 

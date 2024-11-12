@@ -15,16 +15,10 @@ class DetailController extends Controller
         $details = Detail::where('product_id', $product->id)->get();
         $parametres=Parametre::where('product_id', $product->id)->get();
         // Liste de toutes les colonnes de la table
-        $columns = [
-            'poids', 'capacite_godet', 'model_moteur', 'fabricant',
-            'puissance_nominal', 'dimension_contour', 'type_conduite', 'chassis',
-            'poids_total', 'charge_utile', 'vitesse_max', 'profondeur_forage',
-            'diametere_max', 'capacite_large', 'couple_sortie', 'capacite_nominal',
-            'hauteur_levage_maximal', 'model', 'LH', 'modele_chasis', 'longeur_total',
-            'hauteur_total', 'logeur_deux_convoyeur', 'plaque_rampe', 'logueur_hors_tout',
-            'hauteur_max_travail', 'hauteur_max_platforme', 'portee_travail_max',
-            'charge_godet', 'charge_nominal', 'posse_max'
-        ];
+            $columns = [
+        'Poids en ordre de marche (kg)','Capacité du godet (m³)','Puissance nominale (kW)','Charge nominale (kg)','Charge du godet (m³)',
+        'Lame semi-U (m³)','Largeur de voie (mm)','Capacité de levage nominale (t)','Flèche allongée (m)','Puissance du moteur (kW/tr/min)'
+    ];
 
         // Créer une collection pour les détails filtrés
         $filteredDetails = $details->map(function ($detail) use ($columns) {

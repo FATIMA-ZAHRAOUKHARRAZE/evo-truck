@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>EVO</title>
         <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="Evo , machinery,excavating machinery,crane,forklift,chariot élévateur,grue">
         <!-- Fonts -->
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         <link rel="stylesheet" href={{ asset('css/product.css') }}>
@@ -46,33 +46,42 @@
 
                 </li>
                 {{--products --}}
-                <li class="web-products">
-                    <a style="color: white;"
-                        href="#">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</a>
-                    <div class="info-bar">
-                        <div class="produit-header d-flex justify-content-between align-items-center flex-wrap">
-                            <h5 style="margin: 0; flex: 1;">
-                                {{ GoogleTranslate::trans('MONDE DE PRODUIT', \App::getLocale()) }}</h5>
-                            <span style="flex: 0 0 auto;">
-                                {{ GoogleTranslate::trans('produit', \App::getLocale()) }}
-                                <a href="{{ route('category.liste') }}">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </span>
+               <li class="web-products">
+    <a style="color: white;" href="#">{{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</a>
+    <div class="info-bar">
+        <div class="produit-header d-flex justify-content-between align-items-center flex-wrap">
+            <h5 style="margin: 0; flex: 1;">
+                {{ GoogleTranslate::trans('MONDE DE PRODUIT', \App::getLocale()) }}
+            </h5>
+            <span style="flex: 0 0 auto;">
+                {{ GoogleTranslate::trans('produit', \App::getLocale()) }}
+                <a href="{{ route('category.liste') }}">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </span>
+        </div>
 
+        <!-- Liste des catégories avec regroupement automatique par ligne de 3 éléments -->
+        <div class="products-list d-flex flex-column">
+            @foreach ($categories->chunk(3) as $chunk)
+                <div class="d-flex justify-content-around mt-2">
+                    @foreach ($chunk as $categorie)
+                        <div>
+                            <a href="{{ url('product/' . $categorie->id) }}">
+                                {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                            </a>
                         </div>
-                        <!-- Liste des catégories avec regroupement par 3 -->
-                        <ul class="products-list list-unstyled p-0">
-                            @foreach ($categories as $categorie)
-                                <li>
-                                    <a href="{{ url('product/' . $categorie->id) }}">
-                                        {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </li>
+                    @endforeach
+                </div>
+            @endforeach
+        </div>
+    </div>
+</li>
+
+
+
+
+
                 {{-- Mobile products --}}
                 <li style="display: none;z-index:200;" class=" mobile-products nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
@@ -125,7 +134,7 @@
         {{-- le button whatssap--}}
         <div class="whatsapp-btn-container ps-5">
             <a class="whatsapp-btn" href="https://wa.me/91999999999"><i class="fab fa-whatsapp"></i></a>
-            <span>Contact Us</span>
+            <span>{{ GoogleTranslate::trans('Contact Us', \App::getLocale()) }}</span>
         </div>
         <footer class="text-center text-lg-start text-white mb-0"
             style="background: linear-gradient(to right,#2042be ,#0d2471)">

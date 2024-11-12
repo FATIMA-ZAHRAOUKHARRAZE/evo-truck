@@ -8,6 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SolutionController;
+use App\Http\Controllers\SCategorieController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,7 +37,7 @@ Route::get('/category/search', [CategoryController::class, 'search'])->name('cat
 // envoyer les donneés du formulaire d'ordre
 Route::post('/form/order', [OrderController::class, 'insert'])->name('order.inser');
 // filtrer les produit par category
-Route::get('/product/filter/{id}/{productname?}', [ProductController::class, 'filter'])->name('product.filter');
+Route::get('/product/filter/{id}/{cid}/{productname?}', [ProductController::class, 'filter'])->name('product.filter');
 // traduction de navbar
 Route::get('/translate/change',[ProductController::class,'googleTranslateChange'])->name('translate.change');
 // solution page

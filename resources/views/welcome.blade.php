@@ -29,7 +29,7 @@
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
                     <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                        <img src="{{ asset('images/Original.png') }}" class="card-img-top" alt="Product Image"
+                        <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top" alt="Product Image"
                             style="border-radius: 15px 15px 0 0; height: 300px; object-fit: cover;">
                         <div class="card-body text-center">
                             <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #333;">

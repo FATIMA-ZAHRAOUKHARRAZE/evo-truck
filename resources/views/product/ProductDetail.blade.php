@@ -2,7 +2,7 @@
 
 @section('content')
     <style>
-    
+
         .row {
             margin-right: 0 !important;
              margin-left: 20px
@@ -21,7 +21,7 @@
             .parali{
                 font-size: 14px !important;
                 padding-top: 30px;
-              
+
             }
         }
     </style>
@@ -39,7 +39,7 @@
                 <main class="col-lg-6">
                     <div class="ps-lg-5">
                         <h4 class="title text-dark">
-                            <h1>{{ GoogleTranslate::trans($product->nom_pro , \App::getLocale()) }}</h1> <br> {{ GoogleTranslate::trans($product->dec_pro, \App::getLocale()) }} 
+                            <h1>{{ $product->nom_pro }}</h1> <br> {{ GoogleTranslate::trans($product->dec_pro, \App::getLocale()) }}
 
                         </h4>
                     </div>
@@ -68,7 +68,7 @@
     <section>
         <div  id="navbar"style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2042be; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
             <ul style="list-style: none; padding-righ: 40px; display: flex; gap: 60px; margin-right: 60px;">
-                <li class="parali" style="font-size: 20px;">{{ GoogleTranslate::trans($product->nom_pro, \App::getLocale()) }}</li>
+                <li class="parali" style="font-size: 20px;">{{$product->nom_pro}}</li>
                 <li class="parali" style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a>
                 </li>
                 <li class="parali" style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#parameter">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</a></li>
