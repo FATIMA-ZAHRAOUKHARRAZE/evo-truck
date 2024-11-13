@@ -6,12 +6,13 @@
 @section('content')
     <!-- Page Image -->
         <div style="position: relative; width: 100%;">
-            <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .9;"
-                src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
-            <div style="font-weight: bold; position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
-                <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
-            </div>
+        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
+            loading="lazy" alt="">
+        <div
+            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+            <span style="font-size: 50px;">{{ GoogleTranslate::trans('PRODUITS', \App::getLocale()) }}</span>
         </div>
+    </div>
     <section class="container mt-4">
         <div class="row">
             <!-- Sidebar -->

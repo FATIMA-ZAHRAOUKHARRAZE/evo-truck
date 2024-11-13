@@ -2,15 +2,17 @@
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 @endsection
+
 @section('content')
     <!-- Page Image -->
         <div style="position: relative; width: 100%;">
-            <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .9;"
-                src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
-            <div style="font-weight: bold; position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
-                <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
-            </div>
+        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
+            loading="lazy" alt="">
+        <div
+            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+            <span style="font-size: 50px;">{{ GoogleTranslate::trans('PRODUITS', \App::getLocale()) }}</span>
         </div>
+    </div>
     <section class="container mt-4">
         <div class="row">
             <!-- Sidebar -->
@@ -18,6 +20,7 @@
     <h3 class="mb-4">
         {{ GoogleTranslate::trans("Filter les Produits", \App::getLocale()) }}
     </h3>
+
     <!-- Category Selection -->
     <div class="mb-3">
         <label for="category-select" class="form-label">
@@ -38,6 +41,7 @@
             @endforelse
         </select>
     </div>
+
     <!-- Product Name Input -->
     <div class="mb-3">
         <label for="product-name" class="form-label">
@@ -45,10 +49,12 @@
         </label>
         <input type="text" class="form-control" id="product-name" placeholder="Enter part of product">
     </div>
+
     <!-- Filter Link Button -->
     <a href="#" id="filter-link" class="btn btn-primary mb-3">
         {{ GoogleTranslate::trans("filtre", \App::getLocale()) }}
     </a>
+
     <script>
         // Store the route template with placeholders in JavaScript
         const routeTemplate = "{{ route('product.filter', ['id' => ':id','cid' => ':cid', 'productname' => ':productname']) }}";
@@ -67,6 +73,7 @@
             // Update the filter link's href
             document.getElementById('filter-link').href = route;
         }
+
         // Add event listeners to dynamically update the filter link
         document.getElementById('category-select').addEventListener('change', updateFilterLink);
         document.getElementById('product-name').addEventListener('input', updateFilterLink);
@@ -83,6 +90,7 @@
         {{ GoogleTranslate::trans("Il utilise un moteur YANMAR, offrant un faible niveau de bruit et une excellente efficacité économique.", \App::getLocale()) }}
     </h4>
 </div>
+
             <!-- Content Column -->
             <div class="col-md-9 col-12">
                 <div class="row">
@@ -99,6 +107,7 @@
                                                 <div class="bbb_deals_item_name">{{$item['product']->nom_pro}}</div>
                                                 <div class="bbb_deals_item_price">  {{$item['product']->price}}</div>
                                             </div>
+
                                             @foreach ($item['details'] as $detail)
                                                 <div class="bbb_deals_item_details">
                                                     @foreach ($detail as $column => $value)

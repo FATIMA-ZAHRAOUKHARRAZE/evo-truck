@@ -9,37 +9,42 @@
     .col-5-custom {
         width: 20%; /* chaque colonne prend 20% pour faire 5 colonnes */
     }
+
     @media (max-width: 1200px) {
         .col-5-custom {
             width: 25%; /* 4 colonnes sur écran de taille moyenne */
         }
     }
+
     @media (max-width: 992px) {
         .col-5-custom {
             width: 33.33%; /* 3 colonnes sur écran de taille moyenne */
         }
     }
+
     @media (max-width: 768px) {
         .col-5-custom {
             width: 50%; /* 2 colonnes sur les petits écrans */
         }
     }
+
     @media (max-width: 576px) {
         .col-5-custom {
             width: 100%; /* 1 colonne sur les écrans très petits */
         }
     }
+
     </style>
     <div style="position: relative; width: 100%;">
-    <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .9;"
-         src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
-    <div style="font-weight: bold; position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
-        <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
-    </div>
+        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
+            loading="lazy" alt="">
+        <div
+            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+            <span style="font-size: 50px;">{{ GoogleTranslate::trans('PRODUITS', \App::getLocale()) }}</span>
+        </div>
     </div>
     <div class="container mb-5">
-        <h2 class="text-center" style="font-size: 28px; margin-top: 20px; font-weight: bold; color: #333;">
-            {{ GoogleTranslate::trans('PRODUCTS', \App::getLocale()) }}</h2>
+
 
         <!-- Barre de recherche -->
         <div class="search-bar col-12 text-center mt-4 mb-4">

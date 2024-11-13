@@ -255,6 +255,14 @@
             border-radius: 50% !important;
         }
     </style>
+    <div style="position: relative; width: 100%;">
+        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
+            loading="lazy" alt="">
+        <div
+            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+            <span style="font-size: 50px;">{{ GoogleTranslate::trans('À PROPOS', \App::getLocale()) }}</span>
+        </div>
+    </div>
     <section class="page-section" id="about">
         <div class="container">
             <ul class="timeline">
