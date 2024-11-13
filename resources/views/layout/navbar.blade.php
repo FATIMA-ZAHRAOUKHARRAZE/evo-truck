@@ -163,10 +163,21 @@
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="mb-4 font-weight-bold">
                             {{ GoogleTranslate::trans('CONTACT US', \App::getLocale()) }}</h6>
-                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                        <p><i class="fas fa-envelope mr-3"></i> evo@gmail.com</p>
-                        <p><i class="fas fa-phone mr-3"></i> + 00 00 00 00 00</p>
-                        <p><i class="fas fa-print mr-3"></i> + 00 00 00 00</p>
+                        <p><i class="fas fa-home mr-3"></i>
+   <a href="https://www.google.com/maps/dir//%E8%90%AC%E5%BB%B8%E5%BB%A3%E5%A0%B4+Maxgrand+Plaza+3+Tai+Yau+St+San+Po+Kong+Hong+Kong/@22.3382773,114.1991415,6444m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x340406da6bfd00c1:0xbec707f31aaccdb5!2m2!1d114.1991415!2d22.3382773?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
+      style="text-decoration: none; color: inherit;" target="_blank">
+      19h Maxgrand Plaza No.3 Tai Yau Street San Po Kong, Kowloon, Hong Kong
+   </a>
+</p>
+
+                           <p><i class="fas fa-envelope mr-3"></i>
+   <a href="mailto:export@gmg-market.com" style="color:white;text-decoration: none">export@gmg-market.com</a>
+</p>
+
+                        <p><i class="fas fa-phone mr-3"></i>
+   <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826 086 894</a>
+</p>
+
                     </div>
                 </div>
                 <hr class="my-3">

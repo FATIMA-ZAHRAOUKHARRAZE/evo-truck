@@ -9,31 +9,26 @@
     .col-5-custom {
         width: 20%; /* chaque colonne prend 20% pour faire 5 colonnes */
     }
-
     @media (max-width: 1200px) {
         .col-5-custom {
             width: 25%; /* 4 colonnes sur écran de taille moyenne */
         }
     }
-
     @media (max-width: 992px) {
         .col-5-custom {
             width: 33.33%; /* 3 colonnes sur écran de taille moyenne */
         }
     }
-
     @media (max-width: 768px) {
         .col-5-custom {
             width: 50%; /* 2 colonnes sur les petits écrans */
         }
     }
-
     @media (max-width: 576px) {
         .col-5-custom {
             width: 100%; /* 1 colonne sur les écrans très petits */
         }
     }
-
     </style>
     <div style="position: relative; width: 100%;">
     <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .9;"

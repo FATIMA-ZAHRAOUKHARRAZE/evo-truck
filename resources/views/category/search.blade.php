@@ -8,7 +8,6 @@
             <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
         </div>
     </div>
-
     <div class="container">
         @if ($products->isEmpty())
             <p>{{ GoogleTranslate::trans('Aucun produit trouvé.', \App::getLocale()) }}</p>
@@ -28,7 +27,6 @@
                                                 {{ $item['product']->nom_pro }}
                                             </div>
                                         </div>
-
                                         @foreach ($item['details'] as $detail)
                                             <div class="bbb_deals_item_details">
                                                 @foreach ($detail as $column => $value)
@@ -39,7 +37,6 @@
                                                 @endforeach
                                             </div>
                                         @endforeach
-
                                         <div class="available">
                                             <div class="available_line d-flex flex-row justify-content-start">
                                                 <div class="available_title">
