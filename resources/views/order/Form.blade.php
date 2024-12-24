@@ -1,19 +1,47 @@
 @extends('layout.navbar')
 
+<style>
+@media (max-width: 768px) {
+    .form-container {
+        display: flex; /* Activer Flexbox */
+        flex-direction: column; /* Disposer les éléments verticalement */
+        align-items: center; /* Centrer horizontalement */
+        justify-content: center; /* Centrer verticalement */
+        min-height: 100vh; /* Prend toute la hauteur de l'écran */
+        margin: 0 auto; /* Centre horizontalement */
+        width: 90%; /* Prend 90% de la largeur de l'écran */
+    }
+
+    .form-container form {
+        width: 100%; /* Adapter la largeur au conteneur */
+        margin: 0; /* Supprimer les marges inutiles */
+        margin-right:100px;
+    }
+
+    .form-container h2, 
+    .form-container p {
+        text-align: center; /* Centrer le texte */
+    }
+    .image-desktop-only{
+        display:none;
+    }
+}
+
+</style>
 @section('content')
     <!-- Page Image -->
-        <div style="position: relative; width: 100%;">
-            <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .9;"
-                src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
-            <div style="font-weight: bold; position: absolute; top: 20%; left: 20%; color: #ffffffc6; font-size: 24px; padding: 10px;">
-                <span style="font-size: 50px;">{{ GoogleTranslate::trans("Produits", \App::getLocale()) }}</span>
-            </div>
-        </div>
+        <div style="position: relative; width: 100%;"class="image-desktop-only">
+    <img  style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}" alt="">
+    <div class="image-desktop-only"
+        style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+        <span style="font-size: 50px;">{{'PRODUITS' }}</span>
+    </div>
+</div>
     <section>
-        <div class="container text-center">
-            <h2 style="font-weight: bold">{{ GoogleTranslate::trans('Devis gratuit', \App::getLocale()) }}
+        <div class="form-container">
+            <h2 style="font-weight: bold;text-align:center">{{ GoogleTranslate::trans('Devis gratuit', \App::getLocale()) }}
             </h2>
-            <p> {{ GoogleTranslate::trans(
+            <p style="text-align:center"> {{ GoogleTranslate::trans(
                 "Nous vous contacterons dans les 24 heures (jours ouvrables), veuillez garder votre téléphone portable ouvert. Si vous avez besoin d'autres services,
                 n'hésitez pas à appeler la",
                 \App::getLocale(),

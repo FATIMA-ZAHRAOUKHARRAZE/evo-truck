@@ -1,14 +1,19 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
+    <style>  @media (max-width: 768px) {
+    .image-desktop-only {
+        display: none;
+    }
+}</style>
 @endsection
 @section('content')
     <!-- Page Image -->
-    <div style="position: relative; width: 100%;">
+    <div style="position: relative; width: 100%;" class="image-desktop-only">
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             loading="lazy" alt="">
-        <div
-            style="font-weight: bold; position: absolute; top: 20%; left:30%;  color: #2042be; font-size: 24px; padding: 10px;">
+        <div class="image-desktop-only"
+        style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;">{{ GoogleTranslate::trans('EQUIPEMENT
             BLINDES', \App::getLocale()) }}</span>
         </div>
@@ -18,32 +23,32 @@
     <section class="design-steps">
         <h1>{{ GoogleTranslate::trans('Les étapes de nos Design.', \App::getLocale()) }}</h1>
         <div class="steps-container">
-            <div class="step">
+            <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>
                 <h2>{{ GoogleTranslate::trans('DESIGN', \App::getLocale()) }}</h2>
                 <p>{{ GoogleTranslate::trans('L’art de la beauté au service de l’industrie', \App::getLocale()) }}</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="fade-up"> 
                 <i class="fas fa-search icon"></i>
                 <h2>{{ GoogleTranslate::trans('RECHERCHE & DÉVELOPPEMENT', \App::getLocale()) }}</h2>
                 <p>{{ GoogleTranslate::trans('Les meilleurs spécialistes à votre écoute', \App::getLocale()) }}</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="fade-up">
                 <i class="fas fa-industry icon"></i>
                 <h2>{{ GoogleTranslate::trans('FABRICATION', \App::getLocale()) }}</h2>
                 <p>{{ GoogleTranslate::trans('Les meilleurs ingénieurs de production', \App::getLocale()) }}</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="fade-up">
                 <i class="fas fa-cube icon"></i>
                 <h2>{{ GoogleTranslate::trans('PROTOTYPAGE', \App::getLocale()) }}</h2>
                 <p>{{ GoogleTranslate::trans('L’innovation à portée de main', \App::getLocale()) }}</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="fade-up">
                 <i class="fas fa-vial icon"></i>
                 <h2>{{ GoogleTranslate::trans('TEST ET ESSAI', \App::getLocale()) }}</h2>
                 <p>{{ GoogleTranslate::trans('Maîtrise des risques au maximum', \App::getLocale()) }}</p>
             </div>
-            <div class="step">
+            <div class="step" data-aos="fade-up">
                 <i class="fas fa-couch icon"></i>
                 <h2>{{ GoogleTranslate::trans('CONFORT', \App::getLocale()) }}</h2>
                 <p>{{ GoogleTranslate::trans('La robustesse du blindage et le confort d’une', \App::getLocale()) }}</p>
@@ -58,10 +63,10 @@
     <div class="section">
         <div class="contain">
             <div class="content-section">
-                <div class="title">
+                <div class="title"data-aos="fade-up">
                     <h1>{{ GoogleTranslate::trans(' Équipements blindé', \App::getLocale()) }}</h1>
                 </div>
-                <div class="content">
+                <div class="content"data-aos="fade-up">
                     <p>
                     {{ GoogleTranslate::trans('Depuis plus de 25 ans, vehiculeblinde.com est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
 

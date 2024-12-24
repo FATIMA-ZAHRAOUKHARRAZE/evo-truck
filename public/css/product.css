@@ -31,7 +31,7 @@ html,
 }
 
 .ribbon {
-    width: 150px;
+    width: 250px;
     height: 150px;
     overflow: hidden;
     position: absolute
@@ -103,7 +103,8 @@ div {
     padding-bottom: 34px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    margin-top: 0px
+    margin-top: 0px;
+     height : 100%
 }
 
 .bbb_deals_title {
@@ -151,9 +152,9 @@ div {
     color: red
 }
 
+
 .bbb_deals_item_name {
-    font-size: 24px;
-    font-weight: 400;
+    font-weight: bold; /* ou utilisez 700 */
     color: #000000
 }
 
@@ -177,14 +178,13 @@ div {
     font-weight: 700
 }
 
-@media only screen and (max-width: 991px) {
-    .bbb_deals {
-        width: 100%;
-        margin-right: 0px
-    }
+.available_line{
+   margin-top: 30px;
 }
 
-@media only screen and (max-width: 575px) {
+
+
+@media  (max-width: 785px) {
     .bbb_deals {
         padding-left: 15px;
         padding-right: 15px
@@ -231,3 +231,4 @@ div {
     background: linear-gradient(to right, #0d2471, #2042be);
     /* Couleur de fond au survol */
 }
+

@@ -5,62 +5,63 @@
             margin-right: 0 !important;
         }
 
-        /* CSS personnalisé pour définir 5 colonnes sur les écrans larges */
+
         .col-5-custom {
-            width: 20%; /* chaque colonne prend 20% pour faire 5 colonnes */
+            width: 20%;
         }
 
         .custom-control .carousel-control-prev-icon,
         .custom-control .carousel-control-next-icon {
-            background-color: darkblue;
-            padding: 20px;
-            border-radius: 5px;
+            background-color: #00008b22;
+
         }
 
         @media (max-width: 1200px) {
             .col-5-custom {
-                width: 25%; /* 4 colonnes sur écran de taille moyenne */
+                width: 25%;
             }
         }
 
         @media (max-width: 992px) {
             .col-5-custom {
-                width: 33.33%; /* 3 colonnes sur écran de taille moyenne */
+                width: 33.33%;
             }
         }
 
         @media (max-width: 768px) {
-            .col-5-custom {
-                width: 50%; /* 2 colonnes sur les petits écrans */
-            }
+          
 
-            .carousel-item.active > img, .carousel-item > img {
-                margin-top: 1rem;
-                margin-bottom: 2rem;
-                height: 60vh !important;
-                margin-left: 0 !important;
-                width: 100% !important;
-            }
+           
         }
 
         @media (max-width: 576px) {
-            .col-5-custom {
-                width: 100%; /* 1 colonne sur les écrans très petits */
+            .col-5-custom
+            {
+                width: 100%;
             }
         }
+            .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+
+    .card:hover {
+        transform: scale(1.05) !important; /* Slightly scale up the card */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15 !important); /* Add a subtle shadow */
+        opacity: 0.8 !important;
+    }
     </style>
 
     <!-- Code pour le banner image -->
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block" style="margin-top: 1rem; height: 70vh !important; margin-left: 10vw; width: 80%;" src="https://hk-etg.com/wp-content/uploads/2023/10/bigger.jpg" alt="Slide 1">
+                <img class="d-block" style="margin-top: 1.5rem; margin-bottom: 2rem; height: 90vh !important;  width: 100%;" src="{{ asset('images\Original.png') }}" alt="Slide 1">
             </div>
 
             <div class="carousel-item">
-                <img class="d-block" style="margin-top: 1rem; margin-bottom: 2rem; height: 70vh !important; margin-left: 10vw; width: 80%;" src="https://hk-etg.com/wp-content/uploads/2023/10/1920-x-1000.jpg" alt="Slide 2">
+                <img class="d-block" style="margin-top: 1.5rem; margin-bottom: 2rem; height: 90vh !important;  width: 100%;" src="{{ asset('images\Original.png') }}" alt="Slide 2">
             </div>
-        </div>
+    </div>
 
         <a class="carousel-control-prev custom-control" href="#carousel" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -70,15 +71,16 @@
         </a>
     </div>
 
+
     <!-- Code pour la partie produit -->
-    <div class="row justify-content-center" style="margin-top: 50px">
-        @forelse ($categories as $categorie)
-            <div class="col-5-custom mb-4">
-                <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+    <div class="row justify-content-center" style="margin-top: 50px" data-aos="fade-left">
+        @forelse ($categories->take(21) as $categorie)
+            <div class="mb-4 col-5-custom" > 
+                <div class="border-0 shadow-sm card h-100" style="border-radius: 15px;" >
                     <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                         <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top" alt="Product Image"
                              style="border-radius: 15px 15px 0 0; height: 250px; object-fit: cover;">
-                        <div class="card-body text-center">
+                        <div class="text-center card-body" >
                             <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #333;">
                                 {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
                             </h5>

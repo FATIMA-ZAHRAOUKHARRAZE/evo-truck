@@ -1,0 +1,182 @@
+[18-Dec-2024 08:07:12 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:12 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:12 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:18 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:18 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:18 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:19 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:19 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:19 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:19 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:19 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:19 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:20 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:20 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:20 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:20 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:20 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:21 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:21 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:21 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:21 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:21 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:22 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:22 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:22 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:30 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:30 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:30 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:31 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:31 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:31 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:33 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:33 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:33 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:33 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:33 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:33 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:34 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:34 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:34 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:35 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:35 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:35 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:37 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:37 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:37 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:38 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:38 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:38 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:38 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:38 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:38 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:39 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:39 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:39 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Warning:  require(/home/evomahhw/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/evomahhw/public_html/index.php on line 34
+[18-Dec-2024 08:07:39 UTC] PHP Stack trace:
+[18-Dec-2024 08:07:39 UTC] PHP   1. {main}() /home/evomahhw/public_html/index.php:0
+[18-Dec-2024 08:07:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/evomahhw/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/evomahhw/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/evomahhw/public_html/index.php on line 34

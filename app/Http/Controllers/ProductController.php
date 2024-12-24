@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Category;
@@ -23,44 +24,46 @@ class ProductController extends Controller
         $details = Detail::whereIn('product_id', $products->pluck('id'))->get();
 
         // Liste de toutes les colonnes de la table
-    $columns = [
-        'Poids en ordre de marche (kg)','Capacité du godet (m³)','Puissance nominale (kW)','Charge nominale (kg)','Charge du godet (m³)',
-        'Lame semi-U (m³)','Largeur de voie (mm)','Capacité de levage nominale (t)','Flèche allongée (m)','Puissance du moteur (kW/tr/min)'
-    ];
+ $allColumns = DB::getSchemaBuilder()->getColumnListing('details');
 
+// Exclure les colonnes "id" et "product_id"
+$columns = collect($allColumns)->reject(function ($column) {
+    return in_array($column, ['id', 'product_id']);
+})->toArray();
         // Créer une collection pour les détails filtrés
         $filteredDetails = [];
 
         // Parcourir chaque produit pour obtenir ses détails
         foreach ($products as $product) {
-            $productDetails = $details->where('product_id', $product->id);
+    $productDetails = $details->where('product_id', $product->id);
 
-            // Parcourir chaque enregistrement de détails pour choisir trois colonnes non nulles
-            $finalDetail = $productDetails->map(function ($detail) use ($columns) {
-                // Filtrer les colonnes non nulles
-                $nonNullColumns = collect($columns)->filter(function ($column) use ($detail) {
-                    return !is_null($detail->{$column});
-                });
+    // Parcourir chaque enregistrement de détails pour sélectionner les colonnes non nulles
+    $finalDetail = $productDetails->map(function ($detail) use ($columns) {
+        // Filtrer les colonnes non nulles
+        $nonNullColumns = collect($columns)->filter(function ($column) use ($detail) {
+            return !is_null($detail->{$column});
+        });
 
-                // Si on a au moins 3 colonnes non nulles, on en choisit 3 aléatoirement
-                if ($nonNullColumns->count() >= 3) {
-                    // Convertir les clés en tableau
-                    $randomColumns = $nonNullColumns->random(3)->toArray();
-                    // Retourner uniquement les colonnes sélectionnées pour cet enregistrement
-                    return $detail->only($randomColumns);
-                }
-                return null; // Sinon, on ne retourne rien
-            })->filter(); // Filtrer les résultats non nuls
-
-            // Limiter à 3 enregistrements
-            $finalDetails = $finalDetail->take(3);
-
-            // Ajouter les détails filtrés pour ce produit dans le tableau
-            $filteredDetails[$product->id] = [
-                'product' => $product,
-                'details' => $finalDetails
-            ];
+        // Si on a au moins une colonne non nulle
+        if ($nonNullColumns->count() >= 1) {
+            // Limiter au maximum 3 colonnes non nulles aléatoires (ou toutes si moins de 3)
+            $selectedColumns = $nonNullColumns->take(3)->toArray();
+            // Retourner uniquement les colonnes sélectionnées pour cet enregistrement
+            return $detail->only($selectedColumns);
         }
+        return null; // Sinon, ne retourne rien
+    })->filter(); // Filtrer les résultats non nuls
+
+    // Limiter à 3 enregistrements
+    $finalDetails = $finalDetail->take(3);
+
+    // Ajouter les détails filtrés pour ce produit dans le tableau
+    $filteredDetails[$product->id] = [
+        'product' => $product,
+        'details' => $finalDetails
+    ];
+}
+
 
         // Passer les produits et leurs détails à la vue
         return view('product.index', compact('categories', 'filteredDetails','id','scategories'));
@@ -68,11 +71,12 @@ class ProductController extends Controller
     public function googleTranslateChange(Request $request)
     {
 
+         
         App::setLocale($request->lang);
 
         Session::put('locale',$request->lang);
 
-        return redirect()->back();
+        return redirect()->back(); 
     }
 
   public function filter($cid, $id, $productname = null)
@@ -100,12 +104,12 @@ class ProductController extends Controller
     // Fetch product details for the retrieved products
     $details = Detail::whereIn('product_id', $products->pluck('id'))->get();
 
-    // List of columns for filtering details
-    $columns = [
-        'Poids en ordre de marche (kg)', 'Capacité du godet (m³)', 'Puissance nominale (kW)',
-        'Charge nominale (kg)', 'Charge du godet (m³)', 'Lame semi-U (m³)', 'Largeur de voie (mm)',
-        'Capacité de levage nominale (t)', 'Flèche allongée (m)', 'Puissance du moteur (kW/tr/min)'
-    ];
+    $allColumns = DB::getSchemaBuilder()->getColumnListing('details');
+
+// Exclure les colonnes "id" et "product_id"
+$columns = collect($allColumns)->reject(function ($column) {
+    return in_array($column, ['id', 'product_id','created_at','updated_at']);
+})->toArray();
 
     // Prepare the filtered details
     $filteredDetails = [];

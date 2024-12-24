@@ -68,6 +68,7 @@ nav ul li:hover::after {
        left: 0;
    }
 
+
 .menu-icon {
        display: none;
        cursor: pointer;
@@ -79,7 +80,7 @@ nav ul li:hover::after {
    }
 
    /* Mobile menu */
-   @media (max-width: 700px) {
+   @media (max-width: 780px) {
        nav {
            padding: 10px 40px;
        }
@@ -109,7 +110,7 @@ nav ul li:hover::after {
        .info-bar {
            display: none;
        }
-       
+
    }
 
    /* Info-bar dropdown styling */
@@ -169,6 +170,7 @@ footer {
        color: white;
        width: 100%;
    }
+   .dropdown-menu dropdown-item {background: linear-gradient(to right, #2042be, #0d2471);}
 @media (max-width: 768px) {
     .produit-header {
         flex-direction: column;
@@ -191,7 +193,7 @@ footer {
      /* Ensure the button is visible on mobile */
      margin: 10px 0;
           }
-    
+
 .products-list {
     margin-top: 10px;
           }
@@ -228,25 +230,29 @@ footer {
         scrollbar-color: #2216ca #602cd9;
          /* For Firefox */
                                   }
-                
+
      /* For WebKit browsers (Chrome, Safari) */
 .mobile-ul::-webkit-scrollbar {
         width: 4px;
-                                    
+
     }
-                
+
 .mobile-ul::-webkit-scrollbar-thumb {
          background: #3308eef5;
           /* Scrollbar color */
          border-radius: 4px;
          /* Round edges */
  }
-                
+
  .mobile-ul::-webkit-scrollbar-thumb:hover {
     background: #555;
 
             }
-      
+
+            .lang{
+                display:none
+            }
+
 }
 /* BUTTON WHATSSAP*/
 .whatsapp-btn-container {
@@ -265,6 +271,10 @@ footer {
         bottom: 24px;
         opacity: 1;
     }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .whatsapp-btn-container .whatsapp-btn {
@@ -294,3 +304,42 @@ footer {
     transform: rotateZ(0deg) translateX(0px) !important;
     opacity: 1 !important;
 }
+
+.container{
+width: 95% !important;
+}
+
+.bbb_deals_item_detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bbb_deals_item_detail_label {
+    font-weight: bold;
+    text-align: left;
+    flex-basis: 75%;  /* Label takes 40% of the width */
+}
+
+.bbb_deals_item_detail_value {
+    text-align: right;
+    flex-basis: 25%;  /* Value takes 60% of the width */
+}
+
+.dropdown-item:hover{
+    color:black !important;
+}
+
+@media (max-width: 768px) {
+#menuList {
+    min-height: 0;
+    overflow: hidden;
+    transition: min-height 0.3s ease-in-out;
+}
+
+#s {
+    transition: padding-top 0.3s ease-in-out;
+}
+
+}
+

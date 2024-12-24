@@ -23,13 +23,29 @@
                 padding-top: 30px;
 
             }
+
         }
+      #menu {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+    @media (max-width: 600px) {
+        #navbar {
+            display: none;
+
+        }
+
+
+
+    }
     </style>
     <section class="py-5 mt-5 mb-5">
         <div class="">
             <div class="row gx-5">
                 <aside class="col-lg-6">
-                    <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                    <div class="mb-3 border rounded-4 d-flex justify-content-center">
                         <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
                             <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
                                 src="{{ asset('/images/' . $product->img_pro) }}" />
@@ -39,41 +55,50 @@
                 <main class="col-lg-6">
                     <div class="ps-lg-5">
                         <h4 class="title text-dark">
-                            <h1>{{ $product->nom_pro }}</h1> <br> {{ GoogleTranslate::trans($product->dec_pro, \App::getLocale()) }}
+                            <h1>{{ $product->nom_pro }}</h1> <br> 
 
                         </h4>
                     </div>
-                    <hr style="margin-top: 60px">
-                    @foreach ($filteredDetails as $detail)
-                        <div class="row" style="margin-top: 40px">
-                            @foreach ($detail as $column => $value)
-                                <dt class="col-3 ">{{ GoogleTranslate::trans(ucfirst($column) , \App::getLocale()) }}</dt>
-                                <dd class="col-9 ">{{ GoogleTranslate::trans($value, \App::getLocale()) }}</dd>
-                            @endforeach
-                        </div>
-                    @endforeach
-                    <hr style="margin-top: 30px" />
+                   @if(!empty($filteredDetails) && count($filteredDetails) > 0)
+                        <hr style="margin-top: 60px">
+                        @foreach ($filteredDetails as $detail)
+                            <div class="row" style="margin-top: 40px;margin-right: 20px !important;">
+                                @foreach ($detail as $column => $value)
+                                    <dt class="col-10 ">{{ GoogleTranslate::trans(ucfirst($column), \App::getLocale()) }}</dt>
+                                    <dd class="col-1 ">{{ GoogleTranslate::trans($value, \App::getLocale()) }}</dd>
+                                @endforeach
+                            </div>
+                        @endforeach
+                        
+                       
 
+                        <hr style="margin-top: 30px" />
+                    @endif
+
+
+                   
+                <br>
                     <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
                         class="btn btn-warning shadow-0">
                         <i class="me-1 fa fa-shopping-basket"></i>{{ GoogleTranslate::trans( 'Commander en ligne', \App::getLocale()) }}
                     </a>
-                    <a href="#" class="btn btn-primary shadow-0 " style=""><i class="fa-solid fa-phone"></i>
-                        00-00-00-00 </a>
+
             </div>
             </main>
         </div>
         </div>
     </section>
     <section>
-        <div  id="navbar"style="position: relative; z-index: 10000; height: 70px; width: 100%; background-color: #2042be; color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <ul style="list-style: none; padding-righ: 40px; display: flex; gap: 60px; margin-right: 60px;">
-                <li class="parali" style="font-size: 20px;">{{$product->nom_pro}}</li>
-                <li class="parali" style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a>
-                </li>
-                <li class="parali" style="font-size: 20px;"><a style="color: white; text-decoration: none" href="#parameter">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</a></li>
-            </ul>
-        </div>
+        <div id="navbar" style="position: relative; z-index: 10000; background-color: #2042be;  justify-content: space-between; align-items: center; color: white;height: 70px; width: 100%;padding: 0 20px;padding-top: 20px;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <ul id="menu" class="gap-4 mb-0 list-unstyled d-lg-flex" >
+             <div class="logo" style="font-size: 20px;">{{$product->nom_pro}}</div>
+            <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a></li>
+            <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none" href="#parameter">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</a></li>
+        </ul>
+    </div>
+</div>
         <div id="Product_facture" class="mt-5 text-white">margin</div>
         {{-- Product fetures --}}
         <div style="margin-top: 10px" class="container mt-3 ">
@@ -100,8 +125,8 @@
                         @foreach ($parametres as $parametre)
                             <tr>
                                 <th scope="row">{{ GoogleTranslate::trans($parametre->Article , \App::getLocale()) }}</th>
-                                <td>{{ GoogleTranslate::trans( $parametre->Unité , \App::getLocale()) }}</td>
-                                <td>{{ GoogleTranslate::trans( $parametre->Paramètre , \App::getLocale()) }}</td>
+                                <td>{{ $parametre->Unité }}</td>
+                                <td>{{ GoogleTranslate::trans($parametre->Paramètre, \App::getLocale())  }}</td>
                             </tr>
                         @endforeach
                     </tbody>

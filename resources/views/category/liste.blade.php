@@ -26,6 +26,9 @@
         .col-5-custom {
             width: 50%; /* 2 colonnes sur les petits écrans */
         }
+        .sss{
+    display:none
+}
     }
 
     @media (max-width: 576px) {
@@ -35,11 +38,11 @@
     }
 
     </style>
-    <div style="position: relative; width: 100%;">
+    <div style="position: relative; width: 100%;" class="sss">
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             loading="lazy" alt="">
         <div
-            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;"class="photo" >
             <span style="font-size: 50px;">{{ GoogleTranslate::trans('PRODUITS', \App::getLocale()) }}</span>
         </div>
     </div>

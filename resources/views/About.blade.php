@@ -254,19 +254,24 @@
         .rounded-circle {
             border-radius: 50% !important;
         }
-    </style>
-    <div style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
-            loading="lazy" alt="">
-        <div
-            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
-            <span style="font-size: 50px;">{{ GoogleTranslate::trans('À PROPOS', \App::getLocale()) }}</span>
-        </div>
+   @media (max-width: 768px) {
+    .image-desktop-only {
+        display: none;
+    }
+}
+</style>
+
+        <div style="position: relative; width: 100%;"class="image-desktop-only">
+    <img  style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}" alt="">
+    <div class="image-desktop-only"
+        style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+        <span style="font-size: 50px;">{{ GoogleTranslate::trans('A PROPOS DE', \App::getLocale()) }}</span>
     </div>
-    <section class="page-section" id="about">
+</div>
+    <section class="page-section" id="about"  >
         <div class="container">
-            <ul class="timeline">
-                <li>
+            <ul class="timeline" >
+                <li data-aos="fade-left">
                     <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('images/Original.png') }}"
                             loading="lazy" alt="..." />
                     </div>
@@ -289,15 +294,15 @@
                         </div>
                     </div>
                 </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                <li class="timeline-inverted" data-aos="fade-left">
+                    <div class="timeline-image" ><img class="rounded-circle img-fluid"
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">
                                 {{ GoogleTranslate::trans('DÉVOILER NOTRE HÉRITAGE', \App::getLocale()) }}</h4>
                         </div>
-                        <div class="timeline-body">
+                        <div class="timeline-body" >
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
                                     "Dans un monde où le progrès se mesure à la robustesse des fondations et à
@@ -310,15 +315,15 @@
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                <li data-aos="fade-left">
+                    <div class="timeline-image" ><img class="rounded-circle img-fluid"
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel" >
                         <div class="timeline-heading">
 
                             <h4 class="subheading">{{ GoogleTranslate::trans('IMPACT MONDIAL', \App::getLocale()) }}</h4>
                         </div>
-                        <div class="timeline-body">
+                        <div class="timeline-body" >
                             <p class="text-muted">
                                 {{ GoogleTranslate::trans(
                                     "EVO machinery est fier de figurer parmi les plus grandes
@@ -330,10 +335,10 @@
                         </div>
                     </div>
                 </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                <li class="timeline-inverted" data-aos="fade-left">
+                    <div class="timeline-image" ><img class="rounded-circle img-fluid"
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel" >
                         <div class="timeline-heading">
 
                             <h4 class="subheading">
@@ -358,15 +363,15 @@
         </div>
 
 
-        <div class="container">
-            <div class="text-center">
+        <div class="container" data-aos="fade-left">
+            <div class="text-center" >
                 <h2 class="section-heading text-uppercase " style="color: #2042be">
                     {{ GoogleTranslate::trans('CE QUE NOUS OFFRONS', \App::getLocale()) }}</h2>
 
             </div>
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="team-member">
+                    <div class="team-member" data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('QUALITÉ', \App::getLocale()) }}</h4>
@@ -382,7 +387,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="team-member">
+                    <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('CONCEPTION ET R&D', \App::getLocale()) }}</h4>
@@ -397,7 +402,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="team-member">
+                    <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('DIVERSITÉ', \App::getLocale()) }}</h4>
@@ -412,7 +417,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="team-member">
+                    <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
                         <h4>{{ GoogleTranslate::trans('SERVICE', \App::getLocale()) }}</h4>

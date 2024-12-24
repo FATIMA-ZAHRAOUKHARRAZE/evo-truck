@@ -37,7 +37,7 @@ footer {
     /* Ensure it’s higher than other overlapping elements */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 780px) {
     .sidebar {
         margin-left: 0;
         padding: 10px;
@@ -48,5 +48,5 @@ footer {
         /* Space between deals on mobile */
     }
 
-  
+
 }

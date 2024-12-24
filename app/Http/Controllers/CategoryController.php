@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Detail;
@@ -21,12 +22,11 @@ class CategoryController extends Controller
 
         // Récupérer les détails pour tous les produits récupérés
         $details = Detail::whereIn('product_id', $products->pluck('id'))->get();
-
-        // Liste de toutes les colonnes de la table
-            $columns = [
-        'Poids en ordre de marche (kg)','Capacité du godet (m³)','Puissance nominale (kW)','Charge nominale (kg)','Charge du godet (m³)',
-        'Lame semi-U (m³)','Largeur de voie (mm)','Capacité de levage nominale (t)','Flèche allongée (m)','Puissance du moteur (kW/tr/min)'
-    ];
+         $allColumns = DB::getSchemaBuilder()->getColumnListing('details');
+        // Exclure les colonnes "id" et "product_id"
+        $columns = collect($allColumns)->reject(function ($column) {
+            return in_array($column, ['id', 'product_id']);
+        })->toArray();
 
         // Créer une collection pour les détails filtrés
         $filteredDetails = [];
@@ -43,12 +43,12 @@ class CategoryController extends Controller
                 });
 
                 // Si on a au moins 3 colonnes non nulles, on en choisit 3 aléatoirement
-                if ($nonNullColumns->count() >= 3) {
-                    // Convertir les clés en tableau
-                    $randomColumns = $nonNullColumns->random(3)->toArray();
-                    // Retourner uniquement les colonnes sélectionnées pour cet enregistrement
-                    return $detail->only($randomColumns);
-                }
+                if ($nonNullColumns->count() >= 1) {
+            // Limiter au maximum 3 colonnes non nulles aléatoires (ou toutes si moins de 3)
+            $selectedColumns = $nonNullColumns->take(3)->toArray();
+            // Retourner uniquement les colonnes sélectionnées pour cet enregistrement
+            return $detail->only($selectedColumns);
+        }
                 return null; // Sinon, on ne retourne rien
             })->filter(); // Filtrer les résultats non nuls
 
