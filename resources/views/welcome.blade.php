@@ -28,11 +28,7 @@
             }
         }
 
-        @media (max-width: 768px) {
-          
 
-           
-        }
 
         @media (max-width: 576px) {
             .col-5-custom
@@ -49,17 +45,23 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15 !important); /* Add a subtle shadow */
         opacity: 0.8 !important;
     }
-    </style>
+</style>
 
     <!-- Code pour le banner image -->
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block" style="margin-top: 1.5rem; margin-bottom: 2rem; height: 90vh !important;  width: 100%;" src="{{ asset('images\Original.png') }}" alt="Slide 1">
+          <div class="carousel-item active">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\EXCAVATORS 1.png') }}" alt="Slide 1">
             </div>
 
-            <div class="carousel-item">
-                <img class="d-block" style="margin-top: 1.5rem; margin-bottom: 2rem; height: 90vh !important;  width: 100%;" src="{{ asset('images\Original.png') }}" alt="Slide 2">
+           <div class="carousel-item ">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\LOADERS 1.png') }}" alt="Slide 1">
+            </div>
+            <div class="carousel-item ">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="Slide 1">
+            </div>
+            <div class="carousel-item ">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 4.png') }}" alt="Slide 1">
             </div>
     </div>
 

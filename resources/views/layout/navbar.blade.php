@@ -47,7 +47,7 @@
             </div>
             <ul id="menuList">
                  <!--welcome --->
-                <li> <a href="{{ url('/') }}"
+                <li class="s" > <a href="{{ url('/') }}"
                         class="menu-item">{{ GoogleTranslate::trans('Bienvenue', \App::getLocale()) }}</a>
                 </li>
                 <!--about --->

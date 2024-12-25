@@ -112,7 +112,7 @@
         <!-- Content Column -->
         <div class="col-md-9 col-12">
             <div class="row d-flex flex-wrap">
-                @foreach ($filteredDetails as $item)
+                @foreach ($filteredDetailsPaginator as $item)
                     <div class="product-item mb-4 col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                         <div class="bbb_deals">
                             <div class="bbb_deals_slider_container">
@@ -152,7 +152,35 @@
                     </div>
                 @endforeach
             </div>
+            <div class="pagination-wrapper">
+    {{ $filteredDetailsPaginator->links('pagination::bootstrap-5') }}
+</div>
         </div>
     </div>
 </section>
+<script>
+    // Select the <nav> element inside .pagination-wrapper
+const navElement = document.querySelector('.pagination-wrapper nav');
+
+if (navElement) {
+  // Create a new <div> element
+  const divElement = document.createElement('div');
+
+  // Copy attributes from the <nav> to the <div>
+  Array.from(navElement.attributes).forEach(attr => {
+    divElement.setAttribute(attr.name, attr.value);
+  });
+
+  // Copy the content of the <nav> to the <div>
+  divElement.innerHTML = navElement.innerHTML;
+
+  // Replace the <nav> with the <div>
+  navElement.parentNode.replaceChild(divElement, navElement);
+
+  console.log('<nav> has been replaced with <div>!');
+} else {
+  console.log('No <nav> found inside .pagination-wrapper');
+}
+
+</script>
 @endsection

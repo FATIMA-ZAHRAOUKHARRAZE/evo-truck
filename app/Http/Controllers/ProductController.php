@@ -7,68 +7,57 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\SCategorie;
 use App\Models\Detail;
+use Illuminate\Support\Collection;
 use App;
+use Illuminate\Pagination\Paginator;
 use Session;
 class ProductController extends Controller
 {
-    // code pour index.product
     public function index($id)
-    {
-        // Récupérer les produits qui appartiennent à la catégorie spécifiée
-        $products = Product::where('category_id', $id)->get();
-        $categories = Category::all();
+{
+    // Fetch products and categories
+    $products = Product::where('category_id', $id)->get();
+    $categories = Category::all();
+    $scategories = Category::find($id)?->SCategory ?? collect();
 
-        $scategories = Category::find($id)->SCategory;
+    // Fetch details and filter
+    $details = Detail::whereIn('product_id', $products->pluck('id'))->get();
+    $allColumns = DB::getSchemaBuilder()->getColumnListing('details');
+    $columns = collect($allColumns)->reject(fn($column) => in_array($column, ['id', 'product_id']));
 
-        // Récupérer les détails pour tous les produits récupérés
-        $details = Detail::whereIn('product_id', $products->pluck('id'))->get();
+    $filteredDetails = $products->map(function ($product) use ($details, $columns) {
+        $productDetails = $details->where('product_id', $product->id);
+        $finalDetail = $productDetails->map(function ($detail) use ($columns) {
+            $nonNullColumns = $columns->filter(fn($column) => !is_null($detail->{$column}))->take(3);
+            return $nonNullColumns->isNotEmpty() ? $detail->only($nonNullColumns->toArray()) : null;
+        })->filter()->take(3);
 
-        // Liste de toutes les colonnes de la table
- $allColumns = DB::getSchemaBuilder()->getColumnListing('details');
+        return [
+            'product' => $product,
+            'details' => $finalDetail,
+        ];
+    });
 
-// Exclure les colonnes "id" et "product_id"
-$columns = collect($allColumns)->reject(function ($column) {
-    return in_array($column, ['id', 'product_id']);
-})->toArray();
-        // Créer une collection pour les détails filtrés
-        $filteredDetails = [];
+    // Paginate the filtered results
+    $filteredDetails = $this->paginateCollection($filteredDetails, 9);
 
-        // Parcourir chaque produit pour obtenir ses détails
-        foreach ($products as $product) {
-    $productDetails = $details->where('product_id', $product->id);
-
-    // Parcourir chaque enregistrement de détails pour sélectionner les colonnes non nulles
-    $finalDetail = $productDetails->map(function ($detail) use ($columns) {
-        // Filtrer les colonnes non nulles
-        $nonNullColumns = collect($columns)->filter(function ($column) use ($detail) {
-            return !is_null($detail->{$column});
-        });
-
-        // Si on a au moins une colonne non nulle
-        if ($nonNullColumns->count() >= 1) {
-            // Limiter au maximum 3 colonnes non nulles aléatoires (ou toutes si moins de 3)
-            $selectedColumns = $nonNullColumns->take(3)->toArray();
-            // Retourner uniquement les colonnes sélectionnées pour cet enregistrement
-            return $detail->only($selectedColumns);
-        }
-        return null; // Sinon, ne retourne rien
-    })->filter(); // Filtrer les résultats non nuls
-
-    // Limiter à 3 enregistrements
-    $finalDetails = $finalDetail->take(3);
-
-    // Ajouter les détails filtrés pour ce produit dans le tableau
-    $filteredDetails[$product->id] = [
-        'product' => $product,
-        'details' => $finalDetails
-    ];
+    return view('product.index', compact('categories', 'filteredDetails', 'id', 'scategories'));
 }
 
+private function paginateCollection(Collection $items, int $perPage)
+{
+    $currentPage = Paginator::resolveCurrentPage() ?? 1;
+    $currentItems = $items->forPage($currentPage, $perPage);
 
-        // Passer les produits et leurs détails à la vue
-        return view('product.index', compact('categories', 'filteredDetails','id','scategories'));
-    }
-    public function googleTranslateChange(Request $request)
+    return new \Illuminate\Pagination\LengthAwarePaginator(
+        $currentItems,
+        $items->count(),
+        $perPage,
+        $currentPage,
+        ['path' => Paginator::resolveCurrentPath()]
+    );
+}
+public function googleTranslateChange(Request $request)
     {
 
          
@@ -79,7 +68,7 @@ $columns = collect($allColumns)->reject(function ($column) {
         return redirect()->back(); 
     }
 
-  public function filter($cid, $id, $productname = null)
+ public function filter($cid, $id, $productname = null)
 {
     // Fetch all categories
     $categories = Category::all();
@@ -106,15 +95,13 @@ $columns = collect($allColumns)->reject(function ($column) {
 
     $allColumns = DB::getSchemaBuilder()->getColumnListing('details');
 
-// Exclure les colonnes "id" et "product_id"
-$columns = collect($allColumns)->reject(function ($column) {
-    return in_array($column, ['id', 'product_id','created_at','updated_at']);
-})->toArray();
+    // Exclude columns "id" and "product_id"
+    $columns = collect($allColumns)->reject(function ($column) {
+        return in_array($column, ['id', 'product_id', 'created_at', 'updated_at']);
+    })->toArray();
 
     // Prepare the filtered details
-    $filteredDetails = [];
-
-    foreach ($products as $product) {
+    $filteredDetails = $products->map(function ($product) use ($details, $columns) {
         $productDetails = $details->where('product_id', $product->id);
 
         $finalDetail = $productDetails->map(function ($detail) use ($columns) {
@@ -134,14 +121,24 @@ $columns = collect($allColumns)->reject(function ($column) {
         // Limit to 3 records
         $finalDetails = $finalDetail->take(3);
 
-        // Store the final details for this product
-        $filteredDetails[$product->id] = [
+        return [
             'product' => $product,
-            'details' => $finalDetails
+            'details' => $finalDetails,
         ];
-    }
+    });
 
-    return view("product.filtered", compact('id','cid', 'categories', 'filteredDetails', 'scategories'));
+    // Paginate the filtered results
+    $perPage = 9;
+    $currentPage = Paginator::resolveCurrentPage();
+    $filteredDetailsPaginator = new \Illuminate\Pagination\LengthAwarePaginator(
+        $filteredDetails->forPage($currentPage, $perPage),
+        $filteredDetails->count(),
+        $perPage,
+        $currentPage,
+        ['path' => Paginator::resolveCurrentPath()]
+    );
+
+    return view("product.filtered", compact('id', 'cid', 'categories', 'filteredDetailsPaginator', 'scategories'));
 }
 }
 

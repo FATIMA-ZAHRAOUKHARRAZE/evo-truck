@@ -96,6 +96,7 @@ nav ul li:hover::after {
            gap: 0;
            overflow: hidden;
            max-height: 0;
+          
        }
 
        nav ul li {
@@ -172,6 +173,9 @@ footer {
    }
    .dropdown-menu dropdown-item {background: linear-gradient(to right, #2042be, #0d2471);}
 @media (max-width: 768px) {
+    .s{
+        margin-top:18px;
+    }
     .produit-header {
         flex-direction: column;
         /* Aligne les éléments en colonne sur les petits écrans */
