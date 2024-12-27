@@ -65,7 +65,7 @@
                             <div class="row" style="margin-top: 40px;margin-right: 20px !important;">
                                 @foreach ($detail as $column => $value)
                                     <dt class="col-10 ">{{ GoogleTranslate::trans(ucfirst($column), \App::getLocale()) }}</dt>
-                                    <dd class="col-1 ">{{ GoogleTranslate::trans($value, \App::getLocale()) }}</dd>
+                                    <dd class="col-1 ">{{$value}}</dd>
                                 @endforeach
                             </div>
                         @endforeach
@@ -104,7 +104,12 @@
         <div style="margin-top: 10px" class="container mt-3 ">
             <h2 style="font-weight: bold;color:#2042be">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</h2>
             <span class="mt-2 ">
-                {{ $product->dec_pro }}
+             {{ 
+    GoogleTranslate::trans(
+        $product->desc_pro ?? $product->cacteristique ?? 'Aucune description disponible', 
+        \App::getLocale()
+    ) 
+}}
             </span>
         </div>
 
@@ -126,7 +131,7 @@
                             <tr>
                                 <th scope="row">{{ GoogleTranslate::trans($parametre->Article , \App::getLocale()) }}</th>
                                 <td>{{ $parametre->Unité }}</td>
-                                <td>{{ GoogleTranslate::trans($parametre->Paramètre, \App::getLocale())  }}</td>
+                                <td>{{ $parametre->Paramètre}}</td>
                             </tr>
                         @endforeach
                     </tbody>

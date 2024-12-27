@@ -42,7 +42,7 @@
         <!-- Sidebar -->
         <div class="col-md-3 col-12 sidebar mb-4">
             <h3 class="mb-4">
-                {{ GoogleTranslate::trans("Filter les Produits", \App::getLocale()) }}
+                {{ GoogleTranslate::trans("Filtrer les Produits", \App::getLocale()) }}
             </h3>
 
             <!-- Category Selection -->
@@ -69,14 +69,14 @@
             <!-- Product Name Input -->
             <div class="mb-3">
                 <label for="product-name" class="form-label">
-                    {{ GoogleTranslate::trans("le nom de produit.", \App::getLocale()) }}
+                    {{ GoogleTranslate::trans("Le nom de produit.", \App::getLocale()) }}
                 </label>
-                <input type="text" class="form-control" id="product-name" placeholder="Enter part of product">
+                <input type="text" class="form-control" id="product-name" placeholder="{{ GoogleTranslate::trans('Entrer une partie de produit', \App::getLocale()) }}">
             </div>
 
             <!-- Filter Link Button -->
             <a href="#" id="filter-link" class="btn btn-primary mb-3">
-                {{ GoogleTranslate::trans("filtre", \App::getLocale()) }}
+                {{ GoogleTranslate::trans("Filtrer", \App::getLocale()) }}
             </a>
 
             <script>
@@ -100,13 +100,7 @@
                 updateFilterLink();
             </script>
 
-            <!-- Product Solution Section -->
-            <h2 class="mt-4">
-                {{ GoogleTranslate::trans("Voir les solutions de produits associés.", \App::getLocale()) }}
-            </h2>
-            <h4>
-                {{ GoogleTranslate::trans("Il utilise un moteur YANMAR, offrant un faible niveau de bruit et une excellente efficacité économique.", \App::getLocale()) }}
-            </h4>
+          
         </div>
 
         <!-- Content Column -->
@@ -128,8 +122,8 @@
                                             <div class="bbb_deals_item_details" data-aos="fade-left">
                                                 @foreach ($detail as $column => $value)
                                                     <div class="bbb_deals_item_detail">
-                                                        <div class="bbb_deals_item_detail_label" style="font-size: 15px"> {{ ucfirst(Str::limit($column, 12)) }}:</div>
-                                                        <div class="bbb_deals_item_detail_value">{{ Str::limit($value, 10) }}</div>
+                                                        <div class="bbb_deals_item_detail_label" style="font-size: 15px"> {{ ucfirst(GoogleTranslate::trans(Str::limit($column, 12), \App::getLocale())) }}:</div>
+                                                        <div class="bbb_deals_item_detail_value">  {{ Str::limit($value, 10)}}</div>
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -137,10 +131,10 @@
                                         <div class="mt-2 available">
                                             <div class="flex-row available_line d-flex justify-content-between">
                                                 <a href="{{ route('ProductDetail', $item['product']->id) }}" class="btn" data-aos="flip-left">
-                                                    {{"PLUS" }}
+                                                  {{ GoogleTranslate::trans("PLUS", \App::getLocale()) }}
                                                 </a>
                                                 <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}" class="btn" data-aos="flip-right">
-                                                    {{"ORDER" }}
+                                              {{ GoogleTranslate::trans("COMMANDE", \App::getLocale()) }}
                                                 </a>
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>

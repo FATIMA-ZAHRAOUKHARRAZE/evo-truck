@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="keywords" content="Evo , machinery,excavating machinery,crane,forklift,chariot élévateur,grue">
         <!-- Fonts -->
-        
+
 
 
         @yield('url')
@@ -16,8 +16,11 @@
         <link rel="stylesheet" href={{ asset('css/product.css') }}>
         <link rel="stylesheet" href={{ asset('css/liste.css') }}>
         <link rel="icon" href="{{ asset('images/Original.png') }}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -46,22 +49,16 @@
                 <a href="/"><img src="{{ asset('logo.png') }}" alt=""></a>
             </div>
             <ul id="menuList">
-                 <!--welcome --->
-                <li class="s" > <a href="{{ url('/') }}"
-                        class="menu-item">{{ GoogleTranslate::trans('Bienvenue', \App::getLocale()) }}</a>
+                <!--welcome --->
+                <li class="s"> <a href="{{ url('/') }}"
+                        class="menu-item">{{ GoogleTranslate::trans('Acceuil', \App::getLocale()) }}</a>
                 </li>
-                <!--about --->
-                <li> <a href="{{ url('/about') }}"
-                        class="menu-item">{{ GoogleTranslate::trans('À propos de', \App::getLocale()) }}</a>
-                </li>
-                {{-- solution --}}
-                <li><a href="{{ url('/solution') }}">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
 
-                </li>
 
                 {{-- products --}}
                 <li class="web-products">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="color:white">
                         {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
                     </a>
                     <ul class="dropdown-menu">
@@ -74,8 +71,15 @@
                         @endforeach
                     </ul>
                 </li>
-                
-                
+                <!--about --->
+                <li> <a href="{{ url('/about') }}"
+                        class="menu-item">{{ GoogleTranslate::trans('À propos de', \App::getLocale()) }}</a>
+                </li>
+                {{-- solution --}}
+                <li><a href="{{ url('/solution') }}">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
+
+                </li>
+
                 {{-- Mobile products --}}
                 <li style="display: none;z-index:200;" class=" mobile-products nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
@@ -99,10 +103,9 @@
                         @endforeach
                     </ul>
                 </li>
-
-                <li>
+                <li class="mob-lang">
                     <div class="col-md-4 w-100">
-                        <select style=" background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
+                        <select style="background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
                             class="form-select pe-5 changeLanguage" aria-label="Language select"><i
                                 class="fa-solid fa-language"></i>
                             <option style="background-color:#000099">
@@ -111,12 +114,32 @@
                             <option style="background-color:#000099" value="en"
                                 {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
                             <option style="background-color:#000099" value="fr"
-                                {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>Français</option>
+                                {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
+                                Français</option>
                         </select>
                     </div>
                 </li>
 
+
             </ul>
+
+            <div class="pc-lang">
+                <div class="col-md-4 w-100">
+                    <select
+                        style="padding-bottom:10px; background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
+                        class="form-select pe-5 changeLanguage" aria-label="Language select"><i
+                            class="fa-solid fa-language"></i>
+                        <option style="background-color:#000099">
+                            {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
+                        </option>
+                        <option style="background-color:#000099" value="en"
+                            {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                        <option style="background-color:#000099" value="fr"
+                            {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
+                            Français</option>
+                    </select>
+                </div>
+            </div>
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -148,14 +171,16 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">
                             {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}</h6>
-                      @foreach ($categories->take(5) as $categorie)
-    <p><a class="text-white" style="text-decoration: none"
-            href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}</a>
-    </p>
-@endforeach
-<p> <a class="text-white" style="text-decoration: none" href="{{ route('category.liste') }}">
-                                {{ GoogleTranslate::trans('voir tous', \App::getLocale()) }} {{' '}}<i class="fa fa-arrow-right"></i></a>
-</p>
+                        @foreach ($categories->take(5) as $categorie)
+                            <p><a class="text-white" style="text-decoration: none"
+                                    href="{{ url('product/' . $categorie->id) }}">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}</a>
+                            </p>
+                        @endforeach
+                        <p> <a class="text-white" style="text-decoration: none"
+                                href="{{ route('category.liste') }}">
+                                {{ GoogleTranslate::trans('voir tous', \App::getLocale()) }} {{ ' ' }}<i
+                                    class="fa fa-arrow-right"></i></a>
+                        </p>
                     </div>
                     <hr class="w-100 clearfix d-md-none" />
                     <!-- Contact Us -->
@@ -228,5 +253,5 @@
             once: true, // Jouer une seule fois
         });
     </script>
-    
+
 </html>

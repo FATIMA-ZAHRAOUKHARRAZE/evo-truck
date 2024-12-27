@@ -23,7 +23,7 @@ class ProductController extends Controller
     // Fetch details and filter
     $details = Detail::whereIn('product_id', $products->pluck('id'))->get();
     $allColumns = DB::getSchemaBuilder()->getColumnListing('details');
-    $columns = collect($allColumns)->reject(fn($column) => in_array($column, ['id', 'product_id']));
+    $columns = collect($allColumns)->reject(fn($column) => in_array($column, ['id', 'product_id','updated_at','created_at']));
 
     $filteredDetails = $products->map(function ($product) use ($details, $columns) {
         $productDetails = $details->where('product_id', $product->id);

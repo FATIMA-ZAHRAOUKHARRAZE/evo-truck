@@ -39,7 +39,7 @@
                                             <div class="bbb_deals_item_details" data-aos="fade-left">
                                                 @foreach ($detail as $column => $value)
                                                     <div class="bbb_deals_item_detail">
-                                                        <div class="bbb_deals_item_detail_label" style="font-size: 15px">{{ ucfirst($column) }}:</div>
+                                                        <div class="bbb_deals_item_detail_label" style="font-size: 15px">{{ ucfirst(GoogleTranslate::trans(Str::limit($column, 12), \App::getLocale())) }}:</div>
                                                         <div class="bbb_deals_item_detail_value">{{ $value }}</div>
                                                     </div>
                                                 @endforeach

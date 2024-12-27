@@ -16,6 +16,9 @@ class DetailController extends Controller
         $parametres=Parametre::where('product_id', $product->id)->get();
         // Liste de toutes les colonnes de la table
            $columns = [
+               'Longueur de la flèche',
+               'Hauteur de levage maximum',
+               'Capacité de levage maximum',
     'Taille des particules d\'alimentation',
     'Capacité de traitement',
     'Poids de la machine',

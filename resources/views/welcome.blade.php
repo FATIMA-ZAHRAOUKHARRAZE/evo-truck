@@ -1,6 +1,7 @@
 @extends('layout.navbar')
 @section('content')
     <style>
+
         .row {
             margin-right: 0 !important;
         }
@@ -20,21 +21,21 @@
             .col-5-custom {
                 width: 25%;
             }
+           
         }
 
         @media (max-width: 992px) {
             .col-5-custom {
                 width: 33.33%;
             }
+
         }
-
-
-
         @media (max-width: 576px) {
             .col-5-custom
             {
                 width: 100%;
             }
+
         }
             .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease !important;
@@ -51,17 +52,17 @@
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\EXCAVATORS 1.png') }}" alt="Slide 1">
+                <img class="d-block" style="margin-top:2vh; margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\EXCAVATORS 1.png') }}" alt="Slide 1">
             </div>
 
            <div class="carousel-item ">
-                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\LOADERS 1.png') }}" alt="Slide 1">
+                <img class="d-block" style="margin-top:2vh;margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\LOADERS 1.png') }}" alt="Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="Slide 1">
+                <img class="d-block" style="margin-top:2vh;margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 4.png') }}" alt="Slide 1">
+                <img class="d-block" style="margin-top:2vh;margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 4.png') }}" alt="Slide 1">
             </div>
     </div>
 
@@ -76,7 +77,7 @@
 
     <!-- Code pour la partie produit -->
     <div class="row justify-content-center" style="margin-top: 50px" data-aos="fade-left">
-        @forelse ($categories->take(21) as $categorie)
+        @forelse ($categories as $categorie)
             <div class="mb-4 col-5-custom" > 
                 <div class="border-0 shadow-sm card h-100" style="border-radius: 15px;" >
                     <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">

@@ -53,7 +53,8 @@
         <div class="search-bar col-12 text-center mt-4 mb-4">
             <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
                 <input type="text" class="form-control form-control-lg search-input" name="query"
-                    placeholder="Entrer le modèle de produit..." aria-label="Search"
+                    placeholder= "{{ GoogleTranslate::trans('Entrer le modèle de produit...', \App::getLocale()) }}"
+ aria-label="Search"
                     style="border-radius: 25px 0 0 25px; border: 1px solid #ccc; padding: 10px;">
                 <button type="submit" class="btn btn-primary btn-lg"
                     style="border-radius: 0 25px 25px 0; padding: 10px 20px;">
