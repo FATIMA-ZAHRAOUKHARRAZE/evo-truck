@@ -39,13 +39,16 @@ nav ul {
        gap: 20px;
        align-items: center;
    }
+.nav-link{
+    padding:0 !important;
+}
 
 nav ul li {
    
        list-style-type: none;
        font-size: 20px;
        position: relative;
-       padding-right:27px;
+       padding-right:20px;
        padding-top:14px;
    }
 
@@ -76,6 +79,7 @@ nav ul li:hover::after {
        display: none;
        cursor: pointer;
    }
+   
 
 .menu-icon i {
        color: #fff;
@@ -171,7 +175,7 @@ nav ul li:not(:hover) .info-bar {
    /* Main content */
 main {
        flex-grow: 1;
-       padding-top: 100px;
+       padding-top: 3vh;
        /* To ensure content starts below the navbar */
    }
 

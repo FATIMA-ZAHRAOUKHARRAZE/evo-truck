@@ -52,17 +52,17 @@
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-                <img class="d-block" style="margin-top:2vh; margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\EXCAVATORS 1.png') }}" alt="Slide 1">
+                <img class="d-block" style=" margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\EXCAVATORS 1.png') }}" alt="Slide 1">
             </div>
 
            <div class="carousel-item ">
-                <img class="d-block" style="margin-top:2vh;margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\LOADERS 1.png') }}" alt="Slide 1">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\LOADERS 1.png') }}" alt="Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" style="margin-top:2vh;margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="Slide 1">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" style="margin-top:2vh;margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 4.png') }}" alt="Slide 1">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 4.png') }}" alt="Slide 1">
             </div>
     </div>
 
