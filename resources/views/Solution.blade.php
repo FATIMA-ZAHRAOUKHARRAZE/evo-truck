@@ -13,7 +13,7 @@
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             loading="lazy" alt="">
         <div class="image-desktop-only"
-        style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+        style="font-weight: bold; position: absolute; top: 20%; left:30%;  color: #2042be; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;">{{ GoogleTranslate::trans('EQUIPEMENT
             BLINDES', \App::getLocale()) }}</span>
         </div>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="content"data-aos="fade-up">
                     <p>
-                    {{ GoogleTranslate::trans('Depuis plus de 25 ans, vehiculeblinde.com est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
+                    {{ GoogleTranslate::trans('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
 
 En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, vehiculeblinde.com se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.
 

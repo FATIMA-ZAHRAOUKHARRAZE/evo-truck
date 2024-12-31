@@ -18,6 +18,7 @@ use App\Http\Controllers\admin\CategorieController;
 use App\Http\Controllers\admin\DeatailController;
 use App\Http\Controllers\admin\ParametreController;
 use App\Http\Controllers\admin\RegisteredUserController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -102,5 +103,8 @@ Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.up
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
+
+Route::get('/contact',[ContactController::class, "index"])->name('contact');
+Route::post('/contact', [ContactController::class, "send"])->name('contact.send');
 
 require __DIR__.'/auth.php';

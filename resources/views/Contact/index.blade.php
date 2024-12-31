@@ -96,9 +96,9 @@
 				<div class="mt-4 contact-details">
 					<p data-aos="fade-left"><i class="bi bi-geo-alt"></i> Address: 19h Maxgrand Plaza No.3 Tai Yau
 						Street San Po Kong, Kowloon, Hong Kong</p>
-					<p data-aos="fade-left"><i class="bi bi-telephone"></i> Phone: +86 19 826 086 894</p>
+					<p data-aos="fade-left"><i class="bi bi-telephone"></i> Téléphone: +86 19 826 086 894</p>
 					<p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: export@gmg-market.com</p>
-					<p data-aos="fade-left"><i class="bi bi-globe"></i> Website: evo-machinery.com</p>
+					<p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-machinery.com</p>
 				</div>
 			</div>
 		</div>

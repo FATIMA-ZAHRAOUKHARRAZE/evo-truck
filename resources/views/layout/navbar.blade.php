@@ -50,20 +50,33 @@
                 
 
                 {{-- products --}}
-                <li class="web-products">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
-                        {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
-                    </a>
-                    <ul class="dropdown-menu">
+             <li class="web-products">
+    <a class="nav-link dropdown-toggle" href="#" role="button" style="color:white">
+        {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
+    </a>
+    <ul class="dropdown-menu pt-4 kk">
+        <div class="dropdown-item-group d-flex">
+            @foreach ($categories->sortBy(function($category) {
+                return strlen($category->nom_cat); // Sort by the length of the category name
+            })->chunk(ceil($categories->count() / 3)) as $chunk)
+                <div class="dropdown-column me-5">
+                    @foreach ($chunk as $category)
+                        <span class="d-flex pb-2">
+                            <a style="color:white !important" class="dropdown-item rr" href="{{ url('product/' . $category->id) }}">
+                                {{ GoogleTranslate::trans($category->nom_cat, \App::getLocale()) }}
+                            </a>
+                            <img src="{{ asset('images/' . $category->img_cat) }}" style="width:50px;height:auto">
+                        </span>
+                    @endforeach
+                </div>
+            @endforeach
+        </div>
+    </ul>
+</li>
 
-                        <li><a class="dropdown-item" href="{{ route('category.liste') }}">
-                                {{ GoogleTranslate::trans('voir tous', \App::getLocale()) }}</a></li>
-                        @foreach ($categories->take(8) as $chunk)
-                            <li><a class="dropdown-item" href="{{ url('product/' . $chunk->id) }}">
-                                    {{ GoogleTranslate::trans($chunk->nom_cat, \App::getLocale()) }}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
+
+                
+              
                 <!--about --->
                 
                 {{-- solution --}}
@@ -71,7 +84,7 @@
 
                 </li>
                 <li> <a href="{{ url('/about') }}"
-                        class="menu-item">{{ GoogleTranslate::trans('À propos de', \App::getLocale()) }}</a>
+                        class="menu-item">{{ GoogleTranslate::trans('À propos', \App::getLocale()) }}</a>
                 </li>
                 {{-- contact --}}
                 <li><a href="{{ route('contact') }}">{{ GoogleTranslate::trans('Contact', \App::getLocale()) }}</a>
@@ -84,8 +97,8 @@
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
                     </a>
-                    <ul style="min-height:200px;font-size:12px !important;background:#0017acdc"
-                        class="dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
+                    <ul style="min-height: 300px;background: rgba(0, 23, 172, 0.863);font-size: 12px !important;position: absolute;inset: 0px auto auto 0px; margin: 0px;margin-top: 11px;left: -13px !important;transform: translate3d(-145px, 32px, 0px);"
+                        class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
                         <li>
                             <a class="text-white dropdown-item" href="{{ route('category.liste') }}">
                                 {{ GoogleTranslate::trans('produit', \App::getLocale()) }}
@@ -156,7 +169,7 @@
                     <!-- About Us -->
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">
-                            {{ GoogleTranslate::trans('À propos de', \App::getLocale()) }}</h6>
+                            {{ GoogleTranslate::trans('À propos', \App::getLocale()) }}</h6>
                         <p>
                             {{ GoogleTranslate::trans(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.", \App::getLocale()) }}
                         </p>
@@ -205,7 +218,7 @@
                         <!-- Copyright -->
                         <div class="col-md-7 col-lg-8 text-center text-md-start">
                             <div class="p-3">
-                                © 2024 Copyright: <a class="text-white" href="https://evo-machinery.com">EVO.com</a>
+                                © 2024 Copyright: <a class="text-white" href="https://evo-machinery.com">evo-machinery.com</a>
                             </div>
                         </div>
                     </div>
@@ -222,6 +235,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script>
+
         $('.changeLanguage').change(function(event) {
             var url = "{{ route('translate.change') }}";
             window.location.href = url + "?lang=" + $(this).val()
@@ -236,6 +250,7 @@
                 menuList.style.minHeight = "0px";
             }
         }
+        
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

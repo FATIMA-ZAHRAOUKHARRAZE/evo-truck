@@ -10,7 +10,8 @@ class Category extends Model
     use HasFactory;
      protected $fillable = [
         'nom_cat',        // Example product name
-        'img_cat',        // Example image field
+        'img_cat',
+        'img_catpro',// Example image field
     ];
      public function SCategory()
     {

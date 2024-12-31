@@ -36,9 +36,9 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="image">Image</label>
-                                <input type="text" class="form-control" name="img_pro" value="{{ $produit->img_pro }}"
-                                    id="img_pro">
+                                <input type="texte" class="form-control" name="image" id="image" >
                             </div>
+                            
                             <div class="form-group">
                                 <label for="categorie">Catégorie</label>
                                 <select name="category_id" id="category_id" class="form-control">

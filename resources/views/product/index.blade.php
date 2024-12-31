@@ -33,10 +33,10 @@
 <!-- Page Image -->
 <div class="sss" style="position: relative; width: 100%;">
     <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" 
-         src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
-    <div style="font-weight: bold; position: absolute; top: 20%; left:40%; color: #2042be; font-size: 24px; padding: 10px;">
+         src="{{ asset('images/'.$categorie->img_catpro) }}" loading="lazy" alt="">
+    <div style="font-weight: bold; position: absolute; top: 40%; left:40%; color: #2042be; font-size: 24px; ">
         <span style="font-size: 50px;">
-            {{ GoogleTranslate::trans('PRODUITS', \App::getLocale()) }}
+            {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
         </span>
     </div>
 </div>
@@ -121,7 +121,11 @@
                                     </div>
                                     <div class="mb-1 bbb_deals_content">
                                         <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
-                                            <div class="mb-5 bbb_deals_item_name" style="color: #031c77">
+                                           <div class="mb-5 bbb_deals_item_name" style="color: #031c77;font-size: {{ 
+    strlen($item['product']->nom_pro) < 12 ? '30px' : 
+    (strlen($item['product']->nom_pro) < 20 ? '20px' : 
+    (strlen($item['product']->nom_pro) < 30 ? '16px' : '14px'))
+}}">
                                                 <b>{{ $item['product']->nom_pro }}</b>
                                             </div>
                                         </div>
@@ -129,12 +133,12 @@
                                             <div class="bbb_deals_item_details" data-aos="fade-left">
                                                 @foreach ($detail as $column => $value)
                                                     <div class="bbb_deals_item_detail">
-                                                        <div class="bbb_deals_item_detail_label" style="font-size: 15px">
-                                                          {{ ucfirst(GoogleTranslate::trans(Str::limit($column, 12), \App::getLocale())) }}
+                                                        <div class="bbb_deals_item_detail_label" style="font-size: 13.7px">
+                                                          {{ ucfirst(GoogleTranslate::trans(Str::limit($column, 20), \App::getLocale())) }}
 
                                                         </div>
                                                         <div class="bbb_deals_item_detail_value">
-                                                           {{Str::limit($value, 10)}}
+                                                           {{Str::limit($value, 6)}}
 
                                                         </div>
                                                     </div>

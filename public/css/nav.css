@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
    /* Reset and base styling */
 * {
        margin: 0;
        padding: 0;
        box-sizing: border-box;
-       font-family: sans-serif;
+       font-family: "Poppins", serif;
+
    }
 html,
 body {
@@ -14,6 +18,346 @@ body {
        flex-direction: column;
        min-height: 100vh;
    }
+
+   /* Navbar styling */
+nav {
+       padding: 0px 0px 0px 80px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       background: linear-gradient(to right, #2042be, #0d2471);
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       z-index: 1000;
+       height: 80px;
+   }
+
+.logo img {
+       height: 120px;
+   }
+
+nav ul {
+       display: flex;
+       gap: 20px;
+       align-items: center;
+   }
+.nav-link{
+    padding:0 !important;
+}
+
+nav ul li {
+   
+       list-style-type: none;
+       font-size: 20px;
+       position: relative;
+       padding-right:20px;
+       padding-top:14px;
+   }
+
+nav ul li a {
+       text-decoration: none;
+       color: #fff;
+       padding: 10px 0;
+   }
+
+nav ul li::after {
+       content: "";
+       position: absolute;
+       left: 50%;
+       bottom: 0;
+       width: 0;
+       height: 2px;
+       background-color: #fff;
+       transition: width 0.3s ease, left 0.3s ease;
+   }
+
+nav ul li:hover::after {
+       width: 100%;
+       left: 0;
+   }
+   /* scrolle DE MENU PRODUITS */
+    .dropdown-menu {
+        max-height: 500px; /* Ajustez la hauteur selon vos besoins */
+        overflow-y: auto; /* Ajoute un défilement vertical */
+        scrollbar-width: thin; /* Style pour les navigateurs modernes */
+    }
+    .dropdown-menu::-webkit-scrollbar {
+        width: 8px; /* Largeur de la scrollbar */
+    }
+    
+    
+    
+
+    .menu-icon {
+           display: none;
+           cursor: pointer;
+       }
+   
+
+.menu-icon i {
+       color: #fff;
+       font-size: 30px;
+   }
+.mob-lang{
+        display:none;
+    }
+   /* Mobile menu */
+   @media (max-width: 780px) {
+        ul.ee.dropdown-menu.mobile-ul.show {
+        left: -2vw !important;
+        margin-top: 10px !important;
+        width: 96vw !important;
+    }
+       nav {
+           padding: 10px 40px;
+       }
+    .pc-lang{
+        display:none;
+    }
+    .mob-lang{
+        display:block;
+    }
+       nav ul {
+           position: absolute;
+           top: 65px;
+           left: 0;
+           right: 0;
+           flex-direction: column;
+           text-align: center;
+           background: linear-gradient(to right, #2042be, #0d2471);
+           gap: 0;
+           overflow: hidden;
+           max-height: 0;
+          
+       }
+
+       nav ul li {
+           padding: 20px;
+           padding-top: 0;
+       }
+
+       .menu-icon {
+           display: block;
+       }
+
+       .info-bar {
+           display: none;
+       }
+main {
+       flex-grow: 1;
+       padding-top: 4vh;
+       /* To ensure content starts below the navbar */
+   }
+   }
+   
+   
+
+
+   /* Main content */
+main {
+       flex-grow: 1;
+       padding-top: 3vh;
+       /* To ensure content starts below the navbar */
+   }
+.dropdown-menu {background: linear-gradient(to right, #2042be, #0d2471);}
+   /* Footer styling */
+footer {
+       background: linear-gradient(to right, #2042be, #0d2471);
+       color: white;
+       width: 100%;
+   }
+   
+@media (max-width: 768px) {
+    .s{
+        margin-top:18px;
+    }
+    .produit-header {
+        flex-direction: column;
+        /* Aligne les éléments en colonne sur les petits écrans */
+        text-align: center;
+        /* Centre le texte */
+    }
+
+    .produit-header h5 {
+        margin-bottom: 10px;
+        /* Ajoute un espace en bas du titre */
+    }
+
+    .products-list li {
+        margin-bottom: 10px;
+        /* Ajoute un espace entre les éléments de la liste */
+    }
+#toggleProducts {
+     display: block;
+     /* Ensure the button is visible on mobile */
+     margin: 10px 0;
+          }
+
+.products-list {
+    margin-top: 10px;
+          }
+.web-products{
+    display: none;
+          }
+        /* MOBILE PRODUCTS*/
+.mobile-products>ul:hover{
+         background: #0017ac90 !important;
+ }
+.mobile-products>ul>li>a{
+     font-size: 15px !important;
+    background: #0017acdc !important;
+     padding: 10px;
+                                  }
+                  .mobile-products>ul>li>a:hover{
+                    background: #0017ac !important;
+                  }
+.mobile-products>ul{
+         min-height: 10vh;
+         z-index: 20000;
+                                  }
+.mobile-products{
+    display: block !important;
+                  }
+.mobile-ul { /* Set a max height */ overflow-y: auto; /* Enable vertical scrolling */ /* Optional: Customize scrollbar appearance */ scrollbar-width: thin; /* For Firefox */ scrollbar-color: #2216ca #602cd9; /* For Firefox */ min-height: 300px !important; background: rgba(0, 23, 172, 0.863);font-size: 12px !important;position: absolute;inset: 0px auto auto 0px;margin: 0px;margin-top: 11px;left: -13px !important;transform: translate3d(-145px, 32px, 0px); }
+
+     /* For WebKit browsers (Chrome, Safari) */
+.mobile-ul::-webkit-scrollbar {
+        width: 4px;
+
+    }
+
+.mobile-ul::-webkit-scrollbar-thumb {
+         background: #3308eef5;
+          /* Scrollbar color */
+         border-radius: 4px;
+         /* Round edges */
+ }
+
+ .mobile-ul::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+            }
+
+            .lang{
+                display:none
+            }
+
+}
+/* BUTTON WHATSSAP*/
+.whatsapp-btn-container {
+    position: fixed ;
+    right: 30px;
+    opacity: 0;
+    bottom: -50px;
+    padding: 24px;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+    z-index: 999999;
+}
+
+@keyframes fade-up {
+    100% {
+        bottom: 24px;
+        opacity: 1;
+    }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.whatsapp-btn-container .whatsapp-btn {
+    font-size: 48px !important;
+    color: #25d366;
+    display: inline-block !important;
+    transition: all 400ms !important;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover {
+    transform: scale(1.2) !important;
+}
+
+.whatsapp-btn-container span {
+    position: absolute !important;
+    top: 0 !important;
+    left: 4px !important;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #075e54;
+    transform: rotateZ(20deg) translateX(10px) !important;
+    opacity: 0;
+    transition: all 400ms !important;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover+span {
+    transform: rotateZ(0deg) translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+.container{
+width: 95% !important;
+}
+
+.bbb_deals_item_detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bbb_deals_item_detail_label {
+    font-weight: bold;
+    text-align: left;
+    flex-basis: 75%;  /* Label takes 40% of the width */
+}
+
+.bbb_deals_item_detail_value {
+    text-align: right;
+    flex-basis: 25%;  /* Value takes 60% of the width */
+}
+
+.dropdown-item:hover{
+    color:black !important;
+}
+
+@media (max-width: 768px) {
+#menuList {
+    min-height: 0;
+    overflow: hidden;
+    transition: min-height 0.3s ease-in-out;
+}
+
+#s {
+    transition: padding-top 0.3s ease-in-out;
+}
+
+}
+
+.dropdown-menu{
+    left:-37px !important;
+    width:90vw !important;
+    padding:20px !important
+}
+
+  @media (max-width: 380px) {
+         main {
+       padding-top: 3vh;
+       /* To ensure content starts below the navbar */
+   }
+     }
+
+.kk{
+    margin-top:2.5vh !important
+}
+
+.rr:hover {
+    background-color: transparent !important; /* Removes hover background */
+    color: inherit !important; /* Keeps text color unchanged */
+}
+
+
+
 
    /* Navbar styling */
 nav {
@@ -74,11 +418,10 @@ nav ul li:hover::after {
        left: 0;
    }
 
-
-.menu-icon {
-       display: none;
-       cursor: pointer;
-   }
+    .menu-icon {
+           display: none;
+           cursor: pointer;
+       }
    
 
 .menu-icon i {
@@ -125,52 +468,15 @@ nav ul li:hover::after {
        .info-bar {
            display: none;
        }
-
+main {
+       flex-grow: 1;
+       padding-top: 4vh;
+       /* To ensure content starts below the navbar */
    }
-
-   /* Info-bar dropdown styling */
-.info-bar {
-       position: absolute;
-       background: linear-gradient(to right, #2042be, #0d2471);
-       color: #fff;
-       padding: 20px;
-       width: 550px;
-       border-radius: 5px;
-       z-index: 1;
-       opacity: 0;
-       visibility: hidden;
-       pointer-events: none;
-       top: 100%;
-       left: 50%;
-       transform: translateX(-50%) translateY(10px);
-       transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
    }
+   
+   
 
-nav ul li:hover .info-bar {
-       opacity: 1;
-       visibility: visible;
-       pointer-events: auto;
-       transform: translateX(-50%) translateY(0);
-   }
-
-nav ul li:not(:hover) .info-bar {
-       opacity: 0;
-       visibility: hidden;
-       pointer-events: none;
-   }
-
-.info-bar ul {
-       list-style-type: none;
-       padding: 0;
-       margin: 10px 0;
-   }
-
-.info-bar ul li a {
-       color: #ffff;
-       padding: 8px;
-       display: block;
-       font-size: 15px;
-   }
 
    /* Main content */
 main {
@@ -178,14 +484,14 @@ main {
        padding-top: 3vh;
        /* To ensure content starts below the navbar */
    }
-
+.dropdown-menu {background: linear-gradient(to right, #2042be, #0d2471);}
    /* Footer styling */
 footer {
        background: linear-gradient(to right, #2042be, #0d2471);
        color: white;
        width: 100%;
    }
-   .dropdown-menu dropdown-item {background: linear-gradient(to right, #2042be, #0d2471);}
+   
 @media (max-width: 768px) {
     .s{
         margin-top:18px;
@@ -359,5 +665,91 @@ width: 95% !important;
     transition: padding-top 0.3s ease-in-out;
 }
 
+}
+
+.dropdown-menu{
+    left:-32vw !important;
+    width:90vw !important;
+    padding:20px !important
+}
+
+  @media (max-width: 380px) {
+         main {
+       padding-top: 3vh;
+       /* To ensure content starts below the navbar */
+   }
+     }
+
+.kk{
+    margin-top:2.5vh !important
+}
+
+.rr:hover {
+    background-color: transparent !important; /* Removes hover background */
+    color: inherit !important; /* Keeps text color unchanged */
+}
+
+
+
+/* Add this CSS to your stylesheet */
+/* Style the dropdown container */
+.web-products {
+    position: relative;
+}
+
+/* Style the dropdown menu */
+.web-products .dropdown-menu {
+    display: block; /* Keep it block for transition effects */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
+    transform: translateY(-10px); /* Position above */
+    transition: all 0.3s ease-in-out; /* Smooth visibility and position */
+    background-color: #333; /* Optional: background color */
+    padding: 10px; /* Optional: dropdown padding */
+    z-index: 1000; /* Keep dropdown on top */
+}
+
+/* Show the dropdown menu on hover */
+.web-products:hover .dropdown-menu {
+    opacity: 1; /* Fully visible */
+    visibility: visible;
+    transform: translateY(0); /* Move to normal position */
+}
+
+/* Style dropdown links */
+.web-products .dropdown-item {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.2s ease-in-out; /* Smooth color transition */
+}
+
+.web-products .dropdown-item:hover {
+    color: #ffd700; /* Optional: hover color */
+}
+
+/* Dropdown columns */
+.web-products .dropdown-column {
+    margin-right: 20px; /* Space between columns */
+}
+
+/* Dropdown item group for alignment */
+.web-products .dropdown-item-group {
+    display: flex;
+    gap: 20px; /* Optional: space between columns */
+}
+
+/* Dropdown images */
+.web-products .dropdown-item img {
+    margin-left: 8px; /* Space between text and image */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+}
+
+.web-products .dropdown-item:hover img {
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 

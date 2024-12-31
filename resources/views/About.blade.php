@@ -265,7 +265,7 @@
     <img  style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}" alt="">
     <div class="image-desktop-only"
         style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
-        <span style="font-size: 50px;">{{ GoogleTranslate::trans('A PROPOS DE', \App::getLocale()) }}</span>
+        <span style="font-size: 50px;">{{ GoogleTranslate::trans('A PROPOS ', \App::getLocale()) }}</span>
     </div>
 </div>
     <section class="page-section" id="about"  >

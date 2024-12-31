@@ -17,6 +17,8 @@ class ProductController extends Controller
 {
     // Fetch products and categories
     $products = Product::where('category_id', $id)->get();
+ 
+$categorie = Category::where('id', $id)->first();
     $categories = Category::all();
     $scategories = Category::find($id)?->SCategory ?? collect();
 
@@ -41,7 +43,7 @@ class ProductController extends Controller
     // Paginate the filtered results
     $filteredDetails = $this->paginateCollection($filteredDetails, 9);
 
-    return view('product.index', compact('categories', 'filteredDetails', 'id', 'scategories'));
+    return view('product.index', compact('categories', 'filteredDetails', 'id', 'scategories','categorie'));
 }
 
 private function paginateCollection(Collection $items, int $perPage)
@@ -70,6 +72,7 @@ public function googleTranslateChange(Request $request)
 
  public function filter($cid, $id, $productname = null)
 {
+    $categorie = Category::where('id', $id)->first();
     // Fetch all categories
     $categories = Category::all();
 
@@ -138,7 +141,7 @@ public function googleTranslateChange(Request $request)
         ['path' => Paginator::resolveCurrentPath()]
     );
 
-    return view("product.filtered", compact('id', 'cid', 'categories', 'filteredDetailsPaginator', 'scategories'));
+    return view("product.filtered", compact('id', 'cid', 'categories', 'filteredDetailsPaginator', 'scategories','categorie'));
 }
 }
 

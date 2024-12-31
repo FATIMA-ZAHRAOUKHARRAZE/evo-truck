@@ -64,6 +64,12 @@
             <div class="carousel-item ">
                 <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 4.png') }}" alt="Slide 1">
             </div>
+             <div class="carousel-item ">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\Forklift 3+.png') }}" alt="Slide 1">
+            </div>
+             <div class="carousel-item ">
+                <img class="d-block" style="margin-bottom: 2rem; height: auto !important;  width: 100%;" src="{{ asset('images\PORT MACHINERY logo.png') }}" alt="Slide 1">
+            </div>
     </div>
 
         <a class="carousel-control-prev custom-control" href="#carousel" role="button" data-bs-slide="prev">
