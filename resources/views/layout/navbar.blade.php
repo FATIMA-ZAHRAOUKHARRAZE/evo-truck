@@ -47,7 +47,7 @@
                 <li class="s" > <a href="{{ url('/') }}"
                         class="menu-item">{{ GoogleTranslate::trans('Acceuil', \App::getLocale()) }}</a>
                 </li>
-                
+
 
                 {{-- products --}}
              <li class="web-products">
@@ -73,12 +73,28 @@
         </div>
     </ul>
 </li>
+ {{-- Mobile products --}}
+            <li style="display: none;z-index:200;" class="mobile-products nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
+                </a>
+                <ul style="min-height: 300px;background: rgba(0, 23, 172, 0.863);font-size: 12px !important;position: absolute;inset: 0px auto auto 0px; margin: 0px;margin-top: 11px;left: -13px !important;transform: translate3d(-145px, 32px, 0px);"
+                    class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
 
-
-                
-              
+                    @foreach ($categories->sortBy(function($category) {
+                        return strlen($category->nom_cat);
+                    }) as $categorie)
+                        <li>
+                            <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
+                                {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </li>
                 <!--about --->
-                
+
                 {{-- solution --}}
                 <li><a href="{{ url('/solution') }}">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
 
@@ -89,31 +105,10 @@
                 {{-- contact --}}
                 <li><a href="{{ route('contact') }}">{{ GoogleTranslate::trans('Contact', \App::getLocale()) }}</a>
 
-                </li> 
-                
-                {{-- Mobile products --}}
-                <li style="display: none;z-index:200;" class=" mobile-products nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
-                    </a>
-                    <ul style="min-height: 300px;background: rgba(0, 23, 172, 0.863);font-size: 12px !important;position: absolute;inset: 0px auto auto 0px; margin: 0px;margin-top: 11px;left: -13px !important;transform: translate3d(-145px, 32px, 0px);"
-                        class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
-                        <li>
-                            <a class="text-white dropdown-item" href="{{ route('category.liste') }}">
-                                {{ GoogleTranslate::trans('produit', \App::getLocale()) }}
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </li>
-                        @foreach ($categories as $categorie)
-                            <li>
-                                <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
-                                    {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
                 </li>
+
+
+
 <li  class="mob-lang">
                     <div class="col-md-4 w-100">
                         <select style="background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
@@ -129,10 +124,10 @@
                         </select>
                     </div>
                 </li>
-              
+
 
             </ul>
-            
+
               <div class="pc-lang">
                     <div class="col-md-4 w-100">
                         <select style="padding-bottom:10px; background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
@@ -250,7 +245,7 @@
                 menuList.style.minHeight = "0px";
             }
         }
-        
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -261,5 +256,5 @@
             once: true, // Jouer une seule fois
         });
     </script>
-    
+
 </html>
