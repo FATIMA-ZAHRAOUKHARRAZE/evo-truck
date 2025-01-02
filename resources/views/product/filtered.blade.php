@@ -7,8 +7,13 @@
 <style>
 /* Hide header image on small screens */
 @media (max-width: 768px) {
-    .sss {
-        display: none;
+   .textph {
+     position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin: 0; /* Reset margins */
     }
 }
 
@@ -29,10 +34,10 @@
 
 <!-- Page Image -->
 <div class="sss" style="position: relative; width: 100%;">
-    <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/'.$categorie->img_catpro) }}"
-        loading="lazy" alt="">
+    <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;" src="{{ asset('images/'.$categorie->img_catpro) }}"
+        alt="">
     <div
-        style="font-weight: bold; position: absolute;  top: 40%; left:40%; color: #2042be; font-size: 24px; ">
+        style="font-weight: bold; position: absolute;  top: 40%;   left: {{ strlen($categorie->nom_cat) < 25 ? "37%" : (strlen($categorie->nom_cat) < 20 ? "30%" : "20%") }}; color: #2042be; font-size: 24px; " class="textph">
         <span style="font-size: 50px;">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}</span>
     </div>
 </div>

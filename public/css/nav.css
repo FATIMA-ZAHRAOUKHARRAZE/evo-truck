@@ -31,7 +31,7 @@ nav {
        left: 0;
        right: 0;
        z-index: 1000;
-       height: 80px;
+       height: 75px;
    }
 
 .logo img {
@@ -109,6 +109,9 @@ nav ul li:hover::after {
         left: -2vw !important;
         margin-top: 10px !important;
         width: 96vw !important;
+    }
+    .logo img{
+        margin-left:-60px
     }
        nav {
            padding: 10px 40px;
@@ -359,20 +362,7 @@ width: 95% !important;
 
 
 
-   /* Navbar styling */
-nav {
-       padding: 0px 0px 0px 80px;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       background: linear-gradient(to right, #2042be, #0d2471);
-       position: fixed;
-       top: 0;
-       left: 0;
-       right: 0;
-       z-index: 1000;
-       height: 10vh;
-   }
+
 
 .logo img {
        height: 120px;

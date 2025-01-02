@@ -1,19 +1,16 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
-    <style>  @media (max-width: 768px) {
-    .image-desktop-only {
-        display: none;
-    }
-}</style>
+    
 @endsection
+
 @section('content')
     <!-- Page Image -->
-    <div style="position: relative; width: 100%;" class="image-desktop-only">
+    <div style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             loading="lazy" alt="">
-        <div class="image-desktop-only"
-        style="font-weight: bold; position: absolute; top: 20%; left:30%;  color: #2042be; font-size: 24px; padding: 10px;">
+        <div class="textph"
+        style="font-weight: bold; position: absolute; top: 40%; left:30%;  color: #2042be; font-size: 24px;">
             <span style="font-size: 50px;">{{ GoogleTranslate::trans('EQUIPEMENT
             BLINDES', \App::getLocale()) }}</span>
         </div>

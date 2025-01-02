@@ -106,7 +106,7 @@
             <span class="mt-2 ">
              {{ 
     GoogleTranslate::trans(
-        $product->desc_pro ?? $product->cacteristique ?? 'Aucune description disponible', 
+        $product->dec_pro ?? $product->cacteristique ?? '   ', 
         \App::getLocale()
     ) 
 }}

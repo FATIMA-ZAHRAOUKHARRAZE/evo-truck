@@ -256,16 +256,21 @@
         }
    @media (max-width: 768px) {
     .image-desktop-only {
-        display: none;
+         position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin: 0; /* Reset margins */
     }
 }
 </style>
 
-        <div style="position: relative; width: 100%;"class="image-desktop-only">
+        <div style="position: relative; width: 100%;">
     <img  style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}" alt="">
     <div class="image-desktop-only"
-        style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
-        <span style="font-size: 50px;">{{ GoogleTranslate::trans('A PROPOS ', \App::getLocale()) }}</span>
+        style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px; ">
+        <span style="font-size: 50px;">{{ GoogleTranslate::trans('À propos ', \App::getLocale()) }}</span>
     </div>
 </div>
     <section class="page-section" id="about"  >
