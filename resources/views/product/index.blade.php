@@ -11,11 +11,17 @@
     .textph {
      position: absolute;
         top: 50%;
-        left: 50%;
+        left: 50% !important;
         transform: translate(-50%, -50%);
         text-align: center;
         margin: 0; /* Reset margins */
+        
     }
+    .textph span
+    {
+        font-size: 25px !important;
+    }
+    
 }
 
 /* Media Query for Screens ≤ 540px: Force 1 Column */

@@ -253,7 +253,8 @@
         AOS.init({
             duration: 1000, // Durée de l'animation en ms
             easing: 'ease-in-out', // Type d'animation
-            once: true, // Jouer une seule fois
+            once: false, 
+            offset: 200,
         });
     </script>
     
