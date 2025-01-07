@@ -1,52 +1,55 @@
+/* Style de la barre latérale */
 .sidebar {
-    background-color: rgba(255, 255, 255, 0.89);
-    color: #001b91;
-    border: 1px solid #fffffff9;
-    border-radius: 3px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-height: 50vh;
-    overflow-y: auto;
-    /* Ensure scrolling if content exceeds max height */
+    background-color: rgba(255, 255, 255, 0.89); /* Fond blanc avec transparence légère */
+    color: #001b91; /* Couleur de texte bleu foncé */
+    border: 1px solid #fffffff9; /* Bordure blanche avec légère transparence */
+    border-radius: 3px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère autour de la barre latérale */
+    max-height: 50vh; /* Hauteur maximale de la barre latérale à 50% de la hauteur de la fenêtre */
+    overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la hauteur maximale */
+    /* Scrolling activé lorsque le contenu dépasse la hauteur maximale */
 }
 
+/* Style pour les titres h3 dans la barre latérale */
 .sidebar h3 {
-    font-weight: bold;
-    text-align: center;
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
 }
 
+/* Style pour les titres h2 dans la barre latérale */
 .sidebar h2 {
-    font-weight: bold;
-    color: #3a3ad4;
-    font-size: 25px;
-    text-align: center;
-    padding-top: 12px;
+    font-weight: bold; /* Texte en gras */
+    color: #3a3ad4; /* Couleur bleu clair */
+    font-size: 25px; /* Taille de police plus grande */
+    text-align: center; /* Centrer le texte */
+    padding-top: 12px; /* Espacement en haut du titre */
 }
 
+/* Style pour les titres h4 dans la barre latérale */
 .sidebar h4 {
-    color: black;
-    font-size: 17px;
-    padding-top: 10px;
+    color: black; /* Couleur noire pour les titres h4 */
+    font-size: 17px; /* Taille de police modérée */
+    padding-top: 10px; /* Espacement en haut du titre */
 }
 
+/* Style pour le footer */
 footer {
-    position: relative;
-    /* or absolute */
-    z-index: 10;
-    margin-top: 50px;
-    /* Ensure it’s higher than other overlapping elements */
+    position: relative; /* Positionnement relatif pour le footer */
+    z-index: 10; /* Assure que le footer soit au-dessus des autres éléments superposés */
+    margin-top: 50px; /* Espacement au-dessus du footer */
+    /* Assure que le footer soit plus haut que les autres éléments qui pourraient se chevaucher */
 }
 
+/* Médias queries pour les écrans de petite taille (max-width: 780px) */
 @media (max-width: 780px) {
     .sidebar {
-        margin-left: 0;
-        padding: 10px;
+        margin-left: 0; /* Supprime la marge à gauche sur les petits écrans */
+        padding: 10px; /* Maintient l'espacement interne */
     }
 
     .bbb_deals {
-        margin-bottom: 20px;
-        /* Space between deals on mobile */
+        margin-bottom: 20px; /* Ajoute un espacement en bas entre les offres sur mobile */
+        /* Espacement supplémentaire entre les offres */
     }
-
-
 }

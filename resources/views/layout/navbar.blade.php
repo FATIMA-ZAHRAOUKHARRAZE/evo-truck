@@ -42,7 +42,7 @@
             <div class="logo">
                 <a href="/"><img src="{{ asset('logo.png') }}" alt=""></a>
             </div>
-            <ul id="menuList">
+            <ul class="nav-list" id="menuList">
                  <!--welcome --->
                 <li class="s" > <a href="{{ url('/') }}"
                         class="menu-item">{{ GoogleTranslate::trans('Acceuil', \App::getLocale()) }}</a>
@@ -51,7 +51,7 @@
 
                 {{-- products --}}
              <li class="web-products">
-    <a class="nav-link dropdown-toggle" href="#" role="button" style="color:white">
+    <a class="nav-link dropdown-toggle" href="#" role="button" style="color:#ffd700">
         {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
     </a>
     <ul class="dropdown-menu pt-4 kk">
@@ -62,7 +62,7 @@
                 <div class="dropdown-column me-5">
                     @foreach ($chunk as $category)
                         <span class="d-flex pb-2">
-                            <a style="color:white !important" class="dropdown-item rr" href="{{ url('product/' . $category->id) }}">
+                            <a style="color:#ffd700 !important" class="dropdown-item rr" href="{{ url('product/' . $category->id) }}">
                                 {{ GoogleTranslate::trans($category->nom_cat, \App::getLocale()) }}
                             </a>
                             <img src="{{ asset('images/' . $category->img_cat) }}" style="width:50px;height:auto">
@@ -111,16 +111,20 @@
 
 <li  class="mob-lang">
                     <div class="col-md-4 w-100">
-                        <select style="background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
+                        <select style="background-color: rgba(255, 255, 255, 0);border:none;color:#ffd700;font-size:20px"
                             class="form-select pe-5 changeLanguage" aria-label="Language select"><i
                                 class="fa-solid fa-language"></i>
-                            <option style="background-color:#000099">
+                            <option style="background-color:#ffd700">
                                 {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
                             </option>
-                            <option style="background-color:#000099" value="en"
-                                {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                            <option style="background-color:#000099" value="fr"
+                              <option style="background-color:#ffd700" value="fr"
                                 {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>Français</option>
+                            <option style="background-color:#ffd700" value="en"
+                                {{ session()->get('locale') =='en' ? 'selected' : '' }}>English</option>
+                                <option style="background-color:#000099" value="ar"
+                                {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>Arabe</option>
+                          
+                             
                         </select>
                     </div>
                 </li>
@@ -128,18 +132,20 @@
 
             </ul>
             
-              <div class="pc-lang">
+              <div  class="pc-lang">
                     <div class="col-md-4 w-100">
-                        <select style="padding-bottom:10px; background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
+                        <select style="color:#ffd700 !important;cursor:pointer;padding-bottom:10px; background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
                             class="form-select pe-5 changeLanguage" aria-label="Language select"><i
                                 class="fa-solid fa-language"></i>
                             <option style="background-color:#000099">
                                 {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
                             </option>
-                            <option style="background-color:#000099" value="en"
-                                {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
                             <option style="background-color:#000099" value="fr"
                                 {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>Français</option>
+                            <option style="background-color:#000099" value="en"
+                                {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                                <option style="background-color:#000099" value="ar"
+                                {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>Arabe</option>
                         </select>
                     </div>
                 </div>

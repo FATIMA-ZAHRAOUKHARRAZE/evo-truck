@@ -79,9 +79,9 @@
             <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
                 <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                     <img src="{{ asset('images/' .$categorie->img_cat) }}"  class="card-img-top" alt="Product Image"
-                         style="border-radius: 15px 15px 0 0; height: 250px; object-fit: cover;">
+                         style="border-radius: 15px 15px 0 0; height: 200px; object-fit: cover;">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #333;">
+                        <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #2042be;;">
                             {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
                         </h5>
                     </div>

@@ -1,6 +1,7 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    
 @endsection
 
 @section('content')

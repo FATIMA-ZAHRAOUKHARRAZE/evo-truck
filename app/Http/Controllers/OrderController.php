@@ -11,11 +11,11 @@ use App\Models\Order;
 class OrderController extends Controller
 {
     public function index ($id,$name){
-        
+
         $categories = Category::all();
-        $spesificcat = Category::where('id','=',$id)->first()->nom_cat; 
+        $spesificcat = Category::where('id','=',$id)->first()->nom_cat;
         return view('order.Form',compact('categories','spesificcat','name'));
-        
+
     }
 
     public function insert(Request $req){
@@ -28,7 +28,9 @@ class OrderController extends Controller
         'email' => 'required|email',
         'country' => 'required|string|max:100', // Adjust max length as necessary
         'message' => 'nullable|string|max:1000', // Assuming you want to allow long messages
-       
+        'société' =>'required|string|max:255',
+        'activité'=>'required|string|max:255',
+
     ]);
 
     Order::create($filed);
