@@ -35,34 +35,61 @@
         @else
         @endif
     </head>
+<style>
 
+    /* Scrollbar track */
+    ::-webkit-scrollbar {
+        width: 8px;
+        /* Width of the scrollbar */
+        height: 12px;
+        /* Height for horizontal scrollbar */
+    }
+
+    /* Scrollbar thumb (the draggable part) */
+    ::-webkit-scrollbar-thumb {
+        background-color: #0d2471;
+        /* Color of the scrollbar thumb */
+        border-radius: 2px;
+        /* Rounded corners */
+        border: 3px solid transparent;
+        /* Optional for spacing */
+    }
+
+    /* Scrollbar track (background) */
+    ::-webkit-scrollbar-track {
+        background: #ffffff;
+        /* Background color of the track */
+
+    }
+
+</style>
     <body class="font-sans antialiased">
-        <nav>
+        <nav id="nav" class="w-nav">
             <!---le logo --->
-            <div class="logo">
-                <a href="/"><img src="{{ asset('logo.png') }}" alt=""></a>
+            <div id="logo" class="logo">
+                <a class="img-logo" href="/"href="/"><img id="img-logo" src="{{ asset('./images/tr2.png') }}" alt=""></a>
             </div>
             <ul class="nav-list" id="menuList">
                  <!--welcome --->
                 <li class="s" > <a href="{{ url('/') }}"
                         class="menu-item">{{ GoogleTranslate::trans('Acceuil', \App::getLocale()) }}</a>
                 </li>
-                
+
 
                 {{-- products --}}
              <li class="web-products">
-    <a class="nav-link dropdown-toggle" href="#" role="button" style="color:#ffd700">
+    <a class="nav-link dropdown-toggle pro" href="#" role="button" style="color:#ffd700">
         {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
     </a>
-    <ul class="dropdown-menu pt-4 kk">
-        <div class="dropdown-item-group d-flex">
+    <ul class="dropdown-menu pt-4 kk"style="background: white;">
+        <div class="dropdown-item-group dit d-flex " >
             @foreach ($categories->sortBy(function($category) {
                 return strlen($category->nom_cat); // Sort by the length of the category name
             })->chunk(ceil($categories->count() / 3)) as $chunk)
                 <div class="dropdown-column me-5">
                     @foreach ($chunk as $category)
                         <span class="d-flex pb-2">
-                            <a style="color:#ffd700 !important" class="dropdown-item rr" href="{{ url('product/' . $category->id) }}">
+                            <a style="color:#2042be !important" class="dropdown-item rr" href="{{ url('product/' . $category->id) }}">
                                 {{ GoogleTranslate::trans($category->nom_cat, \App::getLocale()) }}
                             </a>
                             <img src="{{ asset('images/' . $category->img_cat) }}" style="width:50px;height:auto">
@@ -75,13 +102,13 @@
 </li>
  {{-- Mobile products --}}
             <li style="display: none;z-index:200;" class="mobile-products nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" style="color:#ffd700"
                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ GoogleTranslate::trans('Produits', \App::getLocale()) }}
                 </a>
                 <ul style="min-height: 300px;background: rgba(0, 23, 172, 0.863);font-size: 12px !important;position: absolute;inset: 0px auto auto 0px; margin: 0px;margin-top: 11px;left: -13px !important;transform: translate3d(-145px, 32px, 0px);"
                     class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
-            
+
                     @foreach ($categories->sortBy(function($category) {
                         return strlen($category->nom_cat);
                     }) as $categorie)
@@ -94,7 +121,7 @@
                 </ul>
             </li>
                 <!--about --->
-                
+
                 {{-- solution --}}
                 <li><a href="{{ url('/solution') }}">{{ GoogleTranslate::trans('Solution', \App::getLocale()) }}</a>
 
@@ -105,50 +132,63 @@
                 {{-- contact --}}
                 <li><a href="{{ route('contact') }}">{{ GoogleTranslate::trans('Contact', \App::getLocale()) }}</a>
 
-                </li> 
-                
-               
+                </li>
+
+
 
 <li  class="mob-lang">
                     <div class="col-md-4 w-100">
                         <select style="background-color: rgba(255, 255, 255, 0);border:none;color:#ffd700;font-size:20px"
                             class="form-select pe-5 changeLanguage" aria-label="Language select"><i
                                 class="fa-solid fa-language"></i>
-                            <option style="background-color:#ffd700">
+                            <option  style="background-color:#000099">
                                 {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
                             </option>
-                              <option style="background-color:#ffd700" value="fr"
+                              <option style="background-color:#000099" value="fr"
                                 {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>Français</option>
-                            <option style="background-color:#ffd700" value="en"
+                            <option style="background-color:#000099" value="en"
                                 {{ session()->get('locale') =='en' ? 'selected' : '' }}>English</option>
                                 <option style="background-color:#000099" value="ar"
                                 {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>Arabe</option>
-                          
-                             
                         </select>
                     </div>
                 </li>
-              
-
             </ul>
-            
-              <div  class="pc-lang">
-                    <div class="col-md-4 w-100">
-                        <select style="color:#ffd700 !important;cursor:pointer;padding-bottom:10px; background-color: rgba(255, 255, 255, 0);border:none;color:white;font-size:20px"
-                            class="form-select pe-5 changeLanguage" aria-label="Language select"><i
-                                class="fa-solid fa-language"></i>
-                            <option style="background-color:#000099">
-                                {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
-                            </option>
-                            <option style="background-color:#000099" value="fr"
-                                {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>Français</option>
-                            <option style="background-color:#000099" value="en"
-                                {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
-                                <option style="background-color:#000099" value="ar"
-                                {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>Arabe</option>
-                        </select>
-                    </div>
-                </div>
+              <div class="pc-lang">
+    <div class="col-md-4 w-100 change">
+        <select
+            id="languageSelect"
+            style="color:#ffd700; cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
+            class="form-select pe-5 changeLanguage"
+            aria-label="Language select"
+        >
+            <option  class="changeoption"style="background-color:#000099; >
+                {{ GoogleTranslate::trans('Sélectionner la langue', \App::getLocale()) }}
+            </option>
+            <option
+                style="background-color:#000099;" class="changeoption"
+                value="fr"
+                {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}
+            >
+                Français
+            </option>
+            <option
+                style="background-color:#000099;" class="changeoption"
+                value="en"
+                {{ session()->get('locale') == 'en' ? 'selected' : '' }}
+            >
+                English
+            </option>
+            <option
+                style="background-color:#000099;" class="changeoption"
+                value="ar"
+                {{ session()->get('locale') == 'ar' ? 'selected' : '' }}
+            >
+                Arabe
+            </option>
+        </select>
+    </div>
+</div>
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -251,7 +291,7 @@
                 menuList.style.minHeight = "0px";
             }
         }
-        
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -259,9 +299,44 @@
         AOS.init({
             duration: 1000, // Durée de l'animation en ms
             easing: 'ease-in-out', // Type d'animation
-            once: false, 
+            once: false,
             offset: 200,
         });
     </script>
-    
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    const imageContainer = document.getElementById('nav');
+    const mainImage = document.getElementById('img-logo');
+    const pro = document.querySelector('.pro');
+
+    // Define the images to switch between
+    const hoverImage = "{{ asset('./images/Transparent.png') }}"; // Image to display on hover
+    const defaultImage = "{{ asset('./images/tr2.png') }}"; // Default image
+    const languageSelect = document.getElementById('languageSelect');
+   const changeoption = document.getElementById('changeoption');
+    // Function to check if the screen is small (phone)
+    function isPhone() {
+        return window.innerWidth <= 768; // Adjust width threshold as needed
+    }
+
+    // Add hover event listeners only if the device is not a phone
+    if (!isPhone()) {
+        imageContainer.addEventListener('mouseenter', () => {
+            mainImage.src = hoverImage;
+            pro.style.color = "#2042be";
+            languageSelect.style.color = '#2042be';
+            changeoption.style.color = '#2042be';
+            changeoption.style.backgroundColor = 'white';
+        });
+
+        imageContainer.addEventListener('mouseleave', () => {
+            mainImage.src = defaultImage;
+            pro.style.color = "#ffd700";
+            languageSelect.style.color = '#ffd700';
+            changeoption.style.color = '#ffd700';
+
+        });
+    }
+
+</script>
 </html>
