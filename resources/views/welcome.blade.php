@@ -133,7 +133,9 @@
    <div class="ab-content">
      <h1 data-aos="fade-up" class="text-center about-title" style="padding-bottom: 40px">{{ GoogleTranslate::trans('À propos', \App::getLocale()) }}</h1>
     <p data-aos="fade-up">
-        {{ GoogleTranslate::trans('evo machinery', \App::getLocale()) }}
+        {{ GoogleTranslate::trans("Fondée en 2000, EVO est une société multina- tionale qui appartient au groupe geant Hongkong
+
+Emerging Technologies Group avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière, machines d'as- sainissement, composants de machine, construction, finances, et l'industrie des TIC.", \App::getLocale()) }}
     </p>
    </div>
 </div>

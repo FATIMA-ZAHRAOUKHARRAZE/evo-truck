@@ -86,7 +86,7 @@
             <!-- Product Name Input -->
             <div class="mb-3">
                 <label for="product-name" class="form-label">
-                    {{ GoogleTranslate::trans("Le nom de produit.", \App::getLocale()) }}
+                    {{ GoogleTranslate::trans("Le nom de produit", \App::getLocale()) }}
                 </label>
                 <input type="text" class="form-control" id="product-name" placeholder="{{ GoogleTranslate::trans('Entrer une partie de produit', \App::getLocale()) }}">
             </div>
@@ -130,7 +130,9 @@
                             <div class="bbb_deals_slider_container">
                                 <div class="bbb_deals_item" data-aos="zoom-in">
                                     <div class="bbb_deals_image">
-                                        <img src="{{ asset('images/' . $item['product']->img_pro) }}" alt="">
+                                        <a href="{{ route('ProductDetail', $item['product']->id) }}">
+					    <img src="{{ asset('images/' . $item['product']->img_pro) }}" alt="">
+					</a>
                                     </div>
                                     <div class="mb-1 bbb_deals_content">
                                         <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
