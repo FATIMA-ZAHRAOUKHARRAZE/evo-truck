@@ -76,7 +76,90 @@
                         class="menu-item">{{ GoogleTranslate::trans('Acceuil', \App::getLocale()) }}</a>
                 </li>
 
+<style>
+    .dropdown-item-group.dit.custom-menu {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;  /* Ensure the item group takes full width */
+    }
 
+    /* Space between the global categories and filtered categories */
+    .dropdown-column.global-categories {
+        border-right: 3px solid #1e00ff; /* Gold vertical line */
+        padding-right: 15px;
+        margin-right: 20px; /* Spacing between the columns */
+        flex: 1;  /* Ensure this column takes full available space */
+    }
+
+    .dropdown-column.filtered-categories {
+        padding-left: 15px;
+        flex: 3;  /* Make sure this column takes more space if needed */
+    }
+
+    /* Optional: Styling for links within the global categories */
+    .global-categories a {
+        color: #ffd700;
+        font-weight: bold;
+        text-decoration: none;
+        display: block; /* Make the links block level to occupy full space */
+        width: 100%; /* Ensure the link takes up all available space */
+        text-align: left;
+    }
+
+    .global-categories a:hover {
+        text-decoration: underline;
+    }
+
+    .dropdown-header {
+        font-weight: bold;
+        color: #ffd700;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .global-categories-header {
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .filtered-categories-header {
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .dropdown-column {
+        padding-top: 15px;
+        width: 100%;  /* Make the columns take up full space */
+    }
+
+    .cc:hover {
+        background-color: transparent !important;
+    }
+
+    /* Ensure that categories within the filtered section take full width */
+    .category-column {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;  /* Align name and image together */
+        align-items: center; /* Align items */
+        gap: 5px; /* Reduce space between name and image */
+    }
+
+    .category-column a {
+        display: block; /* Ensure the link takes full width */
+        width: 100%;  /* Make sure the link takes all available space */
+    }
+
+    /* Space between columns, not between name and picture */
+    .dropdown-item-group.dit.custom-menu {
+        display: flex;
+        justify-content: space-between;  /* Add space between the columns */
+    }
+    .web-products .drc {
+    margin-right: 3px !important;
+}
+
+</style>
                 {{-- products --}}
              <li class="web-products">
     <a class="nav-link dropdown-toggle pro" href="#" role="button" style="color:#ffd700">
@@ -84,20 +167,23 @@
     </a>
     <ul class="dropdown-menu pt-4 kk"style="background: white;">
         <div class="dropdown-item-group dit d-flex " >
-            @foreach ($categories->sortBy(function($category) {
-                return strlen($category->nom_cat); // Sort by the length of the category name
-            })->chunk(ceil($categories->count() / 3)) as $chunk)
-                <div class="dropdown-column me-5">
-                    @foreach ($chunk as $category)
-                        <span class="d-flex pb-2">
-                            <a style="color:#2042be !important" class="dropdown-item rr" href="{{ url('product/' . $category->id) }}">
-                                {{ GoogleTranslate::trans($category->nom_cat, \App::getLocale()) }}
-                            </a>
-                            <img src="{{ asset('images/' . $category->img_cat) }}" style="width:50px;height:auto">
-                        </span>
-                    @endforeach
-                </div>
-            @endforeach
+           <!-- Global Categories Column -->
+            <div class="dropdown-column global-categories">
+                <span class="dropdown-header global-categories-header"> {{ GoogleTranslate::trans('Les Catégories', \App::getLocale()) }}</span>
+                @foreach ($categories->pluck('cat_global')->unique() as $catGlobal)
+                <span class="cc pb-2 d-flex">
+                    <a class="dropdown-item dit" href="javascript:void(0);"
+                        onclick="filterCategoriesByGlobal('{{ $catGlobal }}')">
+                         {{ GoogleTranslate::trans($catGlobal, \App::getLocale()) }} <i class="fas fa-arrow-right"></i>
+                    </a>
+                </span>
+                @endforeach
+            </div>
+            <!-- Categories Column -->
+            <div class="dropdown-column filtered-categories" id="filtered-categories"
+                 style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px;">
+
+            </div>
         </div>
     </ul>
 </li>
@@ -339,5 +425,43 @@
         });
     }
 
+</script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+const categories = [
+        @foreach($categories as $category)
+            {
+                id: {{ $category->id }},
+                nom_cat: "{{ GoogleTranslate::trans($category->nom_cat, app()->getLocale()) }}",  // Traduction côté vue
+                img_cat: "{{$category->img_cat}}",
+                cat_global: "{{ $category->cat_global }}"
+            },
+        @endforeach
+    ];
+    // Fonction pour filtrer les catégories par cat_global
+  function filterCategoriesByGlobal(catGlobal) {
+
+  const filteredCategories = categories.filter(category => category.cat_global === catGlobal); // Filtrage des catégories
+
+    // Récupérer l'élément pour les catégories filtrées
+    const categoryContainer = document.getElementById('filtered-categories');
+
+    // Effacer les catégories filtrées précédentes sans effacer les produits
+    categoryContainer.innerHTML = '';
+
+    filteredCategories.forEach(category => {
+        const categoryElement = document.createElement('div');
+        categoryElement.classList.add('dropdown-column', 'drc', 'me-5');
+        categoryElement.innerHTML = `
+            <span class="pb-2 d-flex cc">
+                <a style="color:#2042be" class="dropdown-item dit" href="{{ url('product/') }}/${category.id}">
+                    ${category.nom_cat} <!-- Affichage du nom de la catégorie -->
+                </a>
+                <img src="{{ asset('images/') }}/${category.img_cat}" style="width:50px;height:auto">
+            </span>
+        `;
+        categoryContainer.appendChild(categoryElement);
+    });
+}
 </script>
 </html>

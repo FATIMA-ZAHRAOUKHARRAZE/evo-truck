@@ -11,7 +11,8 @@ class Category extends Model
      protected $fillable = [
         'nom_cat',        // Example product name
         'img_cat',
-        'img_catpro',// Example image field
+        'img_catpro',
+        'cat_global',// Example image field
     ];
      public function SCategory()
     {
