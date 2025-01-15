@@ -138,7 +138,12 @@ class DetailController extends Controller
     'Hauteur totale de l\'unité (mm)', // Missing
     'L*l*H (mm)', // Missing
     'Modèle de châssis', // Missing
-    'Taille des particules d\'alimentation' // Missing
+    'Taille des particules d\'alimentation', // Missing
+    '	Volume de la trémie (t/h)',
+    'Capacité de levage maximum',
+    'Hauteur de levage maximum',
+    'Longueur de la flèche',
+    'Poids de la machine (t)'
 ];
 
 
