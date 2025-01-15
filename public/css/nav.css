@@ -116,6 +116,9 @@ nav ul li:hover::after {
         margin-top: 10px !important;
         width: 96vw !important;
     }
+    .ab-content{
+        width:90vw;
+    }
     .logo img{
         margin-left:-60px
     }

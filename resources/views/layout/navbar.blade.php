@@ -260,7 +260,7 @@
                         <!-- Copyright -->
                         <div class="col-md-7 col-lg-8 text-center text-md-start">
                             <div class="p-3">
-                                © 2024 Copyright: <a class="text-white" href="https://evo-machinery.com">evo-machinery.com</a>
+                                © 2025 Copyright: <a class="text-white" href="https://evo-machinery.com">evo-machinery.com</a>
                             </div>
                         </div>
                     </div>
