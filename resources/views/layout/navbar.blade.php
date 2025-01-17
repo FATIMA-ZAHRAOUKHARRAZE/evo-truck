@@ -352,18 +352,21 @@
         changeoption.style.backgroundColor = 'transparent';
     }
 
-    // Add hover event listeners
-    imageContainer.addEventListener('mouseenter', applyEffects);
-    imageContainer.addEventListener('mouseleave', resetEffects);
+
 
     // Add scroll event listener
-    window.addEventListener('scroll', () => {
+   if (window.innerWidth > 768) {
+       // Add hover event listeners
+    imageContainer.addEventListener('mouseenter', applyEffects);
+    imageContainer.addEventListener('mouseleave', resetEffects);
+             window.addEventListener('scroll', () => {
         if (window.scrollY > 40) {
             applyEffects(); // Apply effects when scrolling down
         } else {
             resetEffects(); // Reset effects when returning to the top
         }
     });
+    }
 });
 </script>
 </html>
