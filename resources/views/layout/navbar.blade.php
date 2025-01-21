@@ -160,7 +160,9 @@
                     </div>
                 </li>
             </ul>
-              <div class="pc-lang">
+              <div class="pc-lang"  style="display: flex; justify-content: space-between; align-items: center;">
+               <div class="flag-img-container"> <img class="flag-img" src="{{ session()->get('locale') == 'fr' ? asset('images/fr.png') : (session()->get('locale') == 'en' ? asset('images/us.png') : asset('images/ar.png')) }}"
+  style="height: auto;width:40px" alt=""></div>
     <div class="col-md-4 w-100 change">
         <select
             id="languageSelect"
@@ -386,3 +388,4 @@
 });
 </script>
 </html>
+{{ session()->put('locale', 'fr'); }}
