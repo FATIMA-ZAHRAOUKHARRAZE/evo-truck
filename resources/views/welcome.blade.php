@@ -101,7 +101,7 @@
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-                <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\EXCAVATORS 1.png') }}" alt="Slide 1">
+                <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\EXCAVATORS 2.png') }}" alt="Slide 1">
             </div>
 
            <div class="carousel-item ">
@@ -111,13 +111,13 @@
                 <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 4.png') }}" alt="Slide 1">
+                <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\Aerial Work 2.png') }}" alt="Slide 1">
             </div>
              <div class="carousel-item ">
                 <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\Forklift 3+.png') }}" alt="Slide 1">
             </div>
              <div class="carousel-item ">
-                <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\PORT MACHINERY logo.png') }}" alt="Slide 1">
+                <img class="d-block" style=" height: auto !important;  width: 100%;" src="{{ asset('images\PORT MACHINERY 2.png') }}" alt="Slide 1">
             </div>
     </div>
 
@@ -133,9 +133,7 @@
    <div class="ab-content">
      <h1 data-aos="fade-up" class="text-center about-title" style="padding-bottom: 40px">{{ GoogleTranslate::trans('À propos', \App::getLocale()) }}</h1>
     <p data-aos="fade-up">
-        {{ GoogleTranslate::trans("Fondée en 2000, EVO est une société multina- tionale qui appartient au groupe geant Hongkong
-
-Emerging Technologies Group avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière, machines d'as- sainissement, composants de machine, construction, finances, et l'industrie des TIC.", \App::getLocale()) }}
+        {{ GoogleTranslate::trans("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière, machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.", \App::getLocale()) }}
     </p>
    </div>
 </div>

@@ -155,7 +155,7 @@
                                                   {{ GoogleTranslate::trans("PLUS", \App::getLocale()) }}
                                                 </a>
                                                 <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}" class="btn" data-aos="flip-right">
-                                              {{ GoogleTranslate::trans("COMMANDE", \App::getLocale()) }}
+                                              {{ GoogleTranslate::trans("LE DEVIS", \App::getLocale()) }}
                                                 </a>
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>

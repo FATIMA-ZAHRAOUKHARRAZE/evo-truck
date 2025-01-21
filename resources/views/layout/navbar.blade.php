@@ -63,9 +63,9 @@
 
     }
      .dropdown-column {
-
+                  
                     width: 100%;
-
+                    
                 }
 
 </style>
@@ -258,6 +258,22 @@
                         </p>
 
                     </div>
+                     <!-- Search Bar (Moved after Contact Us) -->
+            <div style="width: 300px !important" class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
+                <h6 class="mb-4 text-uppercase font-weight-bold">
+                    {{ GoogleTranslate::trans('Recherche', \App::getLocale()) }} </h6>
+                <div class="search-bar col-12 text-center mt-4 mb-4">
+                    <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
+                        <input type="text" class="form-control form-control-lg search-input" name="query"
+                            placeholder="modèle de produit.." aria-label="Search"
+                            style=" border: 1px solid #ccc; padding: 10px;">
+                        <button type="submit" class="btn btn-primary btn-lg"
+                            style=" padding: 10px 20px;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
                 </div>
                 <hr class="my-3">
                 <div class="p-3 pt-0">
@@ -352,7 +368,7 @@
         changeoption.style.backgroundColor = 'transparent';
     }
 
-
+    
 
     // Add scroll event listener
    if (window.innerWidth > 768) {

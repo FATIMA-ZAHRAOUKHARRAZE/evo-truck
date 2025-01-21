@@ -10,7 +10,7 @@
         min-height: 100vh; /* Prend toute la hauteur de l'écran */
         margin: 0 auto; /* Centre horizontalement */
         width: 90%; /* Prend 90% de la largeur de l'écran */
-        margin-bottom:50px;
+        margin-bottom:60px;
     }
 
     .form-container form {
@@ -80,7 +80,7 @@
                         <div class="form-group">
                             <label for="fname">{{ GoogleTranslate::trans(' Votre nom complete:', \App::getLocale()) }}</label>
                             <input type="text" class="form-control" id="fname" name="name"
-                                placeholder={{ GoogleTranslate::trans('Enter Votre nom complete', \App::getLocale()) }}>
+                               >
                             @if ($errors->has('name'))
                                 <small class="text-danger">{{ $errors->first('name') }}</small>
                             @endif
@@ -90,7 +90,7 @@
                         <div class="form-group">
                             <label for="fname">{{ GoogleTranslate::trans(' Nom Société:', \App::getLocale()) }}</label>
                             <input type="text" class="form-control" id="fname" name="société"
-                                placeholder={{ GoogleTranslate::trans('Enter Nom Société', \App::getLocale()) }}>
+                               >
                             @if ($errors->has('name'))
                                 <small class="text-danger">{{ $errors->first('société') }}</small>
                             @endif
@@ -99,8 +99,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fname">{{ GoogleTranslate::trans('Activité de Société:', \App::getLocale()) }}</label>
-                            <input type="text" class="form-control" id="fname" name="activité"
-                                placeholder={{ GoogleTranslate::trans('Enter activité de Société', \App::getLocale()) }}>
+                            <input type="text" class="form-control" id="fname" name="activité">
                             @if ($errors->has('name'))
                                 <small class="text-danger">{{ $errors->first('activité') }}</small>
                             @endif
@@ -110,7 +109,7 @@
                         <div class="form-group">
                             <label for="lname">{{ GoogleTranslate::trans('Téléphone:', \App::getLocale()) }}</label>
                             <input type="text" class="form-control" id="lname" name="phone"
-                                placeholder={{ GoogleTranslate::trans('Enter Téléphone', \App::getLocale()) }}>
+                               >
                             @if ($errors->has('phone'))
                                 <small class="text-danger">{{ $errors->first('phone') }}</small>
                             @endif
@@ -123,7 +122,7 @@
                         <div class="form-group">
                             <label for="fname"> {{ GoogleTranslate::trans('Email:', \App::getLocale()) }}</label>
                             <input type="mail" name="email" class="form-control" id="fname"
-                                placeholder={{ GoogleTranslate::trans('Enter Email', \App::getLocale()) }}>
+                               >
                             @if ($errors->has('email'))
                                 <small class="text-danger">{{ $errors->first('email') }}</small>
                             @endif
@@ -153,7 +152,7 @@
 
 
                 <button type="submit"
-                    class="btn btn-primary btn-block mt-4">{{ GoogleTranslate::trans('Soumettre', \App::getLocale()) }}</button>
+                    style="margin-bottom: 10px;" class="btn btn-primary btn-block mt-4">{{ GoogleTranslate::trans('Soumettre', \App::getLocale()) }}</button>
             </form>
 
 

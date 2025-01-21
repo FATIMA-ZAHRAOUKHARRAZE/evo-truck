@@ -6,7 +6,7 @@
         <title>EVO</title>
         <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
         <link rel="icon" href="{{ asset('images/Original.png') }}" type="image/x-icon" />
-
+  
         <!-- Fonts and icons -->
         <script src="{{ asset('assets/js/plugin/webfont/webfont.min.js') }}"></script>
         <script>
@@ -176,22 +176,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a data-bs-toggle="collapse" href="#f">
-                                    <i class="fas fa-cogs"></i>
-                                    <p>Commande</p>
-                                    <span class="caret"></span>
-                                </a>
-                                <div class="collapse" id="f">
-                                    <ul class="nav nav-collapse">
-                                        <li>
-                                            <a href='{{ route('admin.cmd') }}'>
-                                                <span class="sub-item">Liste Commande</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -393,7 +378,6 @@
 
         <!-- Kaiadmin JS -->
         <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
-
 
         <script src="{{ asset('assets/js/demo.js') }}"></script>
 

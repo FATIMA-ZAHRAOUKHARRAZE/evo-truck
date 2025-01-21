@@ -80,7 +80,7 @@
                 <br>
                     <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
                         class="btn btn-warning shadow-0">
-                        <i class="me-1 fa fa-shopping-basket"></i>{{ GoogleTranslate::trans( 'Commander en ligne', \App::getLocale()) }}
+                        <i class="me-1 fa fa-shopping-basket"></i>{{ GoogleTranslate::trans( 'Donner un devis', \App::getLocale()) }}
                     </a>
 
             </div>
