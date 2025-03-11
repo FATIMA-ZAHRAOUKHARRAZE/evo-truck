@@ -133,7 +133,7 @@
    <div class="ab-content">
      <h1 data-aos="fade-up" class="text-center about-title" style="padding-bottom: 40px">{{ GoogleTranslate::trans('À propos', \App::getLocale()) }}</h1>
     <p data-aos="fade-up">
-        {{ GoogleTranslate::trans("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière, machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.", \App::getLocale()) }}
+        {{ GoogleTranslate::trans("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière,machines de levage,machines de terrassement,machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.", \App::getLocale()) }}
     </p>
    </div>
 </div>

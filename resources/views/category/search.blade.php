@@ -28,7 +28,7 @@
                 <div class="bbb_deals_slider_container">
                     <div class="bbb_deals_item" data-aos="zoom-in">
                         <div class="bbb_deals_image">
-                            <a href="{{ route('ProductDetail', $item['product']->id) }}">
+                            <a class="prodct-img-link" href="{{ route('ProductDetail', $item['product']->id) }}">
                                 <img src="{{ asset('images/' . $item['product']->img_pro) }}" alt="">
                             </a>
                         </div>

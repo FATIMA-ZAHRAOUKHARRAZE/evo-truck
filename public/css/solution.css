@@ -3,12 +3,12 @@
 
 /* Appliquer la police Poppins à tous les éléments */
 * {
-    font-family: 'Poppins', sans-serif;
+     font-family: "Arial", sans-serif;
 }
 
 /* Styles de base pour le corps de la page */
 body {
-    font-family: Arial, sans-serif; /* Police par défaut au cas où Poppins ne charge pas */
+     font-family: "Arial", sans-serif;
     color: #333; /* Couleur de texte par défaut */
 }
 

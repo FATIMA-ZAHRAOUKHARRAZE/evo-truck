@@ -24,7 +24,7 @@ class CategoryController extends Controller
 
     // Paginate products based on the search query
     // Using the 'withQueryString' method to preserve the query string in pagination links
-    $products = Product::where('nom_pro', 'LIKE', '%' . $query . '%')->paginate(10)->withQueryString();
+    $products = Product::where('nom_pro', 'LIKE', '%' . $query . '%')->paginate(12)->withQueryString();
 
     $categories = Category::all();
 

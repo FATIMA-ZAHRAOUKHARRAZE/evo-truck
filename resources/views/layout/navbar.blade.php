@@ -4,15 +4,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EVO</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="Evo , machinery,excavating machinery,crane,forklift,chariot élévateur,grue">
+        <title>EVO MACHINERY</title>
+        <meta name="description" content="Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+        <meta name="keywords" content="Evo,machinery,excavating machinery,crane,forklift,chariot élévateur,grue">
         <!-- Fonts -->
         @yield('url')
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         <link rel="stylesheet" href={{ asset('css/product.css') }}>
         <link rel="stylesheet" href={{ asset('css/liste.css') }}>
-        <link rel="icon" href="{{ asset('images/Original.png') }}">
+        <link rel="icon" href="{{ asset('images/logo.png') }}">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -70,6 +70,7 @@
 
 </style>
     <body class="font-sans antialiased">
+        {{session()->get('locale') == null ? session()->put('locale', 'fr') :"" }}
         <nav id="nav" class="w-nav">
             <!---le logo --->
             <div id="logo" class="logo">
@@ -161,8 +162,7 @@
                 </li>
             </ul>
               <div class="pc-lang"  style="display: flex; justify-content: space-between; align-items: center;">
-               <div class="flag-img-container"> <img class="flag-img" src="{{ session()->get('locale') == 'fr' ? asset('images/fr.png') : (session()->get('locale') == 'en' ? asset('images/us.png') : asset('images/ar.png')) }}"
-  style="height: auto;width:40px" alt=""></div>
+               
     <div class="col-md-4 w-100 change">
         <select
             id="languageSelect"
@@ -243,15 +243,19 @@
                         <h6 class="mb-4 font-weight-bold">
                             {{ GoogleTranslate::trans('CONTACTEZ-NOUS', \App::getLocale()) }}</h6>
                         <p><i class="fas fa-home mr-3"></i>
-                            <a href="https://www.google.com/maps/dir//%E8%90%AC%E5%BB%B8%E5%BB%A3%E5%A0%B4+Maxgrand+Plaza+3+Tai+Yau+St+San+Po+Kong+Hong+Kong/@22.3382773,114.1991415,6444m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x340406da6bfd00c1:0xbec707f31aaccdb5!2m2!1d114.1991415!2d22.3382773?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
+                            <a href="https://www.google.com/maps/search/HOLLYWOOD+MONGKOK+,+KOWLOON+,+HONG+KONG/@22.317164,114.170363,20z?hl=fr-FR&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
                                 style="text-decoration: none; color: inherit;" target="_blank">
-                                19h Maxgrand Plaza No.3 Tai Yau Street San Po Kong, Kowloon, Hong Kong
+                                HOLLYWOOD MONGKOK , KOWLOON , HONG KONG
                             </a>
                         </p>
 
                         <p><i class="fas fa-envelope mr-3"></i>
-                            <a href="mailto:export@gmg-market.com"
+                            <a href="mailto:contact@evo-machinery.com"
                                 style="color:white;text-decoration: none">contact@evo-machinery.com</a>
+                        </p>
+                        <p><i class="fas fa-envelope mr-3"></i>
+                            <a href="mailto:sales@evo-machinery.com"
+                                style="color:white;text-decoration: none">sales@evo-machinery.com</a>
                         </p>
 
                         <p><i class="fas fa-phone mr-3"></i>
@@ -291,6 +295,15 @@
             </div>
         </footer>
     </body>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZLXLQ687"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZLXLQ687');
+</script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -388,4 +401,3 @@
 });
 </script>
 </html>
-{{ session()->put('locale', 'fr'); }}
