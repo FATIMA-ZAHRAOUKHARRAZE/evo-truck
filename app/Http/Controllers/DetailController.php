@@ -146,7 +146,9 @@ class DetailController extends Controller
     'Poids de la machine (t)',
     'Capacité de traitement',
     'Poids de la machine',
-    'Taille d\'alimentation maximale (mm)'
+    'Taille d\'alimentation maximale (mm)',
+    'Vitesse max (km/h)',
+    'Hauteur chargement (mm)'
 ];
 
 
