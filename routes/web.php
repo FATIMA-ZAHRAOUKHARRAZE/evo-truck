@@ -108,3 +108,5 @@ Route::get('/contact',[ContactController::class, "index"])->name('contact');
 Route::post('/contact', [ContactController::class, "send"])->name('contact.send');
 
 require __DIR__.'/auth.php';
+
+Route::get('/product/download/{pdf}', [ProductController::class, 'download'])->name('product.download');

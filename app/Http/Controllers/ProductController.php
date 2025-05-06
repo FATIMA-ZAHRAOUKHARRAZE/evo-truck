@@ -17,7 +17,7 @@ class ProductController extends Controller
 {
     // Fetch products and categories
     $products = Product::where('category_id', $id)->get();
- 
+
 $categorie = Category::where('id', $id)->first();
     $categories = Category::all();
     $scategories = Category::find($id)?->SCategory ?? collect();
@@ -62,12 +62,12 @@ private function paginateCollection(Collection $items, int $perPage)
 public function googleTranslateChange(Request $request)
     {
 
-         
+
         App::setLocale($request->lang);
 
         Session::put('locale',$request->lang);
 
-        return redirect()->back(); 
+        return redirect()->back();
     }
 
  public function filter($cid, $id, $productname = null)
@@ -142,6 +142,19 @@ public function googleTranslateChange(Request $request)
     );
 
     return view("product.filtered", compact('id', 'cid', 'categories', 'filteredDetailsPaginator', 'scategories','categorie'));
-}
+    }
+    public function download($pdf)
+    {
+        $file = base_path('../public_html/pdf/' . $pdf.".pdf");
+
+        if (!file_exists($file)) {
+            abort(404, 'File not found.');
+        }
+
+        // Optional: clean filename if needed
+        $downloadName = 'fiche_technique_' . pathinfo($pdf, PATHINFO_FILENAME) . '.pdf';
+
+        return response()->download($file, $downloadName);
+    }
 }
 

@@ -55,7 +55,7 @@
                 <main class="col-lg-6">
                     <div class="ps-lg-5">
                         <h4 class="title text-dark">
-                            <h1>{{ $product->nom_pro }}</h1> <br> 
+                            <h1>{{ $product->nom_pro }}</h1> <br>
 
                         </h4>
                     </div>
@@ -69,14 +69,14 @@
                                 @endforeach
                             </div>
                         @endforeach
-                        
-                       
+
+
 
                         <hr style="margin-top: 30px" />
                     @endif
 
 
-                   
+
                 <br>
                     <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
                         class="btn btn-warning shadow-0">
@@ -104,13 +104,20 @@
         <div style="margin-top: 10px" class="container mt-3 ">
             <h2 style="font-weight: bold;color:#2042be">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</h2>
             <span class="mt-2 ">
-             {{ 
+             {{
     GoogleTranslate::trans(
-        $product->dec_pro ?? $product->cacteristique ?? '   ', 
+        $product->dec_pro ?? $product->cacteristique ?? '   ',
         \App::getLocale()
-    ) 
+    )
 }}
             </span>
+              @if($product->pdf !== null)
+        <div class="mt-3" >   <a href="{{ route('product.download', ['pdf' =>$product->pdf]) }}" class="btn">
+            <i class="fas fa-download"></i>Téléchargement de la fiche technique
+        </a>
+        </div>
+        @endif
+
         </div>
 
         <div id="parameter" class="mt-5 text-white">margin</div>
