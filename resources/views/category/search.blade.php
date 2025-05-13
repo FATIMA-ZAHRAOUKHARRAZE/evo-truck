@@ -12,13 +12,13 @@
             loading="lazy" alt="">
         <div
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
-            <span style="font-size: 50px;">   {{ GoogleTranslate::trans('PRODUITS', \App::getLocale()) }} </span>
+            <span style="font-size: 50px;">   {{ translate('PRODUITS') }} </span>
         </div>
     </div>
 
     <div class="container">
         @if ($products->isEmpty())
-            <p>   {{ GoogleTranslate::trans('Aucun produit trouvé.', \App::getLocale()) }} </p>
+            <p>   {{ translate('Aucun produit trouvé.') }} </p>
         @else
            <div class="col-md-12 col-12">
     <div class="flex-wrap row d-flex">
@@ -49,7 +49,7 @@
                                 @foreach ($detail as $column => $value)
                                 <div class="bbb_deals_item_detail">
                                     <div class="bbb_deals_item_detail_label" style="font-size: 13.7px">
-                                         {{ ucfirst(GoogleTranslate::trans(Str::limit($column, 20), \App::getLocale())) }}
+                                         {{ ucfirst(translate(Str::limit($column, 20))) }}
 
                                     </div>
                                     <div class="bbb_deals_item_detail_value">
@@ -64,11 +64,11 @@
                                 <div class="flex-row available_line d-flex justify-content-between">
                                     <a href="{{ route('ProductDetail', $item['product']->id) }}" class="btn"
                                         data-aos="flip-left">
-                                           {{ GoogleTranslate::trans('PLUS', \App::getLocale()) }} 
+                                           {{ translate('PLUS') }}
                                     </a>
                                     <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
                                         class="btn" data-aos="flip-right">
-                                          {{ GoogleTranslate::trans('LE DEVIS', \App::getLocale()) }} 
+                                          {{ translate('LE DEVIS') }}
                                     </a>
                                 </div>
                                 <div class="available_bar"><span style="width:17%"></span></div>

@@ -17,8 +17,11 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+  public function boot()
     {
-        //
+        if (config('app.debug')) {
+            error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+        }
     }
 }

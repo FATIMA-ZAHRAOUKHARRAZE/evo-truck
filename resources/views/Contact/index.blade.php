@@ -49,11 +49,11 @@
 
 <body>
 	<div class="container contact-section">
-		<h2 data-aos="fade-down" class="text-center1">{{ GoogleTranslate::trans('CONTACTEZ-NOUS', \App::getLocale()) }}</h2>
+		<h2 data-aos="fade-down" class="text-center1">{{ translate('CONTACTEZ-NOUS') }}</h2>
 		<p data-aos="fade-down" class="text-center">
-	{{ GoogleTranslate::trans(
-    "Vous avez des questions ou besoin d'aide ? Contactez-nous en utilisant le formulaire de contact ci-dessous. 
-    Notre équipe du Groupe EVO MACHINERY est là pour vous aider.", 
+	{{ translate(
+    "Vous avez des questions ou besoin d'aide ? Contactez-nous en utilisant le formulaire de contact ci-dessous.
+    Notre équipe du Groupe EVO MACHINERY est là pour vous aider.",
     \App::getLocale()
 ) }}
 
@@ -62,49 +62,49 @@
 		<div class="mt-4 row">
 			<!-- Formulaire de contact -->
 			<div class="col-md-6">
-			    	<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+			    	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 				<form data-aos="fade-right" class="contact-form" action={{ route('contact.send') }} method="POST">
 					@csrf
 					<div class="mb-3">
-						<label for="fullName" class="form-label">{{ GoogleTranslate::trans('Nom', \App::getLocale()) }}</label>
-						<input type="text" class="form-control" id="Nom" name="Nom" placeholder="{{ GoogleTranslate::trans('Nom', \App::getLocale()) }}">
+						<label for="fullName" class="form-label">{{ translate('Nom') }}</label>
+						<input type="text" class="form-control" id="Nom" name="Nom" placeholder="{{ translate('Nom') }}">
 						 @error('Nom')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
 					</div>
 					<div class="mb-3">
-						<label for="emailAddress" class="form-label">{{ GoogleTranslate::trans('Email', \App::getLocale()) }} </label>
-						<input type="email" class="form-control" id="Email" name="Email"  placeholder="{{ GoogleTranslate::trans('Email', \App::getLocale()) }}">
+						<label for="emailAddress" class="form-label">{{ translate('Email') }} </label>
+						<input type="email" class="form-control" id="Email" name="Email"  placeholder="{{ translate('Email') }}">
 						 @error('Email')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
 					</div>
 					<div class="mb-3">
-						<label for="subject" class="form-label">{{ GoogleTranslate::trans('Sujet', \App::getLocale()) }} </label>
-						<input type="text" class="form-control" id="Sujet" name="Sujet" placeholder="{{ GoogleTranslate::trans('Sujet', \App::getLocale()) }}">
+						<label for="subject" class="form-label">{{ translate('Sujet') }} </label>
+						<input type="text" class="form-control" id="Sujet" name="Sujet" placeholder="{{ translate('Sujet') }}">
 						 @error('Sujet')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
 					</div>
 					<div class="mb-3">
-						<label for="message" class="form-label">{{ GoogleTranslate::trans('Message', \App::getLocale()) }}</label>
-						<textarea class="form-control" id="Message" name="Message" rows="5" placeholder="{{ GoogleTranslate::trans('Message', \App::getLocale()) }}"></textarea>
+						<label for="message" class="form-label">{{ translate('Message') }}</label>
+						<textarea class="form-control" id="Message" name="Message" rows="5" placeholder="{{ translate('Message') }}"></textarea>
 						 @error('Message')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
 					</div>
-					
+
 					<div class="mb-3">
                             <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.sitekey') }}"> </div>
                             @error('g-recaptcha-response')
                                 <small class="text-danger">{{ $message }}</small>
-                            @enderror 
-                        </div> 
-					<button type="submit" class="btn btn-primary w-100">{{ GoogleTranslate::trans('Envoie Message', \App::getLocale()) }}</button>
+                            @enderror
+                        </div>
+					<button type="submit" class="btn btn-primary w-100">{{ translate('Envoie Message') }}</button>
 				</form>
-				
+
 			</div>
-			 
+
 
 			<!-- Carte Google et informations -->
 			<div class="col-md-6">
@@ -116,8 +116,8 @@
 					</iframe>
 				</div>
 				<div class="mt-4 contact-details">
-					<p data-aos="fade-left"><i class="bi bi-geo-alt"></i> {{ GoogleTranslate::trans('Address', \App::getLocale()) }}:  HOLLYWOOD MONGKOK , KOWLOON , HONG KONG</p>
-					<p data-aos="fade-left"><i class="bi bi-telephone"></i> {{ GoogleTranslate::trans('Téléphone', \App::getLocale()) }}: +86 19 826 086 894</p>
+					<p data-aos="fade-left"><i class="bi bi-geo-alt"></i> {{ translate('Address') }}:  HOLLYWOOD MONGKOK , KOWLOON , HONG KONG</p>
+					<p data-aos="fade-left"><i class="bi bi-telephone"></i> {{ translate('Téléphone') }}: +86 19 826 086 894</p>
 							<p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a href="mailto:contact@evo-machinery.com" style="text-decoration:none; color: black;">contact@evo-machinery.com</a></p>
 		<p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a href="mailto:sales@evo-machinery.com" style="text-decoration:none; color:black;">sales@evo-machinery.com</a></p>
 

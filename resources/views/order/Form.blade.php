@@ -40,12 +40,12 @@
 </div>
     <section>
         <div class="form-container">
-            <h2 style="font-weight: bold;text-align:center">{{ GoogleTranslate::trans('Devis gratuit', \App::getLocale()) }}
+            <h2 style="font-weight: bold;text-align:center">{{ translate('Devis gratuit') }}
             </h2>
-            <p style="text-align:center"> {{ GoogleTranslate::trans(
+            <p style="text-align:center"> {{ translate(
                 "Nous vous contacterons dans les 24 heures (jours ouvrables), veuillez garder votre téléphone portable ouvert. Si vous avez besoin d'autres services,
                 n'hésitez pas à appeler la",
-                \App::getLocale(),
+                ,
             ) }}
             </p>
 
@@ -61,14 +61,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fname">
-                                {{ GoogleTranslate::trans('Catégorie de produit :', \App::getLocale()) }}</label>
+                                {{ translate('Catégorie de produit :') }}</label>
                             <input type="text" name="prod_cat" value="{{ $spesificcat }}" class="form-control" readonly>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label
-                                for="lname">{{ GoogleTranslate::trans('Modèle de produit :', \App::getLocale()) }}</label>
+                                for="lname">{{ translate('Modèle de produit :') }}</label>
                             <input type="text" class="form-control" name="prod_mod" readonly value="{{ $name }}">
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                 <div class="row mb-4">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="fname">{{ GoogleTranslate::trans(' Votre nom complete:', \App::getLocale()) }}</label>
+                            <label for="fname">{{ translate(' Votre nom complete:') }}</label>
                             <input type="text" class="form-control" id="fname" name="name"
                                >
                             @if ($errors->has('name'))
@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="fname">{{ GoogleTranslate::trans(' Nom Société:', \App::getLocale()) }}</label>
+                            <label for="fname">{{ translate(' Nom Société:') }}</label>
                             <input type="text" class="form-control" id="fname" name="société"
                                >
                             @if ($errors->has('name'))
@@ -98,7 +98,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="fname">{{ GoogleTranslate::trans('Activité de Société:', \App::getLocale()) }}</label>
+                            <label for="fname">{{ translate('Activité de Société:') }}</label>
                             <input type="text" class="form-control" id="fname" name="activité">
                             @if ($errors->has('name'))
                                 <small class="text-danger">{{ $errors->first('activité') }}</small>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="lname">{{ GoogleTranslate::trans('Téléphone:', \App::getLocale()) }}</label>
+                            <label for="lname">{{ translate('Téléphone:') }}</label>
                             <input type="text" class="form-control" id="lname" name="phone"
                                >
                             @if ($errors->has('phone'))
@@ -120,7 +120,7 @@
                 <div class="row mb-4">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="fname"> {{ GoogleTranslate::trans('Email:', \App::getLocale()) }}</label>
+                            <label for="fname"> {{ translate('Email:') }}</label>
                             <input type="mail" name="email" class="form-control" id="fname"
                                >
                             @if ($errors->has('email'))
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="lname">{{ GoogleTranslate::trans('Le Pays:', \App::getLocale()) }}</label>
+                            <label for="lname">{{ translate('Le Pays:') }}</label>
                             <input type="text" class="form-control" id="lname" name="country">
                             @if ($errors->has('country'))
                                 <small class="text-danger">{{ $errors->first('country') }}</small>
@@ -141,7 +141,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="fname"> {{ GoogleTranslate::trans('Message:', \App::getLocale()) }}</label>
+                        <label for="fname"> {{ translate('Message:') }}</label>
                         <textarea class="form-control" name="message"></textarea>
                         @if ($errors->has('message'))
                             <small class="text-danger">{{ $errors->first('message') }}</small>
@@ -152,7 +152,7 @@
 
 
                 <button type="submit"
-                    style="margin-bottom: 10px;" class="btn btn-primary btn-block mt-4">{{ GoogleTranslate::trans('Soumettre', \App::getLocale()) }}</button>
+                    style="margin-bottom: 10px;" class="btn btn-primary btn-block mt-4">{{ translate('Soumettre') }}</button>
             </form>
 
 

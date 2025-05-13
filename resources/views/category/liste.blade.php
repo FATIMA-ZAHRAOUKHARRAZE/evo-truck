@@ -43,7 +43,7 @@
             loading="lazy" alt="">
         <div
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;"class="photo" >
-            <span style="font-size: 50px;">{{ GoogleTranslate::trans('PRODUITS', \App::getLocale()) }}</span>
+            <span style="font-size: 50px;">{{ translate('PRODUITS', ) }}</span>
         </div>
     </div>
     <div class="container mb-5">
@@ -53,7 +53,7 @@
         <div class="search-bar col-12 text-center mt-4 mb-4">
             <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
                 <input type="text" class="form-control form-control-lg search-input" name="query"
-                    placeholder= "{{ GoogleTranslate::trans('Entrer le modèle de produit...', \App::getLocale()) }}"
+                    placeholder= "{{ translate('Entrer le modèle de produit...', ) }}"
  aria-label="Search"
                     style="border-radius: 25px 0 0 25px; border: 1px solid #ccc; padding: 10px;">
                 <button type="submit" class="btn btn-primary btn-lg"
@@ -66,7 +66,7 @@
             @forelse ($categories as $categorie)
                 <li class="category-item">
                     <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                        {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                        {{ translate($categorie->nom_cat, ) }}
                     </a>
                 </li>
             @empty
@@ -82,7 +82,7 @@
                          style="border-radius: 15px 15px 0 0; height: 200px; object-fit: cover;">
                     <div class="card-body text-center">
                         <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #2042be;;">
-                            {{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}
+                            {{ translate($categorie->nom_cat, ) }}
                         </h5>
                     </div>
                 </a>

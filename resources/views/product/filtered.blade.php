@@ -42,7 +42,7 @@
         alt="">
     <div
         style="font-weight: bold; position: absolute;  top: 40%;   left: {{ strlen($categorie->nom_cat) < 25 ? "37%" : (strlen($categorie->nom_cat) < 20 ? "30%" : "20%") }}; color: #2042be; font-size: 24px; " class="textph">
-        <span style="font-size: 50px;">{{ GoogleTranslate::trans($categorie->nom_cat, \App::getLocale()) }}</span>
+        <span style="font-size: 50px;">{{ translate($categorie->nom_cat) }}</span>
     </div>
 </div>
 
@@ -51,31 +51,31 @@
         <!-- Sidebar -->
         <div class="col-md-3 col-12 sidebar mb-4">
             <h3 class="mb-4">
-                {{ GoogleTranslate::trans("Filtrer les Produits", \App::getLocale()) }}
+                {{ translate("Filtrer les Produits") }}
             </h3>
 
             <!-- Category Selection -->
             <div class="mb-3">
                 <label for="category-select" class="form-label">
-                    {{ GoogleTranslate::trans("Sélectionner une catégorie", \App::getLocale()) }}
+                    {{ translate("Sélectionner une catégorie") }}
                 </label>
                 <select class="form-select" id="category-select">
                     <option disabled>
-                        {{ GoogleTranslate::trans("Sélectionner une catégorie", \App::getLocale()) }}
+                        {{ translate("Sélectionner une catégorie") }}
                     </option>
                     @forelse ($scategories as $categorie)
                      @if($categorie->id == $cid)
                         <option value="{{ $categorie->id }}" selected>
-                            {{ GoogleTranslate::trans($categorie->name, \App::getLocale()) }}
+                            {{ translate($categorie->name) }}
                         </option>
                     @else
                     <option value="{{ $categorie->id }}" >
-                            {{ GoogleTranslate::trans($categorie->name, \App::getLocale()) }}
+                            {{ translate($categorie->name) }}
                         </option>
                     @endif
                     @empty
                         <option disabled>
-                            {{ GoogleTranslate::trans("Aucune catégorie n'existe.", \App::getLocale()) }}
+                            {{ translate("Aucune catégorie n'existe.") }}
                         </option>
                     @endforelse
                 </select>
@@ -84,14 +84,14 @@
             <!-- Product Name Input -->
             <div class="mb-3">
                 <label for="product-name" class="form-label">
-                    {{ GoogleTranslate::trans("Le nom de produit", \App::getLocale()) }}
+                    {{ translate("Le nom de produit") }}
                 </label>
-                <input type="text" class="form-control" id="product-name" placeholder="{{ GoogleTranslate::trans('Entrer une partie de produit', \App::getLocale()) }}">
+                <input type="text" class="form-control" id="product-name" placeholder="{{ translate('Entrer une partie de produit') }}">
             </div>
 
             <!-- Filter Link Button -->
             <a href="#" id="filter-link" class="btn btn-primary mb-3">
-                {{ GoogleTranslate::trans("Filtrer", \App::getLocale()) }}
+                {{ translate("Filtrer") }}
             </a>
 
             <script>
@@ -115,7 +115,7 @@
                 updateFilterLink();
             </script>
 
-          
+
         </div>
 
         <!-- Content Column -->
@@ -133,9 +133,9 @@
                                     </div>
                                     <div class="mb-1 bbb_deals_content">
                                         <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
-                                          <div class="mb-5 bbb_deals_item_name" style="color: #031c77;font-size: {{ 
-    strlen($item['product']->nom_pro) < 12 ? '30px' : 
-    (strlen($item['product']->nom_pro) < 20 ? '20px' : 
+                                          <div class="mb-5 bbb_deals_item_name" style="color: #031c77;font-size: {{
+    strlen($item['product']->nom_pro) < 12 ? '30px' :
+    (strlen($item['product']->nom_pro) < 20 ? '20px' :
     (strlen($item['product']->nom_pro) < 30 ? '16px' : '14px'))
 }}"><b>{{ $item['product']->nom_pro }}</b></div>
                                         </div>
@@ -143,7 +143,7 @@
                                             <div class="bbb_deals_item_details" data-aos="fade-left">
                                                 @foreach ($detail as $column => $value)
                                                     <div class="bbb_deals_item_detail">
-                                                        <div class="bbb_deals_item_detail_label" style="font-size: 13.7px"> {{ ucfirst(GoogleTranslate::trans(Str::limit($column, 20), \App::getLocale())) }}:</div>
+                                                        <div class="bbb_deals_item_detail_label" style="font-size: 13.7px"> {{ ucfirst(translate(Str::limit($column, 20))) }}:</div>
                                                         <div class="bbb_deals_item_detail_value">  {{ Str::limit($value, 6)}}</div>
                                                     </div>
                                                 @endforeach
@@ -152,10 +152,10 @@
                                         <div class="mt-2 available">
                                             <div class="flex-row available_line d-flex justify-content-between">
                                                 <a href="{{ route('ProductDetail', $item['product']->id) }}" class="btn" data-aos="flip-left">
-                                                  {{ GoogleTranslate::trans("PLUS", \App::getLocale()) }}
+                                                  {{ translate("PLUS") }}
                                                 </a>
                                                 <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}" class="btn" data-aos="flip-right">
-                                              {{ GoogleTranslate::trans("LE DEVIS", \App::getLocale()) }}
+                                              {{ translate("LE DEVIS") }}
                                                 </a>
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>

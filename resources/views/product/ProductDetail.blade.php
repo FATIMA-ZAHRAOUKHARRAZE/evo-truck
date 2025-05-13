@@ -1,45 +1,50 @@
 @extends('layout.navbar')
 
 @section('content')
-    <style>
 
+    <style>
         .row {
             margin-right: 0 !important;
-             margin-left: 20px
+            margin-left: 20px
         }
+
         @media (max-width: 600px) {
             .fdiv {
                 margin-bottom: 20px
             }
-            .ps-lg-5{
+
+            .ps-lg-5 {
                 margin-left: 20px
             }
-            dd{
+
+            dd {
                 display: inline-block;
                 margin-right: 20px
             }
-            .parali{
+
+            .parali {
                 font-size: 14px !important;
                 padding-top: 30px;
 
             }
 
         }
-      #menu {
+
+        #menu {
             display: flex;
             flex-direction: row;
         }
 
 
-    @media (max-width: 600px) {
-        #navbar {
-            display: none;
+        @media (max-width: 600px) {
+            #navbar {
+                display: none;
+
+            }
+
+
 
         }
-
-
-
-    }
     </style>
     <section class="py-5 mt-5 mb-5">
         <div class="">
@@ -59,13 +64,13 @@
 
                         </h4>
                     </div>
-                   @if(!empty($filteredDetails) && count($filteredDetails) > 0)
+                    @if (!empty($filteredDetails) && count($filteredDetails) > 0)
                         <hr style="margin-top: 60px">
                         @foreach ($filteredDetails as $detail)
                             <div class="row" style="margin-top: 40px;margin-right: 20px !important;">
                                 @foreach ($detail as $column => $value)
-                                    <dt class="col-10 ">{{ GoogleTranslate::trans(ucfirst($column), \App::getLocale()) }}</dt>
-                                    <dd class="col-1 ">{{$value}}</dd>
+                                    <dt class="col-10 ">{{ translate(ucfirst($column)) }}</dt>
+                                    <dd class="col-1 ">{{ $value }}</dd>
                                 @endforeach
                             </div>
                         @endforeach
@@ -77,10 +82,10 @@
 
 
 
-                <br>
+                    <br>
                     <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
                         class="btn btn-warning shadow-0">
-                        <i class="me-1 fa fa-shopping-basket"></i>{{ GoogleTranslate::trans( 'Donner un devis', \App::getLocale()) }}
+                        <i class="me-1 fa fa-shopping-basket"></i>{{translate('Donner un devis')}}
                     </a>
 
             </div>
@@ -89,56 +94,57 @@
         </div>
     </section>
     <section>
-        <div id="navbar" style="position: relative; z-index: 10000; background-color: #2042be;  justify-content: space-between; align-items: center; color: white;height: 70px; width: 100%;padding: 0 20px;padding-top: 20px;">
-    <div class="container d-flex justify-content-between align-items-center">
+        <div id="navbar"
+            style="position: relative; z-index: 10000; background-color: #2042be;  justify-content: space-between; align-items: center; color: white;height: 70px; width: 100%;padding: 0 20px;padding-top: 20px;">
+            <div class="container d-flex justify-content-between align-items-center">
 
-        <ul id="menu" class="gap-4 mb-0 list-unstyled d-lg-flex" >
-             <div class="logo" style="font-size: 20px;">{{$product->nom_pro}}</div>
-            <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</a></li>
-            <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none" href="#parameter">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</a></li>
-        </ul>
-    </div>
-</div>
+                <ul id="menu" class="gap-4 mb-0 list-unstyled d-lg-flex">
+                    <div class="logo" style="font-size: 20px;">{{ $product->nom_pro }}</div>
+                    <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
+                            href="#Product_facture">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</a>
+                    </li>
+                    <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
+                            href="#parameter">{{ translate('PARAMÈTRES') }}</a></li>
+                </ul>
+            </div>
+        </div>
         <div id="Product_facture" class="mt-5 text-white">margin</div>
         {{-- Product fetures --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h2 style="font-weight: bold;color:#2042be">{{ GoogleTranslate::trans('CARACTÉRISTIQUE DU PRODUIT', \App::getLocale()) }}</h2>
+            <h2 style="font-weight: bold;color:#2042be">
+                {{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</h2>
             <span class="mt-2 ">
-             {{
-    GoogleTranslate::trans(
-        $product->dec_pro ?? $product->cacteristique ?? '   ',
-        \App::getLocale()
-    )
-}}
+                {{ translate($product->dec_pro ?? ($product->cacteristique ?? '   ')) }}
             </span>
-              @if($product->pdf !== null)
-        <div class="mt-3" >   <a href="{{ route('product.download', ['pdf' =>$product->pdf]) }}" class="btn">
-            <i class="fas fa-download"></i>Téléchargement de la fiche technique
-        </a>
-        </div>
-        @endif
+            @if ($product->pdf !== null)
+                <div class="mt-3"> <a href="{{ route('product.download', ['pdf' => $product->pdf]) }}" class="btn">
+                        <i class="fas fa-download"></i>Téléchargement de la fiche technique
+                    </a>
+                </div>
+            @endif
 
         </div>
 
         <div id="parameter" class="mt-5 text-white">margin</div>
         {{-- parametre --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h2 style="font-weight: bold;color:#2042be">{{ GoogleTranslate::trans('PARAMÈTRES', \App::getLocale()) }}</h2>
+            <h2 style="font-weight: bold;color:#2042be">{{ translate('PARAMÈTRES') }}</h2>
             <span class="mt-2 ">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">{{ GoogleTranslate::trans('Article', \App::getLocale()) }}</th>
-                            <th scope="col">{{ GoogleTranslate::trans('Unité', \App::getLocale()) }}</th>
-                            <th scope="col">{{ GoogleTranslate::trans('Paramètre', \App::getLocale()) }}</th>
+                            <th scope="col">{{ translate('Article') }}</th>
+                            <th scope="col">{{ translate('Unité') }}</th>
+                            <th scope="col">{{ translate('Paramètre') }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($parametres as $parametre)
                             <tr>
-                                <th scope="row">{{ GoogleTranslate::trans($parametre->Article , \App::getLocale()) }}</th>
+                                <th scope="row">{{ translate($parametre->Article) }}
+                                </th>
                                 <td>{{ $parametre->Unité }}</td>
-                                <td>{{ $parametre->Paramètre}}</td>
+                                <td>{{ $parametre->Paramètre }}</td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -146,7 +152,7 @@
             </span>
         </div>
     </section>
-<br>
+    <br>
     <script>
         window.onscroll = function() {
             var navbar = document.getElementById("navbar");

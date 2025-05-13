@@ -270,7 +270,7 @@
     <img  style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}" alt="">
     <div class="image-desktop-only"
         style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px; ">
-        <span style="font-size: 50px;">{{ GoogleTranslate::trans('À propos ', \App::getLocale()) }}</span>
+        <span style="font-size: 50px;">{{ translate('À propos ') }}</span>
     </div>
 </div>
     <section class="page-section" id="about"  >
@@ -282,12 +282,12 @@
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">{{ GoogleTranslate::trans('BIENVENUE CHEZ EVO', \App::getLocale()) }}
+                            <h4 class="subheading">{{ translate('BIENVENUE CHEZ EVO') }}
                             </h4>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
-                                {{ GoogleTranslate::trans(
+                                {{ translate(
                                     "Depuis sa création en 2000, EVO machinery s'est rapidement
                                                                                                                                                                                                                                 imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
                                                                                                                                                                                                                                 engins de levage. Notre parcours a été caractérisé par une recherche incessante de
@@ -305,11 +305,11 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">
-                                {{ GoogleTranslate::trans('DÉVOILER NOTRE HÉRITAGE', \App::getLocale()) }}</h4>
+                                {{ translate('DÉVOILER NOTRE HÉRITAGE') }}</h4>
                         </div>
                         <div class="timeline-body" >
                             <p class="text-muted">
-                                {{ GoogleTranslate::trans(
+                                {{ translate(
                                     "Dans un monde où le progrès se mesure à la robustesse des fondations et à
                                                                                                                                                                                                                                 la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
                                                                                                                                                                                                                                 engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
@@ -326,11 +326,11 @@
                     <div class="timeline-panel" >
                         <div class="timeline-heading">
 
-                            <h4 class="subheading">{{ GoogleTranslate::trans('IMPACT MONDIAL', \App::getLocale()) }}</h4>
+                            <h4 class="subheading">{{ translate('IMPACT MONDIAL') }}</h4>
                         </div>
                         <div class="timeline-body" >
                             <p class="text-muted">
-                                {{ GoogleTranslate::trans(
+                                {{ translate(
                                     "EVO machinery est fier de figurer parmi les plus grandes
                                                                                                                                                                                                                                 entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
                                                                                                                                                                                                                                 reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
@@ -347,11 +347,11 @@
                         <div class="timeline-heading">
 
                             <h4 class="subheading">
-                                {{ GoogleTranslate::trans('NOTRE VISION ET NOS VALEURS', \App::getLocale()) }}</h4>
+                                {{ translate('NOTRE VISION ET NOS VALEURS') }}</h4>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
-                                {{ GoogleTranslate::trans(
+                                {{ translate(
                                     "Chez EVO machinery, notre chemin est éclairé par une vision
                                                                                                                                                                     claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
                                                                                                                                                                                                                                 de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
@@ -371,7 +371,7 @@
         <div class="container" data-aos="fade-left">
             <div class="text-center" >
                 <h2 class="section-heading text-uppercase " style="color: #2042be">
-                    {{ GoogleTranslate::trans('CE QUE NOUS OFFRONS', \App::getLocale()) }}</h2>
+                    {{ translate('CE QUE NOUS OFFRONS') }}</h2>
 
             </div>
             <div class="row">
@@ -379,9 +379,9 @@
                     <div class="team-member" data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
-                        <h4>{{ GoogleTranslate::trans('QUALITÉ', \App::getLocale()) }}</h4>
+                        <h4>{{ translate('QUALITÉ') }}</h4>
                         <p class="text-muted">
-                            {{ GoogleTranslate::trans(
+                            {{ translate(
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
                                 rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
                                  conformes aux normes de l'industrie.",
@@ -395,9 +395,9 @@
                     <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
-                        <h4>{{ GoogleTranslate::trans('CONCEPTION ET R&D', \App::getLocale()) }}</h4>
+                        <h4>{{ translate('CONCEPTION ET R&D') }}</h4>
                         <p class="text-muted">
-                            {{ GoogleTranslate::trans(
+                            {{ translate(
                                 "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
                                 continus dans l’amélioration et l’innovation des produits.",
                                 \App::getLocale(),
@@ -410,9 +410,9 @@
                     <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
-                        <h4>{{ GoogleTranslate::trans('DIVERSITÉ', \App::getLocale()) }}</h4>
+                        <h4>{{ translate('DIVERSITÉ') }}</h4>
                         <p class="text-muted">
-                            {{ GoogleTranslate::trans(
+                            {{ translate(
                                 "EVO machinery une large gamme d'équipements de construction et de levage,
                                 notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
                                 \App::getLocale(),
@@ -425,9 +425,9 @@
                     <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
                             alt="..." />
-                        <h4>{{ GoogleTranslate::trans('SERVICE', \App::getLocale()) }}</h4>
+                        <h4>{{ translate('SERVICE') }}</h4>
                         <p class="text-muted">
-                            {{ GoogleTranslate::trans(
+                            {{ translate(
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
                                 pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
                                 pour garantir une qualité de produit de premier ordre.",

@@ -1,7 +1,7 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
-    
+
 @endsection
 
 @section('content')
@@ -11,44 +11,44 @@
             loading="lazy" alt="">
         <div class="textph"
         style="font-weight: bold; position: absolute; top: 40%; left:30%;  color: #2042be; font-size: 24px;">
-            <span style="font-size: 50px;">{{ GoogleTranslate::trans('EQUIPEMENT
-            BLINDES', \App::getLocale()) }}</span>
+            <span style="font-size: 50px;">{{ translate('EQUIPEMENT
+            BLINDES') }}</span>
         </div>
     </div>
 
     <!-- la partie etapes design -->
     <section class="design-steps">
-        <h1>{{ GoogleTranslate::trans('Les étapes de nos Design.', \App::getLocale()) }}</h1>
+        <h1>{{ translate('Les étapes de nos Design.') }}</h1>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>
-                <h2>{{ GoogleTranslate::trans('DESIGN', \App::getLocale()) }}</h2>
-                <p>{{ GoogleTranslate::trans('L’art de la beauté au service de l’industrie', \App::getLocale()) }}</p>
+                <h2>{{ translate('DESIGN') }}</h2>
+                <p>{{ translate('L’art de la beauté au service de l’industrie') }}</p>
             </div>
-            <div class="step" data-aos="fade-up"> 
+            <div class="step" data-aos="fade-up">
                 <i class="fas fa-search icon"></i>
-                <h2>{{ GoogleTranslate::trans('RECHERCHE & DÉVELOPPEMENT', \App::getLocale()) }}</h2>
-                <p>{{ GoogleTranslate::trans('Les meilleurs spécialistes à votre écoute', \App::getLocale()) }}</p>
+                <h2>{{ translate('RECHERCHE & DÉVELOPPEMENT') }}</h2>
+                <p>{{ translate('Les meilleurs spécialistes à votre écoute') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-industry icon"></i>
-                <h2>{{ GoogleTranslate::trans('FABRICATION', \App::getLocale()) }}</h2>
-                <p>{{ GoogleTranslate::trans('Les meilleurs ingénieurs de production', \App::getLocale()) }}</p>
+                <h2>{{ translate('FABRICATION') }}</h2>
+                <p>{{ translate('Les meilleurs ingénieurs de production') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-cube icon"></i>
-                <h2>{{ GoogleTranslate::trans('PROTOTYPAGE', \App::getLocale()) }}</h2>
-                <p>{{ GoogleTranslate::trans('L’innovation à portée de main', \App::getLocale()) }}</p>
+                <h2>{{ translate('PROTOTYPAGE') }}</h2>
+                <p>{{ translate('L’innovation à portée de main') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-vial icon"></i>
-                <h2>{{ GoogleTranslate::trans('TEST ET ESSAI', \App::getLocale()) }}</h2>
-                <p>{{ GoogleTranslate::trans('Maîtrise des risques au maximum', \App::getLocale()) }}</p>
+                <h2>{{ translate('TEST ET ESSAI') }}</h2>
+                <p>{{ translate('Maîtrise des risques au maximum') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-couch icon"></i>
-                <h2>{{ GoogleTranslate::trans('CONFORT', \App::getLocale()) }}</h2>
-                <p>{{ GoogleTranslate::trans('La robustesse du blindage et le confort d’une', \App::getLocale()) }}</p>
+                <h2>{{ translate('CONFORT') }}</h2>
+                <p>{{ translate('La robustesse du blindage et le confort d’une') }}</p>
             </div>
         </div>
     </section>
@@ -61,20 +61,20 @@
         <div class="contain">
             <div class="content-section">
                 <div class="title"data-aos="fade-up">
-                    <h1>{{ GoogleTranslate::trans(' Équipements blindé', \App::getLocale()) }}</h1>
+                    <h1>{{ translate(' Équipements blindé') }}</h1>
                 </div>
                 <div class="content"data-aos="fade-up">
                     <p>
-                    {{ GoogleTranslate::trans('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
+                    {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
 
 En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, vehiculeblinde.com se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.
 
 Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.
 
-Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.', \App::getLocale()) }}
+Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
                     </p>
                     {{-- <div class="button mb-5">
-                        <a href="">{{ GoogleTranslate::trans('Nos services', \App::getLocale()) }}</a>
+                        <a href="">{{ translate('Nos services') }}</a>
                     </div> --}}
                 </div>
             </div>
