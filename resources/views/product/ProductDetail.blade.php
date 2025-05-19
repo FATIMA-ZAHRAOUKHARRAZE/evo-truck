@@ -1,4 +1,8 @@
 @extends('layout.navbar')
+@section('url')
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    <link rel="stylesheet" href={{ asset('css/product.css') }}>
+@endsection
 @section('content')
     <style>
         .row {
