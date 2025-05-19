@@ -1,6 +1,7 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    <link rel="stylesheet" href={{ asset('css/product.css') }}>
 @endsection
 @section('content')
     <style>
@@ -43,10 +44,10 @@
             </span>
         </div>
     </div>
-    <section class="container ps-3 pe-3 mt-4">
+    <section class="container mt-4 ps-3 pe-3">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-md-3 col-12 sidebar mb-4">
+            <div class="mb-4 col-md-3 col-12 sidebar">
                 <h3 class="mb-4">
                     {{ translate("Filtrer les Produits") }}
                 </h3>
@@ -76,7 +77,7 @@
                     <input type="text" class="form-control" id="product-name" placeholder="{{ translate('Entrer une partie de produit') }}">
                 </div>
                 <!-- Filter Link Button -->
-                <a href="#" id="filter-link" class="btn btn-primary mb-3">
+                <a href="#" id="filter-link" class="mb-3 btn btn-primary">
                     {{ translate("Filtrer") }}
                 </a>
                 <script>
@@ -98,9 +99,9 @@
             </div>
             <!-- Content Column -->
             <div class="col-md-9 col-12">
-                <div class="row d-flex flex-wrap">
+                <div class="flex-wrap row d-flex">
                     @foreach ($filteredDetails as $item)
-                        <div class="product-item mb-4 col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                        <div class="mb-4 product-item col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
                             <div class="bbb_deals">
                                 <div class="bbb_deals_slider_container">
                                     <div class="bbb_deals_item" data-aos="zoom-in">
