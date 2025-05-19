@@ -128,23 +128,23 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
     </div>
-<!-- partie about -->
-<div class="about" id="">
-   <div class="ab-content">
-     <h1 data-aos="fade-up" class="text-center about-title" style="padding-bottom: 40px">{{ translate('À propos') }}</h1>
-    <p data-aos="fade-up">
-        {{ translate("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière,machines de levage,machines de terrassement,machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.") }}
-    </p>
-   </div>
-</div>
-<!-- afficher le texte -->
-<div class="my-5 text-center">
-    <h2  data-aos="fade-up"  style="font-size: 40px; font-weight: bold; color:#2042be;" >{{ translate('Nos produits') }}</h2>
-    <h3  data-aos="fade-up"  style="font-size: 16px; color: black; line-height: 1.6;">
-      {{ translate('EVO MACHINERY est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
+    <!-- partie about -->
+    <div class="about" id="">
+    <div class="ab-content">
+        <h1 data-aos="fade-up" class="text-center about-title" style="padding-bottom: 40px">{{ translate('À propos') }}</h1>
+        <p data-aos="fade-up">
+            {{ translate("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière,machines de levage,machines de terrassement,machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.") }}
+        </p>
+    </div>
+    </div>
+    <!-- afficher le texte -->
+    <div class="my-5 text-center">
+        <h2  data-aos="fade-up"  style="font-size: 40px; font-weight: bold; color:#2042be;" >{{ translate('Nos produits') }}</h2>
+        <h3  data-aos="fade-up"  style="font-size: 16px; color: black; line-height: 1.6;">
+        {{ translate('EVO MACHINERY est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
 
-    </h3>
-</div>
+        </h3>
+    </div>
     <!-- Code pour la partie produit -->
     <div class="container">
       <div class="row justify-content-center" style="margin-top: 50px" data-aos="fade-up">
@@ -163,7 +163,6 @@
                 </div>
             </div>
         @empty
-
         @endforelse
     </div>
 @endsection

@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
-
    /* Reset and base styling */
 * {
        margin: 0;
        padding: 0;
        box-sizing: border-box;
         font-family: "Arial", sans-serif;
-
    }
 html,
 body {
@@ -18,8 +15,7 @@ body {
        flex-direction: column;
        min-height: 100vh;
    }
-
-   /* Navbar styling */
+/* Navbar styling */
 nav {
        padding: 0px 0px 0px 80px;
        display: flex;
@@ -34,7 +30,6 @@ nav {
        height: 75px;
        transition:.3s
    }
-
 .logo img {
        height: 120px;
    }
@@ -47,11 +42,8 @@ nav ul {
 .nav-link{
     padding:0 !important;
 }
-
 nav ul li {
-
        list-style-type: none;
-
        position: relative;
        padding-right:20px;
        padding-top:14px;
@@ -59,13 +51,11 @@ nav ul li {
    .nav-list li a:hover{
        color:#efc425 !important;
    }
-
 nav ul li a {
        text-decoration: none;
        color: #fff;
        padding: 10px 0;
    }
-
 nav ul li::after {
        content: "";
        position: absolute;
@@ -76,37 +66,28 @@ nav ul li::after {
        background-color: #fff;
        transition: width 0.3s ease, left 0.3s ease;
    }
-
-
-nav ul li:hover::after {
+    nav ul li:hover::after {
        width: 100%;
        left: 0;
    }
-
    /* scrolle DE MENU PRODUITS */
     .dropdown-menu {
         max-height: 500px; /* Ajustez la hauteur selon vos besoins */
         overflow-y: auto; /* Ajoute un défilement vertical */
         scrollbar-width: thin; /* Style pour les navigateurs modernes */
     }
-
     .dropdown-menu::-webkit-scrollbar {
         width: 8px; /* Largeur de la scrollbar */
     }
-
-
-
     .menu-icon {
            display: none;
            cursor: pointer;
        }
-
-
-.menu-icon i {
+    .menu-icon i {
        color: #fff;
        font-size: 30px;
    }
-.mob-lang{
+    .mob-lang{
         display:none;
     }
    /* Mobile menu */
@@ -142,31 +123,23 @@ nav ul li:hover::after {
            gap: 0;
            overflow: hidden;
            max-height: 0;
-
        }
-
        nav ul li {
            padding: 20px;
            padding-top: 0;
        }
-
        .menu-icon {
            display: block;
        }
-
        .info-bar {
            display: none;
        }
-main {
+        main {
        flex-grow: 1;
        padding-top: 4vh;
        /* To ensure content starts below the navbar */
-   }
-   }
-
-
-
-
+    }
+}
    /* Main content */
 main {
        flex-grow: 1;
@@ -255,7 +228,6 @@ footer {
             .lang{
                 display:none
             }
-
 }
 /* BUTTON WHATSSAP*/
 .whatsapp-btn-container {
@@ -358,21 +330,13 @@ width: 95% !important;
        /* To ensure content starts below the navbar */
    }
      }
-
 .kk{
     margin-top:2.5vh !important
 }
-
 .rr:hover {
     background-color: transparent !important; /* Removes hover background */
     color: inherit !important; /* Keeps text color unchanged */
 }
-
-
-
-
-
-
 .logo img {
        height: 120px;
    }
@@ -476,10 +440,6 @@ main {
        /* To ensure content starts below the navbar */
    }
    }
-
-
-
-
    /* Main content */
 main {
        flex-grow: 1;
