@@ -254,22 +254,21 @@
         .rounded-circle {
             border-radius: 50% !important;
         }
-   @media (max-width: 768px) {
-    .image-desktop-only {
-         position: absolute;
-        top: 50%;
-        left: 15%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        margin: 0; /* Reset margins */
-    }
+        @media (max-width: 768px) {
+            .image-desktop-only {
+                position: absolute;
+                top: 50%;
+                left: 15%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                margin: 0; /* Reset margins */
+            }
 }
 </style>
 
-        <div style="position: relative; width: 100%;">
+    <div style="position: relative; width: 100%;">
     <img  style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}" alt="">
-    <div class="image-desktop-only"
-        style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px; ">
+    <div class="image-desktop-only" style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px;">
         <span style="font-size: 50px;">{{ translate('À propos ') }}</span>
     </div>
 </div>
@@ -277,65 +276,42 @@
         <div class="container">
             <ul class="timeline" >
                 <li data-aos="fade-left">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('images/Original.png') }}"
-                            loading="lazy" alt="..." />
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." />
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">{{ translate('BIENVENUE CHEZ EVO') }}
-                            </h4>
+                            <h4 class="subheading">{{ translate('BIENVENUE CHEZ EVO') }}</h4>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
-                                {{ translate(
-                                    "Depuis sa création en 2000, EVO machinery s'est rapidement
-                                                                                                                                                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
-                                                                                                                                                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
-                                                                                                                                                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
-                                                                                                                                                                                                                                de qualité supérieure à notre clientèle mondiale.",
-                                    \App::getLocale(),
-                                ) }}
+                                {{ translate("Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage. Notre parcours a été caractérisé par une recherche incessante de l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions de qualité supérieure à notre clientèle mondiale.") }}
                             </p>
                         </div>
                     </div>
                 </li>
                 <li class="timeline-inverted" data-aos="fade-left">
-                    <div class="timeline-image" ><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
+                    <div class="timeline-image" ><img class="rounded-circle img-fluid" src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">
-                                {{ translate('DÉVOILER NOTRE HÉRITAGE') }}</h4>
+                            <h4 class="subheading">{{ translate('DÉVOILER NOTRE HÉRITAGE') }}</h4>
                         </div>
                         <div class="timeline-body" >
                             <p class="text-muted">
-                                {{ translate(
-                                    "Dans un monde où le progrès se mesure à la robustesse des fondations et à
-                                                                                                                                                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
-                                                                                                                                                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
-                                                                                                                                                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
-                                    \App::getLocale(),
-                                ) }}
+                                {{ translate("Dans un monde où le progrès se mesure à la robustesse des fondations et à la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux les plus importants et les plus influents du secteur des machines de construction.") }}
                             </p>
                         </div>
                     </div>
                 </li>
                 <li data-aos="fade-left">
-                    <div class="timeline-image" ><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
+                    <div class="timeline-image" ><img class="rounded-circle img-fluid" src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
                     <div class="timeline-panel" >
                         <div class="timeline-heading">
-
                             <h4 class="subheading">{{ translate('IMPACT MONDIAL') }}</h4>
                         </div>
                         <div class="timeline-body" >
                             <p class="text-muted">
                                 {{ translate(
-                                    "EVO machinery est fier de figurer parmi les plus grandes
-                                                                                                                                                                                                                                entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
-                                                                                                                                                                                                                                reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
-                                    \App::getLocale(),
-                                ) }}
+                                    "EVO machinery est fier de figurer parmi les plus grandes entreprises de machines de construction au monde. Nos contributions nous ont valu d'être reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.") }}
                             </p>
                         </div>
                     </div>
@@ -345,20 +321,13 @@
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
                     <div class="timeline-panel" >
                         <div class="timeline-heading">
-
                             <h4 class="subheading">
                                 {{ translate('NOTRE VISION ET NOS VALEURS') }}</h4>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ translate(
-                                    "Chez EVO machinery, notre chemin est éclairé par une vision
-                                                                                                                                                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
-                                                                                                                                                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
-                                                                                                                                                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
-                                                                                                                                                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
-                                                                                                                                                                                                                                l'industrie.",
-                                    \App::getLocale(),
+                                    "Chez EVO machinery, notre chemin est éclairé par une vision claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à élever continuellement nos performances, en établissant de nouvelles références au sein de l'industrie."
                                 ) }}
                             </p>
                         </div>
@@ -384,8 +353,7 @@
                             {{ translate(
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
                                 rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                 conformes aux normes de l'industrie.",
-                                \App::getLocale(),
+                                 conformes aux normes de l'industrie."
                             ) }}
                         </p>
 
@@ -414,8 +382,7 @@
                         <p class="text-muted">
                             {{ translate(
                                 "EVO machinery une large gamme d'équipements de construction et de levage,
-                                notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
-                                \App::getLocale(),
+                                notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore."
                             ) }}
                         </p>
 
@@ -430,8 +397,7 @@
                             {{ translate(
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
                                 pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                pour garantir une qualité de produit de premier ordre.",
-                                \App::getLocale(),
+                                pour garantir une qualité de produit de premier ordre."
                             ) }}
                         </p>
 
