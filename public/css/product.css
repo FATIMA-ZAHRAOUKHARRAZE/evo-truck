@@ -82,6 +82,14 @@ html,
     top: 17px
 }
 
+/* Main content */
+.main {
+    flex-grow: 1;
+    padding-top: 25px;
+   }
+.banner{
+    margin-top: 50px;
+}
 div {
     display: block;
     position: relative;

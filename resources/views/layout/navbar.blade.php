@@ -162,7 +162,7 @@
             </div>
         </nav>
         {{-- l'affichage des view --}}
-        <main class=" flex-grow-1">
+        <main class="main flex-grow-1">
             @yield('content')
 
         </main>

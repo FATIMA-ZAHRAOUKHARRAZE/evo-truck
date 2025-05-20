@@ -44,7 +44,7 @@
             </span>
         </div>
     </div>
-    <section class="container mt-4 ps-3 pe-3">
+    <section class="container banner ps-3 pe-3">
         <div class="row">
             <!-- Sidebar -->
             <div class="mb-4 col-md-3 col-12 sidebar">

@@ -423,19 +423,14 @@ nav ul li:hover::after {
     .info-bar {
         display: none;
     }
-    main {
+    .main {
         flex-grow: 1;
-        padding-top: 4vh;
+
         /* To ensure content starts below the navbar */
     }
 }
 
-/* Main content */
-main {
-    flex-grow: 1;
-    padding-top: 75px;
-    /* To ensure content starts below the navbar */
-}
+
 
 /* Footer styling */
 footer {
