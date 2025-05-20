@@ -4,41 +4,8 @@
     <link rel="stylesheet" href={{ asset('css/product.css') }}>
 @endsection
 @section('content')
-    <style>
-    /* Hide header image on small screens */
-    @media (max-width: 768px) {
-    .textph {
-        position: absolute;
-            top: 50%;
-            left: 50% !important;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            margin: 0; /* Reset margins */
-        }
-        .textph span
-        {
-            font-size: 25px !important;
-        }
-    }
 
-    /* Responsive grid adjustments */
-    @media (max-width: 540px) {
-        .product-item {
-            flex: 0 0 100%; /* Full width */
-            max-width: 100%; /* Full width */
-        }
-    }
-    @media (max-width: 920px) and (min-width: 541px) {
-        .product-item {
-            flex: 0 0 50%; /* Half width */
-            max-width: 50%; /* Half width */
-        }
-    }
-    </style>
-@extends('layout.navbar')
-@section('url')
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-@endsection
+
 <!-- Page Image -->
 <div class="sss" style="position: relative; width: 100%;">
     <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;" src="{{ asset('images/'.$categorie->img_catpro) }}"alt="">
@@ -164,23 +131,6 @@
         </div>
     </div>
 </section>
-<script>
-    // Select the <nav> element inside .pagination-wrapper
-    const navElement = document.querySelector('.pagination-wrapper nav');
-    if (navElement) {
-    // Create a new <div> element
-    const divElement = document.createElement('div');
-    // Copy attributes from the <nav> to the <div>
-    Array.from(navElement.attributes).forEach(attr => {
-        divElement.setAttribute(attr.name, attr.value);
-    });
-    // Copy the content of the <nav> to the <div>
-    divElement.innerHTML = navElement.innerHTML;
-    // Replace the <nav> with the <div>
-    navElement.parentNode.replaceChild(divElement, navElement);
-    console.log('<nav> has been replaced with <div>!');
-    } else {
-    console.log('No <nav> found inside .pagination-wrapper');
-    }
-</script>
+<!--script-->
+    <script src="{{ asset('js/product.js') }}" defer></script>
 @endsection
