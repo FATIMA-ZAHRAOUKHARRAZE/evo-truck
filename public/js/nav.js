@@ -14,21 +14,6 @@ AOS.init({
     once: false,
     offset: 200,
 });
-//change language
-$(".changeLanguage").change(function (event) {
-    var url = "{{ route('translate.change') }}";
-    window.location.href = url + "?lang=" + $(this).val();
-});
-let menuList = document.getElementById("menuList");
-menuList.style.minHeight = "0px";
-
-function toggleMenu() {
-    if (menuList.style.minHeight == "0px") {
-        menuList.style.minHeight = "100vh ";
-    } else {
-        menuList.style.minHeight = "0px";
-    }
-}
 
 document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.getElementById("nav");
