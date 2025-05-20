@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <link rel="stylesheet" href={{ asset('css/product.css') }}>
 @endsection
+
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <div style="position: relative; width: 100%;">
@@ -97,8 +98,8 @@
                         <p class="text-muted">
                             {{ translate(
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                                                                                        rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                                                                         conformes aux normes de l'industrie.",
+                                                                                                                                                                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
+                                                                                                                                                                                                                                     conformes aux normes de l'industrie.",
                             ) }}
                         </p>
 
@@ -112,7 +113,7 @@
                         <p class="text-muted">
                             {{ translate(
                                 "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                                                                                        continus dans l’amélioration et l’innovation des produits.",
+                                                                                                                                                                                                                                    continus dans l’amélioration et l’innovation des produits.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -127,7 +128,7 @@
                         <p class="text-muted">
                             {{ translate(
                                 "EVO machinery une large gamme d'équipements de construction et de levage,
-                                                                                        notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
+                                                                                                                                                                                                                                    notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
                             ) }}
                         </p>
 
@@ -141,8 +142,8 @@
                         <p class="text-muted">
                             {{ translate(
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                                                                                        pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                                                                        pour garantir une qualité de produit de premier ordre.",
+                                                                                                                                                                                                                                    pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
+                                                                                                                                                                                                                                    pour garantir une qualité de produit de premier ordre.",
                             ) }}
                         </p>
 
