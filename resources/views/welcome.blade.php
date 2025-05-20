@@ -109,7 +109,6 @@
                 /* Augmente la largeur des colonnes pour les écrans moyens. */
             }
         }
-
         @media (max-width: 992px) {
             .col-5-custom {
                 width: 33.33%;
@@ -138,7 +137,6 @@
             /* Réduit légèrement l'opacité au survol. */
         }
     </style>
-
     <!-- Code pour le banner image -->
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
