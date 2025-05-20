@@ -1,68 +1,22 @@
 @extends('layout.navbar')
 
 @section('url')
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 @endsection
-
 @section('content')
-<style>
-	body {
-		font-family: Arial, sans-serif;
-	}
-.text-center1{
-    color:#0d2471;
-    text-align :center;
-}
-	.contact-section {
-		padding: 40px 20px;
-		background-color: #f8f9fa;
-	}
-
-	.contact-form {
-		background-color: #ffffff;
-		border-radius: 5px;
-		padding: 20px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	}
-
-	.contact-details {
-		text-align: center;
-	}
-
-	.contact-details i {
-		font-size: 24px;
-		color: #007bff;
-		margin-bottom: 10px;
-	}
-
-	.google-map-error {
-		text-align: center;
-		padding: 20px;
-		border: 1px solid #e0e0e0;
-		border-radius: 5px;
-		background-color: #ffffff;
-	}
-</style>
-</head>
-
 <body>
 	<div class="container contact-section">
 		<h2 data-aos="fade-down" class="text-center1">{{ translate('CONTACTEZ-NOUS') }}</h2>
 		<p data-aos="fade-down" class="text-center">
-	{{ translate(
-    "Vous avez des questions ou besoin d'aide ? Contactez-nous en utilisant le formulaire de contact ci-dessous.
-    Notre équipe du Groupe EVO MACHINERY est là pour vous aider.",
-    \App::getLocale()
-) }}
-
+	        {{ translate("Vous avez des questions ou besoin d'aide ? Contactez-nous en utilisant le formulaire de contact ci-dessous.Notre équipe du Groupe EVO MACHINERY est là pour vous aider.") }}
 		</p>
-
 		<div class="mt-4 row">
 			<!-- Formulaire de contact -->
 			<div class="col-md-6">
-			    	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+			    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 				<form data-aos="fade-right" class="contact-form" action={{ route('contact.send') }} method="POST">
 					@csrf
 					<div class="mb-3">
@@ -93,7 +47,6 @@
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
 					</div>
-
 					<div class="mb-3">
                             <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.sitekey') }}"> </div>
                             @error('g-recaptcha-response')
@@ -102,10 +55,7 @@
                         </div>
 					<button type="submit" class="btn btn-primary w-100">{{ translate('Envoie Message') }}</button>
 				</form>
-
 			</div>
-
-
 			<!-- Carte Google et informations -->
 			<div class="col-md-6">
 				<div data-aos="fade-left" class="google-map-error">
@@ -118,17 +68,11 @@
 				<div class="mt-4 contact-details">
 					<p data-aos="fade-left"><i class="bi bi-geo-alt"></i> {{ translate('Address') }}:  HOLLYWOOD MONGKOK , KOWLOON , HONG KONG</p>
 					<p data-aos="fade-left"><i class="bi bi-telephone"></i> {{ translate('Téléphone') }}: +86 19 826 086 894</p>
-							<p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a href="mailto:contact@evo-machinery.com" style="text-decoration:none; color: black;">contact@evo-machinery.com</a></p>
-		<p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a href="mailto:sales@evo-machinery.com" style="text-decoration:none; color:black;">sales@evo-machinery.com</a></p>
-
-
-
+					<p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a href="mailto:contact@evo-machinery.com" style="text-decoration:none; color: black;">contact@evo-machinery.com</a></p>
+		            <p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a href="mailto:sales@evo-machinery.com" style="text-decoration:none; color:black;">sales@evo-machinery.com</a></p>
 					<p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-machinery.com</p>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-	@endsection
+@endsection

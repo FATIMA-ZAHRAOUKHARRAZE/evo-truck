@@ -1,0 +1,38 @@
+	body {
+	    font-family: Arial, sans-serif;
+	}
+
+	.text-center1 {
+	    color: #0d2471;
+	    text-align: center;
+	}
+
+	.contact-section {
+	    padding: 40px 20px;
+	    background-color: #f8f9fa;
+	}
+
+	.contact-form {
+	    background-color: #ffffff;
+	    border-radius: 5px;
+	    padding: 20px;
+	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.contact-details {
+	    text-align: center;
+	}
+
+	.contact-details i {
+	    font-size: 24px;
+	    color: #007bff;
+	    margin-bottom: 10px;
+	}
+
+	.google-map-error {
+	    text-align: center;
+	    padding: 20px;
+	    border: 1px solid #e0e0e0;
+	    border-radius: 5px;
+	    background-color: #ffffff;
+	}

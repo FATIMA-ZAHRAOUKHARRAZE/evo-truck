@@ -1,10 +1,8 @@
 @extends('layout.navbar')
-<style>
-    @media (max-width: 768px) {
-        .sss {
-            display: none
-        }
-</style>
+ @section('url')
+    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/catliste.css') }}">
+@endsection
 @section('content')
     <!-- Page Image -->
     <div class="sss" style="position: relative; width: 100%;">

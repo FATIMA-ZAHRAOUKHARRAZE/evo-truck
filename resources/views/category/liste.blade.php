@@ -1,48 +1,12 @@
 @extends('layout.navbar')
+
+ @section('url')
+
+    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/catliste.css') }}">
+@endsection
 @section('content')
-    <style>
-        .row {
-            margin-right: 0 !important;
-        }
-
-        /* CSS personnalisé pour définir 5 colonnes sur les écrans larges */
-        .col-5-custom {
-            width: 20%;
-            /* chaque colonne prend 20% pour faire 5 colonnes */
-        }
-
-        @media (max-width: 1200px) {
-            .col-5-custom {
-                width: 25%;
-                /* 4 colonnes sur écran de taille moyenne */
-            }
-        }
-
-        @media (max-width: 992px) {
-            .col-5-custom {
-                width: 33.33%;
-                /* 3 colonnes sur écran de taille moyenne */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .col-5-custom {
-                width: 50%;
-                /* 2 colonnes sur les petits écrans */
-            }
-
-            .sss {
-                display: none
-            }
-        }
-
-        @media (max-width: 576px) {
-            .col-5-custom {
-                width: 100%;
-                /* 1 colonne sur les écrans très petits */
-            }
-        }
-    </style>
+   <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <div style="position: relative; width: 100%;" class="sss">
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             loading="lazy" alt="">
@@ -52,8 +16,6 @@
         </div>
     </div>
     <div class="container mb-5">
-
-
         <!-- Barre de recherche -->
         <div class="search-bar col-12 text-center mt-4 mb-4">
             <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">

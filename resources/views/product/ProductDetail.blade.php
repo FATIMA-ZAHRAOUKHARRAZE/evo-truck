@@ -36,7 +36,7 @@
             }
         }
     </style>
-    <section class="py-5 mt-5 mb-5">
+    <section class="pb-5 banner mb-5">
         <div class="">
             <div class="row gx-5">
                 <aside class="col-lg-6">

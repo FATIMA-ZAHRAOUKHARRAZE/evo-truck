@@ -1,0 +1,75 @@
+.category-list {
+    display: flex; /* Utilise Flexbox pour l'alignement horizontal */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'espace est insuffisant */
+    justify-content: center; /* Centre les éléments horizontalement */
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le rembourrage par défaut */
+    margin: 20px 0; /* Ajoute un espacement vertical autour de la liste */
+}
+
+.category-item {
+    padding: 15px; /* Rembourrage autour de chaque élément de catégorie */
+    color: #2042be; /* Couleur du texte par défaut */
+    cursor: pointer; /* Change le curseur au survol */
+    margin: 0 10px; /* Espace entre les éléments */
+}
+
+.category-item a {
+    text-decoration: none; /* Supprime la décoration de texte pour le lien */
+    color: inherit; /* Hérite de la couleur du texte parent */
+    margin-left: 5px; /* Espace entre le texte et l'icône */
+}
+
+.category-item:hover {
+    color: #2042be; /* Change la couleur du texte au survol */
+}
+
+.category-item:hover a {
+    color: inherit; /* Assure que le lien conserve la couleur héritée au survol */
+}
+ .row {
+     margin-right: 0 !important;
+ }
+
+ /* CSS personnalisé pour définir 5 colonnes sur les écrans larges */
+ .col-5-custom {
+     width: 20%;
+     /* chaque colonne prend 20% pour faire 5 colonnes */
+ }
+
+ @media (max-width: 1200px) {
+     .col-5-custom {
+         width: 25%;
+         /* 4 colonnes sur écran de taille moyenne */
+     }
+ }
+
+ @media (max-width: 992px) {
+     .col-5-custom {
+         width: 33.33%;
+         /* 3 colonnes sur écran de taille moyenne */
+     }
+ }
+
+ @media (max-width: 768px) {
+     .col-5-custom {
+         width: 50%;
+         /* 2 colonnes sur les petits écrans */
+     }
+
+     .sss {
+         display: none
+     }
+ }
+
+ @media (max-width: 576px) {
+     .col-5-custom {
+         width: 100%;
+         /* 1 colonne sur les écrans très petits */
+     }
+ }
+@media (max-width: 768px) {
+    .sss {
+        display: none
+    }
+}
