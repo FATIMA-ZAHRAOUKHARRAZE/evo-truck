@@ -1,5 +1,4 @@
 <h2>Nouvelle demande de devis</h2>
-
 <ul>
     <li><strong>Nom :</strong> {{ $data['name'] }}</li>
     <li><strong>Société :</strong> {{ $data['société'] }}</li>

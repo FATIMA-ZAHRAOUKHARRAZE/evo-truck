@@ -27,3 +27,49 @@
 .category-item:hover a {
     color: inherit; /* Assure que le lien conserve la couleur héritée au survol */
 }
+ .row {
+     margin-right: 0 !important;
+ }
+
+ /* CSS personnalisé pour définir 5 colonnes sur les écrans larges */
+ .col-5-custom {
+     width: 20%;
+     /* chaque colonne prend 20% pour faire 5 colonnes */
+ }
+
+ @media (max-width: 1200px) {
+     .col-5-custom {
+         width: 25%;
+         /* 4 colonnes sur écran de taille moyenne */
+     }
+ }
+
+ @media (max-width: 992px) {
+     .col-5-custom {
+         width: 33.33%;
+         /* 3 colonnes sur écran de taille moyenne */
+     }
+ }
+
+ @media (max-width: 768px) {
+     .col-5-custom {
+         width: 50%;
+         /* 2 colonnes sur les petits écrans */
+     }
+
+     .sss {
+         display: none
+     }
+ }
+
+ @media (max-width: 576px) {
+     .col-5-custom {
+         width: 100%;
+         /* 1 colonne sur les écrans très petits */
+     }
+ }
+@media (max-width: 768px) {
+    .sss {
+        display: none
+    }
+}

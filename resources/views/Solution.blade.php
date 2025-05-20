@@ -1,6 +1,7 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
 @endsection
 
 @section('content')
@@ -14,7 +15,6 @@
             BLINDES') }}</span>
         </div>
     </div>
-
     <!-- la partie etapes design -->
     <section class="design-steps">
         <h1>{{ translate('Les étapes de nos Design.') }}</h1>
@@ -51,37 +51,24 @@
             </div>
         </div>
     </section>
-
-
-
-    {{-- //////////// --}}
-  <section>
-    <div class="section">
-        <div class="contain">
-            <div class="content-section">
-                <div class="title"data-aos="fade-up">
-                    <h1>{{ translate(' Équipements blindé') }}</h1>
+    <section>
+        <div class="section">
+            <div class="contain">
+                <div class="content-section">
+                    <div class="title"data-aos="fade-up">
+                        <h1>{{ translate(' Équipements blindé') }}</h1>
+                    </div>
+                    <div class="content"data-aos="fade-up">
+                        <p>
+                        {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
+                        </p>
+                    </div>
                 </div>
-                <div class="content"data-aos="fade-up">
-                    <p>
-                    {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
-
-En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, vehiculeblinde.com se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.
-
-Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.
-
-Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
-                    </p>
-                    {{-- <div class="button mb-5">
-                        <a href="">{{ translate('Nos services') }}</a>
-                    </div> --}}
+                <div class="image-section">
+                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="Équipement blindé">
                 </div>
-            </div>
-            <div class="image-section">
-                <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="Équipement blindé">
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 @endsection
