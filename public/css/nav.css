@@ -76,6 +76,7 @@ body {
     list-style-type: none;
     font-size: 23px;
 }
+
 .nav-list li a:hover {
     color: #efc425 !important;
 }

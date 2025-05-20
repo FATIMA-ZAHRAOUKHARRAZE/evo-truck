@@ -13,9 +13,10 @@
     <!--script-->
     <script src="{{ asset('js/nav.js') }}" defer></script>
     <!-- Fonts -->
-    @yield('url')
+
     <link rel="stylesheet" href={{ asset('css/nav.css') }}>
     <link rel="stylesheet" href={{ asset('css/liste.css') }}>
+    @yield('url')
     <link rel="icon" href="{{ asset('images/logo.png') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
