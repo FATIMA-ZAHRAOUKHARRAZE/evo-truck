@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 html,
-
 .mydiv {
     margin-top: 50px;
     margin-bottom: 50px
@@ -31,7 +30,7 @@ html,
 }
 
 .ribbon {
-    width: 250px;
+    width: 350px;
     height: 150px;
     overflow: hidden;
     position: absolute
@@ -90,13 +89,7 @@ html,
 .banner{
     margin-top: 50px;
 }
-div {
-    display: block;
-    position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
-}
+
 
 .bbb_deals_featured {
     width: 100%
@@ -133,9 +126,12 @@ div {
 }
 
 .bbb_deals_image {
-    width: 80%
-}
+    width: 80%;
 
+}
+.prodct-img-link{
+    overflow: hidden;
+}
 .bbb_deals_image img {
     width: 100%
 }
@@ -258,12 +254,12 @@ div {
                 margin: 0;
                 /* Reset margins */
             }
-    
+
             .textph span {
                 font-size: 25px !important;
             }
         }
-    
+
         /* Media Query for Screens ≤ 540px: Force 1 Column */
         @media (max-width: 540px) {
             .product-item {
@@ -273,7 +269,7 @@ div {
                 /* Full width */
             }
         }
-    
+
         /* Media Query for Screens 541px to 920px: Use 2 Columns */
         @media (max-width: 920px) and (min-width: 541px) {
             .product-item {
@@ -289,10 +285,7 @@ div {
     /* Couleur de fond au survol */
 }
 
- .row {
-     margin-right: 0 !important;
-     margin-left: 20px
- }
+
 
  @media (max-width: 600px) {
      .fdiv {
@@ -325,3 +318,66 @@ div {
 
      }
  }
+
+ @media (max-width: 768px) {
+    .textph {
+    position: absolute;
+        top: 50%;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin: 0;
+    }
+    .textph span
+    {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width: 540px) {
+    .product-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 920px) and (min-width: 541px) {
+    .product-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 1440px) {
+    .row {
+        margin-right: -11px;
+        margin-left: -11px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .fdiv {
+        margin-bottom: 20px
+    }
+    .ps-lg-5 {
+        margin-left: 20px
+    }
+    dd {
+        display: inline-block;
+        margin-right: 20px
+    }
+    .parali {
+        font-size: 14px !important;
+        padding-top: 30px;
+    }
+}
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 600px) {
+    #navbar {
+        display: none;
+
+    }
+}

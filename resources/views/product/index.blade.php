@@ -1,44 +1,16 @@
 @extends('layout.navbar')
 @section('url')
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    <link rel="stylesheet" href={{ asset('css/product.css') }}>
+
 @endsection
 @section('content')
-    <style>
-    /* Media Query for Hiding Header Image on Small Screens */
-    @media (max-width: 768px) {
-        .textph {
-        position: absolute;
-            top: 50%;
-            left: 50% !important;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            margin: 0; /* Reset margins */
-        }
-        .textph span
-        {
-            font-size: 25px !important;
-        }
-    }
-    /* Media Query for Screens ≤ 540px: Force 1 Column */
-    @media (max-width: 540px) {
-        .product-item {
-            flex: 0 0 100%; /* Full width */
-            max-width: 100%; /* Full width */
-        }
-    }
-    /* Media Query for Screens 541px to 920px: Use 2 Columns */
-    @media (max-width: 920px) and (min-width: 541px) {
-        .product-item {
-            flex: 0 0 50%; /* Half width */
-            max-width: 50%; /* Half width */
-        }
-    }
-    </style>
+<link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+<link rel="stylesheet" href={{ asset('css/product.css') }}>
     <!-- Page Image -->
     <div class="sss" style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"src="{{ asset('images/'.$categorie->img_catpro) }}"  alt="">
-        <div class="textph" style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? "37%" : (strlen($categorie->nom_cat) < 20 ? "30%" : "20%") }};color: #2042be; font-size: 24px; ">
+        <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"src="{{ asset('images/' . $categorie->img_catpro) }}"
+            alt="">
+        <div class="textph"
+            style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }};color: #2042be; font-size: 24px; ">
             <span style="font-size: 50px;letter-spacing: 2px;">
                 {{ translate($categorie->nom_cat) }}
             </span>
@@ -49,16 +21,16 @@
             <!-- Sidebar -->
             <div class="mb-4 col-md-3 col-12 sidebar">
                 <h3 class="mb-4">
-                    {{ translate("Filtrer les Produits") }}
+                    {{ translate('Filtrer les Produits') }}
                 </h3>
                 <!-- Category Selection -->
                 <div class="mb-3">
                     <label for="category-select" class="form-label">
-                        {{ translate("Sélectionner une catégorie") }}
+                        {{ translate('Sélectionner une catégorie') }}
                     </label>
                     <select class="form-select" id="category-select">
                         <option disabled>
-                            {{ translate("Sélectionner une catégorie") }}
+                            {{ translate('Sélectionner une catégorie') }}
                         </option>
                         @forelse ($scategories as $categorie)
                             <option value="{{ $categorie->id }}">
@@ -73,15 +45,18 @@
                 </div>
                 <!-- Product Name Input -->
                 <div class="mb-3">
-                    <label for="product-name" class="form-label">{{ translate("Le nom de produit") }}</label>
-                    <input type="text" class="form-control" id="product-name" placeholder="{{ translate('Entrer une partie de produit') }}">
+                    <label for="product-name" class="form-label">{{ translate('Le nom de produit') }}</label>
+                    <input type="text" class="form-control" id="product-name"
+                        placeholder="{{ translate('Entrer une partie de produit') }}">
                 </div>
                 <!-- Filter Link Button -->
                 <a href="#" id="filter-link" class="mb-3 btn btn-primary">
-                    {{ translate("Filtrer") }}
+                    {{ translate('Filtrer') }}
                 </a>
                 <script>
-                    const routeTemplate = "{{ route('product.filter', ['id' => ':id','cid' => ':cid', 'productname' => ':productname']) }}";
+                    const routeTemplate =
+                        "{{ route('product.filter', ['id' => ':id', 'cid' => ':cid', 'productname' => ':productname']) }}";
+
                     function updateFilterLink() {
                         const selectElement = document.getElementById('category-select');
                         const productName = document.getElementById('product-name').value;
@@ -99,24 +74,29 @@
             </div>
             <!-- Content Column -->
             <div class="col-md-9 col-12">
-                <div class="flex-wrap row d-flex">
+                <div class="row g-3">
                     @foreach ($filteredDetails as $item)
-                        <div class="mb-4 product-item col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                            <div class="bbb_deals">
+                        <div class="col-12 col-md-6 col-lg-4 product-item" data-aos="fade-up">
+                                <div class="bbb_deals overflow-hidden">
                                 <div class="bbb_deals_slider_container">
                                     <div class="bbb_deals_item" data-aos="zoom-in">
                                         <div class="bbb_deals_image">
-                                            <a class="prodct-img-link" href="{{ route('ProductDetail', $item['product']->id) }}">
-                                                <img src="{{ asset('images/' . $item['product']->img_pro) }}" alt="">
+                                            <a class="prodct-img-link"
+                                                href="{{ route('ProductDetail', $item['product']->id) }}">
+                                                <img loading="lazy" src="{{ asset('images/' . $item['product']->img_pro) }}"
+                                                    alt="{{  $item['product']->img_pro }}">
                                             </a>
                                         </div>
                                         <div class="mb-1 bbb_deals_content">
                                             <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
-                                            <div class="mb-5 bbb_deals_item_name" style="color: #031c77;font-size: {{
-                                                        strlen($item['product']->nom_pro) < 12 ? '30px' :
-                                                        (strlen($item['product']->nom_pro) < 20 ? '20px' :
-                                                        (strlen($item['product']->nom_pro) < 30 ? '16px' : '14px'))
-                                                    }}">
+                                                <div class="mb-5 bbb_deals_item_name"
+                                                    style="color: #031c77;font-size: {{ strlen($item['product']->nom_pro) < 12
+                                                        ? '30px'
+                                                        : (strlen($item['product']->nom_pro) < 20
+                                                            ? '20px'
+                                                            : (strlen($item['product']->nom_pro) < 30
+                                                                ? '16px'
+                                                                : '14px')) }}">
                                                     <b>{{ $item['product']->nom_pro }}</b>
                                                 </div>
                                             </div>
@@ -124,11 +104,12 @@
                                                 <div class="bbb_deals_item_details" data-aos="fade-left">
                                                     @foreach ($detail as $column => $value)
                                                         <div class="bbb_deals_item_detail">
-                                                            <div class="bbb_deals_item_detail_label" style="font-size: 13.7px">
-                                                            {{ ucfirst(translate(Str::limit($column, 20))) }}
+                                                            <div class="bbb_deals_item_detail_label" title="{{strlen($column ) > 20 ? $column : ''}}"
+                                                                style="font-size: 13.7px">
+                                                                {{ ucfirst(translate(Str::limit($column, 20))) }}
                                                             </div>
-                                                            <div class="bbb_deals_item_detail_value">
-                                                            {{Str::limit($value, 6)}}
+                                                            <div class="bbb_deals_item_detail_value" >
+                                                                {{ Str::limit($value, 6) }}
                                                             </div>
                                                         </div>
                                                     @endforeach
@@ -136,13 +117,13 @@
                                             @endforeach
                                             <div class="mt-2 available">
                                                 <div class="flex-row available_line d-flex justify-content-between">
-                                                    <a href="{{ route('ProductDetail', $item['product']->id) }}" class="btn"
-                                                        data-aos="flip-left">
-                                                    {{ translate("PLUS") }}
+                                                    <a href="{{ route('ProductDetail', $item['product']->id) }}"
+                                                        class="btn" data-aos="flip-left">
+                                                        {{ translate('PLUS') }}
                                                     </a>
                                                     <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
                                                         class="btn" data-aos="flip-right">
-                                                        {{ translate("LE DEVIS") }}
+                                                        {{ translate('LE DEVIS') }}
                                                     </a>
                                                 </div>
                                                 <div class="available_bar"><span style="width:17%"></span></div>

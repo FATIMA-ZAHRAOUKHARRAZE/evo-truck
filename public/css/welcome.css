@@ -138,4 +138,39 @@
 .main {
     flex-grow: 1;
     padding-top: 75px;
-   }
+}
+
+.carousel-item > img {
+    height: auto !important;
+    width: 100%;
+}
+
+.ab-content > h1 {
+    padding-bottom: 40px;
+}
+
+.ab-div > h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2042be;
+}
+.ab-div > h3 {
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+}
+
+.w-product > div img {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+.div2 {
+    border-radius: 15px;
+}
+
+.lastdiv>h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2042be;
+}

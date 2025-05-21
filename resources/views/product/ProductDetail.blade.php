@@ -1,48 +1,17 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    <link rel="stylesheet" href={{ asset('css/product.css') }}>
 @endsection
 @section('content')
-    <style>
-        .row {
-            margin-right: 0 !important;
-            margin-left: 20px
-        }
-        @media (max-width: 600px) {
-            .fdiv {
-                margin-bottom: 20px
-            }
-            .ps-lg-5 {
-                margin-left: 20px
-            }
-            dd {
-                display: inline-block;
-                margin-right: 20px
-            }
-            .parali {
-                font-size: 14px !important;
-                padding-top: 30px;
-            }
-        }
-        #menu {
-            display: flex;
-            flex-direction: row;
-        }
-        @media (max-width: 600px) {
-            #navbar {
-                display: none;
-
-            }
-        }
-    </style>
+    <link rel="stylesheet" href={{ asset('css/product.css') }}>
     <section class="pb-5 banner mb-5">
         <div class="">
             <div class="row gx-5">
                 <aside class="col-lg-6">
                     <div class="mb-3 border rounded-4 d-flex justify-content-center">
                         <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
-                            <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="{{ asset('/images/' . $product->img_pro) }}" />
+                            <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
+                                src="{{ asset('/images/' . $product->img_pro) }}" />
                         </a>
                     </div>
                 </aside>
@@ -54,21 +23,22 @@
                     </div>
                     @if (!empty($filteredDetails) && count($filteredDetails) > 0)
                         <hr style="margin-top: 60px">
-                            @foreach ($filteredDetails as $detail)
-                                <div class="row" style="margin-top: 40px;margin-right: 20px !important;">
-                                    @foreach ($detail as $column => $value)
-                                        <dt class="col-10 ">{{ translate(ucfirst($column)) }}</dt>
-                                        <dd class="col-1 ">{{ $value }}</dd>
-                                    @endforeach
-                                </div>
-                            @endforeach
+                        @foreach ($filteredDetails as $detail)
+                            <div class="row" style="margin-top: 40px;margin-right: 20px !important;">
+                                @foreach ($detail as $column => $value)
+                                    <dt class="col-10 ">{{ translate(ucfirst($column)) }}</dt>
+                                    <dd class="col-1 ">{{ $value }}</dd>
+                                @endforeach
+                            </div>
+                        @endforeach
                         <hr style="margin-top: 30px" />
                     @endif
                     <br>
-                    <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}" class="btn btn-warning shadow-0">
-                        <i class="me-1 fa fa-shopping-basket"></i>{{translate('Donner un devis')}}
+                    <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
+                        class="btn btn-warning shadow-0">
+                        <i class="me-1 fa fa-shopping-basket"></i>{{ translate('Donner un devis') }}
                     </a>
-                </div>
+                    </div>
                 </main>
             </div>
         </div>
@@ -79,8 +49,10 @@
             <div class="container d-flex justify-content-between align-items-center">
                 <ul id="menu" class="gap-4 mb-0 list-unstyled d-lg-flex">
                     <div class="logo" style="font-size: 20px;">{{ $product->nom_pro }}</div>
-                    <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none" href="#Product_facture">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</a></li>
-                    <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none" href="#parameter">{{ translate('PARAMÈTRES') }}</a></li>
+                    <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
+                            href="#Product_facture">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</a></li>
+                    <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
+                            href="#parameter">{{ translate('PARAMÈTRES') }}</a></li>
                 </ul>
             </div>
         </div>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -42,7 +43,8 @@
     <nav id="nav" class="w-nav">
         <!---le logo --->
         <div id="logo" class="logo">
-            <a class="img-logo" href="/"href="/"><img id="img-logo" src="{{ asset('./images/tr2.png') }}"></a>
+            <a class="img-logo" href="/" href="/"><img id="img-logo"
+                    src="{{ asset('./images/tr2.png') }}"></a>
         </div>
         <ul class="nav-list" id="menuList">
             <!--welcome --->
@@ -54,7 +56,7 @@
                 <a class="nav-link dropdown-toggle pro" href="#" role="button">
                     {{ translate('Produits') }}
                 </a>
-                <ul class="pt-4 dropdown-menu kk"style="background: white;">
+                <ul class="pt-4 dropdown-menu kk" style="background: white;">
                     <div class="dropdown-item-group dit d-flex ">
                         @foreach ($categories->sortBy(function ($category) {
             return strlen($category->nom_cat); // Sort by the length of the category name
@@ -97,11 +99,8 @@
             </li>
 
             {{-- solution --}}
-            <li><a href="{{ url('/solution') }}">{{ translate('Solution') }}</a>
-
-            </li>
-            <li> <a href="{{ url('/about') }}" class="menu-item">{{ translate('À propos') }}</a>
-            </li>
+            <li><a href="{{ url('/solution') }}">{{ translate('Solution') }}</a></li>
+            <li> <a href="{{ url('/about') }}" class="menu-item">{{ translate('À propos') }}</a></li>
             {{-- contact --}}
             <li><a href="{{ route('contact') }}">{{ translate('Contact') }}</a>
             </li>
@@ -128,130 +127,125 @@
                 <select id="languageSelect"
                     style="color:#ffd700; cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
                     class="form-select pe-5 changeLanguage" aria-label="Language select">
-                    <option class="changeoption"style="background-color:#000099; >
+                    <option class="changeoption"
+                        style="background-color:#000099; >
                 {{ translate('Sélectionner la langue') }}
             </option>
             <option
-                style="background-color:#000099;" class="changeoption"
-                value="fr"
-                {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}
-            >
-                 Français
-            </option>
-            <option
-                style="background-color:#000099;" class="changeoption"
-                value="en"
-                {{ session()->get('locale') == 'en' ? 'selected' : '' }}
-            >
-                English
-            </option>
-            <option
-                style="background-color:#000099;" class="changeoption"
-                value="ar"
-                {{ session()->get('locale') == 'ar' ? 'selected' : '' }}
-            >
-                Arabe
-            </option>
-        </select>
-    </div>
-</div>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
+                style="
+                        background-color:#000099;" class="changeoption" value="fr"
+                        {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
+                        Français
+                    </option>
+                    <option style="background-color:#000099;" class="changeoption" value="en"
+                        {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
+                        English
+                    </option>
+                    <option style="background-color:#000099;" class="changeoption" value="ar"
+                        {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
+                        Arabe
+                    </option>
+                </select>
             </div>
-        </nav>
-        {{-- l'affichage des view --}}
-        <main class="main flex-grow-1">
-            @yield('content')
-
-        </main>
-        {{-- le button whatssap --}}
-        <div class="whatsapp-btn-container ps-5">
-            <a class="whatsapp-btn" href="https://wa.me/91999999999"><i class="fab fa-whatsapp"></i></a>
-            <span>{{ translate('Contactez-nous') }}</span>
         </div>
-        <footer class="mb-0 text-center text-white text-lg-start"
-            style="background: linear-gradient(to right,#2042be ,#0d2471)">
-            <div class="container p-4 pb-0">
-                <div class="row">
-                    <!-- About Us -->
-                    <div class="mx-auto mt-3 col-md-3 col-lg-3 col-xl-3">
-                        <h6 class="mb-4 text-uppercase font-weight-bold">
-                            {{ translate('À propos') }}</h6>
-                        <p>
-                            {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
-                        </p>
-                    </div>
-                    <hr class="clearfix w-100 d-md-none" />
-                    <!-- Products -->
-                    <div class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
-                        <h6 class="mb-4 text-uppercase font-weight-bold">
-                            {{ translate('Produits') }}</h6>
-                                 @foreach ($categories->take(5) as $categorie)
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    {{-- l'affichage des view --}}
+    <main class="main flex-grow-1">
+        @yield('content')
+
+    </main>
+    {{-- le button whatssap --}}
+    <div class="whatsapp-btn-container ps-5">
+        <a class="whatsapp-btn" href="https://wa.me/91999999999"><i class="fab fa-whatsapp"></i></a>
+        <span>{{ translate('Contactez-nous') }}</span>
+    </div>
+    <footer class="mb-0 text-center text-white text-lg-start"
+        style="background: linear-gradient(to right,#2042be ,#0d2471)">
+        <div class="container p-4 pb-0">
+            <div class="row">
+                <!-- About Us -->
+                <div class="mx-auto mt-3 col-md-3 col-lg-3 col-xl-3">
+                    <h6 class="mb-4 text-uppercase font-weight-bold">
+                        {{ translate('À propos') }}</h6>
+                    <p>
+                        {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des
+                                                                                                                                                                        leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
+                    </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none" />
+                <!-- Products -->
+                <div class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
+                    <h6 class="mb-4 text-uppercase font-weight-bold">
+                        {{ translate('Produits') }}</h6>
+                    @foreach ($categories->take(5) as $categorie)
                         <p><a class="text-white" style="text-decoration: none"
                                 href="{{ url('product/' . $categorie->id) }}">{{ translate($categorie->nom_cat) }}</a>
                         </p>
-                        @endforeach
-                        <p> <a class="text-white" style="text-decoration: none"
-                                href="{{ route('category.liste') }}">
-                                {{ translate('voir tous') }} {{ ' ' }}<i class="fa fa-arrow-right"></i></a>
-                        </p>
-            </div>
-            <hr class="clearfix w-100 d-md-none" />
-            <!-- Contact Us -->
-            <div class="mx-auto mt-3 col-md-4 col-lg-3 col-xl-3">
-                <h6 class="mb-4 font-weight-bold">
-                    {{ translate('CONTACTEZ-NOUS') }}</h6>
-                <p><i class="mr-3 fas fa-home"></i>
-                    <a href="https://www.google.com/maps/search/HOLLYWOOD+MONGKOK+,+KOWLOON+,+HONG+KONG/@22.317164,114.170363,20z?hl=fr-FR&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
-                        style="text-decoration: none; color: inherit;" target="_blank">
-                        HOLLYWOOD MONGKOK , KOWLOON , HONG KONG
-                    </a>
-                </p>
+                    @endforeach
+                    <p> <a class="text-white" style="text-decoration: none" href="{{ route('category.liste') }}">
+                            {{ translate('voir tous') }} {{ ' ' }}<i class="fa fa-arrow-right"></i></a>
+                    </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none" />
+                <!-- Contact Us -->
+                <div class="mx-auto mt-3 col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="mb-4 font-weight-bold">
+                        {{ translate('CONTACTEZ-NOUS') }}</h6>
+                    <p><i class="mr-3 fas fa-home"></i>
+                        <a href="https://www.google.com/maps/search/HOLLYWOOD+MONGKOK+,+KOWLOON+,+HONG+KONG/@22.317164,114.170363,20z?hl=fr-FR&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                            style="text-decoration: none; color: inherit;" target="_blank">
+                            HOLLYWOOD MONGKOK , KOWLOON , HONG KONG
+                        </a>
+                    </p>
 
-                <p><i class="mr-3 fas fa-envelope"></i>
-                    <a href="mailto:contact@evo-machinery.com"
-                        style="color:white;text-decoration: none">contact@evo-machinery.com</a>
-                </p>
-                <p><i class="mr-3 fas fa-envelope"></i>
-                    <a href="mailto:sales@evo-machinery.com"
-                        style="color:white;text-decoration: none">sales@evo-machinery.com</a>
-                </p>
+                    <p><i class="mr-3 fas fa-envelope"></i>
+                        <a href="mailto:contact@evo-machinery.com"
+                            style="color:white;text-decoration: none">contact@evo-machinery.com</a>
+                    </p>
+                    <p><i class="mr-3 fas fa-envelope"></i>
+                        <a href="mailto:sales@evo-machinery.com"
+                            style="color:white;text-decoration: none">sales@evo-machinery.com</a>
+                    </p>
 
-                <p><i class="mr-3 fas fa-phone"></i>
-                    <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826 086
-                        894</a>
-                </p>
+                    <p><i class="mr-3 fas fa-phone"></i>
+                        <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826 086
+                            894</a>
+                    </p>
 
-            </div>
-            <!-- Search Bar (Moved after Contact Us) -->
-            <div style="width: 300px !important" class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
-                <h6 class="mb-4 text-uppercase font-weight-bold">
-                    {{ translate('Recherche') }} </h6>
-                <div class="mt-4 mb-4 text-center search-bar col-12">
-                    <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
-                        <input type="text" class="form-control form-control-lg search-input" name="query"
-                            placeholder="modèle de produit.." aria-label="Search"
-                            style=" border: 1px solid #ccc; padding: 10px;">
-                        <button type="submit" class="btn btn-primary btn-lg" style=" padding: 10px 20px;">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </form>
+                </div>
+                <!-- Search Bar (Moved after Contact Us) -->
+                <div style="width: 300px !important" class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
+                    <h6 class="mb-4 text-uppercase font-weight-bold">
+                        {{ translate('Recherche') }} </h6>
+                    <div class="mt-4 mb-4 text-center search-bar col-12">
+                        <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
+                            <input type="text" class="form-control form-control-lg search-input" name="query"
+                                placeholder="modèle de produit.." aria-label="Search"
+                                style=" border: 1px solid #ccc; padding: 10px;">
+                            <button type="submit" class="btn btn-primary btn-lg" style=" padding: 10px 20px;">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <hr class="my-3">
-        <div class="p-3 pt-0">
-            <div class="row d-flex align-items-center">
-                <!-- Copyright -->
-                <div class="text-center col-md-7 col-lg-8 text-md-start">
-                    <div class="p-3">
-                        © 2025 Copyright: <a class="text-white" href="https://evo-machinery.com">evo-machinery.com</a>
+            <hr class="my-3">
+            <div class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <!-- Copyright -->
+                    <div class="text-center col-md-7 col-lg-8 text-md-start">
+                        <div class="p-3">
+                            © 2025 Copyright: <a class="text-white"
+                                href="https://evo-machinery.com">evo-machinery.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        </footer>
+    </footer>
 
 </body>
 <!-- Google tag (gtag.js) -->
@@ -259,14 +253,13 @@
 <script>
     window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
     gtag('config', 'G-SWZLXLQ687');
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
 </script>
@@ -300,7 +293,5 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script>
 
-</script>
 </html>

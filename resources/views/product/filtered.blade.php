@@ -79,12 +79,12 @@
         <div class="col-md-9 col-12">
             <div class="flex-wrap row d-flex">
                 @foreach ($filteredDetailsPaginator as $item)
-                    <div class="mb-4 product-item col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                        <div class="bbb_deals">
+                    <div class="mb-4  product-item col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+                        <div class="bbb_deals overflow-hidden">
                             <div class="bbb_deals_slider_container">
                                 <div class="bbb_deals_item" data-aos="zoom-in">
                                     <div class="bbb_deals_image">
-                                       <a  class="prodct-img-link" href="{{ route('ProductDetail', $item['product']->id) }}">
+                                        <a  class="prodct-img-link" href="{{ route('ProductDetail', $item['product']->id) }}">
                     					    <img src="{{ asset('images/' . $item['product']->img_pro) }}" alt="">
                     					</a>
                                     </div>
