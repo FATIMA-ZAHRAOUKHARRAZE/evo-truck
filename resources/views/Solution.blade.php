@@ -1,7 +1,7 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    
 @endsection
 
 @section('content')
