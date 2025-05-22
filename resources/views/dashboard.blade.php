@@ -6,7 +6,7 @@
         <title>EVO</title>
         <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
         <link rel="icon" href="{{ asset('images/Original.png') }}" type="image/x-icon" />
-  
+
         <!-- Fonts and icons -->
         <script src="{{ asset('assets/js/plugin/webfont/webfont.min.js') }}"></script>
         <script>
@@ -176,7 +176,7 @@
                                     </ul>
                                 </div>
                             </li>
-                           
+
                         </ul>
                     </div>
                 </div>

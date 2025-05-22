@@ -59,24 +59,24 @@
                 <ul class="pt-4 dropdown-menu kk" style="background: white;">
                     <div class="dropdown-item-group dit d-flex ">
                         @foreach ($categories->sortBy(function ($category) {
-            return strlen($category->nom_cat); // Sort by the length of the category name
-        })->chunk(ceil($categories->count() / 3)) as $chunk)
-                            <div class="dropdown-column me-5">
-                                @foreach ($chunk as $category)
-                                    <span class="pb-2 d-flex">
-                                        <a style="color:#2042be !important" class="dropdown-item rr"
-                                            href="{{ url('product/' . $category->id) }}">
-                                            {{ translate($category->nom_cat) }}
-                                        </a>
-                                        <img src="{{ asset('images/' . $category->img_cat) }}"
-                                            style="width:50px;height:auto">
-                                    </span>
-                                @endforeach
-                            </div>
-                        @endforeach
-                    </div>
-                </ul>
-            </li>
+                            return strlen($category->nom_cat);
+                                })->chunk(ceil($categories->count() / 3)) as $chunk)
+                                                    <div class="dropdown-column me-5">
+                                                        @foreach ($chunk as $category)
+                                                            <span class="pb-2 d-flex">
+                                                                <a style="color:#2042be !important" class="dropdown-item rr"
+                                                                    href="{{ url('product/' . $category->id) }}">
+                                                                    {{ translate($category->nom_cat) }}
+                                                                </a>
+                                                                <img src="{{ asset('images/' . $category->img_cat) }}"
+                                                            style="width:50px;height:auto">
+                                                    </span>
+                                                @endforeach
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </ul>
+                            </li>
 
 
             {{-- Mobile products --}}
