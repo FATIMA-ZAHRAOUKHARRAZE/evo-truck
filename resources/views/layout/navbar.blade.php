@@ -211,8 +211,7 @@
                     </p>
 
                     <p><i class="mr-3 fas fa-phone"></i>
-                        <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826 086
-                            894</a>
+                        <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826 086 894</a>
                     </p>
 
                 </div>

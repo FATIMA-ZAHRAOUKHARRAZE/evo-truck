@@ -93,7 +93,6 @@ html,
 .bbb_deals_featured {
     width: 100%;
 }
-
 .bbb_deals {
     width: 100%;
     margin-right: 7%;
@@ -213,6 +212,7 @@ html,
         /* Full width */
     }
 }
+
 @media (max-width: 768px) {
     .textph {
         position: absolute;
@@ -221,7 +221,6 @@ html,
         transform: translate(-50%, -50%);
         text-align: center;
         margin: 0;
-        /* Reset margins */
     }
 
     .textph span {
@@ -282,21 +281,6 @@ html,
         display: none;
     }
 }
-
-@media (max-width: 768px) {
-    .textph {
-        position: absolute;
-        top: 50%;
-        left: 50% !important;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        margin: 0;
-    }
-    .textph span {
-        font-size: 25px !important;
-    }
-}
-
 @media (max-width: 540px) {
     .product-item {
         flex: 0 0 100%;

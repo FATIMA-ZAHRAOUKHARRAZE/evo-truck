@@ -30,7 +30,19 @@
  .row {
      margin-right: 0 !important;
  }
-
+.card-img-top{
+border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+.card-titlee{
+    font-size: 18px;
+        font-weight: bold;
+        color: #2042be;;
+}
+.card{
+    border-radius: 15px;
+}
  /* CSS personnalisé pour définir 5 colonnes sur les écrans larges */
  .col-5-custom {
      width: 20%;
