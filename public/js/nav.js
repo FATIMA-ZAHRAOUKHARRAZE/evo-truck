@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const defaultImage = "/images/tr2.png";
     // Function to apply the active effects
     function applyEffects() {
+
         mainImage.src = hoverImage;
         pro.style.color = "#2042be";
         languageSelect.style.color = "#2042be";
@@ -36,7 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to reset the default effects
     function resetEffects() {
-        mainImage.src = defaultImage;
+        if (window.scrollY > 40) {
+            mainImage.src = hoverImage;
+        } else {
+        mainImage.src = defaultImage;}
         pro.style.color = "#ffd700";
         languageSelect.style.color = "#ffd700";
         changeoption.style.color = "#ffd700";
