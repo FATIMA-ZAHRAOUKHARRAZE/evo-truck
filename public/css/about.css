@@ -56,6 +56,13 @@
     border-right-width: 14px;
     border-left-width: 0;
 }
+.timeline-image {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .timeline .timeline-image img {
     width: 100px; /* Largeur de l'image */

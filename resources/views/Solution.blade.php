@@ -7,7 +7,7 @@
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
+        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             loading="lazy" alt="">
         <div class="textph"
         style="font-weight: bold; position: absolute; top: 40%; left:30%;  color: #2042be; font-size: 24px;">
@@ -17,7 +17,8 @@
     </div>
     <!-- la partie etapes design -->
     <section class="design-steps">
-        <h1>{{ translate('Les étapes de nos Design.') }}</h1>
+        <h1>{{ translate('Les étapes de nos design
+        ') }}</h1>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>

@@ -1,12 +1,12 @@
 @extends('layout.navbar')
 @section('url')
-    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+<link rel="stylesheet" href="{{ asset('css/product.css') }}">
     <link rel="stylesheet" href="{{ asset('css/order.css') }}">
 @endsection
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;"class="image-desktop-only">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
+        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             alt="">
         <div class="image-desktop-only"
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
@@ -15,9 +15,8 @@
     </div>
     <section>
         <div class="form-container">
-            <h2 style="font-weight: bold;text-align:center">{{ translate('Devis gratuit') }}
-            </h2>
-            <p style="text-align:center">
+            <h2 class="titre">{{ translate('Devis gratuit') }}</h2>
+            <p class="paragraphe">
                 {{ translate('Nous vous contacterons dans les 24 heures (jours ouvrables), veuillez garder votre téléphone portable ouvert.') }}
             </p>
             @if (session('success'))
@@ -25,7 +24,7 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <form method="post" action="{{ route('order.inser') }}" class="w-75 "
+            <form method="post" action="{{ route('order.inser') }}" class="w-75 formulaire"
                 style="margin-left: 120px;margin-top:40px">
                 @csrf
                 <div class="row mb-4">
@@ -111,7 +110,7 @@
                         @endif
                     </div>
                 </div>
-                <button type="submit" style="margin-bottom: 10px;"
+                <button type="submit"
                     class="btn btn-primary btn-block mt-4">{{ translate('Soumettre') }}</button>
             </form>
         </div>

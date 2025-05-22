@@ -1,18 +1,16 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    
       <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 @endsection
-
 @section('content')
-
     <div style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
             alt="">
         <div class="image-desktop-only"
             style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px;">
-            <span style="font-size: 50px;">{{ translate('À propos ') }}</span>
+            <span style="font-size: 50px;">{{ translate('À propos') }}</span>
         </div>
     </div>
     <section class="page-section" id="about">
@@ -82,8 +80,6 @@
                 </li>
             </ul>
         </div>
-
-
         <div class="container" data-aos="fade-left">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase " style="color: #2042be">
@@ -98,13 +94,7 @@
                         <h4>{{ translate('QUALITÉ') }}</h4>
                         <p class="text-muted">
                             {{ translate(
-<<<<<<< HEAD
-                                "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                                                                                                                                                                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                                                                                                                                                                                                                     conformes aux normes de l'industrie.",
-=======
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe conformes aux normes de l'industrie."
->>>>>>> 51025b9f76064360a0e9ba25f9ae6f6d90817d3e
                             ) }}
                         </p>
 
@@ -117,13 +107,7 @@
                         <h4>{{ translate('CONCEPTION ET R&D') }}</h4>
                         <p class="text-muted">
                             {{ translate(
-<<<<<<< HEAD
-                                "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                                                                                                                                                                                                                                    continus dans l’amélioration et l’innovation des produits.",
-                                \App::getLocale(),
-=======
                                 "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements continus dans l’amélioration et l’innovation des produits."
->>>>>>> 51025b9f76064360a0e9ba25f9ae6f6d90817d3e
                             ) }}
                         </p>
 
@@ -136,12 +120,7 @@
                         <h4>{{ translate('DIVERSITÉ') }}</h4>
                         <p class="text-muted">
                             {{ translate(
-<<<<<<< HEAD
-                                "EVO machinery une large gamme d'équipements de construction et de levage,
-                                                                                                                                                                                                                                    notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
-=======
                                 "EVO machinery une large gamme d'équipements de construction et de levage,notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore."
->>>>>>> 51025b9f76064360a0e9ba25f9ae6f6d90817d3e
                             ) }}
                         </p>
 
@@ -154,13 +133,7 @@
                         <h4>{{ translate('SERVICE') }}</h4>
                         <p class="text-muted">
                             {{ translate(
-<<<<<<< HEAD
-                                "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                                                                                                                                                                                                                                    pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                                                                                                                                                                                                                    pour garantir une qualité de produit de premier ordre.",
-=======
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus pour garantir une qualité de produit de premier ordre.",
->>>>>>> 51025b9f76064360a0e9ba25f9ae6f6d90817d3e
                             ) }}
                         </p>
 

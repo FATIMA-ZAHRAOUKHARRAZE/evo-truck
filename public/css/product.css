@@ -244,68 +244,65 @@ html,
         /* Half width */
     }
 }
-        @media (max-width: 768px) {
-            .textph {
-                position: absolute;
-                top: 50%;
-                left: 50% !important;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                margin: 0;
-                /* Reset margins */
-            }
+@media (max-width: 768px) {
+    .textph {
+        position: absolute;
+        top: 50%;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        margin: 0;
+        /* Reset margins */
+    }
 
-            .textph span {
-                font-size: 25px !important;
-            }
-        }
+    .textph span {
+        font-size: 25px !important;
+    }
+}
 
-        /* Media Query for Screens ≤ 540px: Force 1 Column */
-        @media (max-width: 540px) {
-            .product-item {
-                flex: 0 0 100%;
-                /* Full width */
-                max-width: 100%;
-                /* Full width */
-            }
-        }
+/* Media Query for Screens ≤ 540px: Force 1 Column */
+@media (max-width: 540px) {
+    .product-item {
+        flex: 0 0 100%;
+        /* Full width */
+        max-width: 100%;
+        /* Full width */
+    }
+}
 
-        /* Media Query for Screens 541px to 920px: Use 2 Columns */
-        @media (max-width: 920px) and (min-width: 541px) {
-            .product-item {
-                flex: 0 0 50%;
-                /* Half width */
-                max-width: 50%;
-                /* Half width */
-            }
-        }
+/* Media Query for Screens 541px to 920px: Use 2 Columns */
+@media (max-width: 920px) and (min-width: 541px) {
+    .product-item {
+        flex: 0 0 50%;
+        /* Half width */
+        max-width: 50%;
+        /* Half width */
+    }
+}
 /* Si vous voulez aussi changer le fond au survol tout en gardant le texte blanc */
 .btn:hover {
     background: linear-gradient(to right, #0d2471, #2042be);
     /* Couleur de fond au survol */
 }
+@media (max-width: 600px) {
+    .fdiv {
+        margin-bottom: 20px
+    }
 
+    .ps-lg-5 {
+        margin-left: 20px
+    }
 
+    dd {
+        display: inline-block;
+        margin-right: 20px
+    }
 
- @media (max-width: 600px) {
-     .fdiv {
-         margin-bottom: 20px
-     }
-
-     .ps-lg-5 {
-         margin-left: 20px
-     }
-
-     dd {
-         display: inline-block;
-         margin-right: 20px
-     }
-
-     .parali {
-         font-size: 14px !important;
-         padding-top: 30px;
-     }
- }
+    .parali {
+        font-size: 14px !important;
+        padding-top: 30px;
+    }
+}
 
  #menu {
      display: flex;
@@ -353,8 +350,6 @@ html,
         margin-left: -11px;
     }
 }
-
-
 @media (max-width: 600px) {
     .fdiv {
         margin-bottom: 20px

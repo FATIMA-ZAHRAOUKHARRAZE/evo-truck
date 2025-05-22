@@ -3,7 +3,6 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DetailController;
-
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\admin\ProductController as aProductController;
@@ -53,9 +52,9 @@ Route::get('/translate/change',[ProductController::class,'googleTranslateChange'
 // solution page
 Route::get('/solution', [SolutionController::class, 'index'])->name('Solution');
 
-
-
-
+//contact
+Route::get('/contact',[ContactController::class, "index"])->name('contact');
+Route::post('/contact', [ContactController::class, "send"])->name('contact.send');
 
 Route::middleware('auth')->group(function () {
 
@@ -103,10 +102,6 @@ Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.up
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
-
-Route::get('/contact',[ContactController::class, "index"])->name('contact');
-Route::post('/contact', [ContactController::class, "send"])->name('contact.send');
-
 require __DIR__.'/auth.php';
 
 Route::get('/product/download/{pdf}', [ProductController::class, 'download'])->name('product.download');
