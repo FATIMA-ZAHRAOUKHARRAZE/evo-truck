@@ -1,3 +1,15 @@
+
+.titre {
+    text-align: center;
+    font-weight: bold;
+}
+.paragraphe {
+    text-align: center;
+}
+
+.btn{
+    margin-bottom: 10px;
+}
 @media (max-width: 768px) {
     .form-container {
         display: flex;
@@ -8,7 +20,7 @@
         /* Centrer horizontalement */
         justify-content: center;
         /* Centrer verticalement */
-        min-height: 100vh;
+        min-height: 170vh;
         /* Prend toute la hauteur de l'écran */
         margin: 0 auto;
         /* Centre horizontalement */
@@ -16,21 +28,19 @@
         /* Prend 90% de la largeur de l'écran */
         margin-bottom: 60px;
     }
-
-    .form-container form {
+    .formulaire {
         width: 100%;
         /* Adapter la largeur au conteneur */
         margin: 0;
         /* Supprimer les marges inutiles */
         margin-right: 100px;
     }
-
-    .form-container h2,
-    .form-container p {
+    .titre {
         text-align: center;
-        /* Centrer le texte */
     }
-
+    .paragraphe {
+        text-align: center;
+    }
     .image-desktop-only {
         display: none;
     }

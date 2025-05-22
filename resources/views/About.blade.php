@@ -100,8 +100,6 @@
                 </li>
             </ul>
         </div>
-
-
         <div class="container" data-aos="fade-left">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase " style="color: #2042be">

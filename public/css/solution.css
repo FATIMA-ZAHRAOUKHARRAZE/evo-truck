@@ -6,11 +6,8 @@
      font-family: "Arial", sans-serif;
 }
 
-/* Styles de base pour le corps de la page */
-body {
-     font-family: "Arial", sans-serif;
-    color: #333; /* Couleur de texte par défaut */
-}
+
+
 
 /* Section des étapes de conception */
 .design-steps {
@@ -133,6 +130,28 @@ body {
     color: #0d2471f3; /* Texte bleu foncé */
 }
 
+.textph
+{
+    font-weight: bold;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: #2042be;
+    font-size: 24px;
+    padding: 10px;
+    width: 100%;
+}
+.textph span{
+    font-size: 50px;
+}
+.image-div img
+{
+    position : relative;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    opacity: .4;
+}
 /* Médias queries pour les écrans moyens */
 @media (max-width: 1024px) {
     .contain {
@@ -196,12 +215,7 @@ body {
         padding: 10px 30px; /* Réduction de l'espacement interne */
     }
 
-    .textph {
-        top: 20% !important; /* Positionnement personnalisé */
-        left: 5% !important;
-        text-align: center;
-        margin: 0;
-    }
+
 }
 
 /* Médias queries pour les écrans très petits */
@@ -219,3 +233,18 @@ body {
         padding: 8px 25px; /* Réduction de l'espacement interne */
     }
 }
+ @media (max-width: 768px) {
+     .textph {
+         position: relative;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+         margin: 0;
+     }
+
+     .textph span {
+         font-size: 25px ;
+     }
+
+ }

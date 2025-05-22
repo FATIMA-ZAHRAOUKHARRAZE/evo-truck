@@ -243,6 +243,11 @@ html,
     background: linear-gradient(to right, #0d2471, #2042be);
     /* Couleur de fond au survol */
 }
+@media (max-width: 600px) {
+    .fdiv {
+        margin-bottom: 20px
+    }
+}
 
 @media (max-width: 600px) {
     .fdiv {
@@ -305,7 +310,6 @@ html,
         margin-left: -11px;
     }
 }
-
 @media (max-width: 600px) {
     .fdiv {
         margin-bottom: 20px;
