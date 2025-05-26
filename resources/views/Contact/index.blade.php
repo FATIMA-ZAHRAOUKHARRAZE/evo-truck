@@ -9,7 +9,7 @@
 @section('content')
 <body>
 	<div class="container contact-section">
-		<h2 data-aos="fade-down" class="text-center1">{{ translate('CONTACTEZ-NOUS') }}</h2>
+		<h1 data-aos="fade-down" class="text-center1">{{ translate('CONTACTEZ-NOUS') }}</h1>
 		<p data-aos="fade-down" class="text-center">
 	        {{ translate("Vous avez des questions ou besoin d'aide ? Contactez-nous en utilisant le formulaire de contact ci-dessous.Notre équipe du Groupe EVO MACHINERY est là pour vous aider.") }}
 		</p>
