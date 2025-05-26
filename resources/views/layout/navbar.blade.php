@@ -7,8 +7,6 @@
 
     {{-- seo balises --}}
     @yield('seo')
-      <!-- Balise canonical -->
-    <link rel="canonical" href="https://evo-machinery.com/">
     <!--script-->
     <script src="{{ asset('js/nav.js') }}" defer></script>
     <!-- style -->
