@@ -7,6 +7,7 @@ document.addEventListener("scroll", function () {
         nav.classList.remove("scrolled");
     }
 });
+
 // scroll effect on navbar
 AOS.init({
     duration: 1000, // Durée de l'animation en ms
@@ -27,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const defaultImage = "/images/tr2.png";
     // Function to apply the active effects
     function applyEffects() {
-
         mainImage.src = hoverImage;
         pro.style.color = "#2042be";
         languageSelect.style.color = "#2042be";
@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.scrollY > 40) {
             mainImage.src = hoverImage;
         } else {
-        mainImage.src = defaultImage;}
+            mainImage.src = defaultImage;
+        }
         pro.style.color = "#ffd700";
         languageSelect.style.color = "#ffd700";
         changeoption.style.color = "#ffd700";
@@ -54,10 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
         imageContainer.addEventListener("mouseleave", resetEffects);
         window.addEventListener("scroll", () => {
             if (window.scrollY > 40) {
-                applyEffects(); // Apply effects when scrolling down
+                applyEffects();
             } else {
-                resetEffects(); // Reset effects when returning to the top
+                resetEffects();
             }
         });
     }
 });
+ 

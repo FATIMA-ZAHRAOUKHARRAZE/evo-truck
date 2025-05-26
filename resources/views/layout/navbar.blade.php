@@ -4,13 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EVO MACHINERY</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
-    <meta name="author" content="EVO MACHINERY">
-    <!-- Balise canonical -->
+
+    {{-- seo balises --}}
+    @yield('seo')
+      <!-- Balise canonical -->
     <link rel="canonical" href="https://evo-machinery.com/">
     <!--script-->
     <script src="{{ asset('js/nav.js') }}" defer></script>
@@ -86,10 +83,10 @@
                     {{ translate('Produits') }}
                 </a>
                 <ul class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
-                    @foreach ($categories->sortBy(function ($category) {
-        return strlen($category->nom_cat);
-    }) as $categorie)
-                        <li>
+                        @foreach ($categories->sortBy(function ($category) {
+                        return strlen($category->nom_cat);
+                        }) as $categorie)
+                            <li>
                             <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
                                 {{ translate($categorie->nom_cat) }}
                             </a>
