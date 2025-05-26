@@ -1,5 +1,18 @@
 @extends('layout.navbar')
 @section('content')
+@section('seo')
+    <title>EVO MACHINERY - Produits</title>
+    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="French">
+    <meta name="author" content="EVO MACHINERY">
+    <link rel="canonical" href="https://evo-machinery.com/product/{{ $id }}">
+    <meta property="og:title" content="EVO MACHINERY - Produits">
+    <meta property="og:description" content="EVO MACHINERY - Produits">
+    <meta property="og:type" content="website">
+@endsection
 <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" href={{ asset('css/product.css') }}>
     <!-- Page Image -->
