@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EVO MACHINERY</title>
-    <meta name="description"
-        content="Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo,machinery,excavating machinery,crane,forklift,chariot élévateur,grue">
-    <!-- Balise canonical -->
+
+    {{-- seo balises --}}
+    @yield('seo')
+      <!-- Balise canonical -->
     <link rel="canonical" href="https://evo-machinery.com/">
     <!--script-->
     <script src="{{ asset('js/nav.js') }}" defer></script>
@@ -59,24 +59,24 @@
                 <ul class="pt-4 dropdown-menu kk" style="background: white;">
                     <div class="dropdown-item-group dit d-flex ">
                         @foreach ($categories->sortBy(function ($category) {
-                            return strlen($category->nom_cat);
-                                })->chunk(ceil($categories->count() / 3)) as $chunk)
-                                                    <div class="dropdown-column me-5">
-                                                        @foreach ($chunk as $category)
-                                                            <span class="pb-2 d-flex">
-                                                                <a style="color:#2042be !important" class="dropdown-item rr"
-                                                                    href="{{ url('product/' . $category->id) }}">
-                                                                    {{ translate($category->nom_cat) }}
-                                                                </a>
-                                                                <img src="{{ asset('images/' . $category->img_cat) }}"
-                                                            style="width:50px;height:auto">
-                                                    </span>
-                                                @endforeach
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </ul>
-                            </li>
+                return strlen($category->nom_cat);
+                    })->chunk(ceil($categories->count() / 3)) as $chunk)
+                                        <div class="dropdown-column me-5">
+                                            @foreach ($chunk as $category)
+                                    <span class="pb-2 d-flex">
+                                        <a style="color:#2042be !important" class="dropdown-item rr"
+                                            href="{{ url('product/' . $category->id) }}">
+                                            {{ translate($category->nom_cat) }}
+                                        </a>
+                                        <img src="{{ asset('images/' . $category->img_cat) }}"
+                                            style="width:50px;height:auto">
+                                    </span>
+                                @endforeach
+                            </div>
+                        @endforeach
+                    </div>
+                </ul>
+            </li>
 
 
             {{-- Mobile products --}}
@@ -86,10 +86,10 @@
                     {{ translate('Produits') }}
                 </a>
                 <ul class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
-                    @foreach ($categories->sortBy(function ($category) {
-        return strlen($category->nom_cat);
-    }) as $categorie)
-                        <li>
+                        @foreach ($categories->sortBy(function ($category) {
+                        return strlen($category->nom_cat);
+                        }) as $categorie)
+                            <li>
                             <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
                                 {{ translate($categorie->nom_cat) }}
                             </a>
@@ -172,7 +172,7 @@
                         {{ translate('À propos') }}</h6>
                     <p>
                         {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des
-                                                                                                                                                                        leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
+                                                                                                                                                                                                                                                leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                     </p>
                 </div>
                 <hr class="clearfix w-100 d-md-none" />

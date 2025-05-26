@@ -1,5 +1,9 @@
 @extends('layout.navbar')
-
+@section('seo')
+    <meta name="description"
+        content="Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords" content="Evo,machinery,excavating machinery,crane,forklift,chariot élévateur,grue">
+@endsection
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <!-- Code pour le banner image -->
