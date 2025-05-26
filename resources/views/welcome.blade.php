@@ -1,15 +1,16 @@
 @extends('layout.navbar')
 @section('seo')
- <title>EVO MACHINERY</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <title>EVO MACHINERY</title>
+    <meta name="description"
+        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords"
+        content="EVO Machinery, machines de construction, équipements de construction, excavatrices, chargeuses, véhicules spéciaux, engins de chantier, machines portuaires, équipements de levage, machines de terrassement, machines d'assainissement, composants de machine, construction, finance, TIC, Maroc, Afrique, industrie minière, machines de levage, machines de terrassement">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/">
-    <meta property="og:title" content="EVO MACHINERY - Acceuil">
-    <meta property="og:description" content="EVO MACHINERY - Acceuil">
+    <meta property="og:title" content="EVO MACHINERY - Accueil">
+    <meta property="og:description" content="EVO MACHINERY - Accueil">
     <meta property="og:type" content="website">
 @endsection
 @section('content')

@@ -1,26 +1,34 @@
 @extends('layout.navbar')
 
 @section('url')
-        <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/product.css') }}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Contact</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <title>EVO MACHINERY - Contactez-nous</title>
+    <meta name="description"
+        content="Contactez EVO Machinery à Hong Kong. Notre équipe est à votre disposition pour répondre à vos questions sur nos équipements de construction. Adresse : Hollywood Mongkok, Kowloon, Hong Kong. Téléphone : +86 19 826 086 894">
+    <meta name="keywords"
+        content="contact EVO Machinery, support client, service après-vente, équipements de construction, Hong Kong, Hollywood Mongkok, Kowloon, assistance technique, demande d'information, service client">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/contact">
-    <meta property="og:title" content="EVO MACHINERY - Contact">
-    <meta property="og:description" content="EVO MACHINERY - Contact">
+    <meta property="og:title" content="EVO MACHINERY - Contactez-nous">
+    <meta property="og:description"
+        content="Contactez notre équipe à Hong Kong pour toute question sur nos équipements de construction">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset('images/Original.png') }}">
+    <meta property="og:street-address" content="Hollywood Mongkok">
+    <meta property="og:locality" content="Kowloon">
+    <meta property="og:region" content="Hong Kong">
+    <meta property="og:phone_number" content="+86 19 826 086 894">
+    <meta property="og:email" content="contact@evo-machinery.com">
 @endsection
 @section('content')
-<body>
+
 	<div class="container contact-section">
 		<h1 data-aos="fade-down" class="text-center1">{{ translate('CONTACTEZ-NOUS') }}</h1>
 		<p data-aos="fade-down" class="text-center">

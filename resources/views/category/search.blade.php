@@ -4,17 +4,21 @@
     <link rel="stylesheet" href="{{ asset('css/catliste.css') }}">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Chercher</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <title>EVO MACHINERY - Résultats de recherche pour "{{ $query }}"</title>
+    <meta name="description"
+        content="Trouvez les produits EVO Machinery correspondant à votre recherche '{{ $query }}'. Explorez notre catalogue d'équipements de construction et demandez un devis personnalisé.">
+    <meta name="keywords"
+        content="{{ $query }}, recherche produits, EVO Machinery, équipements de construction, machines industrielles, spécifications techniques, devis personnalisé, catalogue machines, qualité industrielle">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/category/search?query={{ $query }}">
-    <meta property="og:title" content="EVO MACHINERY - Chercher">
-    <meta property="og:description" content="EVO MACHINERY - Chercher">
+    <meta property="og:title" content="EVO MACHINERY - Résultats pour '{{ $query }}'">
+    <meta property="og:description"
+        content="Découvrez les produits EVO Machinery correspondant à votre recherche '{{ $query }}'">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset('images/Original.png') }}">
+    <meta name="search-query" content="{{ $query }}">
 @endsection
 @section('content')
     <!-- Page Image -->
@@ -92,7 +96,7 @@
         @endforeach
     </div>
 
-</div>
+            </div>
         @endif
     </div>
      <div class="pagination-wrapper px-5">

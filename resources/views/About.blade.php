@@ -1,16 +1,18 @@
 @extends('layout.navbar')
 
 @section('seo')
-  <title>EVO MACHINERY - About</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <title>EVO MACHINERY - À Propos</title>
+    <meta name="description"
+        content="Découvrez EVO Machinery, leader mondial depuis 2000 dans les équipements de construction et engins de levage. Notre engagement envers l'innovation, l'excellence et la qualité nous positionne comme un acteur majeur du secteur.">
+    <meta name="keywords"
+        content="EVO Machinery, leader construction, équipements de construction, engins de levage, innovation industrielle, excellence qualité, machines de construction, chargeuses, chariots élévateurs, excavatrices, R&D, contrôle qualité, service client, diversité produits">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/about">
-    <meta property="og:title" content="EVO MACHINERY - About">
-    <meta property="og:description" content="EVO MACHINERY - About">
+    <meta property="og:title" content="EVO MACHINERY - À Propos">
+    <meta property="og:description"
+        content="Leader mondial en équipements de construction depuis 2000 - Innovation, Excellence, Qualité">
     <meta property="og:type" content="website">
 @endsection
 @section('content')
@@ -38,10 +40,10 @@
                             <p class="text-muted">
                                 {{ translate(
                                     "Depuis sa création en 2000, EVO machinery s'est rapidement
-                                                                                                                                                                                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
-                                                                                                                                                                                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
-                                                                                                                                                                                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
-                                                                                                                                                                                                                                                                de qualité supérieure à notre clientèle mondiale.",
+                                                                                                                                                                                                                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
+                                                                                                                                                                                                                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
+                                                                                                                                                                                                                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
+                                                                                                                                                                                                                                                                                                de qualité supérieure à notre clientèle mondiale.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -60,9 +62,9 @@
                             <p class="text-muted">
                                 {{ translate(
                                     "Dans un monde où le progrès se mesure à la robustesse des fondations et à
-                                                                                                                                                                                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
-                                                                                                                                                                                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
-                                                                                                                                                                                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
+                                                                                                                                                                                                                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
+                                                                                                                                                                                                                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
+                                                                                                                                                                                                                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -79,9 +81,9 @@
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ translate(
-                                            "EVO machinery est fier de figurer parmi les plus grandes
-                                            entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
-                                            reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
+                                    "EVO machinery est fier de figurer parmi les plus grandes
+                                                                            entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
+                                                                            reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -101,11 +103,11 @@
                             <p class="text-muted">
                                 {{ translate(
                                     "Chez EVO machinery, notre chemin est éclairé par une vision
-                                                                                                                                                                                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
-                                                                                                                                                                                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
-                                                                                                                                                                                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
-                                                                                                                                                                                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
-                                                                                                                                                                                                                                                                l'industrie.",
+                                                                                                                                                                                                                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
+                                                                                                                                                                                                                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
+                                                                                                                                                                                                                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
+                                                                                                                                                                                                                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
+                                                                                                                                                                                                                                                                                                l'industrie.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -129,8 +131,8 @@
                         <p class="text-muted">
                             {{ translate(
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                                                            rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                                            conformes aux normes de l'industrie.",
+                                                                                        rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
+                                                                                        conformes aux normes de l'industrie.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -145,7 +147,7 @@
                         <p class="text-muted">
                             {{ translate(
                                 "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                                continus dans l’amélioration et l’innovation des produits.",
+                                                            continus dans l'amélioration et l'innovation des produits.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -160,7 +162,7 @@
                         <p class="text-muted">
                             {{ translate(
                                 "EVO machinery une large gamme d'équipements de construction et de levage,
-                                notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
+                                                            notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -175,8 +177,8 @@
                         <p class="text-muted">
                             {{ translate(
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                                pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                pour garantir une qualité de produit de premier ordre.",
+                                                            pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
+                                                            pour garantir une qualité de produit de premier ordre.",
                                 \App::getLocale(),
                             ) }}
                         </p>
