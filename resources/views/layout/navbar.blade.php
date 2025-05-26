@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +8,7 @@
 
     {{-- seo balises --}}
     @yield('seo')
-      <!-- Balise canonical -->
+    <!-- Balise canonical -->
     <link rel="canonical" href="https://evo-machinery.com/">
     <!--script-->
     <script src="{{ asset('js/nav.js') }}" defer></script>
@@ -35,13 +36,14 @@
     @else
     @endif
 </head>
+
 <body class="font-sans antialiased">
     {{ session()->get('locale') == null ? session()->put('locale', 'fr') : '' }}
     <nav id="nav" class="w-nav">
         <!---le logo --->
         <div id="logo" class="logo">
-            <a class="img-logo" href="/"><img id="img-logo"
-                    src="{{ asset('./images/tr2.png') }}" alt="logo"></a>
+            <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/tr2.png') }}"
+                    alt="logo"></a>
         </div>
         <ul class="nav-list" id="menuList">
             <!--welcome --->
@@ -56,18 +58,17 @@
                 <ul class="pt-4 dropdown-menu kk" style="background: white;">
                     <div class="dropdown-item-group dit d-flex ">
                         @foreach ($categories->sortBy(function ($category) {
-<<<<<<< HEAD
                 return strlen($category->nom_cat);
-                    })->chunk(ceil($categories->count() / 3)) as $chunk)
-                                        <div class="dropdown-column me-5">
-                                            @foreach ($chunk as $category)
+            })->chunk(ceil($categories->count() / 3)) as $chunk)
+                                <div class="dropdown-column me-5">
+                                    @foreach ($chunk as $category)
                                     <span class="pb-2 d-flex">
                                         <a style="color:#2042be !important" class="dropdown-item rr"
                                             href="{{ url('product/' . $category->id) }}">
                                             {{ translate($category->nom_cat) }}
                                         </a>
                                         <img src="{{ asset('images/' . $category->img_cat) }}"
-                                            style="width:50px;height:auto">
+                                            style="width:50px;height:auto" alt=" category image">
                                     </span>
                                 @endforeach
                             </div>
@@ -75,26 +76,6 @@
                     </div>
                 </ul>
             </li>
-=======
-                            return strlen($category->nom_cat);
-                                })->chunk(ceil($categories->count() / 3)) as $chunk)
-                                                    <div class="dropdown-column me-5">
-                                                        @foreach ($chunk as $category)
-                                                            <span class="pb-2 d-flex">
-                                                                <a style="color:#2042be !important" class="dropdown-item rr"
-                                                                    href="{{ url('product/' . $category->id) }}">
-                                                                    {{ translate($category->nom_cat) }}
-                                                                </a>
-                                                                <img src="{{ asset('images/' . $category->img_cat) }}"
-                                                            style="width:50px;height:auto" alt=" category image">
-                                                    </span>
-                                                @endforeach
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </ul>
-                            </li>
->>>>>>> 1344781d1f83062d9c65b0929096e687968cc1dc
 
 
             {{-- Mobile products --}}
@@ -104,10 +85,10 @@
                     {{ translate('Produits') }}
                 </a>
                 <ul class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
-                        @foreach ($categories->sortBy(function ($category) {
-                        return strlen($category->nom_cat);
-                        }) as $categorie)
-                            <li>
+                    @foreach ($categories->sortBy(function ($category) {
+        return strlen($category->nom_cat);
+    }) as $categorie)
+                        <li>
                             <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
                                 {{ translate($categorie->nom_cat) }}
                             </a>
@@ -189,12 +170,7 @@
                     <h6 class="mb-4 text-uppercase font-weight-bold">
                         {{ translate('À propos') }}</h6>
                     <p>
-<<<<<<< HEAD
-                        {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des
-                                                                                                                                                                                                                                                leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
-=======
                         {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
->>>>>>> 1344781d1f83062d9c65b0929096e687968cc1dc
                     </p>
                 </div>
                 <hr class="clearfix w-100 d-md-none" />
@@ -233,7 +209,8 @@
                     </p>
 
                     <p><i class="mr-3 fas fa-phone"></i>
-                        <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826 086 894</a>
+                        <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826 086
+                            894</a>
                     </p>
 
                 </div>
