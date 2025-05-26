@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EVO MACHINERY</title>
-    <meta name="description"
-        content="Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo,machinery,excavating machinery,crane,forklift,chariot élévateur,grue">
+    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="French">
     <!-- Balise canonical -->
     <link rel="canonical" href="https://evo-machinery.com/">
     <!--script-->
@@ -37,14 +37,13 @@
     @else
     @endif
 </head>
-
 <body class="font-sans antialiased">
     {{ session()->get('locale') == null ? session()->put('locale', 'fr') : '' }}
     <nav id="nav" class="w-nav">
         <!---le logo --->
         <div id="logo" class="logo">
-            <a class="img-logo" href="/" href="/"><img id="img-logo"
-                    src="{{ asset('./images/tr2.png') }}"></a>
+            <a class="img-logo" href="/"><img id="img-logo"
+                    src="{{ asset('./images/tr2.png') }}" alt="logo"></a>
         </div>
         <ul class="nav-list" id="menuList">
             <!--welcome --->
@@ -69,7 +68,7 @@
                                                                     {{ translate($category->nom_cat) }}
                                                                 </a>
                                                                 <img src="{{ asset('images/' . $category->img_cat) }}"
-                                                            style="width:50px;height:auto">
+                                                            style="width:50px;height:auto" alt=" category image">
                                                     </span>
                                                 @endforeach
                                             </div>
@@ -171,8 +170,7 @@
                     <h6 class="mb-4 text-uppercase font-weight-bold">
                         {{ translate('À propos') }}</h6>
                     <p>
-                        {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des
-                                                                                                                                                                        leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
+                        {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                     </p>
                 </div>
                 <hr class="clearfix w-100 d-md-none" />

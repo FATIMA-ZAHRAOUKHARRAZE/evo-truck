@@ -11,15 +11,13 @@
                     <div class="mb-3 border rounded-4 d-flex justify-content-center">
                         <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
                             <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
-                                src="{{ asset('/images/' . $product->img_pro) }}" />
+                                src="{{ asset('/images/' . $product->img_pro) }}" alt="detail" />
                         </a>
                     </div>
                 </aside>
                 <main class="col-lg-6">
                     <div class="ps-lg-5">
-                        <h4 class="title text-dark">
-                            <h1>{{ $product->nom_pro }}</h1> <br>
-                        </h4>
+                        <h1 class="title text-dark">{{ $product->nom_pro }}</h1> <br>
                     </div>
                     @if (!empty($filteredDetails) && count($filteredDetails) > 0)
                         <hr style="margin-top: 60px">
@@ -59,7 +57,7 @@
         <div id="Product_facture" class="mt-5 text-white">margin</div>
         {{-- Product fetures --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h2 style="font-weight: bold;color:#2042be">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</h2>
+            <h1 style=" font-size:40px;font-weight: bold;color:#2042be">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</h1>
             <span class="mt-2 ">{{ translate($product->dec_pro ?? ($product->cacteristique ?? '   ')) }}</span>
             @if ($product->pdf !== null)
                 <div class="mt-3">
@@ -72,7 +70,7 @@
         <div id="parameter" class="mt-5 text-white">margin</div>
         {{-- parametre --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h2 style="font-weight: bold;color:#2042be">{{ translate('PARAMÈTRES') }}</h2>
+            <h1 style=" font-size:40px;font-weight: bold;color:#2042be ">{{ translate('PARAMÈTRES') }}</h1>
             <span class="mt-2 ">
                 <table class="table table-striped">
                     <thead>

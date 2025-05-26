@@ -10,7 +10,7 @@
             loading="lazy" alt="">
         <div
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;"class="photo">
-            <span style="font-size: 50px;">{{ translate('PRODUITS') }}</span>
+            <h1 style="font-size: 50px;">{{ translate('PRODUITS') }}</h1>
         </div>
     </div>
     <div class="container mb-5">

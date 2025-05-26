@@ -3,9 +3,9 @@
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <!-- Page Image -->
     <div class="about_container">
-        <img src="{{ asset('images/Original.png') }}">
+        <img src="{{ asset('images/Original.png') }}" alt="image">
         <div class="image-desktop-only">
-            <span>{{ translate('À propos ') }}</span>
+            <h1>{{ translate('À propos ') }}</h1>
         </div>
     </div>
     <section class="page-section" id="about">

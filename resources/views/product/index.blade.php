@@ -1,7 +1,4 @@
 @extends('layout.navbar')
-@section('url')
-
-@endsection
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" href={{ asset('css/product.css') }}>
@@ -11,9 +8,9 @@
             alt="">
         <div class="textph"
             style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }};color: #2042be; font-size: 24px; ">
-            <span style="font-size: 50px;letter-spacing: 2px;">
+            <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;">
                 {{ translate($categorie->nom_cat) }}
-            </span>
+            </h1>
         </div>
     </div>
     <section class="container banner ps-3 pe-3">

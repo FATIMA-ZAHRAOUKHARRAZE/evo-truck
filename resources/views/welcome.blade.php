@@ -41,8 +41,8 @@
     </div>
     <!-- afficher le texte -->
     <div class="my-5 text-center ab-div">
-        <h2 data-aos="fade-up">{{ translate('Nos produits') }}
-        </h2>
+        <h1 data-aos="fade-up">{{ translate('Nos produits') }}
+        </h1>
         <h3 data-aos="fade-up">
             {{ translate('EVO MACHINERY est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
 
