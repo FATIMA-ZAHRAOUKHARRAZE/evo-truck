@@ -1,9 +1,18 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
-
 @endsection
-
+@section('head')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="French">
+    <meta name="author" content="EVO MACHINERY">
+    <link rel="canonical" href="https://evo-machinery.com/solution">
+@endsection
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
