@@ -21,7 +21,7 @@
 <!-- Page Image -->
 <div class="sss" style="position: relative; width: 100%;">
     <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"src="{{ asset('images/' . $categorie->img_catpro) }}"
-        alt="">
+        alt="evo logo">
     <div class="textph"
         style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }};color: #2042be; font-size: 24px; ">
         <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;">
