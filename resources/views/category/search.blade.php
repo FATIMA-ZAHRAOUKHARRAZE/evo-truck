@@ -24,7 +24,7 @@
     <!-- Page Image -->
     <div class="sss" style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo logo">
         <div
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;"> {{ translate('PRODUITS') }} </span>
@@ -45,7 +45,7 @@
                                             <a class="prodct-img-link"
                                                 href="{{ route('ProductDetail', $item['product']->id) }}">
                                                 <img src="{{ asset('images/' . $item['product']->img_pro) }}"
-                                                    alt="">
+                                                    alt="evo prodct">
                                             </a>
                                         </div>
                                         <div class="mb-1 bbb_deals_content">

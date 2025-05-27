@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <div style="position: relative; width: 100%;" class="sss">
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo logo">
         <div
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;"class="photo">
             <h1 style="font-size: 50px;">{{ translate('PRODUITS') }}</h1>
@@ -61,7 +61,7 @@
                     <div class="card h-100 shadow-sm border-0">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="Product Image">
+                                alt="evo category">
                             <div class="card-body text-center">
                                 <h5 class="card-titlee">
                                     {{ translate($categorie->nom_cat) }}
