@@ -30,7 +30,7 @@
     <!-- la partie etapes design -->
     <section class="design-steps">
         <h1>{{ translate('Les étapes de nos design
-                        ') }}</h1>
+                                ') }}</h1>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="image-section">
-                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="Équipement blindé">
+                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evo Équipement blindé">
                 </div>
             </div>
         </div>

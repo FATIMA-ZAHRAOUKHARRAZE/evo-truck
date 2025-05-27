@@ -27,7 +27,7 @@
                                         <tr>
                                             <td>{{ $product->nom_pro }}</td>
                                             <td><img style="width:auto;height:70px"
-                                                    src="{{ asset('images/' . $product->img_pro) }}" alt=""></td>
+                                                    src="{{ asset('images/' . $product->img_pro) }}" alt="evo "></td>
                                             <td>{{ $product->Category->nom_cat }}</td>
                                             <td>{{ $product->sCategory->name }}</td>
                                             <td>{{ $product->created_at }}</td>

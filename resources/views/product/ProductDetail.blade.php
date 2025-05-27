@@ -27,7 +27,7 @@
                     <div class="mb-3 border rounded-4 d-flex justify-content-center">
                         <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
                             <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
-                                src="{{ asset('/images/' . $product->img_pro) }}" alt="detail" />
+                                src="{{ asset('/images/' . $product->img_pro) }}" alt="evo detail" />
                         </a>
                     </div>
                 </aside>

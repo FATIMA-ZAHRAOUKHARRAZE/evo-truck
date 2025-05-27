@@ -97,8 +97,11 @@
                                         <a class="prodct-img-link"
                                             href="{{ route('ProductDetail', $item['product']->id) }}">
                                             <img loading="lazy"
-                                                src="{{ asset('images/' . $item['product']->img_pro) }}"
-                                                alt="{{ $item['product']->img_pro }}">
+                                                src="{{ asset('images/' . $item['product']->img_pro) }}" <<<<<<< HEAD
+                                                alt="evo {{ $item['product']->img_pro }}">
+                                            =======
+                                            alt="{{ $item['product']->img_pro }}">
+                                            >>>>>>> 3c3a5f8e6e63dd66998fade1759ee1c3b3892ced
                                         </a>
                                     </div>
                                     <div class="mb-1 bbb_deals_content">

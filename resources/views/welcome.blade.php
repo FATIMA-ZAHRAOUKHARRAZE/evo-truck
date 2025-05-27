@@ -19,20 +19,20 @@
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block" src="{{ asset('images\EXCAVATORS 2.png') }}" alt="Slide 1">
+                <img class="d-block" src="{{ asset('images\EXCAVATORS 2.png') }}" alt="evo Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="Slide 1">
+                <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evo Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="Slide 1">
+                <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evo Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\Aerial Work 2.png') }}" alt="Slide 1">
+                <img class="d-block" src="{{ asset('images\Aerial Work 2.png') }}" alt="evo Slide 1">
             </div>
 
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\PORT MACHINERY 2.png') }}" alt="Slide 1">
+                <img class="d-block" src="{{ asset('images\PORT MACHINERY 2.png') }}" alt="evo Slide 1">
             </div>
         </div>
         <a class="carousel-control-prev custom-control" href="#carousel" role="button" data-bs-slide="prev">
@@ -68,7 +68,7 @@
                     <div class="border-0 shadow-sm card h-100 div2">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="Product Image">
+                                alt="evo Product Image">
                             <div class="text-center card-body lastdiv">
                                 <h5 class="card-title">
                                     {{ translate($categorie->nom_cat) }}

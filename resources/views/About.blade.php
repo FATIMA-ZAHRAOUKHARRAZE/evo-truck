@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <!-- Page Image -->
     <div class="about_container">
-        <img src="{{ asset('images/Original.png') }}" alt="image">
+        <img src="{{ asset('images/Original.png') }}" alt="evo image">
         <div class="image-desktop-only">
             <h1>{{ translate('À propos ') }}</h1>
         </div>
@@ -29,7 +29,7 @@
             <ul class="timeline">
                 <li data-aos="fade-left">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." />
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." />
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
@@ -40,10 +40,10 @@
                             <p class="text-muted">
                                 {{ translate(
                                     "Depuis sa création en 2000, EVO machinery s'est rapidement
-                                                                                                                                                                                                                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
-                                                                                                                                                                                                                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
-                                                                                                                                                                                                                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
-                                                                                                                                                                                                                                                                                                de qualité supérieure à notre clientèle mondiale.",
+                                                                                                                                                                                                                                                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
+                                                                                                                                                                                                                                                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
+                                                                                                                                                                                                                                                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
+                                                                                                                                                                                                                                                                                                                                de qualité supérieure à notre clientèle mondiale.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -52,7 +52,7 @@
                 </li>
                 <li class="timeline-inverted" data-aos="fade-left">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">
@@ -62,9 +62,9 @@
                             <p class="text-muted">
                                 {{ translate(
                                     "Dans un monde où le progrès se mesure à la robustesse des fondations et à
-                                                                                                                                                                                                                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
-                                                                                                                                                                                                                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
-                                                                                                                                                                                                                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
+                                                                                                                                                                                                                                                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
+                                                                                                                                                                                                                                                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
+                                                                                                                                                                                                                                                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -73,7 +73,7 @@
                 </li>
                 <li data-aos="fade-left">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">{{ translate('IMPACT MONDIAL') }}</h4>
@@ -82,8 +82,8 @@
                             <p class="text-muted">
                                 {{ translate(
                                     "EVO machinery est fier de figurer parmi les plus grandes
-                                                                            entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
-                                                                            reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
+                                                                                                            entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
+                                                                                                            reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -92,7 +92,7 @@
                 </li>
                 <li class="timeline-inverted" data-aos="fade-left">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="..." /></div>
+                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
 
@@ -103,11 +103,11 @@
                             <p class="text-muted">
                                 {{ translate(
                                     "Chez EVO machinery, notre chemin est éclairé par une vision
-                                                                                                                                                                                                                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
-                                                                                                                                                                                                                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
-                                                                                                                                                                                                                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
-                                                                                                                                                                                                                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
-                                                                                                                                                                                                                                                                                                l'industrie.",
+                                                                                                                                                                                                                                                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
+                                                                                                                                                                                                                                                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
+                                                                                                                                                                                                                                                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
+                                                                                                                                                                                                                                                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
+                                                                                                                                                                                                                                                                                                                                l'industrie.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -126,13 +126,13 @@
                 <div class="col-lg-3">
                     <div class="team-member" data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="..." />
+                            alt="evo ..." />
                         <h4>{{ translate('QUALITÉ') }}</h4>
                         <p class="text-muted">
                             {{ translate(
                                 "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                                                                                        rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                                                                        conformes aux normes de l'industrie.",
+                                                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
+                                                                                                                    conformes aux normes de l'industrie.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -142,12 +142,12 @@
                 <div class="col-lg-3">
                     <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="..." />
+                            alt="evo ..." />
                         <h4>{{ translate('CONCEPTION ET R&D') }}</h4>
                         <p class="text-muted">
                             {{ translate(
                                 "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                                                            continus dans l'amélioration et l'innovation des produits.",
+                                                                                        continus dans l'amélioration et l'innovation des produits.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -157,12 +157,12 @@
                 <div class="col-lg-3">
                     <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="..." />
+                            alt="evo ..." />
                         <h4>{{ translate('DIVERSITÉ') }}</h4>
                         <p class="text-muted">
                             {{ translate(
                                 "EVO machinery une large gamme d'équipements de construction et de levage,
-                                                            notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
+                                                                                        notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
                                 \App::getLocale(),
                             ) }}
                         </p>
@@ -172,13 +172,13 @@
                 <div class="col-lg-3">
                     <div class="team-member"data-aos="fade-left">
                         <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="..." />
+                            alt="evo ..." />
                         <h4>{{ translate('SERVICE') }}</h4>
                         <p class="text-muted">
                             {{ translate(
                                 "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                                                            pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                                            pour garantir une qualité de produit de premier ordre.",
+                                                                                        pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
+                                                                                        pour garantir une qualité de produit de premier ordre.",
                                 \App::getLocale(),
                             ) }}
                         </p>
