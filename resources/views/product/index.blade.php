@@ -1,26 +1,27 @@
 @extends('layout.navbar')
 @section('content')
 @section('seo')
-    <title>EVO MACHINERY - Produits</title>
+    <title>EVO MACHINERY - {{ translate($categorie->nom_cat) }}</title>
     <meta name="description"
-        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+        content="Découvrez notre gamme complète de {{ translate($categorie->nom_cat) }} par EVO Machinery. Filtrez et explorez nos produits de qualité avec leurs spécifications techniques détaillées. Demandez un devis personnalisé.">
     <meta name="keywords"
-        content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+        content="{{ translate($categorie->nom_cat) }}, EVO Machinery, équipements de construction, machines industrielles, spécifications techniques, devis personnalisé, filtrage produits, catalogue machines, qualité industrielle">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/product/{{ $id }}">
-    <meta property="og:title" content="EVO MACHINERY - Produits">
-    <meta property="og:description" content="EVO MACHINERY - Produits">
+    <meta property="og:title" content="EVO MACHINERY - {{ translate($categorie->nom_cat) }}">
+    <meta property="og:description"
+        content="Explorez notre catalogue de {{ translate($categorie->nom_cat) }} - EVO Machinery">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset('images/' . $categorie->img_catpro) }}">
 @endsection
 <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" href={{ asset('css/product.css') }}>
 <!-- Page Image -->
 <div class="sss" style="position: relative; width: 100%;">
     <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"src="{{ asset('images/' . $categorie->img_catpro) }}"
-        alt="evo">
+        alt="">
     <div class="textph"
         style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }};color: #2042be; font-size: 24px; ">
         <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;">
@@ -96,8 +97,11 @@
                                         <a class="prodct-img-link"
                                             href="{{ route('ProductDetail', $item['product']->id) }}">
                                             <img loading="lazy"
-                                                src="{{ asset('images/' . $item['product']->img_pro) }}"
-                                                alt="evo{{ $item['product']->img_pro }}">
+                                                src="{{ asset('images/' . $item['product']->img_pro) }}" <<<<<<< HEAD
+                                                alt="evo {{ $item['product']->img_pro }}">
+                                            =======
+                                            alt="{{ $item['product']->img_pro }}">
+                                            >>>>>>> 3c3a5f8e6e63dd66998fade1759ee1c3b3892ced
                                         </a>
                                     </div>
                                     <div class="mb-1 bbb_deals_content">

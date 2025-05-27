@@ -3,25 +3,25 @@
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Solution</title>
+    <title>EVO MACHINERY - Solutions et Processus de Fabrication</title>
     <meta name="description"
-        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+        content="Découvrez le processus de fabrication EVO Machinery : design, R&D, fabrication, prototypage, tests et confort. Spécialiste en équipements blindés et véhicules de protection depuis plus de 25 ans.">
     <meta name="keywords"
-        content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+        content="EVO Machinery solutions, processus de fabrication, design industriel, recherche et développement, prototypage, tests industriels, équipements blindés, véhicules blindés, systèmes balistiques, blindage, véhicules de protection, MRAP, forces spéciales, ingénierie de production, innovation industrielle">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/solution">
-    <meta property="og:title" content="EVO MACHINERY - Solution">
-    <meta property="og:description" content="EVO MACHINERY - Solution">
+    <meta property="og:title" content="EVO MACHINERY - Solutions et Processus de Fabrication">
+    <meta property="og:description"
+        content="Découvrez notre expertise en fabrication d'équipements blindés et notre processus de production innovant">
     <meta property="og:type" content="website">
 @endsection
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo">
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
         <div class="textph"
             style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px;">
             <h1 style="font-size: 50px;">{{ translate('Solution') }}</h1>
@@ -30,7 +30,7 @@
     <!-- la partie etapes design -->
     <section class="design-steps">
         <h1>{{ translate('Les étapes de nos design
-                ') }}</h1>
+                                ') }}</h1>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="image-section">
-                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evoÉquipement blindé">
+                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evo Équipement blindé">
                 </div>
             </div>
         </div>

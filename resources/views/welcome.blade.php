@@ -4,14 +4,13 @@
     <meta name="description"
         content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
     <meta name="keywords"
-        content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+        content="EVO Machinery, machines de construction, équipements de construction, excavatrices, chargeuses, véhicules spéciaux, engins de chantier, machines portuaires, équipements de levage, machines de terrassement, machines d'assainissement, composants de machine, construction, finance, TIC, Maroc, Afrique, industrie minière, machines de levage, machines de terrassement">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/">
-    <meta property="og:title" content="EVO MACHINERY - Acceuil">
-    <meta property="og:description" content="EVO MACHINERY - Acceuil">
+    <meta property="og:title" content="EVO MACHINERY - Accueil">
+    <meta property="og:description" content="EVO MACHINERY - Accueil">
     <meta property="og:type" content="website">
 @endsection
 @section('content')
@@ -20,20 +19,20 @@
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block" src="{{ asset('images\EXCAVATORS 2.png') }}" alt="evoSlide 1">
+                <img class="d-block" src="{{ asset('images\EXCAVATORS 2.png') }}" alt="evo Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evoSlide 1">
+                <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evo Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evoSlide 1">
+                <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evo Slide 1">
             </div>
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\Aerial Work 2.png') }}" alt="evoSlide 1">
+                <img class="d-block" src="{{ asset('images\Aerial Work 2.png') }}" alt="evo Slide 1">
             </div>
 
             <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\PORT MACHINERY 2.png') }}" alt="evoSlide 1">
+                <img class="d-block" src="{{ asset('images\PORT MACHINERY 2.png') }}" alt="evo Slide 1">
             </div>
         </div>
         <a class="carousel-control-prev custom-control" href="#carousel" role="button" data-bs-slide="prev">
@@ -69,7 +68,7 @@
                     <div class="border-0 shadow-sm card h-100 div2">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="evoProduct Image">
+                                alt="evo Product Image">
                             <div class="text-center card-body lastdiv">
                                 <h5 class="card-title">
                                     {{ translate($categorie->nom_cat) }}

@@ -30,7 +30,7 @@ const modalShowcase = `
 					<div class="col-md-6 col-lg-4">
 						<div class="card-documentation h-100">
 							<div class="d-flex align-items-center flex-column justify-content-center text-center">
-								<img src="assets/img/kaiadmin/logo_documentation.png" height="60" alt="evoRead Documentation">
+								<img src="assets/img/kaiadmin/logo_documentation.png" height="60" alt="evo Read Documentation">
 								<div class="docs-info ms-3 mb-4">
 									<h6 class="fw-bold mb-0 op-8 mt-1">Need help?</h6>
 									<p class="fw-bold mb-0 op-5">Please check our docs</p>

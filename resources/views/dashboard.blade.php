@@ -46,7 +46,7 @@
                 <!-- Logo Header -->
                 <div class="logo-header" data-background-color="dark">
                     <a href="index.html" class="logo">
-                        <img src="{{ asset('images/Original.png') }}" alt="evonavbar brand" class="navbar-brand"
+                        <img src="{{ asset('images/Original.png') }}" alt="evo navbar brand" class="navbar-brand"
                             height="20" />
                     </a>
                     <div class="nav-toggle">
@@ -189,8 +189,8 @@
                     <!-- Logo Header -->
                     <div class="logo-header" data-background-color="dark">
                         <a href="index.html" class="logo">
-                            <img src="{{ asset('images/Original.png') }}" alt="evonavbar brand" class="navbar-brand"
-                                height="20" />
+                            <img src="{{ asset('images/Original.png') }}" alt="evo navbar brand"
+                                class="navbar-brand" height="20" />
                         </a>
                         <div class="nav-toggle">
                             <button class="btn btn-toggle toggle-sidebar">
@@ -217,7 +217,7 @@
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
                                     aria-expanded="false">
                                     <div class="avatar-sm">
-                                        <img src="{{ asset('images/Original.png') }}" alt="evo..."
+                                        <img src="{{ asset('images/Original.png') }}" alt="evo ..."
                                             class="avatar-img rounded-circle" />
                                     </div>
                                     <span class="profile-username">
@@ -231,7 +231,7 @@
                                             <div class="user-box">
                                                 <div class="avatar-lg">
                                                     <img src="{{ asset('images/Original.png') }}"
-                                                        alt="evoimage profile" class="rounded avatar-img" />
+                                                        alt="evo image profile" class="rounded avatar-img" />
                                                 </div>
                                                 <div class="u-text">
                                                     <h4>{{ Auth::user()->name }}</h4>

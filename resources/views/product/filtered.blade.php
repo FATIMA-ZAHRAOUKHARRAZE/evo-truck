@@ -4,19 +4,20 @@
     <link rel="stylesheet" href={{ asset('css/product.css') }}>
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Filtrer</title>
+    <title>EVO MACHINERY - {{ translate($categorie->nom_cat) }} - Résultats de recherche</title>
     <meta name="description"
-        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+        content="Explorez notre sélection filtrée de {{ translate($categorie->nom_cat) }} par EVO Machinery. Trouvez le produit idéal grâce à nos filtres avancés et découvrez des spécifications techniques détaillées. Demandez un devis personnalisé.">
     <meta name="keywords"
-        content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+        content="{{ translate($categorie->nom_cat) }}, recherche produits, filtrage machines, EVO Machinery, équipements de construction, spécifications techniques, devis personnalisé, catalogue filtré, machines industrielles, qualité industrielle">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/product/filter">
-    <meta property="og:title" content="EVO MACHINERY - Filtrer">
-    <meta property="og:description" content="EVO MACHINERY - Filtrer">
+    <meta property="og:title" content="EVO MACHINERY - {{ translate($categorie->nom_cat) }} - Résultats filtrés">
+    <meta property="og:description"
+        content="Découvrez notre sélection filtrée de {{ translate($categorie->nom_cat) }} - EVO Machinery">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset('images/' . $categorie->img_catpro) }}">
 @endsection
 
 
@@ -24,7 +25,7 @@
     <!-- Page Image -->
     <div class="sss" style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/' . $categorie->img_catpro) }}"alt="evo">
+            src="{{ asset('images/' . $categorie->img_catpro) }}"alt="">
         <div style="font-weight: bold; position: absolute;  top: 40%;   left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }}; color: #2042be; font-size: 24px; "
             class="textph">
             <span style="font-size: 50px;">{{ translate($categorie->nom_cat) }}</span>
@@ -105,8 +106,11 @@
                                         <div class="bbb_deals_image">
                                             <a class="prodct-img-link"
                                                 href="{{ route('ProductDetail', $item['product']->id) }}">
-                                                <img src="{{ asset('images/' . $item['product']->img_pro) }}"
-                                                    alt="evo">
+                                                <img src="{{ asset('images/' . $item['product']->img_pro) }}" <<<<<<< HEAD
+                                                    alt="evo ">
+                                                =======
+                                                alt="">
+                                                >>>>>>> 3c3a5f8e6e63dd66998fade1759ee1c3b3892ced
                                             </a>
                                         </div>
                                         <div class="mb-1 bbb_deals_content">

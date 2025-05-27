@@ -41,7 +41,7 @@
         <!---le logo --->
         <div id="logo" class="logo">
             <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/tr2.png') }}"
-                    alt="evologo"></a>
+                    alt="evo logo"></a>
         </div>
         <ul class="nav-list" id="menuList">
             <!--welcome --->
@@ -66,7 +66,7 @@
                                             {{ translate($category->nom_cat) }}
                                         </a>
                                         <img src="{{ asset('images/' . $category->img_cat) }}"
-                                            style="width:50px;height:auto" alt="evo category image">
+                                            style="width:50px;height:auto" alt="evo  category image">
                                     </span>
                                 @endforeach
                             </div>

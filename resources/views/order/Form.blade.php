@@ -4,25 +4,24 @@
     <link rel="stylesheet" href="{{ asset('css/order.css') }}">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Commande</title>
+    <title>EVO MACHINERY - Demande de devis pour {{ $name }}</title>
     <meta name="description"
-        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+        content="Demandez un devis gratuit pour {{ $name }} ({{ $spesificcat }}) par EVO Machinery. Remplissez notre formulaire et recevez une réponse sous 24h. Service client professionnel et personnalisé.">
     <meta name="keywords"
-        content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+        content="devis {{ $name }}, demande de prix, {{ $spesificcat }}, EVO Machinery, formulaire de contact, devis gratuit, machines de construction, service client, réponse sous 24h">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/form/order/">
-    <meta property="og:title" content="EVO MACHINERY - Commande">
-    <meta property="og:description" content="EVO MACHINERY - Commande">
+    <meta property="og:title" content="EVO MACHINERY - Demande de devis pour {{ $name }}">
+    <meta property="og:description" content="Demandez un devis gratuit pour {{ $name }} - Réponse sous 24h">
     <meta property="og:type" content="website">
 @endsection
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;"class="image-desktop-only">
         <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" alt="evo">
+            src="{{ asset('images/Original.png') }}" alt="">
         <div class="image-desktop-only"
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;">{{ 'PRODUITS' }}</span>
@@ -47,7 +46,8 @@
                         <div class="form-group">
                             <label for="fname">
                                 {{ translate('Catégorie de produit :') }}</label>
-                            <input type="text" name="prod_cat" value="{{ $spesificcat }}" class="form-control" readonly>
+                            <input type="text" name="prod_cat" value="{{ $spesificcat }}" class="form-control"
+                                readonly>
                         </div>
                     </div>
                     <div class="col-md-6">

@@ -5,17 +5,18 @@
 @section('seo')
     <title>EVO MACHINERY - {{ $product->nom_pro }}</title>
     <meta name="description"
-        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+        content="Découvrez {{ $product->nom_pro }} par EVO Machinery. Spécifications techniques détaillées, caractéristiques et paramètres. Demandez un devis personnalisé pour ce produit de qualité.">
     <meta name="keywords"
-        content="{{ $product->nom_pro }},Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+        content="{{ $product->nom_pro }}, EVO Machinery, équipements de construction, spécifications techniques, caractéristiques produit, paramètres techniques, devis personnalisé, machines de construction, qualité industrielle">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="French">
     <meta name="author" content="EVO MACHINERY">
     <link rel="canonical" href="https://evo-machinery.com/ProductDetail/{{ $product->id }}">
-    <meta property="og:title" content="EVO MACHINERY - Produit Detail">
-    <meta property="og:description" content="EVO MACHINERY - Produit Detail">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="EVO MACHINERY - {{ $product->nom_pro }}">
+    <meta property="og:description"
+        content="Découvrez les spécifications techniques et caractéristiques de {{ $product->nom_pro }} - EVO Machinery">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="{{ asset('/images/' . $product->img_pro) }}">
 @endsection
 @section('content')
     <link rel="stylesheet" href={{ asset('css/product.css') }}>
@@ -26,7 +27,7 @@
                     <div class="mb-3 border rounded-4 d-flex justify-content-center">
                         <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
                             <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
-                                src="{{ asset('/images/' . $product->img_pro) }}" alt="evodetail" />
+                                src="{{ asset('/images/' . $product->img_pro) }}" alt="evo detail" />
                         </a>
                     </div>
                 </aside>
