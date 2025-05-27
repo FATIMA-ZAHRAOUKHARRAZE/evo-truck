@@ -1,12 +1,14 @@
 @extends('layout.navbar')
- @section('url')
+@section('url')
     <link rel="stylesheet" href="{{ asset('css/product.css') }}">
     <link rel="stylesheet" href="{{ asset('css/catliste.css') }}">
 @endsection
 @section('seo')
     <title>EVO MACHINERY - Liste Categories</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <meta name="description"
+        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords"
+        content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="French">
@@ -17,10 +19,10 @@
     <meta property="og:type" content="website">
 @endsection
 @section('content')
-   <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <div style="position: relative; width: 100%;" class="sss">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
-            loading="lazy" alt="">
+        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo">
         <div
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;"class="photo">
             <h1 style="font-size: 50px;">{{ translate('PRODUITS') }}</h1>
@@ -55,7 +57,8 @@
                 <div class="col-5-custom mb-4">
                     <div class="card h-100 shadow-sm border-0">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top" alt="Product Image">
+                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
+                                alt="evoProduct Image">
                             <div class="card-body text-center">
                                 <h5 class="card-titlee">
                                     {{ translate($categorie->nom_cat) }}

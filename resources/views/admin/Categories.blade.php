@@ -24,9 +24,10 @@
                                         <tr>
                                             <td>{{ $categorie->nom_cat }}</td>
                                             <td><img style="width:auto;height:70px"
-                                                    src="{{ asset('images/' . $categorie->img_cat) }}" alt=""></td>
+                                                    src="{{ asset('images/' . $categorie->img_cat) }}" alt="evo"></td>
                                             <td>
-                                                <a class="btn btn-primary" href="{{ route('admin.scategory', $categorie->id) }}">Ajouter une sous
+                                                <a class="btn btn-primary"
+                                                    href="{{ route('admin.scategory', $categorie->id) }}">Ajouter une sous
                                                     category</a>
                                                 <a href="{{ route('admin.edit_cat', $categorie->id) }}"
                                                     class="me-2 btn btn-primary">Modifier</a>

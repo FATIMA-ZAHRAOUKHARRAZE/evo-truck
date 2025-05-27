@@ -4,8 +4,10 @@
 @endsection
 @section('seo')
     <title>EVO MACHINERY - {{ $product->nom_pro }}</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="{{ $product->nom_pro }},Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <meta name="description"
+        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords"
+        content="{{ $product->nom_pro }},Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="French">
@@ -24,7 +26,7 @@
                     <div class="mb-3 border rounded-4 d-flex justify-content-center">
                         <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
                             <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
-                                src="{{ asset('/images/' . $product->img_pro) }}" alt="detail" />
+                                src="{{ asset('/images/' . $product->img_pro) }}" alt="evodetail" />
                         </a>
                     </div>
                 </aside>
@@ -49,9 +51,9 @@
                         class="btn btn-warning shadow-0">
                         <i class="me-1 fa fa-shopping-basket"></i>{{ translate('Donner un devis') }}
                     </a>
-                    </div>
-                </main>
             </div>
+            </main>
+        </div>
         </div>
     </section>
     <section>

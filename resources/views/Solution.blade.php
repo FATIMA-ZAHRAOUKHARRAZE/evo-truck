@@ -4,8 +4,10 @@
 @endsection
 @section('seo')
     <title>EVO MACHINERY - Solution</title>
-    <meta name="description" content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
-    <meta name="keywords" content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
+    <meta name="description"
+        content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
+    <meta name="keywords"
+        content="Evo, machinery, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie, Machines d'exploration des ressources, Machines non destinées à l'excavation">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="French">
@@ -18,17 +20,17 @@
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
-            loading="lazy" alt="">
+        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo">
         <div class="textph"
-        style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px;">
+            style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px;">
             <h1 style="font-size: 50px;">{{ translate('Solution') }}</h1>
         </div>
     </div>
     <!-- la partie etapes design -->
     <section class="design-steps">
         <h1>{{ translate('Les étapes de nos design
-        ') }}</h1>
+                ') }}</h1>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>
@@ -71,15 +73,14 @@
                     </div>
                     <div class="content"data-aos="fade-up">
                         <p>
-                        {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
+                            {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
                         </p>
                     </div>
                 </div>
                 <div class="image-section">
-                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="Équipement blindé">
+                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evoÉquipement blindé">
                 </div>
             </div>
         </div>
     </section>
-
 @endsection
