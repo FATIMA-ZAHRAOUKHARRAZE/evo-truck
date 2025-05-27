@@ -20,8 +20,8 @@
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;"class="image-desktop-only">
-        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
-            alt="">
+        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
+            src="{{ asset('images/Original.png') }}" alt="">
         <div class="image-desktop-only"
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;">{{ 'PRODUITS' }}</span>
@@ -46,7 +46,8 @@
                         <div class="form-group">
                             <label for="fname">
                                 {{ translate('Catégorie de produit :') }}</label>
-                            <input type="text" name="prod_cat" value="{{ $spesificcat }}" class="form-control" readonly>
+                            <input type="text" name="prod_cat" value="{{ $spesificcat }}" class="form-control"
+                                readonly>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -124,8 +125,7 @@
                         @endif
                     </div>
                 </div>
-                <button type="submit"
-                    class="btn btn-primary btn-block mt-4">{{ translate('Soumettre') }}</button>
+                <button type="submit" class="btn btn-primary btn-block mt-4">{{ translate('Soumettre') }}</button>
             </form>
         </div>
     </section>
