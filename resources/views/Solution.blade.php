@@ -7,7 +7,7 @@
     <meta name="description"
         content="Découvrez le processus de fabrication EVO Machinery : design, R&D, fabrication, prototypage, tests et confort. Spécialiste en équipements blindés et véhicules de protection depuis plus de 25 ans.">
     <meta name="keywords"
-        content="EVO Machinery solutions, processus de fabrication, design industriel, recherche et développement, prototypage, tests industriels, équipements blindés, véhicules blindés, systèmes balistiques, blindage, véhicules de protection, MRAP, forces spéciales, ingénierie de production, innovation industrielle">
+        content="EVO Machinery solutions, processus de fabrication, design industriel, recherche et développement, prototypage, tests industriels, équipements blindés, véhicules blindés, systèmes balistiques, blindage, véhicules de protection, MRAP, forces spéciales, ingénierie de production, innovation industrielle,maroc">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO MACHINERY">

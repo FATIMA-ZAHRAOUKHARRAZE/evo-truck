@@ -8,7 +8,7 @@
     <meta name="description"
         content="Explorez notre sélection filtrée de {{ translate($categorie->nom_cat) }} par EVO Machinery. Trouvez le produit idéal grâce à nos filtres avancés et découvrez des spécifications techniques détaillées. Demandez un devis personnalisé.">
     <meta name="keywords"
-        content="{{ translate($categorie->nom_cat) }}, recherche produits, filtrage machines, EVO Machinery, équipements de construction, spécifications techniques, devis personnalisé, catalogue filtré, machines industrielles, qualité industrielle">
+        content="{{ translate($categorie->nom_cat) }}, recherche produits, filtrage machines, EVO Machinery, équipements de construction, spécifications techniques, devis personnalisé, catalogue filtré, machines industrielles, qualité industrielle,maroc">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO MACHINERY">

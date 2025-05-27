@@ -7,7 +7,7 @@
     <meta name="description"
         content="Découvrez {{ $product->nom_pro }} par EVO Machinery. Spécifications techniques détaillées, caractéristiques et paramètres. Demandez un devis personnalisé pour ce produit de qualité.">
     <meta name="keywords"
-        content="{{ $product->nom_pro }}, EVO Machinery, équipements de construction, spécifications techniques, caractéristiques produit, paramètres techniques, devis personnalisé, machines de construction, qualité industrielle">
+        content="{{ $product->nom_pro }}, EVO Machinery, équipements de construction, spécifications techniques, caractéristiques produit, paramètres techniques, devis personnalisé, machines de construction, qualité industrielle,maroc">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO MACHINERY">
