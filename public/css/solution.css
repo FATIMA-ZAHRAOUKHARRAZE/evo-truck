@@ -17,8 +17,8 @@
 }
 
 /* Titre principal de la section */
-.design-steps h1 {
-    font-size: 2.5em; /* Taille de police importante */
+.design-steps h3 {
+    font-size: 40px; /* Taille de police importante */
     font-weight: bold; /* Texte en gras */
     color: #2042be; /* Couleur bleu foncé */
     padding: 10px; /* Espacement interne */

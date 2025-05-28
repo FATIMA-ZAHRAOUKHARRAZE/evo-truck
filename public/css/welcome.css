@@ -51,7 +51,7 @@
     /* Place le contenu au-dessus de l'image et de la superposition. */
 }
 
-.ab-content h1 {
+.ab-content h4 {
     font-size: 40px;
     /* Taille de la police pour le titre principal. */
     font-weight: bold;
@@ -62,7 +62,7 @@
     /* Ajoute un espacement en bas du titre. */
 }
 
-.ab-content p {
+.ab-content h2 {
     color: white;
     /* Définit la couleur blanche pour le texte. */
     font-size: 20px;

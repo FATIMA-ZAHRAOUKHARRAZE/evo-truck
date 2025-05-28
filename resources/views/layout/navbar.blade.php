@@ -15,19 +15,16 @@
     @yield('url')
     <link rel="icon" href="{{ asset('images/logo.png') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -56,14 +53,15 @@
                 <ul class="pt-4 dropdown-menu kk" style="background: white;">
                     <div class="dropdown-item-group dit d-flex ">
                         @foreach ($categories->sortBy(function ($category) {
-            return strlen($category->nom_cat);
-        })->chunk(ceil($categories->count() / 3)) as $chunk)
+                                return strlen($category->nom_cat);
+                            })->chunk(ceil($categories->count() / 3)) as $chunk)
                             <div class="dropdown-column me-5">
                                 @foreach ($chunk as $category)
                                     <span class="pb-2 d-flex">
                                         <a style="color:#2042be !important" class="dropdown-item rr"
                                             href="{{ url('product/' . $category->id) }}">
-                                            {{ translate($category->nom_cat) }}
+                                            <h1 style="font-size: 16px;"> {{ translate($category->nom_cat) }}
+                                            </h1>
                                         </a>
                                         <img src="{{ asset('images/' . $category->img_cat) }}"
                                             style="width:50px;height:auto" alt="evo  category image">
@@ -84,11 +82,11 @@
                 </a>
                 <ul class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
                     @foreach ($categories->sortBy(function ($category) {
-        return strlen($category->nom_cat);
-    }) as $categorie)
+                            return strlen($category->nom_cat);
+                        }) as $categorie)
                         <li>
                             <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
-                                {{ translate($categorie->nom_cat) }}
+                                  <h1 style="font-size: 16px;"> {{ translate($categorie->nom_cat) }}</h1>
                             </a>
                         </li>
                     @endforeach
@@ -178,7 +176,7 @@
                         {{ translate('Produits') }}</h6>
                     @foreach ($categories->take(5) as $categorie)
                         <p><a class="text-white" style="text-decoration: none"
-                                href="{{ url('product/' . $categorie->id) }}">{{ translate($categorie->nom_cat) }}</a>
+                                href="{{ url('product/' . $categorie->id) }}"><h1 style="font-size: 16px;">{{ translate($categorie->nom_cat) }}</h1></a>
                         </p>
                     @endforeach
                     <p> <a class="text-white" style="text-decoration: none" href="{{ route('category.liste') }}">
@@ -256,20 +254,11 @@
 
     gtag('config', 'G-SWZLXLQ687');
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-</script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
+
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     $('.changeLanguage').change(function(event) {

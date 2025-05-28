@@ -73,7 +73,7 @@
         <div id="Product_facture" class="mt-5 text-white">margin</div>
         {{-- Product fetures --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h1 style=" font-size:40px;font-weight: bold;color:#2042be">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</h1>
+            <h1 style=" font-size:30px;font-weight: bold;color:#2042be">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</h1>
             <span class="mt-2 ">{{ translate($product->dec_pro ?? ($product->cacteristique ?? '   ')) }}</span>
             @if ($product->pdf !== null)
                 <div class="mt-3">
@@ -86,7 +86,7 @@
         <div id="parameter" class="mt-5 text-white">margin</div>
         {{-- parametre --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h1 style=" font-size:40px;font-weight: bold;color:#2042be ">{{ translate('PARAMÈTRES') }}</h1>
+            <h1 style=" font-size:30px;font-weight: bold;color:#2042be ">{{ translate('PARAMÈTRES') }}</h1>
             <span class="mt-2 ">
                 <table class="table table-striped">
                     <thead>

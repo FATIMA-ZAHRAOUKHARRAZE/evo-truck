@@ -29,7 +29,7 @@
     </div>
     <!-- la partie etapes design -->
     <section class="design-steps">
-        <h1>{{ translate('Les étapes de nos design
+        <h3>{{ translate('Les étapes de nos design
                                 ') }}</h1>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
@@ -69,7 +69,7 @@
             <div class="contain">
                 <div class="content-section">
                     <div class="title"data-aos="fade-up">
-                        <h1>{{ translate(' Équipements blindé') }}</h1>
+                        <h3>{{ translate(' Équipements blindé') }}</h3>
                     </div>
                     <div class="content"data-aos="fade-up">
                         <p>
