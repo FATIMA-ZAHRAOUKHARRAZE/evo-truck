@@ -60,8 +60,8 @@
                                     <span class="pb-2 d-flex">
                                         <a style="color:#2042be !important" class="dropdown-item rr"
                                             href="{{ url('product/' . $category->id) }}">
-                                            <h1 style="font-size: 16px;"> {{ translate($category->nom_cat) }}
-                                            </h1>
+                                           {{ translate($category->nom_cat) }}
+
                                         </a>
                                         <img src="{{ asset('images/' . $category->img_cat) }}"
                                             style="width:50px;height:auto" alt="evo  category image">
@@ -176,7 +176,7 @@
                         {{ translate('Produits') }}</h6>
                     @foreach ($categories->take(5) as $categorie)
                         <p><a class="text-white" style="text-decoration: none"
-                                href="{{ url('product/' . $categorie->id) }}"><h1 style="font-size: 16px;">{{ translate($categorie->nom_cat) }}</h1></a>
+                                href="{{ url('product/' . $categorie->id) }}">{{ translate($categorie->nom_cat) }}</a>
                         </p>
                     @endforeach
                     <p> <a class="text-white" style="text-decoration: none" href="{{ route('category.liste') }}">
