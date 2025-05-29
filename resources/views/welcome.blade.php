@@ -4,7 +4,7 @@
     <meta name="description"
         content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
     <meta name="keywords"
-        content="EVO Machinery, machines de construction, équipements de construction, excavatrices, chargeuses, véhicules spéciaux, engins de chantier, machines portuaires, équipements de levage, machines de terrassement, machines d'assainissement, composants de machine, construction, finance, TIC, Maroc, Afrique, industrie minière, machines de levage, machines de terrassement">
+        content="EVO Machinery, machines de construction, équipements de construction, excavatrices, chargeuses,véhicules spéciaux, engins de chantier, machines portuaires, équipements de levage, machines de terrassement, machines d'assainissement, composants de machine,construction,Maroc,industrie minière, machines de levage, machines de terrassement">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO MACHINERY">

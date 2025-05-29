@@ -1,9 +1,9 @@
 @extends('layout.navbar')
 @section('content')
 @section('seo')
-    <title>EVO MACHINERY - {{ translate($categorie->nom_cat) }}</title>
-    <meta name="description"
-        content="Découvrez notre gamme complète de {{ translate($categorie->nom_cat) }} par EVO Machinery. Filtrez et explorez nos produits de qualité avec leurs spécifications techniques détaillées. Demandez un devis personnalisé.">
+    <title>{{ translate($categorie->nom_cat) }} - EVO MACHINERY</title>
+    <meta name="description" 
+      content="Explorez nos {{ translate($categorie->nom_cat) }} robustes et performantes, idéales pour les travaux publics et privés. EVO Machinery, votre partenaire au Maroc.">
     <meta name="keywords"
         content="{{ translate($categorie->nom_cat) }}, EVO Machinery, équipements de construction, machines industrielles, spécifications techniques, devis personnalisé, filtrage produits, catalogue machines, qualité industrielle,maroc">
     <meta name="robots" content="index, follow">

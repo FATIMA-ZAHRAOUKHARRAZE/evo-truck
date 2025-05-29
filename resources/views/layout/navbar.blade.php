@@ -60,8 +60,8 @@
                                     <span class="pb-2 d-flex">
                                         <a style="color:#2042be !important" class="dropdown-item rr"
                                             href="{{ url('product/' . $category->id) }}">
-                                           {{ translate($category->nom_cat) }}
-
+                                            {{ translate($category->nom_cat) }}
+                                            
                                         </a>
                                         <img src="{{ asset('images/' . $category->img_cat) }}"
                                             style="width:50px;height:auto" alt="evo  category image">
@@ -86,7 +86,7 @@
                         }) as $categorie)
                         <li>
                             <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
-                                  <h1 style="font-size: 16px;"> {{ translate($categorie->nom_cat) }}</h1>
+                                  {{ translate($categorie->nom_cat) }}
                             </a>
                         </li>
                     @endforeach

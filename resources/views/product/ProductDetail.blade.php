@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - {{ $product->nom_pro }}</title>
+    <title>{{ $product->nom_pro }} - EVO MACHINERY</title>
     <meta name="description"
         content="Découvrez {{ $product->nom_pro }} par EVO Machinery. Spécifications techniques détaillées, caractéristiques et paramètres. Demandez un devis personnalisé pour ce produit de qualité.">
     <meta name="keywords"
@@ -50,7 +50,7 @@
                     <br>
                     <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
                         class="btn btn-warning shadow-0">
-                        <i class="me-1 fa fa-shopping-basket"></i>{{ translate('Donner un devis') }}
+                        <i class="me-1 fa fa-shopping-basket"></i>{{ translate('Demander un devis') }}
                     </a>
             </div>
             </main>

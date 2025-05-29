@@ -30,7 +30,7 @@
     <!-- la partie etapes design -->
     <section class="design-steps">
         <h3>{{ translate('Les étapes de nos design
-                                ') }}</h1>
+                                ') }}</h3>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>

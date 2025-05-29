@@ -6,7 +6,7 @@
 @section('seo')
     <title>EVO MACHINERY - Catalogue des Catégories d'Équipements</title>
     <meta name="description"
-        content="Explorez le catalogue complet d'EVO Machinery : Bulldozers, Chargeuses, Niveleuses, Excavatrices, Grues et plus. Découvrez notre gamme complète d'équipements de construction et demandez un devis personnalisé.">
+        content="Explorez le catalogue complet d'EVO Machinery : équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc, Découvrez notre gamme complète d'équipements de construction et demandez un devis personnalisé.">
     <meta name="keywords"
         content="catalogue EVO Machinery, équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc">
     <meta name="robots" content="index, follow">

@@ -4,7 +4,7 @@
     <link rel="stylesheet" href={{ asset('css/product.css') }}>
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - {{ translate($categorie->nom_cat) }} - Résultats de recherche</title>
+    <title>{{ translate($categorie->nom_cat) }} - EVO MACHINERY - Résultats de recherche</title>
     <meta name="description"
         content="Explorez notre sélection filtrée de {{ translate($categorie->nom_cat) }} par EVO Machinery. Trouvez le produit idéal grâce à nos filtres avancés et découvrez des spécifications techniques détaillées. Demandez un devis personnalisé.">
     <meta name="keywords"
