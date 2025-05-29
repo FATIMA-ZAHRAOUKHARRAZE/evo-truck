@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+
 html,
 .mydiv {
     margin-top: 50px;
@@ -86,6 +87,7 @@ html,
     flex-grow: 1;
     padding-top: 25px;
 }
+
 .banner {
     margin-top: 50px;
 }
@@ -93,6 +95,7 @@ html,
 .bbb_deals_featured {
     width: 100%;
 }
+
 .bbb_deals {
     width: 100%;
     margin-right: 7%;
@@ -126,11 +129,14 @@ html,
 .bbb_deals_image {
     width: 80%;
 }
+
 .prodct-img-link {
     overflow: hidden;
 }
+
 .bbb_deals_image img {
-    width: 100%;
+    width: 127%;
+    margin-right: 5px;
 }
 
 .bbb_deals_content {
@@ -154,7 +160,8 @@ html,
 }
 
 .bbb_deals_item_name {
-    font-weight: bold; /* ou utilisez 700 */
+    font-weight: bold;
+    /* ou utilisez 700 */
     color: #000000;
 }
 
@@ -237,11 +244,13 @@ html,
         /* Half width */
     }
 }
+
 /* Si vous voulez aussi changer le fond au survol tout en gardant le texte blanc */
 .btn:hover {
     background: linear-gradient(to right, #0d2471, #2042be);
     /* Couleur de fond au survol */
 }
+
 @media (max-width: 600px) {
     .fdiv {
         margin-bottom: 20px
@@ -266,6 +275,7 @@ html,
         font-size: 14px !important;
         padding-top: 30px;
     }
+
     #navbar {
         display: none;
     }
@@ -281,6 +291,7 @@ html,
         display: none;
     }
 }
+
 @media (max-width: 540px) {
     .product-item {
         flex: 0 0 100%;
@@ -294,22 +305,27 @@ html,
         margin-left: -11px;
     }
 }
+
 @media (max-width: 600px) {
     .fdiv {
         margin-bottom: 20px;
     }
+
     .ps-lg-5 {
         margin-left: 20px;
     }
+
     dd {
         display: inline-block;
         margin-right: 20px;
     }
+
     .parali {
         font-size: 14px !important;
         padding-top: 30px;
     }
 }
+
 #menu {
     display: flex;
     flex-direction: row;
