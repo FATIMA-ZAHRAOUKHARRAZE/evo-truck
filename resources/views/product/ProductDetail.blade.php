@@ -19,17 +19,117 @@
     <meta property="og:image" content="{{ asset('/images/' . $product->img_pro) }}">
 @endsection
 @section('content')
+    <style>
+        .slider {
+            width: 550px;
+            position: relative;
+        }
+
+        .slider input[type=radio] {
+            display: none;
+        }
+
+        .slider img.main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: scale(1.1);
+            transition: all 0.5s ease-in-out;
+            border-radius: 8px;
+        }
+
+        /* Show image when radio checked */
+        #id1:checked~.slides img.img1,
+        #id2:checked~.slides img.img2,
+        #id3:checked~.slides img.img3,
+        #id4:checked~.slides img.img4,
+        #id5:checked~.slides img.img5 {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 1;
+        }
+
+        .slides {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .thumbnails label {
+            display: inline-block;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .thumbnails label:hover {
+            opacity: 1;
+        }
+
+        .thumbnails img {
+            width: 80px;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            transition: border 0.3s ease;
+        }
+
+        /* Highlight selected thumbnail */
+        #id1:checked~.thumbnails label[for="id1"] img,
+        #id2:checked~.thumbnails label[for="id2"] img,
+        #id3:checked~.thumbnails label[for="id3"] img,
+        #id4:checked~.thumbnails label[for="id4"] img,
+        #id5:checked~.thumbnails label[for="id5"] img {
+            border-color: #333;
+            opacity: 1;
+        }
+    </style>
     <link rel="stylesheet" href={{ asset('css/product.css') }}>
-    <section class="pb-5 banner mb-5">
+    <section class="pb-5 mb-5 banner">
         <div class="">
             <div class="row gx-5">
                 <aside class="col-lg-6">
-                    <div class="mb-3 border rounded-4 d-flex justify-content-center">
-                        <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
-                            <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
-                                src="{{ asset('/images/' . $product->img_pro) }}" alt="evo detail" />
-                        </a>
-                    </div>
+                    @if (isset($product->slider))
+                        <div class="ml-8 slider">
+                            <!-- Radio buttons -->
+                            @foreach ($product->slider as $index => $image)
+                                <input type="radio" name="slider" id="id{{ $index + 1 }}"
+                                    {{ $index === 0 ? 'checked' : '' }} />
+                            @endforeach
+
+                            <!-- Slides -->
+                            <div class="slides">
+                                @foreach ($product->slider as $index => $image)
+                                    <img src="{{ asset('/images/' . $image) }}" class="main img{{ $index + 1 }}" />
+                                @endforeach
+                            </div>
+
+                            <!-- Thumbnails -->
+                            <div class="thumbnails">
+                                @foreach ($product->slider as $index => $image)
+                                    <label for="id{{ $index + 1 }}">
+                                        <img src="{{ asset('/images/' . $image) }}" />
+                                    </label>
+                                @endforeach
+                            </div>
+                        </div>
+                    @else
+                        <div class="mb-3 border rounded-4 d-flex justify-content-center">
+                            <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image">
+                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
+                                    src="{{ asset('/images/' . $product->img_pro) }}" alt="evo detail" />
+                            </a>
+                        </div>
+                    @endif
                 </aside>
                 <main class="col-lg-6">
                     <div class="ps-lg-5">
