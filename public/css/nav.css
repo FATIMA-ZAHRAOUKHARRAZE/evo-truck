@@ -18,6 +18,7 @@
 ::-webkit-scrollbar-track {
     background: #ffffff;
 }
+
 .dropdown-column {
     width: 100%;
 }
@@ -29,6 +30,7 @@
     box-sizing: border-box;
     font-family: "Arial", sans-serif;
 }
+
 html,
 body {
     height: 100%;
@@ -59,16 +61,17 @@ body {
     height: 120px;
 }
 
-#nav > ul {
+#nav>ul {
     display: flex;
     gap: 20px;
     align-items: center;
 }
+
 .nav-link {
     padding: 0 !important;
 }
 
-#nav > ul > li {
+#nav>ul>li {
     list-style-type: none;
     position: relative;
     padding-right: 20px;
@@ -81,13 +84,13 @@ body {
     color: #efc425 !important;
 }
 
-#nav > ul > li > a {
+#nav>ul>li>a {
     text-decoration: none;
     color: #ffd700;
     padding: 10px 0;
 }
 
-#nav > ul > li::after {
+#nav>ul>li::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -98,14 +101,16 @@ body {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-#nav > ul > li:hover::after {
+#nav>ul>li:hover::after {
     width: 100%;
     left: 0;
 }
+
 .mobile-products {
     display: none;
     z-index: 200;
 }
+
 .mobile-products>ul {
     min-height: 300px;
     background: rgba(0, 23, 172, 0.863);
@@ -119,7 +124,8 @@ body {
 }
 
 .dropdown-menu::-webkit-scrollbar {
-    width: 8px; /* Largeur de la scrollbar */
+    width: 8px;
+    /* Largeur de la scrollbar */
 }
 
 .menu-icon {
@@ -131,12 +137,19 @@ body {
     color: #fff;
     font-size: 30px;
 }
+
 .mob-lang {
     display: none;
 }
+
 .mob-lang>div>.changeLanguage {
-    background-color: rgba(255, 255, 255, 0);border:none;color:#ffd700;font-size:20px"
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #ffd700;
+    font-size: 20px"
+
 }
+
 /* Mobile menu */
 @media (max-width: 780px) {
     ul.ee.dropdown-menu.mobile-ul.show {
@@ -144,22 +157,28 @@ body {
         margin-top: 10px !important;
         width: 96vw !important;
     }
+
     .ab-content {
         width: 90vw;
     }
+
     .logo img {
         margin-left: -60px;
     }
+
     #nav {
         padding: 10px 40px;
     }
+
     .pc-lang {
         display: none;
     }
+
     .mob-lang {
         display: block;
     }
-    #nav > ul {
+
+    #nav>ul {
         position: absolute;
         top: 65px;
         left: 0;
@@ -172,7 +191,7 @@ body {
         max-height: 0;
     }
 
-    #nav > ul > li {
+    #nav>ul>li {
         padding: 20px;
         padding-top: 0;
     }
@@ -232,22 +251,22 @@ body {
         display: block !important;
     }
 
-    .mobile-products > ul {
+    .mobile-products>ul {
         min-height: 10vh;
         z-index: 20000;
     }
 
-    .mobile-products > ul:hover {
+    .mobile-products>ul:hover {
         background: #0017ac90 !important;
     }
 
-    .mobile-products > ul > li > a {
+    .mobile-products>ul>li>a {
         font-size: 15px !important;
         background: #0017acdc !important;
         padding: 10px;
     }
 
-    .mobile-products > ul > li > a:hover {
+    .mobile-products>ul>li>a:hover {
         background: #0017ac !important;
     }
 
@@ -312,16 +331,19 @@ body {
 
 
 .dropdown-menu {
-    left: -35.4vw ;
-    width: 90vw ;
-    padding: 20px ;
+    left: -35.4vw;
+    width: 90vw;
+    padding: 20px;
     background: linear-gradient(to right, #2042be, #0d2471);
-    max-height: 500px; /* Ajustez la hauteur selon vos besoins */
-    overflow-y: auto; /* Ajoute un défilement vertical */
-    scrollbar-width: thin; /* Style pour les navigateurs modernes */
+    max-height: 500px;
+    /* Ajustez la hauteur selon vos besoins */
+    overflow-y: auto;
+    /* Ajoute un défilement vertical */
+    scrollbar-width: thin;
+    /* Style pour les navigateurs modernes */
 }
 
-//less than 380px
+
 @media (max-width: 380px) {
     main {
         padding-top: 3vh;
@@ -333,8 +355,10 @@ body {
 }
 
 .rr:hover {
-    background-color: transparent !important; /* Removes hover background */
-    color: inherit !important; /* Keeps text color unchanged */
+    background-color: transparent !important;
+    /* Removes hover background */
+    color: inherit !important;
+    /* Keeps text color unchanged */
 }
 
 .logo img {
@@ -346,6 +370,7 @@ body {
     gap: 20px;
     align-items: center;
 }
+
 .nav-link {
     padding: 0 !important;
 }
@@ -381,23 +406,29 @@ nav ul li:hover::after {
     color: #fff;
     font-size: 30px;
 }
+
 .mob-lang {
     display: none;
 }
+
 /* Mobile menu */
 @media (max-width: 780px) {
     .flag-img-container {
         display: none;
     }
+
     #nav {
         padding: 10px 40px;
     }
+
     .pc-lang {
         display: none !important;
     }
+
     .mob-lang {
         display: block;
     }
+
     nav ul {
         position: absolute;
         top: 65px;
@@ -423,6 +454,7 @@ nav ul li:hover::after {
     .info-bar {
         display: none;
     }
+
     .main {
         flex-grow: 1;
 
@@ -486,7 +518,7 @@ body {
     transition: all 400ms !important;
 }
 
-.whatsapp-btn-container .whatsapp-btn:hover + span {
+.whatsapp-btn-container .whatsapp-btn:hover+span {
     transform: rotateZ(0deg) translateX(0px) !important;
     opacity: 1 !important;
 }
@@ -504,12 +536,14 @@ body {
 .bbb_deals_item_detail_label {
     font-weight: bold;
     text-align: left;
-    flex-basis: 75%; /* Label takes 40% of the width */
+    flex-basis: 75%;
+    /* Label takes 40% of the width */
 }
 
 .bbb_deals_item_detail_value {
     text-align: right;
-    flex-basis: 25%; /* Value takes 60% of the width */
+    flex-basis: 25%;
+    /* Value takes 60% of the width */
 }
 
 .dropdown-item:hover {
@@ -517,8 +551,10 @@ body {
 }
 
 .rr:hover {
-    background-color: transparent !important; /* Removes hover background */
-    color: inherit !important; /* Keeps text color unchanged */
+    background-color: transparent !important;
+    /* Removes hover background */
+    color: inherit !important;
+    /* Keeps text color unchanged */
 }
 
 
@@ -529,23 +565,32 @@ body {
 
 /* Style the dropdown menu */
 .web-products .dropdown-menu {
-    display: block; /* Keep it block for transition effects */
+    display: block;
+    /* Keep it block for transition effects */
     position: absolute;
     top: 100%;
-    opacity: 0; /* Hidden by default */
+    opacity: 0;
+    /* Hidden by default */
     visibility: hidden;
-    transform: translateY(-10px); /* Position above */
-    transition: all 0.3s ease-in-out; /* Smooth visibility and position */
-    background-color: #333; /* Optional: background color */
-    padding: 10px; /* Optional: dropdown padding */
-    z-index: 1000; /* Keep dropdown on top */
+    transform: translateY(-10px);
+    /* Position above */
+    transition: all 0.3s ease-in-out;
+    /* Smooth visibility and position */
+    background-color: #333;
+    /* Optional: background color */
+    padding: 10px;
+    /* Optional: dropdown padding */
+    z-index: 1000;
+    /* Keep dropdown on top */
 }
 
 /* Show the dropdown menu on hover */
 .web-products:hover .dropdown-menu {
-    opacity: 1; /* Fully visible */
+    opacity: 1;
+    /* Fully visible */
     visibility: visible;
-    transform: translateY(0); /* Move to normal position */
+    transform: translateY(0);
+    /* Move to normal position */
 }
 
 /* Style dropdown links */
@@ -554,55 +599,70 @@ body {
     text-decoration: none;
     display: block;
     margin-bottom: 8px;
-    transition: color 0.2s ease-in-out; /* Smooth color transition */
+    transition: color 0.2s ease-in-out;
+    /* Smooth color transition */
 }
 
 .web-products .dropdown-item:hover {
-    color: #ffd700; /* Optional: hover color */
+    color: #ffd700;
+    /* Optional: hover color */
 }
 
 /* Dropdown columns */
 .web-products .dropdown-column {
-    margin-right: 20px; /* Space between columns */
+    margin-right: 20px;
+    /* Space between columns */
 }
 
 /* Dropdown item group for alignment */
 .web-products .dropdown-item-group {
     display: flex;
-    gap: 20px; /* Optional: space between columns */
+    gap: 20px;
+    /* Optional: space between columns */
 }
 
 /* Dropdown images */
 .web-products .dropdown-item img {
-    margin-left: 8px; /* Space between text and image */
-    transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+    margin-left: 8px;
+    /* Space between text and image */
+    transition: transform 0.2s ease-in-out;
+    /* Smooth scaling on hover */
 }
 
 .web-products .dropdown-item:hover img {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
 }
 
 .dit {
     background: transparent !important;
 }
+
 /* Hover Styles */
 @media screen and (min-width: 1024px) {
+
     nav:hover #menuList li a,
     nav.scrolled #menuList li a {
-        color: #2042be; /* Change the color of list items */
-        transition: color 0.5s ease; /* Smooth transition */
+        color: #2042be;
+        /* Change the color of list items */
+        transition: color 0.5s ease;
+        /* Smooth transition */
     }
 
     nav:hover .pc-lang span,
     nav.scrolled .pc-lang span {
-        color: #2042be !important; /* Change the color of list items */
-        transition: color 0.5s ease; /* Smooth transition */
+        color: #2042be !important;
+        /* Change the color of list items */
+        transition: color 0.5s ease;
+        /* Smooth transition */
     }
 
     nav:hover .web-products .pro,
     nav.scrolled .web-products .pro {
-        color: #2042be !important; /* Change the color of list items */
-        transition: color 0.5s ease; /* Smooth transition */
+        color: #2042be !important;
+        /* Change the color of list items */
+        transition: color 0.5s ease;
+        /* Smooth transition */
     }
 
     /* Background Animation */
@@ -613,42 +673,56 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        background: white; /* Hover background color */
-        transform: scaleY(0); /* Start hidden */
+        background: white;
+        /* Hover background color */
+        transform: scaleY(0);
+        /* Start hidden */
         transform-origin: top;
-        transition: transform 0.3s ease; /* Smooth transition effect */
-        z-index: -1; /* Place behind the nav content */
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+        z-index: -1;
+        /* Place behind the nav content */
     }
 
     nav:hover::before,
     nav.scrolled::before {
-        transform: scaleY(1); /* Expand to cover the nav */
+        transform: scaleY(1);
+        /* Expand to cover the nav */
     }
 }
+
 /* Styling for the product image hover effect */
-.prodct-img-link > img {
-    transition: 0.5s; /* Smooth transition for hover effects */
+.prodct-img-link>img {
+    transition: 0.5s;
+    /* Smooth transition for hover effects */
 }
 
-.prodct-img-link > img:hover {
-    opacity: 0.8; /* Slight transparency effect */
-    transform: scale(1.2); /* Zoom effect */
+.prodct-img-link>img:hover {
+    opacity: 0.8;
+    /* Slight transparency effect */
+    transform: scale(1.2);
+    /* Zoom effect */
 }
 
 /* Styling for the .bbb_deals hover effect */
 .bbb_deals {
-    border: 2px solid transparent; /* Default border */
-    transition: 0.3s ease-in-out; /* Smooth hover effect */
+    border: 2px solid transparent;
+    /* Default border */
+    transition: 0.3s ease-in-out;
+    /* Smooth hover effect */
 }
 
 .bbb_deals:hover {
-    border: 2px solid #2042be; /* Border color change on hover */
-    box-shadow: 0 4px 12px rgba(32, 66, 190, 0.5); /* Add a soft shadow for a 3D effect */
+    border: 2px solid #2042be;
+    /* Border color change on hover */
+    box-shadow: 0 4px 12px rgba(32, 66, 190, 0.5);
+    /* Add a soft shadow for a 3D effect */
 }
 
 /* To ensure no conflict between .prodct-img-link and .bbb_deals */
-.bbb_deals:hover > .prodct-img-link > img {
-    transform: none; /* Prevent parent hover effect from overriding child hover */
+.bbb_deals:hover>.prodct-img-link>img {
+    transform: none;
+    /* Prevent parent hover effect from overriding child hover */
 }
 
 /* whatssap icon */
@@ -670,6 +744,7 @@ body {
         opacity: 1;
     }
 }
+
 .whatsapp-btn-container .whatsapp-btn {
     font-size: 48px !important;
     color: #25d366;
@@ -693,7 +768,7 @@ body {
     transition: all 400ms !important;
 }
 
-.whatsapp-btn-container .whatsapp-btn:hover + span {
+.whatsapp-btn-container .whatsapp-btn:hover+span {
     transform: rotateZ(0deg) translateX(0px) !important;
     opacity: 1 !important;
 }
@@ -717,4 +792,32 @@ body {
     /* Couleur du texte (blanc) avec priorité */
     margin: 0 10px;
     /* Marge horizontale entre les boutons */
+}
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #ffd700 !important;
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #2042be;
+}
+
+.input-group .btn-primary {
+    background: #2042be;
+    border: none;
+}
+
+.input-group .btn-primary:hover {
+    background: #0d2471;
+}
+  .social-icon {
+      padding: 0 5px;
+  }
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
 }

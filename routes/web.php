@@ -18,6 +18,8 @@ use App\Http\Controllers\admin\DeatailController;
 use App\Http\Controllers\admin\ParametreController;
 use App\Http\Controllers\admin\RegisteredUserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsletterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -105,3 +107,8 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 require __DIR__.'/auth.php';
 
 Route::get('/product/download/{pdf}', [ProductController::class, 'download'])->name('product.download');
+
+
+//news letter
+Route::get('/n', [NewsletterController::class, 'index']);
+Route::post('/subscribe', [NewsletterController::class, 'subscribe']);
