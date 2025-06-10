@@ -1,185 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
+/* Scrollbar track */
+::-webkit-scrollbar {
+    /* Width and height of the scrollbar */
+    width: 8px;
+    height: 12px;
+}
 
-   /* Reset and base styling */
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #0d2471;
+    border-radius: 2px;
+    border: 3px solid transparent;
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.dropdown-column {
+    width: 100%;
+}
+
+/* Reset and base styling */
 * {
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
-        font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
 
-   }
 html,
 body {
-       height: 100%;
-       width: 100%;
-       margin: 0;
-       display: flex;
-       flex-direction: column;
-       min-height: 100vh;
-   }
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-   /* Navbar styling */
-nav {
-       padding: 0px 0px 0px 80px;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       background: linear-gradient(to right, #2042be, #0d2471);
-       position: fixed;
-       top: 0;
-       left: 0;
-       right: 0;
-       z-index: 1000;
-       height: 75px;
-       transition:.3s
-   }
+/* Navbar styling */
+#nav {
+    padding: 0px -20px 0px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #2042be, #0d2471);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 75px;
+    transition: 0.3s;
+}
 
 .logo img {
     height: 120px;
 }
 
-#nav > ul {
+#nav>ul {
     display: flex;
     gap: 20px;
     align-items: center;
 }
+
 .nav-link {
     padding: 0 !important;
 }
 
-nav ul li {
+#nav>ul>li {
+    list-style-type: none;
+    position: relative;
+    padding-right: 20px;
+    padding-top: 14px;
+    list-style-type: none;
+    font-size: 23px;
+}
 
-       list-style-type: none;
+.nav-list li a:hover {
+    color: #efc425 !important;
+}
 
-       position: relative;
-       padding-right:20px;
-       padding-top:14px;
-   }
-   .nav-list li a:hover{
-       color:#efc425 !important;
-   }
+#nav>ul>li>a {
+    text-decoration: none;
+    color: #ffd700;
+    padding: 10px 0;
+}
 
-nav ul li a {
-       text-decoration: none;
-       color: #fff;
-       padding: 10px 0;
-   }
+#nav>ul>li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
 
-nav ul li::after {
-       content: "";
-       position: absolute;
-       left: 50%;
-       bottom: 0;
-       width: 0;
-       height: 2px;
-       background-color: #fff;
-       transition: width 0.3s ease, left 0.3s ease;
-   }
+#nav>ul>li:hover::after {
+    width: 100%;
+    left: 0;
+}
 
+.mobile-products {
+    display: none;
+    z-index: 200;
+}
 
-nav ul li:hover::after {
-       width: 100%;
-       left: 0;
-   }
+.mobile-products>ul {
+    min-height: 300px;
+    background: rgba(0, 23, 172, 0.863);
+    font-size: 12px !important;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    margin-top: 11px;
+    left: -13px !important;
+    transform: translate3d(-145px, 32px, 0px);
+}
 
-   /* scrolle DE MENU PRODUITS */
-    .dropdown-menu {
-        max-height: 500px; /* Ajustez la hauteur selon vos besoins */
-        overflow-y: auto; /* Ajoute un défilement vertical */
-        scrollbar-width: thin; /* Style pour les navigateurs modernes */
-    }
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+    /* Largeur de la scrollbar */
+}
 
-    .dropdown-menu::-webkit-scrollbar {
-        width: 8px; /* Largeur de la scrollbar */
-    }
-
-
-
-    .menu-icon {
-           display: none;
-           cursor: pointer;
-       }
-
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
 
 .menu-icon i {
-       color: #fff;
-       font-size: 30px;
-   }
-.mob-lang{
-        display:none;
-    }
-   /* Mobile menu */
-   @media (max-width: 780px) {
-        ul.ee.dropdown-menu.mobile-ul.show {
+    color: #fff;
+    font-size: 30px;
+}
+
+.mob-lang {
+    display: none;
+}
+
+.mob-lang>div>.changeLanguage {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #ffd700;
+    font-size: 20px"
+
+}
+
+/* Mobile menu */
+@media (max-width: 780px) {
+    ul.ee.dropdown-menu.mobile-ul.show {
         left: -2vw !important;
         margin-top: 10px !important;
         width: 96vw !important;
     }
+
     .ab-content {
         width: 90vw;
     }
+
     .logo img {
         margin-left: -60px;
     }
+
     #nav {
         padding: 10px 40px;
     }
+
     .pc-lang {
         display: none;
     }
+
     .mob-lang {
         display: block;
     }
-       nav ul {
-           position: absolute;
-           top: 65px;
-           left: 0;
-           right: 0;
-           flex-direction: column;
-           text-align: center;
-           background: linear-gradient(to right, #2042be, #0d2471);
-           gap: 0;
-           overflow: hidden;
-           max-height: 0;
 
-       }
+    #nav>ul {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: linear-gradient(to right, #2042be, #0d2471);
+        gap: 0;
+        overflow: hidden;
+        max-height: 0;
+    }
 
-       nav ul li {
-           padding: 20px;
-           padding-top: 0;
-       }
+    #nav>ul>li {
+        padding: 20px;
+        padding-top: 0;
+    }
 
-       .menu-icon {
-           display: block;
-       }
+    .menu-icon {
+        display: block;
+    }
 
-       .info-bar {
-           display: none;
-       }
-main {
-       flex-grow: 1;
-       padding-top: 4vh;
-       /* To ensure content starts below the navbar */
-   }
-   }
+    .info-bar {
+        display: none;
+    }
 
-
-
-
-   /* Main content */
-main {
-       flex-grow: 1;
-       padding-top: 3vh;
-       /* To ensure content starts below the navbar */
-   }
-.dropdown-menu {background: linear-gradient(to right, #2042be, #0d2471);}
-   /* Footer styling */
-footer {
-       background: linear-gradient(to right, #2042be, #0d2471);
-       color: white;
-       width: 100%;
-   }
+}
 
 @media (max-width: 768px) {
     #menuList {
@@ -226,22 +251,22 @@ footer {
         display: block !important;
     }
 
-    .mobile-products > ul {
+    .mobile-products>ul {
         min-height: 10vh;
         z-index: 20000;
     }
 
-    .mobile-products > ul:hover {
+    .mobile-products>ul:hover {
         background: #0017ac90 !important;
     }
 
-    .mobile-products > ul > li > a {
+    .mobile-products>ul>li>a {
         font-size: 15px !important;
         background: #0017acdc !important;
         padding: 10px;
     }
 
-    .mobile-products > ul > li > a:hover {
+    .mobile-products>ul>li>a:hover {
         background: #0017ac !important;
     }
 
@@ -270,37 +295,13 @@ footer {
         border-radius: 4px;
     }
 
- .mobile-ul::-webkit-scrollbar-thumb:hover {
-    background: #555;
-
-            }
-
-            .lang{
-                display:none
-            }
-
-}
-/* BUTTON WHATSSAP*/
-.whatsapp-btn-container {
-    position: fixed ;
-    right: 30px;
-    opacity: 0;
-    bottom: -50px;
-    padding: 24px;
-    animation: fade-up 1000ms forwards;
-    animation-delay: 1000ms;
-    z-index: 999999;
-}
-
-@keyframes fade-up {
-    100% {
-        bottom: 24px;
-        opacity: 1;
+    .mobile-ul::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
-}
 
-body {
-  overflow-x: hidden;
+    .lang {
+        display: none;
+    }
 }
 
 .container {
@@ -328,44 +329,37 @@ body {
     color: black !important;
 }
 
-@media (max-width: 768px) {
-#menuList {
-    min-height: 0;
-    overflow: hidden;
-    transition: min-height 0.3s ease-in-out;
+
+.dropdown-menu {
+    left: -35.4vw;
+    width: 90vw;
+    padding: 20px;
+    background: linear-gradient(to right, #2042be, #0d2471);
+    max-height: 500px;
+    /* Ajustez la hauteur selon vos besoins */
+    overflow-y: auto;
+    /* Ajoute un défilement vertical */
+    scrollbar-width: thin;
+    /* Style pour les navigateurs modernes */
 }
 
-#s {
-    transition: padding-top 0.3s ease-in-out;
+
+@media (max-width: 380px) {
+    main {
+        padding-top: 3vh;
+    }
 }
 
+.kk {
+    margin-top: 2.5vh !important;
 }
 
-.dropdown-menu{
-    left:-38px !important;
-    width:90vw !important;
-    padding:20px !important
-}
-
-  @media (max-width: 380px) {
-         main {
-       padding-top: 3vh;
-       /* To ensure content starts below the navbar */
-   }
-     }
-
-.kk{
-    margin-top:2.5vh !important
-}
 .rr:hover {
-    background-color: transparent !important; /* Removes hover background */
-    color: inherit !important; /* Keeps text color unchanged */
+    background-color: transparent !important;
+    /* Removes hover background */
+    color: inherit !important;
+    /* Keeps text color unchanged */
 }
-
-
-
-
-
 
 .logo img {
     height: 120px;
@@ -376,6 +370,7 @@ body {
     gap: 20px;
     align-items: center;
 }
+
 .nav-link {
     padding: 0 !important;
 }
@@ -411,23 +406,29 @@ nav ul li:hover::after {
     color: #fff;
     font-size: 30px;
 }
+
 .mob-lang {
     display: none;
 }
+
 /* Mobile menu */
 @media (max-width: 780px) {
     .flag-img-container {
         display: none;
     }
+
     #nav {
         padding: 10px 40px;
     }
+
     .pc-lang {
         display: none !important;
     }
+
     .mob-lang {
         display: block;
     }
+
     nav ul {
         position: absolute;
         top: 65px;
@@ -450,25 +451,18 @@ nav ul li:hover::after {
         display: block;
     }
 
-       .info-bar {
-           display: none;
-       }
-main {
-       flex-grow: 1;
-       padding-top: 4vh;
-       /* To ensure content starts below the navbar */
-   }
-   }
+    .info-bar {
+        display: none;
+    }
 
+    .main {
+        flex-grow: 1;
 
-
-
-   /* Main content */
-main {
-    flex-grow: 1;
-    padding-top: 75px;
-    /* To ensure content starts below the navbar */
+        /* To ensure content starts below the navbar */
+    }
 }
+
+
 
 /* Footer styling */
 footer {
@@ -524,7 +518,7 @@ body {
     transition: all 400ms !important;
 }
 
-.whatsapp-btn-container .whatsapp-btn:hover + span {
+.whatsapp-btn-container .whatsapp-btn:hover+span {
     transform: rotateZ(0deg) translateX(0px) !important;
     opacity: 1 !important;
 }
@@ -542,12 +536,14 @@ body {
 .bbb_deals_item_detail_label {
     font-weight: bold;
     text-align: left;
-    flex-basis: 75%; /* Label takes 40% of the width */
+    flex-basis: 75%;
+    /* Label takes 40% of the width */
 }
 
 .bbb_deals_item_detail_value {
     text-align: right;
-    flex-basis: 25%; /* Value takes 60% of the width */
+    flex-basis: 25%;
+    /* Value takes 60% of the width */
 }
 
 .dropdown-item:hover {
@@ -555,8 +551,10 @@ body {
 }
 
 .rr:hover {
-    background-color: transparent !important; /* Removes hover background */
-    color: inherit !important; /* Keeps text color unchanged */
+    background-color: transparent !important;
+    /* Removes hover background */
+    color: inherit !important;
+    /* Keeps text color unchanged */
 }
 
 
@@ -567,23 +565,32 @@ body {
 
 /* Style the dropdown menu */
 .web-products .dropdown-menu {
-    display: block; /* Keep it block for transition effects */
+    display: block;
+    /* Keep it block for transition effects */
     position: absolute;
     top: 100%;
-    opacity: 0; /* Hidden by default */
+    opacity: 0;
+    /* Hidden by default */
     visibility: hidden;
-    transform: translateY(-10px); /* Position above */
-    transition: all 0.3s ease-in-out; /* Smooth visibility and position */
-    background-color: #333; /* Optional: background color */
-    padding: 10px; /* Optional: dropdown padding */
-    z-index: 1000; /* Keep dropdown on top */
+    transform: translateY(-10px);
+    /* Position above */
+    transition: all 0.3s ease-in-out;
+    /* Smooth visibility and position */
+    background-color: #333;
+    /* Optional: background color */
+    padding: 10px;
+    /* Optional: dropdown padding */
+    z-index: 1000;
+    /* Keep dropdown on top */
 }
 
 /* Show the dropdown menu on hover */
 .web-products:hover .dropdown-menu {
-    opacity: 1; /* Fully visible */
+    opacity: 1;
+    /* Fully visible */
     visibility: visible;
-    transform: translateY(0); /* Move to normal position */
+    transform: translateY(0);
+    /* Move to normal position */
 }
 
 /* Style dropdown links */
@@ -592,55 +599,70 @@ body {
     text-decoration: none;
     display: block;
     margin-bottom: 8px;
-    transition: color 0.2s ease-in-out; /* Smooth color transition */
+    transition: color 0.2s ease-in-out;
+    /* Smooth color transition */
 }
 
 .web-products .dropdown-item:hover {
-    color: #ffd700; /* Optional: hover color */
+    color: #ffd700;
+    /* Optional: hover color */
 }
 
 /* Dropdown columns */
 .web-products .dropdown-column {
-    margin-right: 20px; /* Space between columns */
+    margin-right: 20px;
+    /* Space between columns */
 }
 
 /* Dropdown item group for alignment */
 .web-products .dropdown-item-group {
     display: flex;
-    gap: 20px; /* Optional: space between columns */
+    gap: 20px;
+    /* Optional: space between columns */
 }
 
 /* Dropdown images */
 .web-products .dropdown-item img {
-    margin-left: 8px; /* Space between text and image */
-    transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+    margin-left: 8px;
+    /* Space between text and image */
+    transition: transform 0.2s ease-in-out;
+    /* Smooth scaling on hover */
 }
 
 .web-products .dropdown-item:hover img {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
 }
 
 .dit {
     background: transparent !important;
 }
+
 /* Hover Styles */
 @media screen and (min-width: 1024px) {
+
     nav:hover #menuList li a,
     nav.scrolled #menuList li a {
-        color: #2042be; /* Change the color of list items */
-        transition: color 0.5s ease; /* Smooth transition */
+        color: #2042be;
+        /* Change the color of list items */
+        transition: color 0.5s ease;
+        /* Smooth transition */
     }
 
     nav:hover .pc-lang span,
     nav.scrolled .pc-lang span {
-        color: #2042be !important; /* Change the color of list items */
-        transition: color 0.5s ease; /* Smooth transition */
+        color: #2042be !important;
+        /* Change the color of list items */
+        transition: color 0.5s ease;
+        /* Smooth transition */
     }
 
     nav:hover .web-products .pro,
     nav.scrolled .web-products .pro {
-        color: #2042be !important; /* Change the color of list items */
-        transition: color 0.5s ease; /* Smooth transition */
+        color: #2042be !important;
+        /* Change the color of list items */
+        transition: color 0.5s ease;
+        /* Smooth transition */
     }
 
     /* Background Animation */
@@ -651,42 +673,56 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        background: white; /* Hover background color */
-        transform: scaleY(0); /* Start hidden */
+        background: white;
+        /* Hover background color */
+        transform: scaleY(0);
+        /* Start hidden */
         transform-origin: top;
-        transition: transform 0.3s ease; /* Smooth transition effect */
-        z-index: -1; /* Place behind the nav content */
+        transition: transform 0.3s ease;
+        /* Smooth transition effect */
+        z-index: -1;
+        /* Place behind the nav content */
     }
 
     nav:hover::before,
     nav.scrolled::before {
-        transform: scaleY(1); /* Expand to cover the nav */
+        transform: scaleY(1);
+        /* Expand to cover the nav */
     }
 }
+
 /* Styling for the product image hover effect */
-.prodct-img-link > img {
-    transition: 0.5s; /* Smooth transition for hover effects */
+.prodct-img-link>img {
+    transition: 0.5s;
+    /* Smooth transition for hover effects */
 }
 
-.prodct-img-link > img:hover {
-    opacity: 0.8; /* Slight transparency effect */
-    transform: scale(1.2); /* Zoom effect */
+.prodct-img-link>img:hover {
+    opacity: 0.8;
+    /* Slight transparency effect */
+    transform: scale(1.2);
+    /* Zoom effect */
 }
 
 /* Styling for the .bbb_deals hover effect */
 .bbb_deals {
-    border: 2px solid transparent; /* Default border */
-    transition: 0.3s ease-in-out; /* Smooth hover effect */
+    border: 2px solid transparent;
+    /* Default border */
+    transition: 0.3s ease-in-out;
+    /* Smooth hover effect */
 }
 
 .bbb_deals:hover {
-    border: 2px solid #2042be; /* Border color change on hover */
-    box-shadow: 0 4px 12px rgba(32, 66, 190, 0.5); /* Add a soft shadow for a 3D effect */
+    border: 2px solid #2042be;
+    /* Border color change on hover */
+    box-shadow: 0 4px 12px rgba(32, 66, 190, 0.5);
+    /* Add a soft shadow for a 3D effect */
 }
 
 /* To ensure no conflict between .prodct-img-link and .bbb_deals */
-.bbb_deals:hover > .prodct-img-link > img {
-    transform: none; /* Prevent parent hover effect from overriding child hover */
+.bbb_deals:hover>.prodct-img-link>img {
+    transform: none;
+    /* Prevent parent hover effect from overriding child hover */
 }
 
 /* whatssap icon */
@@ -708,6 +744,7 @@ body {
         opacity: 1;
     }
 }
+
 .whatsapp-btn-container .whatsapp-btn {
     font-size: 48px !important;
     color: #25d366;
@@ -731,7 +768,7 @@ body {
     transition: all 400ms !important;
 }
 
-.whatsapp-btn-container .whatsapp-btn:hover + span {
+.whatsapp-btn-container .whatsapp-btn:hover+span {
     transform: rotateZ(0deg) translateX(0px) !important;
     opacity: 1 !important;
 }
@@ -755,4 +792,32 @@ body {
     /* Couleur du texte (blanc) avec priorité */
     margin: 0 10px;
     /* Marge horizontale entre les boutons */
+}
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #ffd700 !important;
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #2042be;
+}
+
+.input-group .btn-primary {
+    background: #2042be;
+    border: none;
+}
+
+.input-group .btn-primary:hover {
+    background: #0d2471;
+}
+  .social-icon {
+      padding: 0 5px;
+  }
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
 }

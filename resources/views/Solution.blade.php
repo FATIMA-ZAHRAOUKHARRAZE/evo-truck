@@ -1,24 +1,36 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
-
 @endsection
-
+@section('seo')
+    <title>EVO MACHINERY - Solutions et Processus de Fabrication</title>
+    <meta name="description"
+        content="Découvrez le processus de fabrication EVO Machinery : design, R&D, fabrication, prototypage, tests et confort. Spécialiste en équipements blindés et véhicules de protection depuis plus de 25 ans.">
+    <meta name="keywords"
+        content="EVO Machinery solutions, processus de fabrication, design industriel, recherche et développement, prototypage, tests industriels, équipements blindés, véhicules blindés, systèmes balistiques, blindage, véhicules de protection, MRAP, forces spéciales, ingénierie de production, innovation industrielle,maroc">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="EVO MACHINERY">
+    <link rel="canonical" href="https://evo-machinery.com/solution">
+    <meta property="og:title" content="EVO MACHINERY - Solutions et Processus de Fabrication">
+    <meta property="og:description"
+        content="Découvrez notre expertise en fabrication d'équipements blindés et notre processus de production innovant">
+    <meta property="og:type" content="website">
+@endsection
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
-            loading="lazy" alt="">
+        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
         <div class="textph"
-        style="font-weight: bold; position: absolute; top: 40%; left:30%;  color: #2042be; font-size: 24px;">
-            <span style="font-size: 50px;">{{ translate('EQUIPEMENT
-            BLINDES') }}</span>
+            style="font-weight: bold; position: absolute; top: 40%; left:40%;  color: #2042be; font-size: 24px;">
+            <h1 style="font-size: 50px;">{{ translate('Solution') }}</h1>
         </div>
     </div>
-
     <!-- la partie etapes design -->
     <section class="design-steps">
-        <h1>{{ translate('Les étapes de nos Design.') }}</h1>
+        <h3>{{ translate('Les étapes de nos design
+                                ') }}</h3>
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>
@@ -52,7 +64,6 @@
             </div>
         </div>
     </section>
-    {{-- //////////// --}}
   <section>
     <div class="section">
         <div class="contain">
@@ -62,15 +73,22 @@
                 </div>
                 <div class="content"data-aos="fade-up">
                     <p>
-                    {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, vehiculeblinde.com se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
+                    {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
+
+En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, vehiculeblinde.com se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.
+
+Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.
+
+Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
                     </p>
+                    {{-- <div class="button mb-5">
+                        <a href="">{{ translate('Nos services') }}</a>
+                    </div> --}}
+                </div>
+                <div class="image-section">
+                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evo Équipement blindé">
                 </div>
             </div>
-            <div class="image-section">
-                <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="Équipement blindé">
-            </div>
         </div>
-    </div>
-</section>
-
+    </section>
 @endsection

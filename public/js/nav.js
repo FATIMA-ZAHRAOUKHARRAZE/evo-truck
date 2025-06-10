@@ -7,6 +7,7 @@ document.addEventListener("scroll", function () {
         nav.classList.remove("scrolled");
     }
 });
+
 // scroll effect on navbar
 AOS.init({
     duration: 1000, // Durée de l'animation en ms
@@ -14,21 +15,6 @@ AOS.init({
     once: false,
     offset: 200,
 });
-//change language
-$(".changeLanguage").change(function (event) {
-    var url = "{{ route('translate.change') }}";
-    window.location.href = url + "?lang=" + $(this).val();
-});
-let menuList = document.getElementById("menuList");
-menuList.style.minHeight = "0px";
-
-function toggleMenu() {
-    if (menuList.style.minHeight == "0px") {
-        menuList.style.minHeight = "100vh ";
-    } else {
-        menuList.style.minHeight = "0px";
-    }
-}
 
 document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.getElementById("nav");
@@ -51,7 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to reset the default effects
     function resetEffects() {
-        mainImage.src = defaultImage;
+        if (window.scrollY > 40) {
+            mainImage.src = hoverImage;
+        } else {
+            mainImage.src = defaultImage;
+        }
         pro.style.color = "#ffd700";
         languageSelect.style.color = "#ffd700";
         changeoption.style.color = "#ffd700";
@@ -65,10 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
         imageContainer.addEventListener("mouseleave", resetEffects);
         window.addEventListener("scroll", () => {
             if (window.scrollY > 40) {
-                applyEffects(); // Apply effects when scrolling down
+                applyEffects();
             } else {
-                resetEffects(); // Reset effects when returning to the top
+                resetEffects();
             }
         });
     }
 });
+ 

@@ -8,8 +8,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère autour de la barre latérale */
     max-height: 50vh; /* Hauteur maximale de la barre latérale à 50% de la hauteur de la fenêtre */
     overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la hauteur maximale */
-    /* Scrolling activé lorsque le contenu dépasse la hauteur maximale */
-}
+    }
 
 /* Style pour les titres h3 dans la barre latérale */
 .sidebar h3 {
@@ -45,7 +44,8 @@ footer {
 @media (max-width: 780px) {
     .sidebar {
         margin-left: 0; /* Supprime la marge à gauche sur les petits écrans */
-        padding: 10px; /* Maintient l'espacement interne */
+        padding: 10px;
+        width:100% /* Maintient l'espacement interne */
     }
 
     .bbb_deals {

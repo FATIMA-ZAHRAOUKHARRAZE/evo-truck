@@ -11,19 +11,24 @@ class Product extends Model
 
     protected $fillable = [
         'nom_pro',        // Example product name
-        'dec_pro',    // Example product description
+        'dec_pro',          // Example product description
         'img_pro',        // Example image field
         'categorie_id',   // Foreign key for category
         'scategorie_id',  // Foreign key for subcategory
     ];
+
+    protected $casts = [
+        'slider' => 'array', //for making array
+    ];
+
     public function Category()
-   {
-       return $this->belongsTo(Category::class);
-   }
+    {
+        return $this->belongsTo(Category::class);
+    }
     public function sCategory()
-   {
-       return $this->belongsTo(SCategorie::class,"scategorie_id");
-   }
+    {
+        return $this->belongsTo(SCategorie::class,"scategorie_id");
+    }
     public function details()
     {
         return $this->hasMany(Detail::class, 'product_id');

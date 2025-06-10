@@ -1,59 +1,37 @@
 @extends('layout.navbar')
+@section('url')
+    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/catliste.css') }}">
+@endsection
+@section('seo')
+    <title>EVO MACHINERY - Catalogue des Catégories d'Équipements</title>
+    <meta name="description"
+        content="Explorez le catalogue complet d'EVO Machinery : équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc, Découvrez notre gamme complète d'équipements de construction et demandez un devis personnalisé.">
+    <meta name="keywords"
+        content="catalogue EVO Machinery, équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="EVO MACHINERY">
+    <link rel="canonical" href="https://evo-machinery.com/category">
+    <meta property="og:title" content="EVO MACHINERY - Catalogue des Équipements de Construction">
+    <meta property="og:description"
+        content="Découvrez notre gamme complète d'équipements de construction : Bulldozers, Chargeuses, Excavatrices et plus. Solutions professionnelles pour tous vos projets.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset('images/Original.png') }}">
+    <meta property="og:url" content="https://evo-machinery.com/category">
+    <meta name="category-page" content="true">
+@endsection
 @section('content')
-    <style>
-        .row {
-            margin-right: 0 !important;
-        }
-
-        /* CSS personnalisé pour définir 5 colonnes sur les écrans larges */
-        .col-5-custom {
-            width: 20%;
-            /* chaque colonne prend 20% pour faire 5 colonnes */
-        }
-
-        @media (max-width: 1200px) {
-            .col-5-custom {
-                width: 25%;
-                /* 4 colonnes sur écran de taille moyenne */
-            }
-        }
-
-        @media (max-width: 992px) {
-            .col-5-custom {
-                width: 33.33%;
-                /* 3 colonnes sur écran de taille moyenne */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .col-5-custom {
-                width: 50%;
-                /* 2 colonnes sur les petits écrans */
-            }
-
-            .sss {
-                display: none
-            }
-        }
-
-        @media (max-width: 576px) {
-            .col-5-custom {
-                width: 100%;
-                /* 1 colonne sur les écrans très petits */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <div style="position: relative; width: 100%;" class="sss">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;" src="{{ asset('images/Original.png') }}"
-            loading="lazy" alt="">
+        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
+            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo logo">
         <div
             style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;"class="photo">
-            <span style="font-size: 50px;">{{ translate('PRODUITS') }}</span>
+            <h1 style="font-size: 50px;">{{ translate('PRODUITS') }}</h1>
         </div>
     </div>
     <div class="container mb-5">
-
-
         <!-- Barre de recherche -->
         <div class="search-bar col-12 text-center mt-4 mb-4">
             <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
@@ -80,12 +58,12 @@
         <div class="row justify-content-center">
             @forelse ($categories as $categorie)
                 <div class="col-5-custom mb-4">
-                    <div class="card h-100 shadow-sm border-0" style="border-radius: 15px;">
+                    <div class="card h-100 shadow-sm border-0">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top" alt="Product Image"
-                                style="border-radius: 15px 15px 0 0; height: 200px; object-fit: cover;">
+                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
+                                alt="evo category">
                             <div class="card-body text-center">
-                                <h5 class="card-title" style="font-size: 18px; font-weight: bold; color: #2042be;;">
+                                <h5 class="card-titlee">
                                     {{ translate($categorie->nom_cat) }}
                                 </h5>
                             </div>
