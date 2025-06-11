@@ -45,7 +45,7 @@ border-radius: 15px 15px 0 0;
 }
  /* CSS personnalisé pour définir 5 colonnes sur les écrans larges */
  .col-5-custom {
-     width: 20%;
+     width: 25%;
      /* chaque colonne prend 20% pour faire 5 colonnes */
  }
 

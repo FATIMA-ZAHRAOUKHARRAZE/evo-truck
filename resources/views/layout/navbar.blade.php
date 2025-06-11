@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,8 +46,8 @@
                     <ul class="pt-4 dropdown-menu kk" style="background: white;">
                         <div class="dropdown-item-group dit d-flex ">
                             @foreach ($categories->sortBy(function ($category) {
-            return strlen($category->nom_cat);
-        })->chunk(ceil($categories->count() / 3)) as $chunk)
+                                    return strlen($category->nom_cat);
+                                })->chunk(ceil($categories->count() / 3)) as $chunk)
                                 <div class="dropdown-column me-5">
                                     @foreach ($chunk as $category)
                                         <span class="pb-2 d-flex">
@@ -230,7 +229,7 @@
                             </div>
                         </div>
                         <!-- Réseaux sociaux -->
-                        <div class="col-md-4 text-center">
+                        <div class="text-center col-md-4">
                             <h6 class="mb-3 text-uppercase font-weight-bold">{{ translate('Suivez-nous') }}</h6>
                             <div class="social-links">
                                 <a href="#" class="text-white social-icon"
@@ -261,7 +260,7 @@
                             <p class="mb-3 small">
                                 {{ translate('Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités') }}
                             </p>
-                            <form action="" method="POST" class="mb-4">
+                            <form action="{{ url('/subscribe') }}" method="post">
                                 @csrf
                                 <div class="input-group">
                                     <input type="email" class="form-control" name="email"
@@ -271,6 +270,17 @@
                                         style="border-radius: 0 20px 20px 0; padding: 0.375rem 1.5rem;">
                                         {{ translate('S\'inscrire') }}
                                     </button>
+                                    @if(session()->has('error'))
+                                    <div class="alert alert-danger">
+                                     {{ session()->get('error') }}
+                                    </div>
+                                    @endif
+
+                                    @if(session()->has('success'))
+                                    <div class="alert alert-success">
+                                     {{ session()->get('success') }}
+                                    </div>
+                                    @endif
                                 </div>
                             </form>
                         </div>
@@ -278,7 +288,6 @@
                 </div>
             </div>
         </footer>
-
     </body>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZLXLQ687"></script>

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const changeoption = document.getElementById("changeoption");
 
     // Define the images to switch between
-    const hoverImage = "/images/Transparent.png";
+    const hoverImage = "/images/Transparent.svg";
     const defaultImage = "/images/tr2.png";
     // Function to apply the active effects
     function applyEffects() {
@@ -62,4 +62,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
- 

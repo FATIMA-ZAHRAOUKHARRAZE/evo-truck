@@ -65,7 +65,7 @@
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
                 <div data-aos="fade-up" class="mb-4 col-5-custom div1">
-                    <div class="border-0 shadow-sm card h-100 div2">
+                    <div class="cardStyle div2">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
                                 alt="evo Product Image">
@@ -80,4 +80,5 @@
             @empty
             @endforelse
         </div>
+    </div>
     @endsection
