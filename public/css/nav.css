@@ -79,7 +79,6 @@ body {
 
 /* Navbar styling */
 #nav {
-    padding: 0px -20px 0px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,6 +90,7 @@ body {
     z-index: 1000;
     height: 75px;
     transition: 0.3s;
+    width: 101vw;
 }
 
 
@@ -210,11 +210,10 @@ body {
     .mob-lang {
         display: block;
     }
-
     #nav>ul {
         position: absolute;
-        top: 65px;
-        left: 0;
+        top: 74px;
+        left: 0px;
         right: 0;
         flex-direction: column;
         text-align: center;
@@ -222,6 +221,7 @@ body {
         gap: 0;
         overflow: hidden;
         max-height: 0;
+        width: 101vw;
     }
 
     #nav>ul>li {
