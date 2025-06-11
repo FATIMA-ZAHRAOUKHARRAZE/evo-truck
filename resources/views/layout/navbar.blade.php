@@ -11,7 +11,7 @@
     <!-- style -->
     <link rel="stylesheet" href={{ asset('css/nav.css') }}>
     @yield('url')
-    <link rel="icon"  sizes="180x32" href="{{ asset('images/EVO_Mobile_Bleu.svg') }}">
+    <link rel="icon"   href="{{ asset('images/iconFichier 2.svg') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">

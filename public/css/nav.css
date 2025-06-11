@@ -90,7 +90,7 @@ body {
     z-index: 1000;
     height: 75px;
     transition: 0.3s;
-    width: 101vw;
+
 }
 
 
@@ -201,7 +201,7 @@ body {
 
     #nav {
         padding: 10px 40px;
-    }
+        width: 101vw    }
 
     .pc-lang {
         display: none;
