@@ -23,43 +23,68 @@ document.addEventListener("DOMContentLoaded", () => {
     const languageSelect = document.getElementById("languageSelect");
     const changeoption = document.getElementById("changeoption");
 
-    // Define the images to switch between
-    const hoverImage = "/images/Transparent.png";
-    const defaultImage = "/images/tr2.png";
-    // Function to apply the active effects
+    const primaryColor = "#0033cc";
+    const defaultColor = "#e8ad1d";
+
+    let hoverImage;
+    let defaultImage;
+
+    // Function to set image paths based on screen size
+    function updateImagePaths() {
+        if (window.innerWidth > 768) {
+            hoverImage = "/images/EVO_WEB_Bleu.svg";
+            defaultImage = "/images/EVO_WEB_Jaune.svg";
+        } else {
+            hoverImage = "/images/EVO_Mobile_Jaune.svg";
+            defaultImage = "/images/EVO_Mobile_Jaune.svg";
+        }
+        // Set initial image based on scroll position
+        updateScrollEffects();
+    }
+
+    // Function to apply hover/active styles
     function applyEffects() {
         mainImage.src = hoverImage;
-        pro.style.color = "#2042be";
-        languageSelect.style.color = "#2042be";
-        changeoption.style.color = "#2042be";
+        pro.style.color = primaryColor;
+        languageSelect.style.color = primaryColor;
+        changeoption.style.color = primaryColor;
         changeoption.style.backgroundColor = "white";
     }
 
-    // Function to reset the default effects
+    // Function to reset to default styles
     function resetEffects() {
+        updateScrollEffects();
+        pro.style.color = defaultColor;
+        languageSelect.style.color = defaultColor;
+        changeoption.style.color = defaultColor;
+        changeoption.style.backgroundColor = "transparent";
+    }
+
+    // Function to set logo based on scroll position
+    function updateScrollEffects() {
         if (window.scrollY > 40) {
             mainImage.src = hoverImage;
         } else {
             mainImage.src = defaultImage;
         }
-        pro.style.color = "#ffd700";
-        languageSelect.style.color = "#ffd700";
-        changeoption.style.color = "#ffd700";
-        changeoption.style.backgroundColor = "transparent";
     }
 
-    // Add scroll event listener
+    // Initialize paths and styles
+    updateImagePaths();
+
+    // Scroll listener (applies to all screen sizes)
+    window.addEventListener("scroll", () => {
+        updateScrollEffects();
+    });
+
+    // Hover listeners (desktop only)
     if (window.innerWidth > 768) {
-        // Add hover event listeners
         imageContainer.addEventListener("mouseenter", applyEffects);
         imageContainer.addEventListener("mouseleave", resetEffects);
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 40) {
-                applyEffects();
-            } else {
-                resetEffects();
-            }
-        });
     }
+
+    // Handle screen resizing
+    window.addEventListener("resize", () => {
+        updateImagePaths();
+    });
 });
- 

@@ -5,7 +5,7 @@ use Newsletter;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use DrewM\MailChimp\MailChimp;
-
+use Illuminate\Support\Facades\Validator;
 class NewsletterController extends Controller
 {
     // Displays the form view
@@ -17,10 +17,17 @@ class NewsletterController extends Controller
     // Handles the subscription process
     public function subscribe(Request $request)
     {
-        // Validates email field
-        $request->validate([
+        // Validate the request
+        $validator = Validator::make($request->all(), [
             'email' => 'required|email',
         ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Please provide a valid email address.'
+            ], 422);
+        }
 
         try {
             // Log the configuration for debugging
@@ -39,45 +46,53 @@ class NewsletterController extends Controller
                     'error' => $mailchimp->getLastError(),
                     'response' => $result
                 ]);
-                return redirect()->back()->with('error', 'Unable to connect to newsletter service. Please try again later.');
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Unable to connect to newsletter service. Please try again later.'
+                ], 500);
             }
 
-            // Checks if the email is already subscribed to the newsletter
+            // Check if email is already subscribed
             if (Newsletter::isSubscribed($request->email)) {
-                return redirect()->back()->with('error', 'You have already subscribed to our Newsletters.');
+                return response()->json([
+                    'success' => false,
+                    'message' => 'You have already subscribed to our Newsletters.'
+                ], 409); // 409 Conflict status code
             }
 
-            // Try to subscribe with more detailed error handling
+            // Try to subscribe
             try {
-                // Subscribes the email to the newsletter
                 $result = Newsletter::subscribe($request->email);
 
                 if (!$result) {
                     Log::error('Newsletter subscription failed', [
                         'email' => $request->email,
                         'error' => 'Subscription failed without specific error',
-                        'config' => [
-                            'api_key_exists' => !empty(config('newsletter.mailchimp.apiKey')),
-                            'list_id_exists' => !empty(config('newsletter.mailchimp.listId'))
-                        ]
+                        'config' => config('newsletter.mailchimp')
                     ]);
-                    return redirect()->back()->with('error', 'Failed to subscribe to newsletter. Please try again later.');
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Failed to subscribe to newsletter. Please try again later.'
+                    ], 500);
                 }
 
-                return redirect()->back()->with('success', 'You have successfully subscribed to our Newsletters.');
+                return response()->json([
+                    'success' => true,
+                    'message' => 'You have successfully subscribed to our Newsletters!'
+                ]);
 
             } catch (Exception $e) {
                 Log::error('Newsletter API error', [
                     'email' => $request->email,
                     'error' => $e->getMessage(),
                     'trace' => $e->getTraceAsString(),
-                    'config' => [
-                        'api_key_exists' => !empty(config('newsletter.mailchimp.apiKey')),
-                        'list_id_exists' => !empty(config('newsletter.mailchimp.listId'))
-                    ]
+                    'config' => config('newsletter.mailchimp')
                 ]);
 
-                return redirect()->back()->with('error', 'An error occurred while subscribing to the newsletter. Please try again later.');
+                return response()->json([
+                    'success' => false,
+                    'message' => 'An error occurred while subscribing to the newsletter. Please try again later.'
+                ], 500);
             }
 
         } catch (Exception $e) {
@@ -87,7 +102,10 @@ class NewsletterController extends Controller
                 'trace' => $e->getTraceAsString()
             ]);
 
-            return redirect()->back()->with('error', 'An error occurred while subscribing to the newsletter. Please try again later.');
+            return response()->json([
+                'success' => false,
+                'message' => 'An unexpected error occurred. Please try again later.'
+            ], 500);
         }
     }
 }

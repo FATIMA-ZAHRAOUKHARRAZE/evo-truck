@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter&family=Oswald:wght@700&family=Roboto&family=Titillium+Web&display=swap');
 
 /* Scrollbar track */
 ::-webkit-scrollbar {
@@ -23,12 +24,46 @@
     width: 100%;
 }
 
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h5 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+}
+
 /* Reset and base styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arial", sans-serif;
 }
 
 html,
@@ -57,9 +92,7 @@ body {
     transition: 0.3s;
 }
 
-.logo img {
-    height: 120px;
-}
+
 
 #nav>ul {
     display: flex;
@@ -86,7 +119,7 @@ body {
 
 #nav>ul>li>a {
     text-decoration: none;
-    color: #ffd700;
+    color: #e8ad1d;
     padding: 10px 0;
 }
 
@@ -145,7 +178,7 @@ body {
 .mob-lang>div>.changeLanguage {
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    color: #ffd700;
+    color: #e8ad1d;
     font-size: 20px"
 
 }
@@ -163,7 +196,7 @@ body {
     }
 
     .logo img {
-        margin-left: -60px;
+        margin-left: -30px;
     }
 
     #nav {
@@ -344,6 +377,7 @@ body {
 }
 
 
+
 @media (max-width: 380px) {
     main {
         padding-top: 3vh;
@@ -362,7 +396,8 @@ body {
 }
 
 .logo img {
-    height: 120px;
+    height: 30px;
+    margin-left: -20px;
 }
 
 #nav>ul {
@@ -377,7 +412,7 @@ body {
 
 #nav>ul>li>a {
     text-decoration: none;
-    color: #ffd700;
+    color: #e8ad1d;
     padding: 10px 0;
 }
 
@@ -436,7 +471,7 @@ nav ul li:hover::after {
         right: 0;
         flex-direction: column;
         text-align: center;
-        background: linear-gradient(to right, #2042be, #0d2471);
+        background: linear-gradient(to right, #2042be, #e8ad1d);
         gap: 0;
         overflow: hidden;
         max-height: 0;
@@ -510,7 +545,6 @@ body {
     position: absolute !important;
     top: 0 !important;
     left: 4px !important;
-    font-family: "Arial", sans-serif;
     font-weight: bold;
     color: #075e54;
     transform: rotateZ(20deg) translateX(10px) !important;
@@ -604,7 +638,7 @@ body {
 }
 
 .web-products .dropdown-item:hover {
-    color: #ffd700;
+    color: #e8ad1d;
     /* Optional: hover color */
 }
 
@@ -640,7 +674,9 @@ body {
 
 /* Hover Styles */
 @media screen and (min-width: 1024px) {
-
+    .logo img {
+        margin-left: 40px;
+    }
     nav:hover #menuList li a,
     nav.scrolled #menuList li a {
         color: #2042be;
@@ -760,7 +796,6 @@ body {
     position: absolute !important;
     top: 0 !important;
     left: 4px !important;
-    font-family: "Arial", sans-serif;
     font-weight: bold;
     color: #075e54;
     transform: rotateZ(20deg) translateX(10px) !important;
@@ -795,7 +830,7 @@ body {
 }
 .social-icon:hover {
     transform: translateY(-3px);
-    color: #ffd700 !important;
+    color: #e8ad1d !important;
 }
 
 .input-group .form-control:focus {
