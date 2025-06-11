@@ -58,7 +58,7 @@
         <div class="row justify-content-center">
             @forelse ($categories as $categorie)
                 <div class="col-5-custom mb-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="cardStyle h-100 ">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
                                 alt="evo category">

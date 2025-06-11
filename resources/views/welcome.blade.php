@@ -4,7 +4,7 @@
     <meta name="description"
         content="EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction.">
     <meta name="keywords"
-        content="EVO Machinery, machines de construction, équipements de construction, excavatrices, chargeuses,véhicules spéciaux, engins de chantier, machines portuaires, équipements de levage, machines de terrassement, machines d'assainissement, composants de machine,construction,Maroc,industrie minière, machines de levage, machines de terrassement">
+        content="EVO Machinery, machines de construction, équipements de construction, excavatrices, chargeuses,véhicules spéciaux, engins de chantier, machines portuaires, équipements de levage, machines de terrassement, machines d'assainissement, composants de machine,construction,Maroc,industrie minière, machines de levage, machines de terrassement,station de concassage et criblage,véhicules spéciaux">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO MACHINERY">
@@ -14,10 +14,6 @@
     <meta property="og:type" content="website">
 @endsection
 @section('content')
-<style>
-
-</style>
-
 
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <div class="popup-overlay" id="popup">
@@ -194,7 +190,7 @@
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
                 <div data-aos="fade-up" class="mb-4 col-5-custom div1">
-                    <div class="border-0 shadow-sm card h-100 div2">
+                    <div class="cardStyle div2">
                         <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
                                 alt="evo Product Image">
@@ -209,5 +205,5 @@
             @empty
             @endforelse
         </div>
-        {{-- <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=06434101838d2' async='true'></script> --}}
+    </div>
     @endsection
