@@ -11,32 +11,32 @@
     z-index: 1000;
     /* backdrop-filter: blur(5px); */
     -webkit-backdrop-filter: blur(5px);
-    height: 100%;
-  }
+}
 
-  .popup-blur-area {
+.popup-blur-area {
     position: relative;
-    padding: 40px; /* This creates the "border" around the popup */
-    background: rgba(255, 255, 255, 0.2); /* Light translucent bg */
-    backdrop-filter: blur(10px); /* Only this blurred */
+    /* padding: 20px; */
+    background: #00000021;
+    backdrop-filter: blur(10px);
     border-radius: 20px;
-  }
+}
 
-
-  .popup-content {
-
+.popup-content {
     padding: 30px;
-    border-radius: 8px;
-    width: 400px;
+    width: 500px;
     text-align: center;
-
     position: relative;
-  }
+    z-index: 1;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: left;
+    animation: popupFadeIn 0.3s ease-out;
+}
 
-  .close-btn {
+.close-btn {
     position: absolute;
-    top: -36px;
-    right: -20px;
+    top: -7px;
+    right: 5px;
     background: none;
     border: none;
     font-size: 24px;
@@ -45,18 +45,15 @@
     padding: 5px;
 }
 
-
-
-  .email-input {
+.email-input {
     width: 70%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-  }
+}
 
-  .subscribe-button {
+.subscribe-button {
     background: #007bff;
     color: white;
     border: none;
@@ -65,55 +62,40 @@
     font-size: 16px;
     transition: 0.3s;
     height: 50px;
-  }
+}
 
-  .subscribe-button:hover {
+.subscribe-button:hover {
     background: #0056b3;
-  }
+}
 
-  .popup-content {
-    position: relative;
-    z-index: 1;
-    padding: 30px;
-    border-radius: 10px;
-    color: white;
-    width: 600px;
-    text-align: center;
-    animation: popupFadeIn 0.3s ease-out;
-  }
-
-  @keyframes popupFadeIn {
+@keyframes popupFadeIn {
     from {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
+}
 
-
-
-  .close-btn:hover {
+.close-btn:hover {
     color: #000098;
-  }
+}
 
-  .subscribe-form {
-    margin-top: 20px;
+.subscribe-form {
+    /* margin-top: 20px; */
     display: flex;
+}
 
-  }
-
-  .subscribe-input {
+.subscribe-input {
     width: 100%;
     padding: 10px;
 
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-  }
-
+}
 
 .about {
     padding-top: 10vh;
@@ -179,7 +161,7 @@
     /* Ajoute un espacement en bas du titre. */
 }
 
-.ab-content P{
+.ab-content P {
     color: white;
     /* Définit la couleur blanche pour le texte. */
     font-size: 20px;
@@ -239,17 +221,16 @@
 }
 
 .cardStyle {
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
     /* Ajoute une transition fluide pour le zoom et les ombres. */
 }
 
 .cardStyle:hover {
-    transform: scale(1.05)  !important;
+    transform: scale(1.05) !important;
     /* Augmente légèrement la taille de la carte au survol. */
     /* transition: transform .5s ease; */
     /* Ajoute une transition fluide pour le zoom et les ombres. */
 }
-
 
 .main {
     flex-grow: 1;
@@ -286,7 +267,7 @@
     border-radius: 15px;
 }
 
-.lastdiv>h4 {
+.lastdiv > h4 {
     font-size: 18px;
     font-weight: bold;
     color: #2042be;
