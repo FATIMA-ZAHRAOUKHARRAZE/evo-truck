@@ -131,8 +131,7 @@
 .textph {
     font-weight: bold;
     position: absolute;
-    top: 30%;
-    left: 30%;
+
     color: #2042be;
     font-size: 24px;
     padding: 10px;
@@ -228,8 +227,8 @@
  @media (max-width: 768px) {
      .textph {
          position: relative;
-         top: 10%;
-         left: 80%;
+         top: 50%;
+         left: 50%;
          transform: translate(-50%, -50%);
          text-align: center;
          margin: 0;
