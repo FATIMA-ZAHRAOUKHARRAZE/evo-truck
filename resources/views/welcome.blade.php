@@ -25,7 +25,7 @@
             <form action="{{ url('/subscribe') }}" method="post" class="subscribe-form" id="subscribeForm">
               @csrf
               <input type="email" name="email" class="email-input" placeholder="Enter your email address" required>
-              <button type="submit" class="subscribe-button">Subscribe</button>
+              <button type="submit" class="btn subscribe-button  ">Subscribe</button>
               <div id="formMessage" style="margin-top: 10px; display: none;"></div>
             </form>
           </div>
