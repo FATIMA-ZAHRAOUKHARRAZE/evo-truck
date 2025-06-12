@@ -56,7 +56,6 @@
                                         <a style="color:#2042be !important" class="dropdown-item rr"
                                             href="{{ url('product/' . $category->id) }}">
                                             {{ translate($category->nom_cat) }}
-
                                         </a>
                                         <img src="{{ asset('images/' . $category->img_cat) }}"
                                             style="width:50px;height:auto" alt="evo  category image">
