@@ -15,6 +15,7 @@
 @endsection
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+
     <div class="popup-overlay" id="popup">
         <div class="popup-blur-area">
             <div class="popup-content">
@@ -25,13 +26,12 @@
                     @csrf
                     <input type="email" name="email" class="email-input" placeholder="Enter your email address"
                         required>
-                    <button type="submit" class="btn subscribe-button  ">Subscribe</button>
+                    <button type="submit" class="btn subscribe-button ">Subscribe</button>
                     <div id="formMessage" style="margin-top: 10px; display: none;"></div>
                 </form>
             </div>
         </div>
     </div>
-
 
     <script>
         const popup = document.getElementById('popup');
@@ -154,7 +154,7 @@
             </div>
             <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evo Slide 1">
-               
+
             </div>
             <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evo Slide 1">
