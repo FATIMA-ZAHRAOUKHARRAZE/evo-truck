@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function resetEffects() {
         updateScrollEffects();
         pro.style.color = defaultColor;
-        languageSelect.style.color = defaultColor;
         changeoption.style.color = defaultColor;
         changeoption.style.backgroundColor = "transparent";
     }
@@ -64,8 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateScrollEffects() {
         if (window.scrollY > 40) {
             mainImage.src = hoverImage;
+            languageSelect.style.color = primaryColor;
         } else {
             mainImage.src = defaultImage;
+            languageSelect.style.color = defaultColor;
         }
     }
 

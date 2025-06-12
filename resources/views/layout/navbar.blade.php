@@ -114,7 +114,7 @@
         <div class="pc-lang" style="display: flex; justify-content: space-between; align-items: center;">
             <div class="col-md-4 w-100 change">
                 <select id="languageSelect"
-                    style="color:#ffd700; cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
+                    style="color:e8ad1d;cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
                     class="form-select pe-5 changeLanguage" aria-label="Language select">
                     <option class="changeoption"
                         style="background-color:#000099; >
