@@ -23,7 +23,7 @@
         <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
             src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
         <div class="textph"
-            style="font-weight: bold; position: absolute; top: 50%; left:50%;  color: #2042be; font-size: 24px;">
+            style="font-weight: bold; position: absolute; top: 30%; left:40%;  color: #2042be; font-size: 24px;">
             <h1 style="font-size: 50px;">{{ translate('Solution') }}</h1>
         </div>
     </div>
@@ -81,18 +81,11 @@
                             Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
                         </p>
                     </div>
-<<<<<<< HEAD
 
                 </div>
                     <div class="image-section">
                         <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evo Équipement blindé">
                     </div>
-=======
-                </div>
-                <div class="image-section">
-                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evo Équipement blindé">
-                </div>
->>>>>>> e2c1f869ed3a273380ccfed610cc7109b8bb245e
             </div>
         </div>
     </section>

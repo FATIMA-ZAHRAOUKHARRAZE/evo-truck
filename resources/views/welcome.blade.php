@@ -172,20 +172,20 @@
     <!-- partie about -->
     <div class="about" id="">
         <div class="ab-content">
-            <h4 data-aos="fade-up" class="text-center about-title">{{ translate('À propos') }}
-            </h4>
-            <h2 data-aos="fade-up">
-                {{ translate("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière,machines de levage,machines de terrassement,machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.") }}
+            <h2 data-aos="fade-up" class="text-center about-title">{{ translate('À propos') }}
             </h2>
+            <P data-aos="fade-up">
+                {{ translate("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière,machines de levage,machines de terrassement,machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.") }}
+            </P>
         </div>
     </div>
     <!-- afficher le texte -->
     <div class="my-5 text-center ab-div">
-        <h1 data-aos="fade-up">{{ translate('Nos produits') }}
-        </h1>
-        <h3 data-aos="fade-up">
+        <h2 data-aos="fade-up" >{{ translate('Nos produits') }}
+        </h2>
+        <p data-aos="fade-up">
             {{ translate('EVO MACHINERY est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
-        </h3>
+        </p>
     </div>
     <!-- Code pour la partie produit -->
     <div class="container w-product">
@@ -197,9 +197,9 @@
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
                                 alt="evo Product Image">
                             <div class="text-center card-body lastdiv">
-                                <h5 class="card-title">
+                                <h4 class="card-title">
                                     {{ translate($categorie->nom_cat) }}
-                                </h5>
+                                </h4>
                             </div>
                         </a>
                     </div>

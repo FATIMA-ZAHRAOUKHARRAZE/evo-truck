@@ -168,7 +168,7 @@
     /* Place le contenu au-dessus de l'image et de la superposition. */
 }
 
-.ab-content h4 {
+.ab-content h2 {
     font-size: 40px;
     /* Taille de la police pour le titre principal. */
     font-weight: bold;
@@ -179,7 +179,7 @@
     /* Ajoute un espacement en bas du titre. */
 }
 
-.ab-content h2 {
+.ab-content P{
     color: white;
     /* Définit la couleur blanche pour le texte. */
     font-size: 20px;
@@ -265,12 +265,12 @@
     padding-bottom: 40px;
 }
 
-.ab-div > h1 {
+.ab-div > h2 {
     font-size: 40px;
     font-weight: bold;
     color: #2042be;
 }
-.ab-div > h3 {
+.ab-div > p {
     font-size: 16px;
     color: black;
     line-height: 1.6;
@@ -286,7 +286,7 @@
     border-radius: 15px;
 }
 
-.lastdiv>h5 {
+.lastdiv>h4 {
     font-size: 18px;
     font-weight: bold;
     color: #2042be;
