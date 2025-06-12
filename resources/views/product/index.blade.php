@@ -2,7 +2,7 @@
 @section('content')
 @section('seo')
     <title>{{ translate($categorie->nom_cat) }} - EVO MACHINERY</title>
-    <meta name="description" 
+    <meta name="description"
       content="Explorez nos {{ translate($categorie->nom_cat) }} robustes et performantes, idéales pour les travaux publics et privés. EVO Machinery, votre partenaire au Maroc.">
     <meta name="keywords"
         content="{{ translate($categorie->nom_cat) }}, EVO Machinery, équipements de construction, machines industrielles, spécifications techniques, devis personnalisé, filtrage produits, catalogue machines, qualité industrielle,maroc">
@@ -33,9 +33,9 @@
     <div class="row">
         <!-- Sidebar -->
         <div class="mb-4 col-md-3 col-12 sidebar">
-            <h3 class="mb-4">
+            <h2 class="mb-4">
                 {{ translate('Filtrer les Produits') }}
-            </h3>
+            </h2>
             <!-- Category Selection -->
             <div class="mb-3">
                 <label for="category-select" class="form-label">
@@ -99,7 +99,7 @@
                                             <img loading="lazy"
                                                 src="{{ asset('images/' . $item['product']->img_pro) }}" <<<<<<< HEAD
                                                 alt="evo {{ $item['product']->img_pro }}">
-                                          
+
                                         </a>
                                     </div>
                                     <div class="mb-1 bbb_deals_content">
