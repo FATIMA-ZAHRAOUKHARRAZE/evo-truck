@@ -63,9 +63,9 @@
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
                                 alt="evo category">
                             <div class="card-body text-center">
-                                <h5 class="card-titlee">
+                                <h4 class="card-titlee">
                                     {{ translate($categorie->nom_cat) }}
-                                </h5>
+                                </h4>
                             </div>
                         </a>
                     </div>

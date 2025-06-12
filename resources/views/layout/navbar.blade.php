@@ -156,8 +156,8 @@
             <div class="row">
                 <!-- About Us -->
                 <div class="mx-auto mt-3 col-md-3 col-lg-3 col-xl-3">
-                    <h6 class="mb-4 text-uppercase font-weight-bold">
-                        {{ translate('À propos') }}</h6>
+                    <h5 class="mb-4 text-uppercase font-weight-bold">
+                        {{ translate('À propos') }}</h5>
                     <p>
                         {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                     </p>
@@ -165,8 +165,8 @@
                 <hr class="clearfix w-100 d-md-none" />
                 <!-- Products -->
                 <div class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
-                    <h6 class="mb-4 text-uppercase font-weight-bold">
-                        {{ translate('Produits') }}</h6>
+                    <h5 class="mb-4 text-uppercase font-weight-bold">
+                        {{ translate('Produits') }}</h5>
                     @foreach ($categories->take(5) as $categorie)
                         <p><a class="text-white" style="text-decoration: none"
                                 href="{{ url('product/' . $categorie->id) }}">{{ translate($categorie->nom_cat) }}</a>
@@ -179,8 +179,8 @@
                 <hr class="clearfix w-100 d-md-none" />
                 <!-- Contact Us -->
                 <div class="mx-auto mt-3 col-md-4 col-lg-3 col-xl-3">
-                    <h6 class="mb-4 font-weight-bold">
-                        {{ translate('CONTACTEZ-NOUS') }}</h6>
+                    <h5h5 class="mb-4 font-weight-bold">
+                        {{ translate('CONTACTEZ-NOUS') }}</h5>
                     <p><i class="mr-3 fas fa-home"></i>
                         <a href="https://www.google.com/maps/search/HOLLYWOOD+MONGKOK+,+KOWLOON+,+HONG+KONG/@22.317164,114.170363,20z?hl=fr-FR&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
                             style="text-decoration: none; color: inherit;" target="_blank">
@@ -204,8 +204,8 @@
                 </div>
                 <!-- Search Bar (Moved after Contact Us) -->
                 <div style="width: 300px !important" class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
-                    <h6 class="mb-4 text-uppercase font-weight-bold">
-                        {{ translate('Recherche') }} </h6>
+                    <h5 class="mb-4 text-uppercase font-weight-bold">
+                        {{ translate('Recherche') }} </h5>
                     <div class="mt-4 mb-4 text-center search-bar col-12">
                         <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
                             <input type="text" class="form-control form-control-lg search-input" name="query"
@@ -231,7 +231,7 @@
                     </div>
                     <!-- Réseaux sociaux -->
                     <div class="text-center col-md-4">
-                        <h6 class="mb-3 text-uppercase font-weight-bold">{{ translate('Suivez-nous') }}</h6>
+                        <h5 class="mb-3 text-uppercase font-weight-bold">{{ translate('Suivez-nous') }}</h5>
                         <div class="social-links">
                             <a href="#" class="text-white social-icon"
                                 style="font-size: 1.5rem; transition: all 0.3s ease;text-decoration: none;">
@@ -257,7 +257,7 @@
                     </div>
                     <!-- Newsletter -->
                     <div class="col-md-4">
-                        <h6 class="mb-3 text-uppercase font-weight-bold">Newsletter</h6>
+                        <h5 class="mb-3 text-uppercase font-weight-bold">Newsletter</h5>
                         <p class="mb-3 small">
                             {{ translate('Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités') }}
                         </p>
