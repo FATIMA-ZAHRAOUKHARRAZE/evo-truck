@@ -141,6 +141,7 @@
           });
         });
       </script>
+    <!-- partie carousel -->
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -179,7 +180,7 @@
     </div>
     <!-- afficher le texte -->
     <div class="my-5 text-center ab-div">
-        <h1 data-aos="fade-up">{{ translate('Nos produits') }}
+        <h1 data-aos="fade-up" >{{ translate('Nos produits') }}
         </h1>
         <h3 data-aos="fade-up">
             {{ translate('EVO MACHINERY est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}

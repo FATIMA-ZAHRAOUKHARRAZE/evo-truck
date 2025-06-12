@@ -66,11 +66,11 @@
     <section>
         <div class="section">
             <div class="contain">
-                <div class="content-section">
+                <div class="content-section ">
                     <div class="title"data-aos="fade-up">
                         <h1>{{ translate(' Équipements blindé') }}</h1>
                     </div>
-                    <div class="content"data-aos="fade-up">
+                    <div class="contentS two-column" data-aos="fade-up">
                         <p>
                             {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
 
@@ -81,11 +81,18 @@
                             Des installations de production à la pointe de la technologie permettent à des équipes d’ingénieurs et de techniciens hautement qualifiés de transformer n’importe quelle plate-forme de véhicule en un véhicule de protection entièrement repensé.') }}
                         </p>
                     </div>
+<<<<<<< HEAD
 
                 </div>
                     <div class="image-section">
                         <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evo Équipement blindé">
                     </div>
+=======
+                </div>
+                <div class="image-section">
+                    <img src="{{ asset('/images/EXCAVATORS/EI15X.jpg') }}" alt="evo Équipement blindé">
+                </div>
+>>>>>>> e2c1f869ed3a273380ccfed610cc7109b8bb245e
             </div>
         </div>
     </section>

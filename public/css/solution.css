@@ -1,13 +1,10 @@
 /* Importation de la police Poppins depuis Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
 /* Appliquer la police Poppins à tous les éléments */
 * {
-     font-family: "Arial", sans-serif;
+    font-family: "Arial", sans-serif;
 }
-
-
-
 
 /* Section des étapes de conception */
 .design-steps {
@@ -72,7 +69,8 @@
     display: flex; /* Flexbox pour la disposition */
     align-items: flex-start; /* Aligner les éléments en haut */
     justify-content: space-between; /* Espacement entre les sections */
-    flex-wrap: wrap; /* Permet de s'adapter sur petits écrans */
+    flex-wrap: wrap;
+    /* Permet de s'adapter sur petits écrans */
 }
 
 /* Section du contenu texte */
@@ -100,7 +98,7 @@
 }
 
 /* Paragraphe dans la section texte */
-.content-section .content p {
+.content-section .contentS p {
     margin-top: 20px; /* Espacement en haut */
     font-family: sans-serif; /* Police sans-serif */
     font-size: 17px; /* Taille de police modérée */
@@ -108,12 +106,12 @@
 }
 
 /* Bouton dans la section texte */
-.content-section .content .button {
+.content-section .contentS .button {
     margin-top: 30px; /* Espacement au-dessus du bouton */
 }
 
 /* Style du lien dans le bouton */
-.content-section .content .button a {
+.content-section .contentS .button a {
     background: linear-gradient(to right, #2042be, #0d2471); /* Dégradé bleu */
     padding: 12px 40px; /* Espacement interne */
     text-decoration: none; /* Supprime le soulignement */
@@ -125,13 +123,12 @@
 }
 
 /* Effet au survol du bouton */
-.content-section .content .button a:hover {
+.content-section .contentS .button a:hover {
     background: #d4cfcf; /* Couleur de fond claire */
     color: #0d2471f3; /* Texte bleu foncé */
 }
 
-.textph
-{
+.textph {
     font-weight: bold;
     position: absolute;
     top: 30%;
@@ -142,13 +139,12 @@
     width: 100%;
 }
 
-.image-div img
-{
-    position : relative;
+.image-div img {
+    position: relative;
     width: 100%;
     max-height: 500px;
     object-fit: cover;
-    opacity: .4;
+    opacity: 0.4;
 }
 /* Médias queries pour les écrans moyens */
 @media (max-width: 1024px) {
@@ -169,11 +165,11 @@
         font-size: 24px; /* Réduction de la taille du titre */
     }
 
-    .content-section .content p {
+    .content-section .contentS p {
         font-size: 15px; /* Réduction de la taille du texte */
     }
 
-    .content-section .content .button a {
+    .content-section .contentS .button a {
         margin-bottom: 20px; /* Ajout d'un espacement en bas */
         font-size: 22px; /* Réduction de la taille du texte du bouton */
         padding: 10px 35px; /* Réduction de l'espacement interne */
@@ -204,16 +200,14 @@
         font-size: 22px; /* Réduction de la taille du titre */
     }
 
-    .content-section .content p {
+    .content-section .contentS p {
         font-size: 14px; /* Réduction de la taille du texte */
     }
 
-    .content-section .content .button a {
+    .content-section .contentS .button a {
         font-size: 18px; /* Réduction de la taille du bouton */
         padding: 10px 30px; /* Réduction de l'espacement interne */
     }
-
-
 }
 
 /* Médias queries pour les écrans très petits */
@@ -222,11 +216,11 @@
         font-size: 20px; /* Réduction de la taille du titre */
     }
 
-    .content-section .content p {
+    .content-section .contentS p {
         font-size: 12px; /* Réduction de la taille du texte */
     }
 
-    .content-section .content .button a {
+    .content-section .contentS .button a {
         font-size: 16px; /* Réduction de la taille du bouton */
         padding: 8px 25px; /* Réduction de l'espacement interne */
     }
@@ -241,8 +235,7 @@
          margin: 0;
      }
 
-     .textph h1 {
-         font-size: 25px ;
-     }
-
- }
+    .textph h1 {
+        font-size: 25px;
+    }
+}
