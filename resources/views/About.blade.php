@@ -33,8 +33,8 @@
                     </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">{{ translate('BIENVENUE CHEZ EVO') }}
-                            </h4>
+                            <h2 class="subheading">{{ translate('BIENVENUE CHEZ EVO') }}
+                            </h2>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
@@ -55,8 +55,8 @@
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">
-                                {{ translate('DÉVOILER NOTRE HÉRITAGE') }}</h4>
+                            <h2 class="subheading">
+                                {{ translate('DÉVOILER NOTRE HÉRITAGE') }}</h2>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
@@ -76,7 +76,7 @@
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 class="subheading">{{ translate('IMPACT MONDIAL') }}</h4>
+                            <h2h2 class="subheading">{{ translate('IMPACT MONDIAL') }}</h2>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
@@ -96,8 +96,8 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
 
-                            <h4 class="subheading">
-                                {{ translate('NOTRE VISION ET NOS VALEURS') }}</h4>
+                            <h2 class="subheading">
+                                {{ translate('NOTRE VISION ET NOS VALEURS') }}</h2>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">

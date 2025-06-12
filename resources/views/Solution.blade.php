@@ -33,32 +33,32 @@
         <div class="steps-container">
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-drafting-compass icon"></i>
-                <h2>{{ translate('DESIGN') }}</h2>
+                <h4>{{ translate('DESIGN') }}</h4>
                 <p>{{ translate('L’art de la beauté au service de l’industrie') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-search icon"></i>
-                <h2>{{ translate('RECHERCHE & DÉVELOPPEMENT') }}</h2>
+                <h4>{{ translate('RECHERCHE & DÉVELOPPEMENT') }}</h4>
                 <p>{{ translate('Les meilleurs spécialistes à votre écoute') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-industry icon"></i>
-                <h2>{{ translate('FABRICATION') }}</h2>
+                <h4>{{ translate('FABRICATION') }}</h4>
                 <p>{{ translate('Les meilleurs ingénieurs de production') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-cube icon"></i>
-                <h2>{{ translate('PROTOTYPAGE') }}</h2>
+                <h4>{{ translate('PROTOTYPAGE') }}</h4>
                 <p>{{ translate('L’innovation à portée de main') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-vial icon"></i>
-                <h2>{{ translate('TEST ET ESSAI') }}</h2>
+                <h4>{{ translate('TEST ET ESSAI') }}</h4>
                 <p>{{ translate('Maîtrise des risques au maximum') }}</p>
             </div>
             <div class="step" data-aos="fade-up">
                 <i class="fas fa-couch icon"></i>
-                <h2>{{ translate('CONFORT') }}</h2>
+                <h4>{{ translate('CONFORT') }}</h4>
                 <p>{{ translate('La robustesse du blindage et le confort d’une') }}</p>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="contain">
                 <div class="content-section ">
                     <div class="title"data-aos="fade-up">
-                        <h1>{{ translate(' Équipements blindé') }}</h1>
+                        <h2>{{ translate(' Équipements blindé') }}</h2>
                     </div>
                     <div class="contentS two-column" data-aos="fade-up">
                         <p>
