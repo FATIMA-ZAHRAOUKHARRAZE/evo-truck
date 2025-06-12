@@ -49,7 +49,7 @@
 }
 
 /* Titre des étapes */
-.step h2 {
+.step h4 {
     font-size: 1em; /* Taille de police modérée */
     font-weight: bold; /* Texte en gras */
     margin-bottom: 10px; /* Espacement sous le titre */

@@ -130,12 +130,12 @@
     margin-bottom: 0;
 }
 
-.timeline .timeline-heading h4 {
+.timeline .timeline-heading h2 {
     margin-top: 0;
     color: inherit;
 }
 
-.timeline .timeline-heading h4.subheading {
+.timeline .timeline-heading h2.subheading {
     text-transform: none;
     color: #2042be;
 }
