@@ -16,6 +16,7 @@
 @section('content')
 
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+    
     <div class="popup-overlay" id="popup">
         <div class="popup-blur-area">
           <div class="popup-content">
@@ -30,10 +31,9 @@
             </form>
           </div>
         </div>
-      </div>
-
-
-      <script>
+    </div>
+            
+    <script>
         const popup = document.getElementById('popup');
         const closeBtn = document.getElementById('closePopupBtn');
         const form = document.getElementById('subscribeForm');
@@ -140,7 +140,8 @@
             submitBtn.textContent = 'Subscribe';
           });
         });
-      </script>
+    </script>
+    
     <!-- partie carousel -->
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
