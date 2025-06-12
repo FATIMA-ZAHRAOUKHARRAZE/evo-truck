@@ -17,7 +17,7 @@
 }
 
 /* Titre principal de la section */
-.design-steps h3 {
+.design-steps .h2 {
     font-size: 40px; /* Taille de police importante */
     font-weight: bold; /* Texte en gras */
     color: #2042be; /* Couleur bleu foncé */
@@ -234,8 +234,8 @@
  @media (max-width: 768px) {
      .textph {
          position: relative;
-         top: 50%;
-         left: 50%;
+         top: 10%;
+         left: 80%;
          transform: translate(-50%, -50%);
          text-align: center;
          margin: 0;
