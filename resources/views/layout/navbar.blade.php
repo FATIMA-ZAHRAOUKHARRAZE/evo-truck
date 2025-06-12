@@ -32,24 +32,19 @@
     <nav id="nav" class="w-nav">
         <!---le logo --->
         <div id="logo" class="logo">
-            <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/EVO_WEB_Jaune.svg') }}"
-                    alt="evo logo"></a>
+            <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/EVO_WEB_Jaune.svg') }}" alt="evo logo"></a>
         </div>
         <ul class="nav-list" id="menuList">
-            <!--welcome --->
-            <li class="s"> <a href="{{ url('/') }}" class="menu-item">{{ translate('Acceuil') }}</a>
-            </li>
-
             {{-- products --}}
             <li class="web-products">
                 <a class="nav-link dropdown-toggle pro" href="#" role="button">
-                    {{ translate('Produits') }}
+                    {{ translate('Tous Nos Produits') }}
                 </a>
                 <ul class="pt-4 dropdown-menu kk" style="background: white;">
                     <div class="dropdown-item-group dit d-flex ">
                         @foreach ($categories->sortBy(function ($category) {
-            return strlen($category->nom_cat);
-        })->chunk(ceil($categories->count() / 3)) as $chunk)
+                            return strlen($category->nom_cat);
+                        })->chunk(ceil($categories->count() / 3)) as $chunk)
                             <div class="dropdown-column me-5">
                                 @foreach ($chunk as $category)
                                     <span class="pb-2 d-flex">
@@ -70,12 +65,12 @@
             <li class="mobile-products nav-item dropdown">
                 <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ translate('Produits') }}
+                    {{ translate('Tous Nos Produits') }}
                 </a>
                 <ul class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
                     @foreach ($categories->sortBy(function ($category) {
-        return strlen($category->nom_cat);
-    }) as $categorie)
+                            return strlen($category->nom_cat);
+                        }) as $categorie)
                         <li>
                             <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
                                 {{ translate($categorie->nom_cat) }}
@@ -87,7 +82,7 @@
 
             {{-- solution --}}
             <li><a href="{{ url('/solution') }}">{{ translate('Solution') }}</a></li>
-            <li> <a href="{{ url('/about') }}" class="menu-item">{{ translate('À propos') }}</a></li>
+            <li> <a href="{{ url('/about') }}" class="menu-item">{{ translate('Qui Sommes Nous') }}</a></li>
             {{-- contact --}}
             <li><a href="{{ route('contact') }}">{{ translate('Contact') }}</a>
             </li>
