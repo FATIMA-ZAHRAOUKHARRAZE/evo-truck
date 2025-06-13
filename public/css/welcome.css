@@ -278,7 +278,7 @@
 .cardStyle {
     position: relative;
     overflow: visible;
-    
+
 }
 
 .cardStyle::before {
@@ -288,12 +288,12 @@
     left: 70%;
     width: 66%;
     height: 72%;
-    background-color: #dee2e69c;
+    background-color: #8487895c;
     /* border: 5px solid #FFD700; */
     transform: translate(-50%, -50%);
     z-index: 0;
     border-radius: 5px;
-    box-shadow: 10px 0 20px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 2px 55px -9px rgb(0 0 0 / 35%);
 }
 
 .cardStyle img {

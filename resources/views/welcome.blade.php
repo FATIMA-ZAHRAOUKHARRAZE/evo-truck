@@ -141,25 +141,27 @@
                 });
         });
     </script>
-
     <!-- partie carousel -->
     <div id="carousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block" src="{{ asset('images\EXCAVATORS 2.png') }}" alt="evo Slide 1">
             </div>
-            <div class="carousel-item ">
+            <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evo Slide 1">
-            </div>
-            <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evo Slide 1">
-            </div>
-            <div class="carousel-item ">
-                <img class="d-block" src="{{ asset('images\Aerial Work 2.png') }}" alt="evo Slide 1">
-            </div>
 
-            <div class="carousel-item ">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evo Slide 1">
+
+            </div>
+            <div class="carousel-item">
+                <img class="d-block" src="{{ asset('images\Aerial Work 2.png') }}" alt="evo Slide 1">
+
+            </div>
+            <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\PORT MACHINERY 2.png') }}" alt="evo Slide 1">
+
             </div>
         </div>
         <a class="carousel-control-prev custom-control" href="#carousel" role="button" data-bs-slide="prev">
@@ -181,7 +183,7 @@
     </div>
     <!-- afficher le texte -->
     <div class="my-5 text-center ab-div">
-        <h2 data-aos="fade-up" >{{ translate('Nos produits') }}
+        <h2 data-aos="fade-up">{{ translate('Nos produits') }}
         </h2>
         <p data-aos="fade-up">
             {{ translate('EVO MACHINERY est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
