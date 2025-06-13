@@ -147,7 +147,6 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block" src="{{ asset('images\EXCAVATORS 2.png') }}" alt="evo Slide 1">
-               
             </div>
             <div class="carousel-item ">
                 <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evo Slide 1">
@@ -192,19 +191,20 @@
     <div class="container w-product">
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
-                <div data-aos="fade-up" class="mb-4 col-5-custom div1">
-                    <div class="cardStyle div2">
-                        <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="evo Product Image">
-                            <div class="text-center card-body lastdiv">
-                                <h4 class="card-title">
-                                    {{ translate($categorie->nom_cat) }}
-                                </h4>
-                            </div>
-                        </a>
-                    </div>
+            <div data-aos="fade-up" class="mb-4 col-5-custom div1">
+                <div class="cardStyle div2">
+                    <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
+                        <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
+                            alt="evo Product Image">
+                        <div class="text-center card-body lastdiv">
+                            <h4 class="card-title">
+                                {{ translate($categorie->nom_cat) }}
+                            </h4>
+                        </div>
+                    </a>
                 </div>
+            </div>
+            
             @empty
             @endforelse
         </div>

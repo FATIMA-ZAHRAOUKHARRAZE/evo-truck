@@ -220,13 +220,13 @@
     }
 }
 
-.cardStyle {
-    transition: transform 0.5s ease;
+.cardStyle img{
+    transition: transform 0.6s ease;
     /* Ajoute une transition fluide pour le zoom et les ombres. */
 }
 
-.cardStyle:hover {
-    transform: scale(1.05) !important;
+.cardStyle img:hover {
+    transform: scale(1.15) !important;
     /* Augmente légèrement la taille de la carte au survol. */
     /* transition: transform .5s ease; */
     /* Ajoute une transition fluide pour le zoom et les ombres. */
@@ -240,6 +240,8 @@
 .carousel-item > img {
     height: auto !important;
     width: 100%;
+    height:auto;
+    object-fit: cover;
 }
 
 .ab-content > h1 {
@@ -271,4 +273,33 @@
     font-size: 18px;
     font-weight: bold;
     color: #2042be;
+}
+
+.cardStyle {
+    position: relative;
+    overflow: visible;
+    
+}
+
+.cardStyle::before {
+    content: '';
+    position: absolute;
+    top: 46%;
+    left: 70%;
+    width: 66%;
+    height: 72%;
+    background-color: #dee2e69c;
+    /* border: 5px solid #FFD700; */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    border-radius: 5px;
+    box-shadow: 10px 0 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+.cardStyle img {
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    height: 200px;
+    width: auto;
 }
