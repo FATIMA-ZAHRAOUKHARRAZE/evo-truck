@@ -204,7 +204,7 @@
         </div>
 
     </div>
-       <!-- Section Pourquoi EVO-MACHINERY -->
+    <!-- Section Pourquoi EVO-MACHINERY -->
     <div class="why-evo-section  container">
         <div class="row align-items-center">
             <div class="col-md-6">
@@ -220,7 +220,7 @@
             </div>
         </div>
     </div>
-  <div class="container about-evo my-5">
+    <div class="container about-evo my-5">
         <div class="row align-items-center mb-5">
             <div class="col-md-5">
                 <h2 class="about-title-2">EVO - MACHINERY</h2>
@@ -254,7 +254,7 @@
         </div>
     </div>
 
- 
+
 
     <!-- Section About EVO-MACHINERY -->
     <!-- afficher le texte -->
@@ -269,27 +269,24 @@
     <div class="container w-product">
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
-                <div data-aos="fade-up" class="mb-4 col-5-custom div1">
-                    <div class="cardStyle div2">
-                        <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="evo Product Image">
-                            <div class="text-center card-body lastdiv">
-                                <h4 class="card-title">
-                                    {{ translate($categorie->nom_cat) }}
-                                </h4>
-                            </div>
-                        </a>
+                <div data-aos="fade-up" class="mb-4 col-5-custom">
+                    <div class="product-card">
+                        <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
+                            alt="evo Product Image">
+                        <div class="product-body">
+                            <h4 class="product-title">
+                                {{ translate($categorie->nom_cat) }}
+                            </h4>
+                            <a href="{{ url('product/' . $categorie->id) }}" class="product-btn">VOIR PLUS</a>
+                        </div>
                     </div>
                 </div>
-
             @empty
             @endforelse
         </div>
-
     </div>
     {{-- section about  --}}
-  
+
 
     <!-- Section Demande de Devis -->
     <div class="devis-section">
