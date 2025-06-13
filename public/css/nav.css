@@ -82,12 +82,25 @@ body {
     background-image: url("../images/backround.webp");
 }
 
+.firstNav{
+    height: 60px;
+    display: flex
+    ;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+}
 /* Navbar styling */
 #nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, #2042be, #0d2471);
+    background: #0033cc;
     position: fixed;
     top: 0;
     left: 0;
@@ -95,7 +108,7 @@ body {
     z-index: 1000;
     height: 75px;
     transition: 0.3s;
-
+    margin-top:60px;
 }
 
 
@@ -418,11 +431,11 @@ body {
 
 #nav>ul>li>a {
     text-decoration: none;
-    color: #e8ad1d;
+    color: white;
     padding: 10px 0;
 }
 
-nav ul li::after {
+#nav ul li::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -433,7 +446,7 @@ nav ul li::after {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-nav ul li:hover::after {
+#nav ul li:hover::after {
     width: 100%;
     left: 0;
 }

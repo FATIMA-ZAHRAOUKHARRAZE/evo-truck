@@ -11,7 +11,7 @@
         <!-- style -->
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         @yield('url')
-        <link rel="icon" href="{{ asset('images/logo.png') }}">
+        <link rel="icon" href="{{ asset('images/iconFichier 2.svg') }}">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,13 +31,18 @@
         {{ session()->get('locale') == null ? session()->put('locale', 'fr') : '' }}
         <div className="bg-[#035803] text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-4"> 
-            
+          <div className="flex items-center space-x-4">
+
           </div>
         </div>
       </div>
-      <nav></nav>
-        <div id="nav" class="w-nav">
+      <nav class="firstNav" style="">
+        <div id="logo" class="logo">
+            <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/EVO_WEB_Bleu.svg') }}"
+                    alt="evo logo"></a>
+        </div>
+      </nav>
+        <nav id="nav" class="w-nav">
             <!---le logo --->
             {{-- <div id="logo" class="logo">
                 <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/tr2.png') }}"
@@ -63,7 +68,7 @@
                                                 href="{{ url('product/' . $category->id) }}">
                                                 {{ translate($category->nom_cat) }}
                                             </a>
-                                            
+
                                         </span>
                                     @endforeach
                                 </div>
@@ -144,7 +149,7 @@
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
+        </nav>
 
 
         {{-- l'affichage des view --}}
