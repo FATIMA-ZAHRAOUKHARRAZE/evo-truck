@@ -177,39 +177,39 @@
     </div>
 
     <!-- Section Services -->
-    <div class="container-fluid services-section my-5">
-        <div class="row justify-content-center text-center">
-            <div class="col-md-3 service-item" data-aos="fade-up">
+        <div class="row  justify-content-center  text-center  mt-5">
+            <div class="col-md-3 service-item" >
                 <div class="service-card">
                     <i class="fas fa-tractor service-icon"></i>
                     <h3>ENGINS<br>INDUSTRIELLES</h3>
                 </div>
             </div>
-            <div class="col-md-3 service-item" data-aos="fade-up">
+            <div class="col-md-3 service-item" >
                 <div class="service-card">
                     <i class="fas fa-truck service-icon"></i>
                     <h3>CAMIONS<br>SEMI-REMORQUES</h3>
                 </div>
             </div>
-            <div class="col-md-3 service-item" data-aos="fade-up">
+            <div class="col-md-3 service-item">
                 <div class="service-card">
                     <i class="fas fa-cogs service-icon"></i>
                     <h3>PIECES<br>DÉTACHÉES</h3>
                 </div>
             </div>
-            <div class="col-md-3 service-item" data-aos="fade-up">
+            <div class="col-md-3 service-item" >
                 <div class="service-card">
                     <i class="fas fa-tools service-icon"></i>
                     <h3>SERVICES /<br>MAINTENANCE</h3>
                 </div>
             </div>
+
         </div>
-    </div>
+
 
     <!-- Section Pourquoi EVO-MACHINERY -->
-    <div class="container-fluid why-evo-section my-5 container">
+    <div class="why-evo-section  container">
         <div class="row align-items-center">
-            <div class="col-md-6" data-aos="fade-right">
+            <div class="col-md-6" >
                 <h2 class="why-title">POURQUOI<br>EVO-MACHINERY?</h2>
             </div>
             <div class="col-md-6" data-aos="fade-left">
@@ -241,27 +241,23 @@
             {{ translate('EVO MACHINERY est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
         </p>
     </div>
-    <!-- Code pour la partie produit -->
+      <!-- Code pour la partie produit -->
     <div class="container w-product">
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
-                <div data-aos="fade-up" class="mb-4 col-5-custom div1">
-                    <div class="cardStyle div2">
-                        <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="evo Product Image">
-                            <div class="text-center card-body lastdiv">
-                                <h4 class="card-title">
-                                    {{ translate($categorie->nom_cat) }}
-                                </h4>
-                            </div>
-                        </a>
-                    </div>
+            <div data-aos="fade-up" class="mb-4 col-5-custom div1">
+                <div class="cardStyle div2">
+                    <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
+                        <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
+                            alt="evo Product Image">
+                        <div class="text-center card-body lastdiv">
+                            <h4 class="card-title">
+                                {{ translate($categorie->nom_cat) }}
+                            </h4>
+                        </div>
+                    </a>
                 </div>
-<<<<<<< HEAD
-=======
             </div>
->>>>>>> c266bb57e3f84335123d8f501bfee08f17bd5768
 
             @empty
             @endforelse

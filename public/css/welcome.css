@@ -309,22 +309,26 @@
 }
 
 /* Styles pour la section Services */
-.services-section {
-
-    padding: 60px 0;
-}
 
 .service-item {
     margin-bottom: 30px;
+    margin-right: 30px;
+    padding: 0;
+    width: 15%;
+}
+
+.row.services-row, .services-section .row {
+    display: flex;
+    justify-content: center;
 }
 
 .service-card {
     background-color: #2042be;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
     height: 100%;
-    width: ;
+    justify-content: center;
 }
 
 .service-card:hover {
@@ -346,7 +350,6 @@
 
 /* Styles pour la section Pourquoi EVO-MACHINERY */
 .why-evo-section {
-
     padding: 60px 0;
 }
 
