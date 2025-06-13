@@ -103,6 +103,7 @@ body {
     display: flex;
     gap: 3vw;
     align-items: center;
+    padding-left:250px;
 }
 
 .nav-link {
@@ -112,7 +113,7 @@ body {
 #nav>ul>li {
     list-style-type: none;
     position: relative;
-    padding-right: 20px;
+    padding-right: 100px;
     padding-top: 14px;
     list-style-type: none;
     font-size: 23px;
@@ -369,7 +370,7 @@ body {
 
 
 .dropdown-menu {
-    left: -25.4vw;
+    left: -10.4vw;
     width: 90vw;
     padding: 20px;
     background: linear-gradient(to right, #2042be, #0d2471);

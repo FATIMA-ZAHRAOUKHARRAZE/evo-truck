@@ -76,14 +76,12 @@
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h2h2 class="subheading">{{ translate('IMPACT MONDIAL') }}</h2>
+                            <h2 class="subheading">{{ translate('IMPACT MONDIAL') }}</h2>
                         </div>
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ translate(
-                                    "EVO machinery est fier de figurer parmi les plus grandes
-                                                                                                            entreprises de machines de construction au monde. Nos contributions nous ont valu d'être
-                                                                                                            reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
+                                    "EVO machinery est fier de figurer parmi les plus grandes entreprises de machines de construction au monde. Nos contributions nous ont valu d'être reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
