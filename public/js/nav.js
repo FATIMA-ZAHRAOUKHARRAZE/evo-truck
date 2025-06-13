@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to reset to default styles
     function resetEffects() {
         updateScrollEffects();
-        pro.style.color = defaultColor;
-        changeoption.style.color = defaultColor;
+        pro.style.color = primaryColor;
+        changeoption.style.color = primaryColor;
         changeoption.style.backgroundColor = "transparent";
     }
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             languageSelect.style.color = primaryColor;
         } else {
             mainImage.src = defaultImage;
-            languageSelect.style.color = defaultColor;
+            languageSelect.style.color = primaryColor;
         }
     }
 

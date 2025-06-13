@@ -84,8 +84,7 @@ body {
 
 .firstNav{
     height: 60px;
-    display: flex
-    ;
+    display: flex ;
         align-items: center;
         justify-content: space-between;
         background: white;
@@ -106,8 +105,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    height: 75px;
-    bottom:2;
+    height: 55px;
     transition: 0.3s;
     margin-top:60px;
 }
@@ -115,7 +113,7 @@ body {
 
 #nav>ul {
     display: flex;
-    gap: 3vw;
+    gap: 0.2vw;
     align-items: center;
     padding-left:250px;
 }
@@ -127,10 +125,12 @@ body {
 #nav>ul>li {
     list-style-type: none;
     position: relative;
-    padding-right: 100px;
+    padding-right: 70px;
     padding-top: 14px;
     list-style-type: none;
-    font-size: 23px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .nav-list li a:hover {
@@ -384,7 +384,7 @@ body {
 
 
 .dropdown-menu {
-    left: -10.4vw;
+    left:-19vw;
     width: 90vw;
     padding: 20px;
     background: linear-gradient(to right, #2042be, #0d2471);
@@ -404,7 +404,7 @@ body {
 }
 
 .kk {
-    margin-top: 2.5vh !important;
+    margin-top: 2.4vh !important;
 }
 
 .rr:hover {
@@ -615,6 +615,7 @@ body {
 /* Style the dropdown container */
 .web-products {
     position: relative;
+    margin-left:8vw;
 }
 
 /* Style the dropdown menu */
@@ -636,6 +637,8 @@ body {
     /* Optional: dropdown padding */
     z-index: 1000;
     /* Keep dropdown on top */
+
+
 }
 
 /* Show the dropdown menu on hover */
