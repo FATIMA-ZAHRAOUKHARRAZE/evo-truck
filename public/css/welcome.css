@@ -324,6 +324,7 @@
     border-radius: 10px;
     transition: transform 0.3s ease;
     height: 100%;
+    width: ;
 }
 
 .service-card:hover {

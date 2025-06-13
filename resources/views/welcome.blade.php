@@ -259,5 +259,4 @@
             @endforelse
         </div>
     </div>
-
 @endsection
