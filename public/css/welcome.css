@@ -307,3 +307,72 @@
     width: auto;
 
 }
+
+/* Styles pour la section Services */
+.services-section {
+
+    padding: 60px 0;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+.service-card {
+    background-color: #2042be;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    width: ;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Styles pour la section Pourquoi EVO-MACHINERY */
+.why-evo-section {
+
+    padding: 60px 0;
+}
+
+.why-title {
+    color: #2042be;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-list li {
+    color: #2042be;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.why-list li i {
+    color: #2042be;
+    margin-right: 15px;
+    font-size: 1.4rem;
+}
