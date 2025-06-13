@@ -177,42 +177,40 @@
     </div>
 
     <!-- Section Services -->
-    <div class="my-5 container-fluid services-section">
-        <div class="text-center row justify-content-center">
-            <div class="col-md-3 service-item" data-aos="fade-up">
-                <div class="service-card">
-                    <i class="fas fa-tractor service-icon"></i>
-                    <h3>ENGINS<br>INDUSTRIELLES</h3>
-                </div>
-            </div>
-            <div class="col-md-3 service-item" data-aos="fade-up">
-                <div class="service-card">
-                    <i class="fas fa-truck service-icon"></i>
-                    <h3>CAMIONS<br>SEMI-REMORQUES</h3>
-                </div>
-            </div>
-            <div class="col-md-3 service-item" data-aos="fade-up">
-                <div class="service-card">
-                    <i class="fas fa-cogs service-icon"></i>
-                    <h3>PIECES<br>DÉTACHÉES</h3>
-                </div>
-            </div>
-            <div class="col-md-3 service-item" data-aos="fade-up">
-                <div class="service-card">
-                    <i class="fas fa-tools service-icon"></i>
-                    <h3>SERVICES /<br>MAINTENANCE</h3>
-                </div>
+    <div class="mt-5 text-center row justify-content-center">
+        <div class="col-md-3 service-item">
+            <div class="service-card">
+                <i class="fas fa-tractor service-icon"></i>
+                <h3>ENGINS<br>INDUSTRIELLES</h3>
             </div>
         </div>
-    </div>
+        <div class="col-md-3 service-item">
+            <div class="service-card">
+                <i class="fas fa-truck service-icon"></i>
+                <h3>CAMIONS<br>SEMI-REMORQUES</h3>
+            </div>
+        </div>
+        <div class="col-md-3 service-item">
+            <div class="service-card">
+                <i class="fas fa-cogs service-icon"></i>
+                <h3>PIECES<br>DÉTACHÉES</h3>
+            </div>
+        </div>
+        <div class="col-md-3 service-item">
+            <div class="service-card">
+                <i class="fas fa-tools service-icon"></i>
+                <h3>SERVICES /<br>MAINTENANCE</h3>
+            </div>
+        </div>
 
-    <!-- Section Pourquoi EVO-MACHINERY -->
-    <div class="container my-5 container-fluid why-evo-section">
+    </div>
+       <!-- Section Pourquoi EVO-MACHINERY -->
+    <div class="container why-evo-section">
         <div class="row align-items-center">
-            <div class="col-md-6" data-aos="fade-right">
+            <div class="col-md-6">
                 <h2 class="why-title">POURQUOI<br>EVO-MACHINERY?</h2>
             </div>
-            <div class="col-md-6" data-aos="fade-left">
+            <div class="col-md-6">
                 <ul class="why-list">
                     <li><i class="fas fa-check"></i> Fiabilité des machines</li>
                     <li><i class="fas fa-check"></i> Produits verifiés et testés</li>
@@ -222,17 +220,43 @@
             </div>
         </div>
     </div>
-
-    <!-- partie about -->
-    <div class="about" id="">
-        <div class="ab-content">
-            <h2 data-aos="fade-up" class="text-center about-title">{{ translate('À propos') }}
-            </h2>
-            <P data-aos="fade-up">
-                {{ translate("Fondée en 2000, EVO est une société multinationale avec la gamme la plus complète de produits concurrentiels et influents dans l'industrie des machines de construction. Notre activité couvre huit domaines clés: machines de construction, camions lourds, machines d'exploitation minière,machines de levage,machines de terrassement,machines d'assainissement, composants de machine, construction, finances, et l'industrie des TIC.") }}
-            </P>
+  <div class="container my-5 about-evo">
+        <div class="mb-5 row align-items-center">
+            <div class="col-md-5">
+                <h2 class="about-title-2">EVO - MACHINERY</h2>
+                <p>
+                    Depuis 2000, Evo-Machinery fournit des engins de chantier, camions industriels et équipements lourds
+                    fiables pour les secteurs du BTP, du transport et de l'industrie. Notre expertise permet aux
+                    professionnels de s'équiper avec des machines performantes, robustes et prêtes à affronter les
+                    conditions les plus exigeantes.
+                </p>
+                <a href="/about" class="about-btn">En savoir plus sur nous &rarr;</a>
+            </div>
+            <div class="text-center col-md-7">
+                <img src="{{ asset('images\banner p2 EVO.jpg') }}" alt="EVO Machinery" class="about-img img-fluid">
+            </div>
+        </div>
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-5">
+                <h2 class="about-title-2">L'innovation au cœur de notre évolution</h2>
+                <p>
+                    Chez Evo-Machinery, l'innovation est le moteur de notre évolution. En intégrant les dernières
+                    technologies aux engins de chantier et camions industriels, nous anticipons les besoins des
+                    professionnels du BTP, du transport et de l'industrie lourde. Notre ambition : offrir des solutions
+                    durables, performantes et intelligentes, conçues pour faire évoluer vos projets et relever vos défis
+                    techniques.
+                </p>
+                <a href="/solution" class="about-btn">Découvrir nos solutions &rarr;</a>
+            </div>
+            <div class="text-center col-md-7">
+                <img src="{{ asset('images\banner p2 EVO.jpg') }}" alt="Innovation EVO" class="about-img img-fluid">
+            </div>
         </div>
     </div>
+
+
+
+    <!-- Section About EVO-MACHINERY -->
     <!-- afficher le texte -->
     <div class="my-5 text-center ab-div">
         <h2 data-aos="fade-up">{{ translate('Nos produits') }}
@@ -260,6 +284,30 @@
                 </div>
             @empty
             @endforelse
+        </div>
+
+    </div>
+    {{-- section about  --}}
+
+
+    <!-- Section Demande de Devis -->
+    <div class="devis-section">
+        <div class="container-fluid">
+            <div class="row align-items-center devis-row">
+                <div class="col-md-6">
+                    <h2 class="devis-title">DEMANDE RAPIDE<br>DE DEVIS</h2>
+                </div>
+                <div class="col-md-6">
+                    <form class="devis-form">
+                        <input type="text" class="devis-input" placeholder="Nom" required>
+                        <input type="text" class="devis-input" placeholder="Société" required>
+                        <input type="tel" class="devis-input" placeholder="Téléphone" required>
+                        <input type="email" class="devis-input" placeholder="E-Mail" required>
+                        <textarea class="devis-input" rows="4" placeholder="Message" required></textarea>
+                        <button type="submit" class="devis-btn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

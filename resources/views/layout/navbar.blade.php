@@ -29,27 +29,20 @@
 
 <body>
     {{ session()->get('locale') == null ? session()->put('locale', 'fr') : '' }}
-    <div className="bg-[#035803] text-white py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-4">
 
-            </div>
-        </div>
-    </div>
     <nav class="firstNav" style="">
         <div id="logo" class="logo">
             <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/EVO_WEB_Bleu.svg') }}"
                     alt="evo logo"></a>
         </div>
-
-        <div class="mx-auto col-lg-2 col-xl-2">
+        <div class=" col-lg-2 col-xl-2" style="margin-right:20vw">
             <div class="mt-4 mb-4 text-center search-bar col-12">
                 <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
                     <input style="width: 300px;height:20px"  type="text" class="form-control form-control-lg search-input" name="query"
-                        placeholder="modèle de produit.." aria-label="Search"
+                        placeholder="Modèle de produit.." aria-label="Search"
                         style=" border: 1px solid #ccc; padding: 10px;">
-                    <button type="submit" class="btn btn-primary btn-lg" style=" padding: 10px 20px;">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                    <button type="submit" class="btn btn-primar y"   >
+                        <i class="fa-solid fa-magnifying-glass" ></i>
                     </button>
                 </form>
             </div>

@@ -310,22 +310,26 @@
 }
 
 /* Styles pour la section Services */
-.services-section {
-
-    padding: 60px 0;
-}
 
 .service-item {
     margin-bottom: 30px;
+    margin-right: 30px;
+    padding: 0;
+    width: 15%;
+}
+
+.row.services-row, .services-section .row {
+    display: flex;
+    justify-content: center;
 }
 
 .service-card {
     background-color: #2042be;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
     height: 100%;
-    width: ;
+    justify-content: center;
 }
 
 .service-card:hover {
@@ -347,7 +351,6 @@
 
 /* Styles pour la section Pourquoi EVO-MACHINERY */
 .why-evo-section {
-
     padding: 60px 0;
 }
 
@@ -356,12 +359,14 @@
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 1.2;
+    margin-left: 150px;
 }
 
 .why-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-left: 220px;
 }
 
 .why-list li {
@@ -376,4 +381,166 @@
     color: #2042be;
     margin-right: 15px;
     font-size: 1.4rem;
+}
+
+
+.about-evo {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.about-title-2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.about-evo p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.about-img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1px solid #2042be;
+    color: #2042be;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.about-btn:hover {
+    background: #2042be;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .about-evo .row {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .about-evo .col-md-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .about-img {
+        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .about-title-2 {
+        margin-top: 20px;
+    }
+    .about-btn {
+        margin-bottom: 30px;
+    }
+    .service-item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .row.services-row, .services-section .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        width: 90%;
+        margin: 0 auto 15px auto;
+        padding: 18px;
+    }
+    .why-title {
+        margin-left: 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .why-list {
+        margin-left: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .why-evo-section {
+        padding: 30px 0;
+    }
+}
+/* le devis */
+
+.devis-section {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+    padding: 60px 0 40px 0;
+}
+
+.devis-title {
+    color: #2042be;
+    font-size: 4vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    margin-left: 50px;
+}
+
+.devis-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.devis-input {
+    border: none;
+    border-radius: 5px;
+    padding: 18px 28px;
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    outline: none;
+    width: 100%;
+    transition: box-shadow 0.2s;
+}
+
+.devis-input:focus {
+    box-shadow: 0 0 0 2px #2042be;
+}
+
+.devis-btn {
+    background: #2042be;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.devis-btn:hover {
+    background: #16308a;
+}
+
+@media (max-width: 991px) {
+    .devis-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .devis-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .devis-form {
+        margin-top: 30px;
+    }
 }
