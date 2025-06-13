@@ -204,8 +204,13 @@
         </div>
 
     </div>
+<<<<<<< HEAD
        <!-- Section Pourquoi EVO-MACHINERY -->
     <div class="container why-evo-section">
+=======
+    <!-- Section Pourquoi EVO-MACHINERY -->
+    <div class="why-evo-section  container">
+>>>>>>> 9cec356a82d057eb3a756b52b8ec543c2c9184b2
         <div class="row align-items-center">
             <div class="col-md-6">
                 <h2 class="why-title">POURQUOI<br>EVO-MACHINERY?</h2>
@@ -220,8 +225,13 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
   <div class="container my-5 about-evo">
         <div class="mb-5 row align-items-center">
+=======
+    <div class="container about-evo my-5">
+        <div class="row align-items-center mb-5">
+>>>>>>> 9cec356a82d057eb3a756b52b8ec543c2c9184b2
             <div class="col-md-5">
                 <h2 class="about-title-2">EVO - MACHINERY</h2>
                 <p>
@@ -269,23 +279,21 @@
     <div class="container w-product">
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
-                <div data-aos="fade-up" class="mb-4 col-5-custom div1">
-                    <div class="cardStyle div2">
-                        <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="evo Product Image">
-                            <div class="text-center card-body lastdiv">
-                                <h4 class="card-title">
-                                    {{ translate($categorie->nom_cat) }}
-                                </h4>
-                            </div>
-                        </a>
+                <div data-aos="fade-up" class="mb-4 col-5-custom">
+                    <div class="product-card">
+                        <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
+                            alt="evo Product Image">
+                        <div class="product-body">
+                            <h4 class="product-title">
+                                {{ translate($categorie->nom_cat) }}
+                            </h4>
+                            <a href="{{ url('product/' . $categorie->id) }}" class="product-btn">VOIR PLUS</a>
+                        </div>
                     </div>
                 </div>
             @empty
             @endforelse
         </div>
-
     </div>
     {{-- section about  --}}
 
