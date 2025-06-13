@@ -29,15 +29,15 @@
 
     <body>
         {{ session()->get('locale') == null ? session()->put('locale', 'fr') : '' }}
-        <div className="bg-[#035803] text-white py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-4"> 
-            
-          </div>
+         <div>
+            <div id="logo" class="logo">
+                <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/tr2.png') }}"
+                        alt="evo logo"></a>
+            </div>
+              
         </div>
-      </div>
-      <nav></nav>
-        <div id="nav" class="w-nav">
+        
+        <nav id="nav" class="w-nav">
             <!---le logo --->
             {{-- <div id="logo" class="logo">
                 <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/tr2.png') }}"
@@ -144,9 +144,8 @@
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
-
-
+        </nav>
+       
         {{-- l'affichage des view --}}
         <main class="main flex-grow-1">
             @yield('content')

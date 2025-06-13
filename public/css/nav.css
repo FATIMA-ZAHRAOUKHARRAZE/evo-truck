@@ -94,6 +94,7 @@ body {
     right: 0;
     z-index: 1000;
     height: 75px;
+    bottom:2;
     transition: 0.3s;
 
 }
@@ -422,7 +423,7 @@ body {
     padding: 10px 0;
 }
 
-nav ul li::after {
+#nav ul li::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -433,7 +434,7 @@ nav ul li::after {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-nav ul li:hover::after {
+#nav ul li:hover::after {
     width: 100%;
     left: 0;
 }
@@ -470,7 +471,7 @@ nav ul li:hover::after {
         display: block;
     }
 
-    nav ul {
+    #nav ul {
         position: absolute;
         top: 65px;
         left: 0;
@@ -483,7 +484,7 @@ nav ul li:hover::after {
         max-height: 0;
     }
 
-    nav ul li {
+    #nav ul li {
         padding: 20px;
         padding-top: 0;
     }
@@ -683,24 +684,24 @@ body {
     .logo img {
         margin-left: 40px;
     }
-    nav:hover #menuList li a,
-    nav.scrolled #menuList li a {
+    #nav:hover #menuList li a,
+    #nav.scrolled #menuList li a {
         color: #2042be;
         /* Change the color of list items */
         transition: color 0.5s ease;
         /* Smooth transition */
     }
 
-    nav:hover .pc-lang span,
-    nav.scrolled .pc-lang span {
+    #nav:hover .pc-lang span,
+    #nav.scrolled .pc-lang span {
         color: #2042be !important;
         /* Change the color of list items */
         transition: color 0.5s ease;
         /* Smooth transition */
     }
 
-    nav:hover .web-products .pro,
-    nav.scrolled .web-products .pro {
+    #nav:hover .web-products .pro,
+    #nav.scrolled .web-products .pro {
         color: #2042be !important;
         /* Change the color of list items */
         transition: color 0.5s ease;
@@ -708,7 +709,7 @@ body {
     }
 
     /* Background Animation */
-    nav::before {
+    #nav::before {
         content: "";
         position: absolute;
         top: 0;
@@ -726,8 +727,8 @@ body {
         /* Place behind the nav content */
     }
 
-    nav:hover::before,
-    nav.scrolled::before {
+    #nav:hover::before,
+    #nav.scrolled::before {
         transform: scaleY(1);
         /* Expand to cover the nav */
     }
