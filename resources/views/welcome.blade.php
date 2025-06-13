@@ -177,8 +177,8 @@
     </div>
 
     <!-- Section Services -->
-    <div class="container-fluid services-section my-5">
-        <div class="row justify-content-center text-center">
+    <div class="my-5 container-fluid services-section">
+        <div class="text-center row justify-content-center">
             <div class="col-md-3 service-item" data-aos="fade-up">
                 <div class="service-card">
                     <i class="fas fa-tractor service-icon"></i>
@@ -207,7 +207,7 @@
     </div>
 
     <!-- Section Pourquoi EVO-MACHINERY -->
-    <div class="container-fluid why-evo-section my-5 container">
+    <div class="container my-5 container-fluid why-evo-section">
         <div class="row align-items-center">
             <div class="col-md-6" data-aos="fade-right">
                 <h2 class="why-title">POURQUOI<br>EVO-MACHINERY?</h2>
@@ -258,11 +258,6 @@
                         </a>
                     </div>
                 </div>
-<<<<<<< HEAD
-=======
-            </div>
->>>>>>> c266bb57e3f84335123d8f501bfee08f17bd5768
-
             @empty
             @endforelse
         </div>

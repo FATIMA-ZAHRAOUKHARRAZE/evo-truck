@@ -101,17 +101,18 @@
 .about {
     padding-top: 10vh;
     /* Ajoute un espacement en haut pour placer le contenu correctement. */
-    height: 85vh;
+    height: 95vh;
     /* Définit la hauteur de la section à 85% de la hauteur de la fenêtre. */
     position: relative;
     /* Position relative pour permettre de positionner les éléments enfants absolument. */
-    background-image: url("https://evo-machinery.com/images/bg111.jpg");
+    /* background-image: url("https://evo-machinery.com/images/bg111.jpg"); */
+    background-image: url("http://127.0.0.1:8000/images/test tes.jpg");
     /* Définit une image d'arrière-plan pour la section. */
     background-size: cover;
     /* Fait en sorte que l'image couvre entièrement la section, sans distorsion. */
     background-position: center;
     /* Centre l'image d'arrière-plan. */
-    overflow: hidden;
+    /* overflow: hidden; */
     /* Empêche le débordement éventuel de l'image. */
 }
 
@@ -128,7 +129,7 @@
     /* Définit la position à droite de la section. */
     bottom: 0;
     /* Définit la position en bas de la section. */
-    background: rgba(0, 0, 0, 0.7);
+    /* background: rgba(0, 0, 0, 0.7); */
     /* Ajoute un fond semi-transparent noir comme superposition. */
     z-index: 1;
     /* Place l'élément au-dessus de l'image de fond mais en dessous du contenu principal. */
@@ -291,12 +292,12 @@
     left: 70%;
     width: 66%;
     height: 72%;
-    background-color: #8487895c;
+    background-color: #84878924;
     /* border: 5px solid #FFD700; */
     transform: translate(-50%, -50%);
     z-index: 0;
     border-radius: 5px;
-    box-shadow: 20px 2px 55px -9px rgb(0 0 0 / 35%);
+    box-shadow: inset 5px -6px 55px -9px rgb(124 124 124 / 14%);
 }
 
 .cardStyle img {
