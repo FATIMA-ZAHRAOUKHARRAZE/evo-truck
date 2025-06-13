@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateImagePaths() {
         if (window.innerWidth > 768) {
             hoverImage = "/images/EVO_WEB_Bleu.svg";
-            defaultImage = "/images/EVO_WEB_Jaune.svg";
+            defaultImage = "/images/EVO_WEB_Bleu.svg";
+            // defaultImage = "/images/EVO_WEB_Jaune.svg";
         } else {
             hoverImage = "/images/EVO_Mobile_Jaune.svg";
             defaultImage = "/images/EVO_Mobile_Jaune.svg";

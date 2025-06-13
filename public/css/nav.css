@@ -82,12 +82,25 @@ body {
     background-image: url("../images/backround.webp");
 }
 
+.firstNav{
+    height: 60px;
+    display: flex
+    ;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+}
 /* Navbar styling */
 #nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, #2042be, #0d2471);
+    background: #0033cc;
     position: fixed;
     top: 0;
     left: 0;
@@ -96,7 +109,7 @@ body {
     height: 75px;
     bottom:2;
     transition: 0.3s;
-
+    margin-top:60px;
 }
 
 
@@ -419,7 +432,7 @@ body {
 
 #nav>ul>li>a {
     text-decoration: none;
-    color: #e8ad1d;
+    color: white;
     padding: 10px 0;
 }
 
