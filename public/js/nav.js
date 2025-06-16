@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
             defaultImage = "/images/EVO_WEB_Bleu.svg";
             // defaultImage = "/images/EVO_WEB_Jaune.svg";
         } else {
-            hoverImage = "/images/EVO_Mobile_Jaune.svg";
-            defaultImage = "/images/EVO_Mobile_Jaune.svg";
+            hoverImage = "/images/EVO_Mobile_Bleu.svg";
+            defaultImage = "/images/EVO_Mobile_Bleu.svg";
         }
         // Set initial image based on scroll position
         updateScrollEffects();

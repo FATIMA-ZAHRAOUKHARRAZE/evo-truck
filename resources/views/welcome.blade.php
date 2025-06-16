@@ -147,7 +147,7 @@
             <div class="carousel-item active">
                 <img class="d-block" src="{{ asset('images\banner p2 EVO.jpg') }}" alt="evo Slide 1">
                 <div class="carousel-caption">
-                    <h1>EVO MACHINERY Specialiste en enguins industrielles poids lourds et solutions  industrielles</h1>
+                    <h1>EVO MACHINERY Specialiste en enguins industrielles poids lourds et solutions industrielles</h1>
                 </div>
             </div>
             <div class="carousel-item">
@@ -212,7 +212,7 @@
 
     </div>
     <!-- Section Pourquoi EVO-MACHINERY -->
-    <div class="why-evo-section  container">
+    <div class="container why-evo-section">
         <div class="row align-items-center">
             <div class="col-md-6">
                 <h2 class="why-title">POURQUOI<br>EVO-MACHINERY?</h2>
@@ -227,8 +227,8 @@
             </div>
         </div>
     </div>
-    <div class="container about-evo my-5">
-        <div class="row align-items-center mb-5">
+    <div class="container my-5 about-evo">
+        <div class="mb-5 row align-items-center">
             <div class="col-md-5">
                 <h2 class="about-title-2">EVO - MACHINERY</h2>
                 <p>
