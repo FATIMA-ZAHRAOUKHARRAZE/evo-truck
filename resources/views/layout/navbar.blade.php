@@ -30,21 +30,22 @@
     <body>
         {{ session()->get('locale') == null ? session()->put('locale', 'fr') : '' }}
 
-    <nav class="firstNav" style="">
-        <div id="logo" class="logo">
-            <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/EVO_WEB_Bleu.svg') }}"
-                    alt="evo logo"></a>
-        </div>
-        <div class=" col-lg-2 col-xl-2" style="margin-right:20vw">
-            <div class="mt-4 mb-4 text-center search-bar col-12">
-                <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
-                    <input type="text" class="firstNav_input search-input" name="query"
-                        placeholder="Modèle de produit.." aria-label="Search"
-                        style=" border: 1px solid #ccc; padding: 10px;">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
+        <nav class="firstNav" style="">
+            <div id="logo" class="logo">
+                <a class="img-logo" href="/"><img id="img-logo" src="{{ asset('./images/EVO_WEB_Bleu.svg') }}"
+                        alt="evo logo"></a>
+            </div>
+            <div class=" col-lg-2 col-xl-2" style="margin-right:20vw">
+                <div class="mt-4 mb-4 text-center search-bar col-12">
+                    <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
+                        <input type="text" class="firstNav_input search-input" name="query"
+                            placeholder="Modèle de produit.." aria-label="Search"
+                            style=" border: 1px solid #ccc; padding: 10px;">
+                        <button type="submit" class="btn btn-primar y">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
 
             <div class="pc-lang">
