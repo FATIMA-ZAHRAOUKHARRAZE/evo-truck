@@ -146,6 +146,9 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block" src="{{ asset('images\banner p2 EVO.jpg') }}" alt="evo Slide 1">
+                <div class="carousel-caption">
+                    <h1>EVO MACHINERY Specialiste en enguins industrielles poids lourds et solutions industrielles</h1>
+                </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\banner site EVO.jpg') }}" alt="evo Slide 1">
@@ -180,25 +183,29 @@
     <div class="mt-5 text-center row justify-content-center">
         <div class="col-md-3 service-item">
             <div class="service-card">
-                <i class="fas fa-tractor service-icon"></i>
+                {{-- <i class="fas fa-tractor service-icon"></i> --}}
+                <img src="{{ asset('images/icons/engin industrielle.svg') }}" alt="engin industrielle" class="service-icon">
                 <h3>ENGINS<br>INDUSTRIELLES</h3>
             </div>
         </div>
         <div class="col-md-3 service-item">
             <div class="service-card">
-                <i class="fas fa-truck service-icon"></i>
+                {{-- <i class="fas fa-truck service-icon"></i> --}}
+                <img src="{{ asset('images/icons/semi-remorque.svg') }}" alt="camion semi remorque" class="service-icon">
                 <h3>CAMIONS<br>SEMI-REMORQUES</h3>
             </div>
         </div>
         <div class="col-md-3 service-item">
             <div class="service-card">
-                <i class="fas fa-cogs service-icon"></i>
+                {{-- <i class="fas fa-cogs service-icon"></i> --}}
+                <img src="{{ asset('images/icons/engrenage.svg') }}" alt="pieces detachees" class="service-icon">
                 <h3>PIECES<br>DÉTACHÉES</h3>
             </div>
         </div>
         <div class="col-md-3 service-item">
             <div class="service-card">
-                <i class="fas fa-tools service-icon"></i>
+                {{-- <i class="fas fa-tools service-icon"></i> --}}
+                <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance" class="service-icon">
                 <h3>SERVICES /<br>MAINTENANCE</h3>
             </div>
         </div>
