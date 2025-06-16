@@ -637,8 +637,15 @@
 
 .carousel-caption h1 {
     text-align: center;
-    margin-right: 1000px;
-    margin-bottom: 100px;
-   
-    color: #0033cc; 
+    margin-right: 800px;
+    margin-bottom: 50px;
+    color: #0033cc;
+}
+@media (max-width: 768px) {
+
+    .carousel-caption h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        margin: 0
+    }
 }
