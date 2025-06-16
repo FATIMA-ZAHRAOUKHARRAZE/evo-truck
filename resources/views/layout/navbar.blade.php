@@ -41,7 +41,7 @@
                     <input type="text" class="firstNav_input search-input" name="query"
                         placeholder="Modèle de produit.." aria-label="Search"
                         style=" border: 1px solid #ccc; padding: 10px;">
-                    <button type="submit" class="btn btn-primar y">
+                    <button type="submit" class="btn btn-primary">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
