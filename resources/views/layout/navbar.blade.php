@@ -118,9 +118,9 @@
                     </a>
                     <ul class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
                         @foreach ($categories->sortBy(function ($category) {
-        return strlen($category->nom_cat);
-    }) as $categorie)
-                            <li>
+                                    return strlen($category->nom_cat);
+                                }) as $categorie)
+                                                        <li>
                                 <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
                                     {{ translate($categorie->nom_cat) }}
                                 </a>

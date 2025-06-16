@@ -181,36 +181,32 @@
 
     <!-- Section Services -->
     <div class="mt-5 text-center row justify-content-center">
-        <div class="col-md-3 service-item">
+        <div class="col-6 col-md-3 service-item">
             <div class="service-card">
-                {{-- <i class="fas fa-tractor service-icon"></i> --}}
                 <img src="{{ asset('images/icons/engin industrielle.svg') }}" alt="engin industrielle" class="service-icon">
                 <h3>ENGINS<br>INDUSTRIELLES</h3>
             </div>
         </div>
-        <div class="col-md-3 service-item">
+        <div class="col-6 col-md-3 service-item">
             <div class="service-card">
-                {{-- <i class="fas fa-truck service-icon"></i> --}}
                 <img src="{{ asset('images/icons/semi-remorque.svg') }}" alt="camion semi remorque" class="service-icon">
                 <h3>CAMIONS<br>SEMI-REMORQUES</h3>
             </div>
         </div>
-        <div class="col-md-3 service-item">
+        <div class="col-6 col-md-3 service-item">
             <div class="service-card">
-                {{-- <i class="fas fa-cogs service-icon"></i> --}}
                 <img src="{{ asset('images/icons/engrenage.svg') }}" alt="pieces detachees" class="service-icon">
                 <h3>PIECES<br>DÉTACHÉES</h3>
             </div>
         </div>
-        <div class="col-md-3 service-item">
+        <div class="col-6 col-md-3 service-item">
             <div class="service-card">
-                {{-- <i class="fas fa-tools service-icon"></i> --}}
                 <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance" class="service-icon">
                 <h3>SERVICES /<br>MAINTENANCE</h3>
             </div>
         </div>
-
     </div>
+    
     <!-- Section Pourquoi EVO-MACHINERY -->
     <div class="container why-evo-section">
         <div class="row align-items-center">
@@ -276,8 +272,8 @@
     <div class="container w-product">
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
-                <div data-aos="fade-up" class="mb-4 col-5-custom">
-                    <div class="product-card d-flex flex-column h-100">
+                <div data-aos="fade-up" class="mb-4 col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
                         <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
                             alt="evo Product Image">
                         <div class="product-body d-flex flex-column flex-grow-1">
@@ -294,6 +290,7 @@
             @endforelse
         </div>
     </div>
+    
     {{-- section about  --}}
 
 

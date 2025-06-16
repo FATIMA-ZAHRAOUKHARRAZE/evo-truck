@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
         mainImage.src = hoverImage;
         pro.style.color = primaryColor;
         languageSelect.style.color = primaryColor;
-        changeoption.style.color = primaryColor;
-        changeoption.style.backgroundColor = "white";
+        changeoption.style.color = "white";
+        changeoption.style.backgroundColor = primaryColor;
     }
 
     // Function to reset to default styles
