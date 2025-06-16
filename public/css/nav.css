@@ -69,6 +69,7 @@ h5 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100vw;
 }
 
 html,
@@ -267,7 +268,7 @@ body {
         right: 0;
         flex-direction: column;
         text-align: center;
-        background:#0033cc;
+      
         gap: 0;
         overflow: hidden;
         max-height: 0;
@@ -524,7 +525,7 @@ body {
         right: 0;
         flex-direction: column;
         text-align: center;
-        background: linear-gradient(to right, #2042be, #0d2471);
+        background: #0033cc;
         gap: 0;
         overflow: hidden;
       
@@ -658,7 +659,7 @@ body {
     display: block;
     /* Keep it block for transition effects */
     position: absolute;
-    top: 100%;
+    top: 75%;
     opacity: 0;
     /* Hidden by default */
     visibility: hidden;
