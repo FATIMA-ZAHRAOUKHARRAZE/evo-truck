@@ -204,13 +204,8 @@
         </div>
 
     </div>
-<<<<<<< HEAD
-       <!-- Section Pourquoi EVO-MACHINERY -->
-    <div class="container why-evo-section">
-=======
     <!-- Section Pourquoi EVO-MACHINERY -->
-    <div class="why-evo-section  container">
->>>>>>> 9cec356a82d057eb3a756b52b8ec543c2c9184b2
+    <div class="container why-evo-section">
         <div class="row align-items-center">
             <div class="col-md-6">
                 <h2 class="why-title">POURQUOI<br>EVO-MACHINERY?</h2>
@@ -225,13 +220,8 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-  <div class="container my-5 about-evo">
+    <div class="container my-5 about-evo">
         <div class="mb-5 row align-items-center">
-=======
-    <div class="container about-evo my-5">
-        <div class="row align-items-center mb-5">
->>>>>>> 9cec356a82d057eb3a756b52b8ec543c2c9184b2
             <div class="col-md-5">
                 <h2 class="about-title-2">EVO - MACHINERY</h2>
                 <p>

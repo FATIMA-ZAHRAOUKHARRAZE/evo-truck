@@ -237,6 +237,7 @@
 .main {
     flex-grow: 1;
     padding-top: 115px;
+    width: 102%;
 }
 
 .carousel-item>img {
