@@ -41,7 +41,7 @@
                     <input style="width: 300px;height:20px"  type="text" class="form-control form-control-lg search-input" name="query"
                         placeholder="Modèle de produit.." aria-label="Search"
                         style=" border: 1px solid #ccc; padding: 10px;">
-                    <button type="submit" class="btn btn-primar y"   >
+                    <button type="submit" class="btn "   >
                         <i class="fa-solid fa-magnifying-glass" ></i>
                     </button>
                 </form>
@@ -54,20 +54,20 @@
                     style=" cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
                     class="form-select pe-5 changeLanguage" aria-label="Language select">
                     <option class="changeoption"
-                        style="background-color:#000099; >
+                        style="background-color:#0033cc; >
                 {{ translate('Sélectionner la langue') }}
             </option>
             <option
                 style="
-                        background-color:#000099;" class="changeoption" value="fr"
+                        background-color:#0033cc;" class="changeoption" value="fr"
                         {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
                         Français
                     </option>
-                    <option style="background-color:#000099;" class="changeoption" value="en"
+                    <option style="background-color:#0033cc;" class="changeoption" value="en"
                         {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
                         English
                     </option>
-                    <option style="background-color:#000099;" class="changeoption" value="ar"
+                    <option style="background-color:#0033cc;" class="changeoption" value="ar"
                         {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
                         Arabe
                     </option>
@@ -98,7 +98,7 @@
                                     <span class="pb-2 d-flex">
                                         <img src="{{ asset('images/' . $category->img_cat) }}"
                                             style="width:50px;height:auto" alt="evo  category image">
-                                        <a style="color:#2042be !important" class="dropdown-item rr"
+                                        <a style="color:#0033cc !important" class="dropdown-item rr"
                                             href="{{ url('product/' . $category->id) }}">
                                             {{ translate($category->nom_cat) }}
                                         </a>
@@ -196,7 +196,7 @@
         <span>{{ translate('Contactez-nous') }}</span>
     </div>
     <footer class="mb-0 text-center text-white text-lg-start"
-        style="background: linear-gradient(to right,#2042be ,#0d2471)">
+        style="background: #0033cc">
         <div class="container p-4 pb-0">
             <div class="row">
                 <!-- About Us -->

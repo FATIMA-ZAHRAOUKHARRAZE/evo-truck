@@ -41,7 +41,7 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #000099;
+    color: #0033cc;
     padding: 5px;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .subscribe-button {
-    background: #007bff;
+    background: 0033cc;
     color: white;
     border: none;
     border-radius: 7px;
@@ -157,7 +157,7 @@
     /* Taille de la police pour le titre principal. */
     font-weight: bold;
     /* Met le texte en gras. */
-    color: #2042be;
+    color: #0033cc;
     /* Définit une couleur bleue personnalisée pour le texte. */
     margin-bottom: 20px;
     /* Ajoute un espacement en bas du titre. */
@@ -253,7 +253,7 @@
 .ab-div>h2 {
     font-size: 40px;
     font-weight: bold;
-    color: #2042be;
+    color: #0033cc;
 }
 
 .ab-div>p {
@@ -275,7 +275,7 @@
 .lastdiv>h4 {
     font-size: 18px;
     font-weight: bold;
-    color: #2042be;
+    color: #0033cc;
 
 }
 
@@ -324,12 +324,16 @@
 }
 
 .service-card {
-    background-color: #2042be;
-    padding: 25px;
+    display: grid;
+    background-color: #0033cc;
+    padding: 20px;
     border-radius: 5px;
     transition: transform 0.3s ease;
     height: 100%;
     justify-content: center;
+    align-content: space-around;
+    align-items: baseline;
+    justify-items: center;
 }
 
 .service-card:hover {
@@ -337,9 +341,9 @@
 }
 
 .service-icon {
-    font-size: 48px;
-    color: #ffffff;
+    width: 7vw !important;
     margin-bottom: 20px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .service-card h3 {
@@ -351,11 +355,12 @@
 
 /* Styles pour la section Pourquoi EVO-MACHINERY */
 .why-evo-section {
+    margin: 3rem, 0 0;
     padding: 20px 0;
 }
 
 .why-title {
-    color: #2042be;
+    color: #0033cc;
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 1.2;
@@ -370,7 +375,7 @@
 }
 
 .why-list li {
-    color: #2042be;
+    color: #0033cc;
     font-size: 1.2rem;
     margin-bottom: 15px;
     display: flex;
@@ -378,7 +383,7 @@
 }
 
 .why-list li i {
-    color: #2042be;
+    color: #0033cc;
     margin-right: 15px;
     font-size: 1.4rem;
 }
@@ -411,8 +416,8 @@
 .about-btn {
     display: inline-block;
     padding: 10px 24px;
-    border: 1px solid #2042be;
-    color: #2042be;
+    border: 1px solid #0033cc;
+    color: #0033cc;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 500;
@@ -420,7 +425,7 @@
 }
 
 .about-btn:hover {
-    background: #2042be;
+    background: #0033cc;
     color: #fff;
 }
 
@@ -481,7 +486,7 @@
 }
 
 .devis-title {
-    color: #2042be;
+    color: #0033cc;
     font-size: 4vw;
     font-weight: bold;
     letter-spacing: 1px;
@@ -510,11 +515,11 @@
 }
 
 .devis-input:focus {
-    box-shadow: 0 0 0 2px #2042be;
+    box-shadow: 0 0 0 2px #0033cc;
 }
 
 .devis-btn {
-    background: #2042be;
+    background: #0033cc;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -549,7 +554,7 @@
 /* categorie */
 .product-card {
     background: #fff;
-    border-radius: 22px;
+    border-radius: 5px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     display: flex;
@@ -557,7 +562,7 @@
     align-items: center;
     padding-bottom: 32px;
     transition: box-shadow 0.2s;
-    min-height: 420px;
+    min-height: 450px;
 }
 
 .product-card:hover {
@@ -591,12 +596,12 @@
 
 .product-btn {
     display: inline-block;
-    background: #2042be;
+    background: #0033cc;
     color: #fff;
     font-weight: bold;
     font-size: 1.2rem;
     border: none;
-    border-radius: 16px;
+    border-radius: 5px;
     padding: 14px 44px;
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
@@ -604,7 +609,7 @@
 }
 
 .product-btn:hover {
-    background: #2042be;
+    background: #0033cc;
     color: #e8ad1d;
 }
 
@@ -627,4 +632,12 @@
         font-size: 1rem;
         padding: 10px 24px;
     }
+}
+
+.carousel-caption h1 {
+    text-align: center;
+    margin-right: 1000px;
+    margin-bottom: 100px;
+   
+    color: #0033cc; 
 }

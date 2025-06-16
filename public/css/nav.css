@@ -167,7 +167,7 @@ body {
 
 .mobile-products>ul {
     min-height: 300px;
-    background: rgba(0, 23, 172, 0.863);
+    background: #0033cc;
     font-size: 12px !important;
     position: absolute;
     inset: 0px auto auto 0px;
@@ -238,7 +238,7 @@ body {
         right: 0;
         flex-direction: column;
         text-align: center;
-        background: linear-gradient(to right, #2042be, #0d2471);
+        background:#0033cc;
         gap: 0;
         overflow: hidden;
         max-height: 0;
@@ -845,7 +845,7 @@ body {
     /* Curseur de main sur le survol */
     transition: background-color 0.3s, transform 0.3s;
     /* Transition douce */
-    background: linear-gradient(to right, #2042be, #0d2471);
+    background-color: #0033cc;
     /* Couleur de fond par défaut */
     color: white !important;
     /* Couleur du texte (blanc) avec priorité */
@@ -857,17 +857,18 @@ body {
     color: #e8ad1d !important;
 }
 
+/* barre de recherche */
 .input-group .form-control:focus {
     box-shadow: none;
-    border-color: #2042be;
+    border-color: #0033cc;
 }
 
-.input-group .btn-primary {
-    background: #2042be;
+.input-group .btn {
+    background-color: #0033cc;
     border: none;
 }
 
-.input-group .btn-primary:hover {
+.input-group .btn:hover {
     background: #0d2471;
 }
   .social-icon {
@@ -879,4 +880,13 @@ body {
         text-align: center !important;
         margin-bottom: 2rem;
     }
+}
+
+.carousel-caption h1{
+
+    text-align: center;
+    margin-right: 1300px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    COLOR: #0033cc;
 }
