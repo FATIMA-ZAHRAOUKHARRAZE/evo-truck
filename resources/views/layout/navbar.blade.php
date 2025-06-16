@@ -41,7 +41,7 @@
                         <input type="text" class="firstNav_input search-input" name="query"
                             placeholder="Modèle de produit.." aria-label="Search"
                             style=" border: 1px solid #ccc; padding: 10px;">
-                        <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary" style="background: #0033cc; border: none;">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
@@ -51,7 +51,7 @@
             <div class="pc-lang">
                 <div class="col-md-4 w-100 change">
                     <select id="languageSelect"
-                        style=" cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
+                        style=" cursor:pointer; padding-bottom:10px; background-color: white; border:none; font-size:20px;"
                         class="form-select pe-5 changeLanguage" aria-label="Language select">
                         <option class="changeoption"
                             style="background-color:#0033cc; >
@@ -255,7 +255,7 @@
                                 894</a>
                         </p>
                     </div>
-                    <!-- Search Bar (Moved after Contact Us) -->
+                    {{-- <!-- Search Bar (Moved after Contact Us) -->
                     <div style="width: 300px !important" class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
                         <h6 class="mb-4 text-uppercase font-weight-bold">
                             {{ translate('Recherche') }} </h6>
@@ -269,7 +269,7 @@
                                 </button>
                             </form>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- Newsletter -->
                 </div>
                 <hr class="my-3">

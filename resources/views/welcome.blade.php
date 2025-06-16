@@ -277,14 +277,16 @@
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
                 <div data-aos="fade-up" class="mb-4 col-5-custom">
-                    <div class="product-card">
+                    <div class="product-card d-flex flex-column h-100">
                         <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
                             alt="evo Product Image">
-                        <div class="product-body">
+                        <div class="product-body d-flex flex-column flex-grow-1">
                             <h4 class="product-title">
                                 {{ translate($categorie->nom_cat) }}
                             </h4>
-                            <a href="{{ url('product/' . $categorie->id) }}" class="product-btn">VOIR PLUS</a>
+                            <div class="mt-auto">
+                                <a href="{{ url('product/' . $categorie->id) }}" class="product-btn w-100">VOIR PLUS</a>
+                            </div>
                         </div>
                     </div>
                 </div>
