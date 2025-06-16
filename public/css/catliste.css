@@ -69,9 +69,7 @@ border-radius: 15px 15px 0 0;
          /* 2 colonnes sur les petits écrans */
      }
 
-     .sss {
-         display: none
-     }
+    
  }
 
  @media (max-width: 576px) {
@@ -80,8 +78,3 @@ border-radius: 15px 15px 0 0;
          /* 1 colonne sur les écrans très petits */
      }
  }
-@media (max-width: 768px) {
-    .sss {
-        display: none
-    }
-}
