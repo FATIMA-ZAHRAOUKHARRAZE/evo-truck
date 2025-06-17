@@ -146,7 +146,7 @@
             <div class="carousel-item active">
                 <img class="d-block" src="{{ asset('images\banner p2 EVO.jpg') }}" alt="evo Slide 1">
                 <div class="carousel-caption">
-                    <h1>EVO MACHINERY Specialiste en enguins industrielles poids lourds et solutions industrielles</h1>
+                    <h1>{{ translate("EVO MACHINERY Specialiste en enguins industrielles poids lourds et solutions industrielles") }}</h1>
                 </div>
             </div>
             <div class="carousel-item">
@@ -184,28 +184,28 @@
             <div class="service-card">
                 {{-- <i class="fas fa-tractor service-icon"></i> --}}
                 <img src="{{ asset('images/icons/engin industrielle.svg') }}" alt="engin industrielle" class="service-icon">
-                <h3>ENGINS<br>INDUSTRIELLES</h3>
+                <h3>{{ translate("ENGINS") }}<br>{{ translate("INDUSTRIELLES") }}</h3>
             </div>
         </div>
         <div class="col-md-3 service-item">
             <div class="service-card">
                 {{-- <i class="fas fa-truck service-icon"></i> --}}
                 <img src="{{ asset('images/icons/semi-remorque.svg') }}" alt="camion semi remorque" class="service-icon">
-                <h3>CAMIONS<br>SEMI-REMORQUES</h3>
+                <h3>{{ translate("CAMIONS") }}<br>{{ translate("SEMI-REMORQUES") }}</h3>
             </div>
         </div>
         <div class="col-md-3 service-item">
             <div class="service-card">
                 {{-- <i class="fas fa-cogs service-icon"></i> --}}
                 <img src="{{ asset('images/icons/engrenage.svg') }}" alt="pieces detachees" class="service-icon">
-                <h3>PIECES<br>DÉTACHÉES</h3>
+                <h3>{{ translate("PIECES") }}<br>{{ translate("DÉTACHÉES") }}</h3>
             </div>
         </div>
         <div class="col-md-3 service-item">
             <div class="service-card">
                 {{-- <i class="fas fa-tools service-icon"></i> --}}
                 <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance" class="service-icon">
-                <h3>SERVICES /<br>MAINTENANCE</h3>
+                <h3>{{ translate("SERVICES ") }}/<br>{{ translate("MAINTENANCE") }}</h3>
             </div>
         </div>
 
@@ -214,14 +214,14 @@
     <div class="container why-evo-section">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h2 class="why-title">POURQUOI<br>EVO-MACHINERY?</h2>
+                <h2 class="why-title">{{ translate("POURQUOI") }}<br>{{ translate("EVO-MACHINERY?") }}</h2>
             </div>
             <div class="col-md-6">
                 <ul class="why-list">
-                    <li><i class="fas fa-check"></i> Fiabilité des machines</li>
-                    <li><i class="fas fa-check"></i> Produits verifiés et testés</li>
-                    <li><i class="fas fa-check"></i> Accompagnement technique</li>
-                    <li><i class="fas fa-check"></i> Livraison rapide et SAV</li>
+                    <li><i class="fas fa-check"></i> {{ translate("Fiabilité des machines") }}</li>
+                    <li><i class="fas fa-check"></i> {{ translate("Produits verifiés et testés") }}</li>
+                    <li><i class="fas fa-check"></i> {{ translate("Accompagnement technique") }}</li>
+                    <li><i class="fas fa-check"></i> {{ translate("Livraison rapide et SAV") }}</li>
                 </ul>
             </div>
         </div>
@@ -229,14 +229,14 @@
     <div class="container my-5 about-evo">
         <div class="mb-5 row align-items-center">
             <div class="col-md-5">
-                <h2 class="about-title-2">EVO - MACHINERY</h2>
+                <h2 class="about-title-2"> {{ translate("EVO - MACHINERY") }}</h2>
                 <p>
-                    Depuis 2000, Evo-Machinery fournit des engins de chantier, camions industriels et équipements lourds
+                     {{ translate("Depuis 2000, Evo-Machinery fournit des engins de chantier, camions industriels et équipements lourds
                     fiables pour les secteurs du BTP, du transport et de l'industrie. Notre expertise permet aux
                     professionnels de s'équiper avec des machines performantes, robustes et prêtes à affronter les
-                    conditions les plus exigeantes.
+                    conditions les plus exigeantes.") }}
                 </p>
-                <a href="/about" class="about-btn">En savoir plus sur nous &rarr;</a>
+                <a href="/about" class="about-btn">{{ translate("En savoir plus sur nous &rarr;") }}</a>
             </div>
             <div class="text-center col-md-7">
                 <img src="{{ asset('images\banner p2 EVO.jpg') }}" alt="EVO Machinery" class="about-img img-fluid">
@@ -244,15 +244,15 @@
         </div>
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-5">
-                <h2 class="about-title-2">L'innovation au cœur de notre évolution</h2>
+                <h2 class="about-title-2">{{ translate("L'innovation au cœur de notre évolution ") }}</h2>
                 <p>
-                    Chez Evo-Machinery, l'innovation est le moteur de notre évolution. En intégrant les dernières
+                    {{ translate("Chez Evo-Machinery, l'innovation est le moteur de notre évolution. En intégrant les dernières
                     technologies aux engins de chantier et camions industriels, nous anticipons les besoins des
                     professionnels du BTP, du transport et de l'industrie lourde. Notre ambition : offrir des solutions
                     durables, performantes et intelligentes, conçues pour faire évoluer vos projets et relever vos défis
-                    techniques.
+                    techniques.") }}
                 </p>
-                <a href="/solution" class="about-btn">Découvrir nos solutions &rarr;</a>
+                <a href="/solution" class="about-btn"> {{ translate("Découvrir nos solutions &rarr;") }}</a>
             </div>
             <div class="text-center col-md-7">
                 <img src="{{ asset('images\banner p2 EVO.jpg') }}" alt="Innovation EVO" class="about-img img-fluid">
@@ -281,7 +281,7 @@
                                 {{ translate($categorie->nom_cat) }}
                             </h4>
                             <div class="mt-auto ">
-                                <a href="{{ url('product/' . $categorie->id) }}" class="product-btn ">VOIR PLUS</a>
+                                <a href="{{ url('product/' . $categorie->id) }}" class="product-btn ">{{ translate("VOIR PLUS") }}</a>
                             </div>
                         </div>
                     </div>

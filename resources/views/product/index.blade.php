@@ -23,7 +23,7 @@
     <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"src="{{ asset('images/' . $categorie->img_catpro) }}"
         alt="evo logo">
     <div class="textph"
-        style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }};color: #2042be; font-size: 24px; ">
+        style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }};color: #0033cc; font-size: 24px; ">
         <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;">
             {{ translate($categorie->nom_cat) }}
         </h1>
@@ -105,7 +105,7 @@
                                     <div class="mb-1 bbb_deals_content">
                                         <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
                                             <div class="mb-5 bbb_deals_item_name"
-                                                style="color: #031c77;font-size: {{ strlen($item['product']->nom_pro) < 12
+                                                style="color: #0033cc;font-size: {{ strlen($item['product']->nom_pro) < 12
                                                     ? '30px'
                                                     : (strlen($item['product']->nom_pro) < 20
                                                         ? '20px'

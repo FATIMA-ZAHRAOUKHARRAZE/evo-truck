@@ -133,7 +133,7 @@
                 </aside>
                 <main class="col-lg-6">
                     <div class="ps-lg-5">
-                        <h1 class="title text-dark">{{ $product->nom_pro }}</h1> <br>
+                        <h1 class="title" style="color: #0033cc;">{{ $product->nom_pro }}</h1> <br>
                     </div>
                     @if (!empty($filteredDetails) && count($filteredDetails) > 0)
                         <hr style="margin-top: 60px">
@@ -159,7 +159,7 @@
     </section>
     <section>
         <div id="navbar"
-            style="position: relative; z-index: 10000; background-color: #2042be;  justify-content: space-between; align-items: center; color: white;height: 70px; width: 100%;padding: 0 20px;padding-top: 20px;">
+            style="position: relative; z-index: 10000; background-color: #0033cc;  justify-content: space-between; align-items: center; color: white;height: 70px; width: 100%;padding: 0 20px;padding-top: 20px;">
             <div class="container d-flex justify-content-between align-items-center">
                 <ul id="menu" class="gap-4 mb-0 list-unstyled d-lg-flex">
                     <div class="logo" style="font-size: 20px;">{{ $product->nom_pro }}</div>
@@ -173,7 +173,7 @@
         <div id="Product_facture" class="mt-5 text-white">margin</div>
         {{-- Product fetures --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h1 style=" font-size:30px;font-weight: bold;color:#2042be">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</h1>
+            <h1 style=" font-size:30px;font-weight: bold;color:#0033cc">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</h1>
             <span class="mt-2 ">{{ translate($product->dec_pro ?? ($product->cacteristique ?? '   ')) }}</span>
             @if ($product->pdf !== null)
                 <div class="mt-3">
@@ -186,7 +186,7 @@
         <div id="parameter" class="mt-5 text-white">margin</div>
         {{-- parametre --}}
         <div style="margin-top: 10px" class="container mt-3 ">
-            <h1 style=" font-size:30px;font-weight: bold;color:#2042be ">{{ translate('PARAMÈTRES') }}</h1>
+            <h1 style=" font-size:30px;font-weight: bold;color:#0033cc ">{{ translate('PARAMÈTRES') }}</h1>
             <span class="mt-2 ">
                 <table class="table table-striped">
                     <thead>

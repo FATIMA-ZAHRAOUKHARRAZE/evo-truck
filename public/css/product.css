@@ -332,4 +332,25 @@ html,
     flex-direction: row;
 }
 
+/* Modification Anass */
+.pagination-wrapper {
+    margin: 10px 0 0 0 !important;
+}
 
+ul.pagination {
+    margin: 0 !important;
+}
+
+.col-md-9.col-12 {
+    background: #e0e0e0;
+    padding: 10px;
+    display: grid;
+    align-content: space-between;
+}
+@media (min-width: 768px) {
+    .col-md-9 {
+        flex: 0 0 auto;
+        width: 70% !important;
+    }
+}
+/* --- */
