@@ -200,7 +200,7 @@
             <div class="container p-4 pb-0">
                 <div class="row">
                     <!-- About Us -->
-                    <div class="mx-auto mt-3 col-md-3 col-lg-3 col-xl-3">
+                    <div class="mx-auto mt-3 col-md-3 col-lg-3 col-xl-4">
                         <h6 class="mb-4 text-uppercase font-weight-bold">
                             {{ translate('À propos') }}</h6>
                         <p>

@@ -353,4 +353,12 @@ ul.pagination {
         width: 70% !important;
     }
 }
+
+footer .pb-4 {
+    padding: 0 !important;
+}
+
+footer h6 {
+    margin-top: 1.5rem !important;
+}
 /* --- */
