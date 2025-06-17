@@ -19,12 +19,10 @@
 @endsection
 @section('content')
     <!-- Page Image -->
-    <div style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
-        <div class="textph"
-            style="font-weight: bold; position: absolute; top: 30%; left:40%;  color: #2042be; font-size: 24px;">
-            <h1 style="font-size: 50px;">{{ translate('Solution') }}</h1>
+    <div class="about_container">
+        <img src="{{ asset('images/Original.png') }}" alt="evo image">
+        <div class="image-desktop-only">
+            <h1>{{ translate('SOLUTION ') }}</h1>
         </div>
     </div>
     <!-- la partie etapes design -->
