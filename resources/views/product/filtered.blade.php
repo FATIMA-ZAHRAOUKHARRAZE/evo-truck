@@ -25,10 +25,9 @@
     <div class="sss" style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"
             src="{{ asset('images/' . $categorie->img_catpro) }}"alt="">
-        <div style="font-weight: bold; position: absolute;  top: 40%;   left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }}; color: #2042be; font-size: 24px; "
-            class="textph">
-            <span style="font-size: 50px;">{{ translate($categorie->nom_cat) }}</span>
-        </div>
+            <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;visibility:hidden;">
+                {{ translate($categorie->nom_cat) }}
+            </h1>
     </div>
     <section class="container mt-4">
         <div class="row">

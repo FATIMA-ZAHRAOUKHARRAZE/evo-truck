@@ -24,7 +24,7 @@
         alt="evo logo">
     <div class="textph"
         style="font-weight: bold; position: absolute; top: 40%;  left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }};color: #0033cc; font-size: 24px; ">
-        <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;">
+        <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;visibility:hidden;">
             {{ translate($categorie->nom_cat) }}
         </h1>
     </div>
