@@ -3,13 +3,14 @@
 	}
 
 	.text-center1 {
-	    color: #0d2471;
+	    color: #0033cc;
 	    text-align: center;
 	}
 
 	.contact-section {
 	    padding: 40px 20px;
 	    background-color: #f8f9fa;
+        margin-top: 40px;
 	}
 
 	.contact-form {
@@ -25,7 +26,7 @@
 
 	.contact-details i {
 	    font-size: 24px;
-	    color: #007bff;
+	    color: #0033cc;
 	    margin-bottom: 10px;
 	}
 

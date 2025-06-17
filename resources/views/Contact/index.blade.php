@@ -76,7 +76,7 @@
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">{{ translate('Envoie Message') }}</button>
+                    <button type="submit" class="btn btn-primary w-100" style="background-color: #0033cc">{{ translate('Envoie Message') }}</button>
                 </form>
             </div>
             <!-- Carte Google et informations -->

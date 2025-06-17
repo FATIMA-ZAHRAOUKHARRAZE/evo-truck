@@ -236,7 +236,7 @@
 
 .main {
     flex-grow: 1;
-    padding-top: 115px;
+    padding-top: 100px;
     width: 102%;
 }
 
@@ -650,7 +650,7 @@
 
 .carousel-caption h1 {
     text-align: center;
-    margin-right: 800px;
+    /* margin-right: 800px; */
     margin-bottom: 50px;
     color: #0033cc;
 }

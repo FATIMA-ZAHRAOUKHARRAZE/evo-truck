@@ -20,7 +20,7 @@
 @section('content')
     <!-- Page Image -->
     <div style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
+        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .2;"
             src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
         <div class="textph"
             style="font-weight: bold; position: absolute; top: 30%; left:40%;  color: #2042be; font-size: 24px;">

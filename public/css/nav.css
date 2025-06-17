@@ -109,7 +109,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    height: 55px;
+    height: 40px;
     transition: 0.3s;
     margin-top: 60px;
 }
@@ -139,10 +139,10 @@ body {
 #nav>ul>li {
     list-style-type: none;
     position: relative;
-    padding-right: 70px;
+    padding-right: 100px;
     padding-top: 14px;
     list-style-type: none;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -155,6 +155,7 @@ body {
     text-decoration: none;
     color: #e8ad1d;
     padding: 10px 0;
+
 }
 
 #nav>ul>li::after {
