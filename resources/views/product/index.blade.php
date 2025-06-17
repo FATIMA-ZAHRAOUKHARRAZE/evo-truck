@@ -90,19 +90,19 @@
             <div class="row g-3">
                 @foreach ($filteredDetails as $item)
                     <div class="col-12 col-md-6 col-lg-4 product-item" data-aos="fade-up">
-                        <div class="bbb_deals overflow-hidden">
+                        <div class="overflow-hidden bbb_deals">
                             <div class="bbb_deals_slider_container">
                                 <div class="bbb_deals_item" data-aos="zoom-in">
                                     <div class="bbb_deals_image">
                                         <a class="prodct-img-link"
                                             href="{{ route('ProductDetail', $item['product']->id) }}">
-                                            <img loading="lazy"
-                                                src="{{ asset('images/' . $item['product']->img_pro) }}" <<<<<<< HEAD
-                                                alt="evo {{ $item['product']->img_pro }}">
+                                            <img src="{{ asset('images/' . $item['product']->img_pro) }}"
+                                                alt="evo ">
 
                                         </a>
                                     </div>
-                                    <div class="mb-1 bbb_deals_content">
+                                    <div class="mb-1 bbb_deals_content" data-aos="fade-up"
+                                    data-aos-delay="300">
                                         <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
                                             <div class="mb-5 bbb_deals_item_name"
                                                 style="color: #0033cc;font-size: {{ strlen($item['product']->nom_pro) < 12
@@ -116,7 +116,7 @@
                                             </div>
                                         </div>
                                         @foreach ($item['details'] as $detail)
-                                            <div class="bbb_deals_item_details" data-aos="fade-left">
+                                            <div class="bbb_deals_item_details">
                                                 @foreach ($detail as $column => $value)
                                                     <div class="bbb_deals_item_detail">
                                                         <div class="bbb_deals_item_detail_label"
@@ -134,11 +134,11 @@
                                         <div class="mt-2 available">
                                             <div class="flex-row available_line d-flex justify-content-between">
                                                 <a href="{{ route('ProductDetail', $item['product']->id) }}"
-                                                    class="btn" data-aos="flip-left" style="background: #0033cc;">
+                                                    class="btn"  style="background: #0033cc;">
                                                     {{ translate('PLUS') }}
                                                 </a>
                                                 <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
-                                                    class="btn" data-aos="flip-right" style="background: #0033cc;">
+                                                    class="btn"  style="background: #0033cc;">
                                                     {{ translate('LE DEVIS') }}
                                                 </a>
                                             </div>
