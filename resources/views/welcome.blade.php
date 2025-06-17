@@ -280,8 +280,8 @@
                             <h4 class="product-title">
                                 {{ translate($categorie->nom_cat) }}
                             </h4>
-                            <div class="mt-auto">
-                                <a href="{{ url('product/' . $categorie->id) }}" class="product-btn w-100">VOIR PLUS</a>
+                            <div class="mt-auto ">
+                                <a href="{{ url('product/' . $categorie->id) }}" class="product-btn ">VOIR PLUS</a>
                             </div>
                         </div>
                     </div>

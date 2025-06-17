@@ -587,6 +587,8 @@
     padding: 24px 16px 0 16px;
 }
 
+
+
 .product-title {
     font-size: 1.2rem;
     font-weight: bold;
@@ -632,6 +634,10 @@
         font-size: 1rem;
         padding: 10px 24px;
     }
+    .product-btn {
+        display:inline-block;
+        width: 30vw;
+      }
 }
 
 .carousel-caption h1 {
