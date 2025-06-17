@@ -52,10 +52,7 @@
                     <select id="languageSelect"
                         style=" cursor:pointer; padding-bottom:10px; background-color: white; border:none; font-size:20px;"
                         class="form-select pe-5 changeLanguage" aria-label="Language select">
-                        <option class="changeoption"
-                            style="background-color:white;">
-                {{ translate('Sélectionner la langue') }}
-            </option>
+
             <option
                 style="
                             background-color:whitec;" class="changeoption" value="fr"
@@ -144,16 +141,14 @@
                         color: white;
                     "><i
                                 class="fa-solid fa-language"></i>
-                            <option style="color:#0d2471">
-                                {{ translate('Sélectionner la langue') }}
-                            </option>
-                            <option style="color:#0d2471" value="fr"
+
+                            <option style="color:#0033cc " value="fr"
                                 {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
                                 Français</option>
-                            <option style="color:#0d2471" value="en"
+                            <option style="color:#0033cc" value="en"
                                 {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English
                             </option>
-                            <option style="color:#0d2471" value="ar"
+                            <option style="color:#0033cc" value="ar"
                                 {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>Arabe
                             </option>
                         </select>
@@ -211,7 +206,37 @@
                         <p>
                             {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                         </p>
+                         <!-- Newsletter -->
+                        <h6 class="mb-3 text-uppercase font-weight-bold">Newsletter</h6>
+                        <p class="mb-3 small">
+                            {{ translate('Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités') }}
+                        </p>
+                        <form action="{{ url('/subscribe') }}" method="post">
+                            @csrf
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="email"
+                                    placeholder="{{ translate('Votre email') }}" required
+                                    style="border-radius: 20px 0 0 20px; border: none;">
+                                <button class="btn btn-primary" type="submit"
+                                    style="border-radius: 0 20px 20px 0; padding: 0.375rem 1.5rem;">
+                                    {{ translate('S\'inscrire') }}
+                                </button>
+                                @if (session()->has('error'))
+                                    <div class="alert alert-danger">
+                                        {{ session()->get('error') }}
+                                    </div>
+                                @endif
+
+                                @if (session()->has('success'))
+                                    <div class="alert alert-success">
+                                        {{ session()->get('success') }}
+                                    </div>
+                                @endif
+                            </div>
+                        </form>
+
                     </div>
+
                     <hr class="clearfix w-100 d-md-none" />
                     <!-- Products -->
                     <div class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
@@ -269,7 +294,7 @@
                         </div>
                         <!-- Réseaux sociaux -->
                         <div class="text-center col-md-4">
-                            <h6 class="mb-3 text-uppercase font-weight-bold">{{ translate('Suivez-nous') }}</h6>
+
                             <div class="social-links">
                                 <a href="#" class="text-white social-icon"
                                     style="font-size: 1.5rem; transition: all 0.3s ease;text-decoration: none;">
@@ -293,36 +318,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- Newsletter -->
-                        <div class="col-md-4">
-                            <h6 class="mb-3 text-uppercase font-weight-bold">Newsletter</h6>
-                            <p class="mb-3 small">
-                                {{ translate('Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités') }}
-                            </p>
-                            <form action="{{ url('/subscribe') }}" method="post">
-                                @csrf
-                                <div class="input-group">
-                                    <input type="email" class="form-control" name="email"
-                                        placeholder="{{ translate('Votre email') }}" required
-                                        style="border-radius: 20px 0 0 20px; border: none;">
-                                    <button class="btn btn-primary" type="submit"
-                                        style="border-radius: 0 20px 20px 0; padding: 0.375rem 1.5rem;">
-                                        {{ translate('S\'inscrire') }}
-                                    </button>
-                                    @if (session()->has('error'))
-                                        <div class="alert alert-danger">
-                                            {{ session()->get('error') }}
-                                        </div>
-                                    @endif
 
-                                    @if (session()->has('success'))
-                                        <div class="alert alert-success">
-                                            {{ session()->get('success') }}
-                                        </div>
-                                    @endif
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>

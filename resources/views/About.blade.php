@@ -71,7 +71,7 @@
                         </div>
                     </div>
                 </li>
-                <li data-aos="fade-left">
+                <li  data-aos="fade-left">
                     <div class="timeline-image"><img class="rounded-circle img-fluid"
                             src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
                     <div class="timeline-panel">
