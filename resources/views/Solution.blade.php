@@ -1,6 +1,7 @@
 @extends('layout.navbar')
 @section('url')
     <link rel="stylesheet" href="{{ asset('css/solution.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 @endsection
 @section('seo')
     <title>EVO MACHINERY - Solutions et Processus de Fabrication</title>
@@ -19,12 +20,19 @@
 @endsection
 @section('content')
     <!-- Page Image -->
+<<<<<<< HEAD
     <div style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .2;"
             src="{{ asset('images/Original.png') }}" loading="lazy" alt="">
         <div class="textph"
             style="font-weight: bold; position: absolute; top: 30%; left:40%;  color: #2042be; font-size: 24px;">
             <h1 style="font-size: 50px;">{{ translate('Solution') }}</h1>
+=======
+    <div class="solution_container">
+        <img src="{{ asset('images/Original.png') }}" alt="evo image">
+        <div class="image-desktop-only">
+            <h1>{{ translate('SOLUTION ') }}</h1>
+>>>>>>> bd340dd9281c68784648f46fdb4c3ec60e7d73f1
         </div>
     </div>
     <!-- la partie etapes design -->
