@@ -24,23 +24,24 @@ class OrderController extends Controller
 	public function insert(Request $req)
 	{
 	    $filed = $req->validate([
-	        'prod_cat' => 'required|string',
-	        'prod_mod' => 'required|string',
+	        'prod_cat' => 'nullable|string',
+	        'prod_mod' => 'nullable|string',
 	        'name' => 'required|string|max:255',
 	        'phone' => 'required|string|max:15',
 	        'email' => 'required|email',
 	        'country' => 'required|string|max:100',
 	        'message' => 'nullable|string|max:1000',
 	        'société' => 'required|string|max:255',
-	        'activité' => 'required|string|max:255',
+	        'activité' => 'nullable|string|max:255',
+
 	    ]);
-	
+       
 	    // Enregistrer en base
 	    Order::create($filed);
-	
+
 	    // Envoyer l'e-mail
 	    Mail::to('contact@evo-machinery.com')->send(new OrderFormMail($filed));
-	
+
 	    return redirect()->back()->with('success', 'Demande envoyée et enregistrée avec succès !');
 	}
 

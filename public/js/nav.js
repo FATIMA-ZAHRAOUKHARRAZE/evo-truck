@@ -43,21 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
         updateScrollEffects();
     }
 
-    // Function to apply hover/active styles
     function applyEffects() {
         mainImage.src = hoverImage;
         pro.style.color = primaryColor;
         languageSelect.style.color = primaryColor;
-        changeoption.style.color = primaryColor;
-        changeoption.style.backgroundColor = "white";
+        changeoption.style.color = primaryColor; // Devient bleu au hover
+        changeoption.style.backgroundColor = "white"; // Fond blanc au hover
     }
 
-    // Function to reset to default styles
+    // Fonction pour revenir aux styles par défaut
     function resetEffects() {
         updateScrollEffects();
         pro.style.color = primaryColor;
-        changeoption.style.color = primaryColor;
-        changeoption.style.backgroundColor = "transparent";
+        changeoption.style.color = "white"; // Texte blanc par défaut
+        changeoption.style.backgroundColor = primaryColor; // Fond bleu par défaut
     }
 
     // Function to set logo based on scroll position

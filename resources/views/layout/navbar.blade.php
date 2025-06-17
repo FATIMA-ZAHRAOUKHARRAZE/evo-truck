@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{-- seo balises --}}
         @yield('seo')
-        <!--script-->
-        <script src="{{ asset('js/nav.js') }}" defer></script>
+
         <!-- style -->
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         @yield('url')
@@ -41,7 +40,7 @@
                         <input type="text" class="firstNav_input search-input" name="query"
                             placeholder="Modèle de produit.." aria-label="Search"
                             style=" border: 1px solid #ccc; padding: 10px;">
-                            <button type="submit" class="btn btn-primary" style="background: #0033cc; border: none;">
+                        <button type="submit" class="btn btn-primary" style="background: #0033cc; border: none;">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
@@ -54,20 +53,20 @@
                         style=" cursor:pointer; padding-bottom:10px; background-color: white; border:none; font-size:20px;"
                         class="form-select pe-5 changeLanguage" aria-label="Language select">
                         <option class="changeoption"
-                            style="background-color:#0033cc; >
+                            style="background-color:white;">
                 {{ translate('Sélectionner la langue') }}
             </option>
             <option
                 style="
-                            background-color:#0033cc;" class="changeoption" value="fr"
+                            background-color:whitec;" class="changeoption" value="fr"
                             {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
                             Français
                         </option>
-                        <option style="background-color:#0033cc;" class="changeoption" value="en"
+                        <option style="background-color:white;" class="changeoption" value="en"
                             {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
                             English
                         </option>
-                        <option style="background-color:#0033cc;" class="changeoption" value="ar"
+                        <option style="background-color:white;" class="changeoption" value="ar"
                             {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
                             Arabe
                         </option>
@@ -255,21 +254,7 @@
                                 894</a>
                         </p>
                     </div>
-                    {{-- <!-- Search Bar (Moved after Contact Us) -->
-                    <div style="width: 300px !important" class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
-                        <h6 class="mb-4 text-uppercase font-weight-bold">
-                            {{ translate('Recherche') }} </h6>
-                        <div class="mt-4 mb-4 text-center search-bar col-12">
-                            <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
-                                <input type="text" class="form-control form-control-lg search-input"
-                                    name="query" placeholder="modèle de produit.." aria-label="Search"
-                                    style=" border: 1px solid #ccc; padding: 10px;">
-                                <button type="submit" class="btn btn-primary btn-lg" style=" padding: 10px 20px;">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div> --}}
+
                     <!-- Newsletter -->
                 </div>
                 <hr class="my-3">
@@ -385,5 +370,6 @@
             padding: 0 5px;
         }
     </style>
-
+<!--script-->
+<script src="{{ asset('js/nav.js') }}" defer></script>
 </html>

@@ -5,7 +5,8 @@
 @font-face {
     font-family: 'MADE';
     src: url('/fonts/MADE GoodTime Grotesk PERSONAL USE.otf') format('opentype');
-  }
+}
+
 /* Scrollbar track */
 ::-webkit-scrollbar {
     /* Width and height of the scrollbar */
@@ -74,7 +75,7 @@ h5 {
 
 html,
 body {
-   height: 100%;
+    height: 100%;
     width: 100%;
     margin: 0;
     display: flex;
@@ -84,9 +85,9 @@ body {
 
 }
 
-.firstNav{
+.firstNav {
     height: 60px;
-    display: flex ;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
@@ -110,29 +111,29 @@ body {
     z-index: 1000;
     height: 55px;
     transition: 0.3s;
-    margin-top:60px;
+    margin-top: 60px;
 }
 
 
 @media screen and (min-width: 768px) {
-    #nav > ul {
-      display: flex;
-      gap: 0.2vw;
-      align-items: center;
-      padding-left: 250px;
+    #nav>ul {
+        display: flex;
+        gap: 0.2vw;
+        align-items: center;
+        padding-left: 250px;
     }
-  }
+}
 
-  .firstNav_input{
+.firstNav_input {
     width: 30vw;
-    height:20px;
+    height: 20px;
     display: block;
     border-radius: 5px;
     height: 40px;
 }
 
 .nav-link {
-    padding: 0 ;
+    padding: 0;
 }
 
 #nav>ul>li {
@@ -219,9 +220,11 @@ body {
 
 
 /* Mobile menu */
-@media (max-width: 880px) {.pc-lang {
-    display: none ;
-}}
+@media (max-width: 880px) {
+    .pc-lang {
+        display: none;
+    }
+}
 
 
 @media (max-width: 780px) {
@@ -230,11 +233,12 @@ body {
         margin-top: 10px !important;
         width: 96vw !important;
     }
-    .firstNav{
-        padding-left:35px;
+
+    .firstNav {
+        padding-left: 35px;
     }
 
-    .firstNav_input{
+    .firstNav_input {
         border-radius: 5px;
         height: 40px;
         display: block;
@@ -253,7 +257,8 @@ body {
 
     #nav {
         padding: 10px 40px;
-        width: 101vw    }
+        width: 101vw
+    }
 
     .pc-lang {
         display: none;
@@ -262,6 +267,7 @@ body {
     .mob-lang {
         display: block;
     }
+
     #nav>ul {
         position: absolute;
         top: 74px;
@@ -416,7 +422,7 @@ body {
 
 
 .dropdown-menu {
-    left:-19vw;
+    left: -19vw;
     width: 90vw;
     padding: 20px;
     background: linear-gradient(to right, #2042be, #0d2471);
@@ -501,6 +507,7 @@ body {
 
     }
 }
+
 @media (max-width: 780px) {
     .flag-img-container {
         display: none;
@@ -513,12 +520,13 @@ body {
     }
 
     .pc-lang {
-        display: none ;
+        display: none;
     }
 
     .mob-lang {
         display: block;
     }
+
     #nav>ul {
         position: absolute;
         top: 54px;
@@ -652,7 +660,7 @@ body {
 /* Style the dropdown container */
 .web-products {
     position: relative;
-    margin-left:8vw;
+    margin-left: 8vw;
 }
 
 /* Style the dropdown menu */
@@ -737,6 +745,7 @@ body {
     .logo img {
         margin-left: 40px;
     }
+
     #nav:hover #menuList li a,
     #nav.scrolled #menuList li a {
         color: #2042be;
@@ -752,6 +761,7 @@ body {
         transition: color 0.5s ease;
         /* Smooth transition */
     }
+
     .pc-lang {
         display: flex;
         justify-content: space-between;
@@ -893,6 +903,7 @@ body {
     margin: 0 10px;
     /* Marge horizontale entre les boutons */
 }
+
 .social-icon:hover {
     transform: translateY(-3px);
     color: #e8ad1d !important;
@@ -912,9 +923,10 @@ body {
 .input-group .btn-primary:hover {
     background: #0d2471;
 }
-  .social-icon {
-      padding: 0 5px;
-  }
+
+.social-icon {
+    padding: 0 5px;
+}
 
 @media (max-width: 768px) {
     .col-md-4 {
@@ -923,7 +935,7 @@ body {
     }
 }
 
-.carousel-caption h1{
+.carousel-caption h1 {
 
     text-align: center;
     margin-right: 1300px;
