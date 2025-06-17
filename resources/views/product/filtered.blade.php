@@ -20,7 +20,6 @@
     <meta property="og:image" content="{{ asset('images/' . $categorie->img_catpro) }}">
 @endsection
 
-
 @section('content')
     <!-- Page Image -->
     <div class="sss" style="position: relative; width: 100%;">
@@ -108,11 +107,9 @@
                                                 href="{{ route('ProductDetail', $item['product']->id) }}">
                                                 <img src="{{ asset('images/' . $item['product']->img_pro) }}"
                                                     alt="evo ">
-
                                             </a>
                                         </div>
-                                        <div class="mb-1 bbb_deals_content"  data-aos="fade-up"
-                                        data-aos-delay="300">
+                                        <div class="mb-1 bbb_deals_content" data-aos="fade-up" data-aos-delay="300">
                                             <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
                                                 <div class="mb-5 bbb_deals_item_name"
                                                     style="color: #031c77;font-size: {{ strlen($item['product']->nom_pro) < 12
@@ -141,11 +138,11 @@
                                             <div class="mt-2 available">
                                                 <div class="flex-row available_line d-flex justify-content-between">
                                                     <a href="{{ route('ProductDetail', $item['product']->id) }}"
-                                                        class="btn" >
+                                                        class="btn">
                                                         {{ translate('PLUS') }}
                                                     </a>
                                                     <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
-                                                        class="btn" >
+                                                        class="btn">
                                                         {{ translate('LE DEVIS') }}
                                                     </a>
                                                 </div>
