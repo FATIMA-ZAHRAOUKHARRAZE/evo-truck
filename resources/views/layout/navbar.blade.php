@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{-- seo balises --}}
         @yield('seo')
-        <!--script-->
-        <script src="{{ asset('js/nav.js') }}" defer></script>
+
         <!-- style -->
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         @yield('url')
@@ -54,20 +53,20 @@
                         style=" cursor:pointer; padding-bottom:10px; background-color: white; border:none; font-size:20px;"
                         class="form-select pe-5 changeLanguage" aria-label="Language select">
                         <option class="changeoption"
-                            style="background-color:#0033cc; >
+                            style="background-color:white;">
                 {{ translate('Sélectionner la langue') }}
             </option>
             <option
                 style="
-                            background-color:#0033cc;" class="changeoption" value="fr"
+                            background-color:whitec;" class="changeoption" value="fr"
                             {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
                             Français
                         </option>
-                        <option style="background-color:#0033cc;" class="changeoption" value="en"
+                        <option style="background-color:white;" class="changeoption" value="en"
                             {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
                             English
                         </option>
-                        <option style="background-color:#0033cc;" class="changeoption" value="ar"
+                        <option style="background-color:white;" class="changeoption" value="ar"
                             {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
                             Arabe
                         </option>
@@ -255,7 +254,7 @@
                                 894</a>
                         </p>
                     </div>
-                   
+
                     <!-- Newsletter -->
                 </div>
                 <hr class="my-3">
@@ -371,5 +370,6 @@
             padding: 0 5px;
         }
     </style>
-
+<!--script-->
+<script src="{{ asset('js/nav.js') }}" defer></script>
 </html>
