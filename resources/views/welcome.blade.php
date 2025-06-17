@@ -15,7 +15,6 @@
 @endsection
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
-
     <div class="popup-overlay" id="popup">
         <div class="popup-blur-area">
             <div class="popup-content">

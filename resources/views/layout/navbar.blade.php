@@ -139,7 +139,7 @@
                     <div class="col-md-4 w-100">
                         <select class="form-select pe-5 changeLanguage" aria-label="Language select"
                             style="
-                        padding-left: 31vw;
+                        padding-left: 20vw;
                         font-size: 22px;
                         color: white;
                     "><i
