@@ -32,7 +32,6 @@
             </div>
         </div>
     </div>
-
     <script>
         const popup = document.getElementById('popup');
         const closeBtn = document.getElementById('closePopupBtn');
@@ -181,32 +180,36 @@
 
     <!-- Section Services -->
     <div class="mt-5 text-center row justify-content-center">
-        <div class="col-6 col-md-3 service-item">
+        <div class="col-md-3 service-item">
             <div class="service-card">
+                {{-- <i class="fas fa-tractor service-icon"></i> --}}
                 <img src="{{ asset('images/icons/engin industrielle.svg') }}" alt="engin industrielle" class="service-icon">
                 <h3>ENGINS<br>INDUSTRIELLES</h3>
             </div>
         </div>
-        <div class="col-6 col-md-3 service-item">
+        <div class="col-md-3 service-item">
             <div class="service-card">
+                {{-- <i class="fas fa-truck service-icon"></i> --}}
                 <img src="{{ asset('images/icons/semi-remorque.svg') }}" alt="camion semi remorque" class="service-icon">
                 <h3>CAMIONS<br>SEMI-REMORQUES</h3>
             </div>
         </div>
-        <div class="col-6 col-md-3 service-item">
+        <div class="col-md-3 service-item">
             <div class="service-card">
+                {{-- <i class="fas fa-cogs service-icon"></i> --}}
                 <img src="{{ asset('images/icons/engrenage.svg') }}" alt="pieces detachees" class="service-icon">
                 <h3>PIECES<br>DÉTACHÉES</h3>
             </div>
         </div>
-        <div class="col-6 col-md-3 service-item">
+        <div class="col-md-3 service-item">
             <div class="service-card">
+                {{-- <i class="fas fa-tools service-icon"></i> --}}
                 <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance" class="service-icon">
                 <h3>SERVICES /<br>MAINTENANCE</h3>
             </div>
         </div>
+
     </div>
-    
     <!-- Section Pourquoi EVO-MACHINERY -->
     <div class="container why-evo-section">
         <div class="row align-items-center">
@@ -256,9 +259,6 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- Section About EVO-MACHINERY -->
     <!-- afficher le texte -->
     <div class="my-5 text-center ab-div">
@@ -290,10 +290,6 @@
             @endforelse
         </div>
     </div>
-    
-    {{-- section about  --}}
-
-
     <!-- Section Demande de Devis -->
     <div class="devis-section">
         <div class="container-fluid">
@@ -302,12 +298,14 @@
                     <h2 class="devis-title">DEMANDE RAPIDE<br>DE DEVIS</h2>
                 </div>
                 <div class="col-md-6">
-                    <form class="devis-form">
-                        <input type="text" class="devis-input" placeholder="Nom" required>
-                        <input type="text" class="devis-input" placeholder="Société" required>
-                        <input type="tel" class="devis-input" placeholder="Téléphone" required>
-                        <input type="email" class="devis-input" placeholder="E-Mail" required>
-                        <textarea class="devis-input" rows="4" placeholder="Message" required></textarea>
+                    <form class="devis-form" method="post" action="{{ route('order.inser') }}">
+                         @csrf
+                        <input type="text" class="devis-input" placeholder="Nom" required name="name">
+                        <input type="text" class="devis-input" placeholder="Société" required name="société">
+                        <input type="text" class="devis-input" placeholder="Le pays" required name="country">
+                        <input type="tel" class="devis-input" placeholder="Téléphone" required name="phone">
+                        <input type="email" class="devis-input" placeholder="E-Mail" required name="email">
+                        <textarea class="devis-input" rows="4" placeholder="Message" required name="message"></textarea>
                         <button type="submit" class="devis-btn">Envoyer</button>
                     </form>
                 </div>

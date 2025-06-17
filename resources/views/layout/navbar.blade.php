@@ -41,7 +41,7 @@
                         <input type="text" class="firstNav_input search-input" name="query"
                             placeholder="Modèle de produit.." aria-label="Search"
                             style=" border: 1px solid #ccc; padding: 10px;">
-                            <button type="submit" class="btn btn-primary" style="background: #0033cc; border: none;">
+                        <button type="submit" class="btn btn-primary" style="background: #0033cc; border: none;">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
@@ -118,9 +118,9 @@
                     </a>
                     <ul class="ee dropdown-menu mobile-ul" aria-labelledby="navbarDropdownMenuLink">
                         @foreach ($categories->sortBy(function ($category) {
-                                    return strlen($category->nom_cat);
-                                }) as $categorie)
-                                                        <li>
+        return strlen($category->nom_cat);
+    }) as $categorie)
+                            <li>
                                 <a class="text-white dropdown-item" href="{{ url('product/' . $categorie->id) }}">
                                     {{ translate($categorie->nom_cat) }}
                                 </a>
@@ -255,21 +255,7 @@
                                 894</a>
                         </p>
                     </div>
-                    {{-- <!-- Search Bar (Moved after Contact Us) -->
-                    <div style="width: 300px !important" class="mx-auto mt-3 col-md-2 col-lg-2 col-xl-2">
-                        <h6 class="mb-4 text-uppercase font-weight-bold">
-                            {{ translate('Recherche') }} </h6>
-                        <div class="mt-4 mb-4 text-center search-bar col-12">
-                            <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
-                                <input type="text" class="form-control form-control-lg search-input"
-                                    name="query" placeholder="modèle de produit.." aria-label="Search"
-                                    style=" border: 1px solid #ccc; padding: 10px;">
-                                <button type="submit" class="btn btn-primary btn-lg" style=" padding: 10px 20px;">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div> --}}
+                   
                     <!-- Newsletter -->
                 </div>
                 <hr class="my-3">
