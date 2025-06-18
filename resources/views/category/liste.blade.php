@@ -23,12 +23,10 @@
 @endsection
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
-    <div style="position: relative; width: 100%;" class="sss">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo logo">
-        <div
-            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #0033cc; font-size: 24px; padding: 10px;"class="photo">
-            <h1 style="font-size: 50px;">{{ translate('PRODUITS') }}</h1>
+     <div class="solution_container">
+        <img src="{{ asset('images/Original.png') }}" alt="evo image">
+        <div class="image-desktop-only">
+            <h1>{{ translate('PRODUITS ') }}</h1>
         </div>
     </div>
     <div class="container mb-5">
@@ -39,7 +37,7 @@
                     placeholder= "{{ translate('Entrer le modèle de produit...') }}" aria-label="Search"
                     style="border-radius: 25px 0 0 25px; border: 1px solid #ccc; padding: 10px;">
                 <button type="submit" class="btn btn-lg"
-                    style="border-radius: 0 25px 25px 0; padding: 10px 20px; backround:#0033cc;">
+                    style="border-radius: 0 25px 25px 0; padding: 10px 20px; background-color:#0033cc;">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
