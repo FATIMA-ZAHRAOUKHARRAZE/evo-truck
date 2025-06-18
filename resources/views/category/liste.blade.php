@@ -27,7 +27,7 @@
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
             src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo logo">
         <div
-            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;"class="photo">
+            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #0033cc; font-size: 24px; padding: 10px;"class="photo">
             <h1 style="font-size: 50px;">{{ translate('PRODUITS') }}</h1>
         </div>
     </div>
@@ -38,8 +38,8 @@
                 <input type="text" class="form-control form-control-lg search-input" name="query"
                     placeholder= "{{ translate('Entrer le modèle de produit...') }}" aria-label="Search"
                     style="border-radius: 25px 0 0 25px; border: 1px solid #ccc; padding: 10px;">
-                <button type="submit" class="btn btn-primary btn-lg"
-                    style="border-radius: 0 25px 25px 0; padding: 10px 20px;">
+                <button type="submit" class="btn btn-lg"
+                    style="border-radius: 0 25px 25px 0; padding: 10px 20px; backround:#0033cc;">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
@@ -55,23 +55,26 @@
             @endforelse
         </ul>
         <!-- Grille de produits -->
-        <div class="row justify-content-center">
+<div class="container w-product">
+        <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
-                <div class="col-5-custom mb-4">
-                    <div class="cardStyle h-100 ">
-                        <a href="{{ url('product/' . $categorie->id) }}" class="text-decoration-none">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="card-img-top"
-                                alt="evo category">
-                            <div class="card-body text-center">
-                                <h4 class="card-titlee">
-                                    {{ translate($categorie->nom_cat) }}
-                                </h4>
+                <div data-aos="fade-up" class="mb-4 col-6 col-sm-6 col-md-4 col-lg-3 card-iteam">
+                    <div class="product-card">
+                        <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
+                            alt="evo Product Image">
+                        <div class="product-body d-flex flex-column flex-grow-1">
+                            <h4 class="product-title">
+                                {{ translate($categorie->nom_cat) }}
+                            </h4>
+                            <div class="mt-auto ">
+                                <a href="{{ url('product/' . $categorie->id) }}" class="product-btn ">{{ translate("VOIR PLUS") }}</a>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             @empty
             @endforelse
         </div>
+    </div>
     </div>
 @endsection

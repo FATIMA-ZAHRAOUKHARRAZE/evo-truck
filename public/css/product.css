@@ -246,11 +246,6 @@ html,
     }
 }
 
-/* Si vous voulez aussi changer le fond au survol tout en gardant le texte blanc */
-.btn:hover {
-    background: linear-gradient(to right, #0d2471, #2042be);
-    /* Couleur de fond au survol */
-}
 
 @media (max-width: 600px) {
     .fdiv {
@@ -284,6 +279,8 @@ html,
 
 #menu {
     display: flex;
+
+    
     flex-direction: row;
 }
 
@@ -353,4 +350,108 @@ ul.pagination {
         width: 70% !important;
     }
 }
+
+footer .pb-4 {
+    padding: 0 !important;
+}
+
+footer h6 {
+    margin-top: 1.5rem !important;
+}
 /* --- */
+
+
+/* categorie */
+.product-card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px;
+    transition: box-shadow 0.2s;
+    min-height: 450px;
+}
+
+
+.product-card:hover {
+    box-shadow: 0 8px 32px rgba(32, 66, 190, 0.15);
+}
+
+
+
+.product-img {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+    background: #eaeeef;
+    margin-bottom: 0;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    overflow: hidden;
+}
+
+.product-body {
+    width: 100%;
+    text-align: center;
+    padding: 24px 16px 0 16px;
+}
+
+
+
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    letter-spacing: 1px;
+    margin: 28px 0;
+}
+
+.product-btn {
+    /* display: inline-block; */
+    background: #0033cc;
+    color: #fff;
+    font-weight: bold;
+    /* font-size: 1.2rem; */
+    /* border: none; */
+    border-radius: 5px;
+    padding: 14px 44px;
+    text-decoration: none;
+    transition: 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(32, 66, 190, 0.07);
+}
+
+.product-btn:hover {
+    background: #0033cc;
+    color: #e8ad1d;
+}
+
+@media (max-width: 767px) {
+    .product-card {
+        min-height: 340px;
+        padding-bottom: 18px;
+    }
+
+    .product-img {
+        height: 140px;
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+    }
+
+    .product-btn {
+        font-size: 1rem;
+        padding: 10px 24px;
+    }
+
+    .product-btn {
+        display: inline-block;
+        width: 30vw;
+    }
+}

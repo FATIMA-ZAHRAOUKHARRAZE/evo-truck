@@ -111,7 +111,7 @@
                                         <div class="mb-1 bbb_deals_content" data-aos="fade-up" data-aos-delay="300">
                                             <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
                                                 <div class="mb-5 bbb_deals_item_name"
-                                                    style="color: #031c77;font-size: {{ strlen($item['product']->nom_pro) < 12
+                                                    style="color: #0033cc;font-size: {{ strlen($item['product']->nom_pro) < 12
                                                         ? '30px'
                                                         : (strlen($item['product']->nom_pro) < 20
                                                             ? '20px'
