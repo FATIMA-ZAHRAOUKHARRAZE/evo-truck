@@ -402,7 +402,7 @@ footer h6 {
 
 
 .product-title {
-    font-size: 1.2rem;
+    font-size: ..7rem;
     font-weight: bold;
     color: #222;
     letter-spacing: 1px;
@@ -439,12 +439,12 @@ footer h6 {
     }
 
     .product-title {
-        font-size: 1.2rem;
+        font-size: .7rem;
         margin-bottom: 18px;
     }
 
     .product-btn {
-        font-size: 1rem;
+        font-size: .9rem;
         padding: 10px 24px;
     }
 
