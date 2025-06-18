@@ -660,6 +660,7 @@
     /* margin-right: 800px; */
     margin-bottom: 50px;
     color: #0033cc;
+    visibility: hidden;
 }
 
 @media (max-width: 768px) {

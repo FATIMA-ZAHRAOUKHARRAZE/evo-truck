@@ -152,11 +152,11 @@
                 <img class="d-block" src="{{ asset('images\banner site EVO.jpg') }}" alt="evo Slide 1">
 
             </div>
-            <div class="carousel-item">
+            {{-- <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evo Slide 1">
 
-            </div>
-            <div class="carousel-item">
+            </div> --}}
+            {{-- <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evo Slide 1">
 
             </div>
@@ -167,7 +167,7 @@
             <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\PORT MACHINERY 2.png') }}" alt="evo Slide 1">
 
-            </div>
+            </div> --}}
         </div>
         <a class="carousel-control-prev custom-control" href="#carousel" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -204,7 +204,7 @@
             <div class="service-card">
                 {{-- <i class="fas fa-tools service-icon"></i> --}}
                 <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance" class="service-icon">
-                <h3>{{ translate("SERVICES ") }}/<br>{{ translate("MAINTENANCE") }}</h3>
+                <h3>{{ translate("SERVICES") }}/<br>{{ translate("MAINTENANCE") }}</h3>
             </div>
         </div>
 
