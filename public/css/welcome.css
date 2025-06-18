@@ -520,9 +520,8 @@
 .devis-input {
     border: none;
     border-radius: 5px;
-    padding: 18px 28px;
-    color: #fff;
-    font-size: 1.3rem;
+    padding: 14px 28px;
+    color: black;
     margin-bottom: 0;
     outline: none;
     width: 100%;
@@ -579,20 +578,20 @@
     transition: box-shadow 0.2s;
     min-height: 450px;
 }
-.card-iteam{
-    
-}
+
 
 .product-card:hover {
     box-shadow: 0 8px 32px rgba(32, 66, 190, 0.15);
 }
+
+
 
 .product-img {
     width: 100%;
     max-width: 320px;
     height: 200px;
     object-fit: contain;
-    background: #e0e0e0;
+    background: #eaeeef;
     margin-bottom: 0;
     border-top-left-radius: 22px;
     border-top-right-radius: 22px;
@@ -603,8 +602,6 @@
     text-align: center;
     padding: 24px 16px 0 16px;
 }
-
-
 
 .product-title {
     font-size: 1.2rem;

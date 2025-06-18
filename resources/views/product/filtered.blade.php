@@ -20,16 +20,14 @@
     <meta property="og:image" content="{{ asset('images/' . $categorie->img_catpro) }}">
 @endsection
 
-
 @section('content')
     <!-- Page Image -->
     <div class="sss" style="position: relative; width: 100%;">
         <img style="width: 100%; max-height: 540px; object-fit: cover; opacity: .4;"
             src="{{ asset('images/' . $categorie->img_catpro) }}"alt="">
-        <div style="font-weight: bold; position: absolute;  top: 40%;   left: {{ strlen($categorie->nom_cat) < 25 ? '37%' : (strlen($categorie->nom_cat) < 20 ? '30%' : '20%') }}; color: #2042be; font-size: 24px; "
-            class="textph">
-            <span style="font-size: 50px;">{{ translate($categorie->nom_cat) }}</span>
-        </div>
+            <h1 style="font-size: 50px;letter-spacing: 2px; border 2px solid;visibility:hidden;">
+                {{ translate($categorie->nom_cat) }}
+            </h1>
     </div>
     <section class="container mt-4">
         <div class="row">
@@ -108,14 +106,12 @@
                                                 href="{{ route('ProductDetail', $item['product']->id) }}">
                                                 <img src="{{ asset('images/' . $item['product']->img_pro) }}"
                                                     alt="evo ">
-
                                             </a>
                                         </div>
-                                        <div class="mb-1 bbb_deals_content"  data-aos="fade-up"
-                                        data-aos-delay="300">
+                                        <div class="mb-1 bbb_deals_content" data-aos="fade-up" data-aos-delay="300">
                                             <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
                                                 <div class="mb-5 bbb_deals_item_name"
-                                                    style="color: #031c77;font-size: {{ strlen($item['product']->nom_pro) < 12
+                                                    style="color: #0033cc;font-size: {{ strlen($item['product']->nom_pro) < 12
                                                         ? '30px'
                                                         : (strlen($item['product']->nom_pro) < 20
                                                             ? '20px'
@@ -141,11 +137,11 @@
                                             <div class="mt-2 available">
                                                 <div class="flex-row available_line d-flex justify-content-between">
                                                     <a href="{{ route('ProductDetail', $item['product']->id) }}"
-                                                        class="btn" >
+                                                        class="btn">
                                                         {{ translate('PLUS') }}
                                                     </a>
                                                     <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
-                                                        class="btn" >
+                                                        class="btn">
                                                         {{ translate('LE DEVIS') }}
                                                     </a>
                                                 </div>

@@ -26,7 +26,7 @@
         <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
             src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo logo">
         <div
-            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
+            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #0033cc; font-size: 24px; padding: 10px;">
             <span style="font-size: 50px;"> {{ translate('PRODUITS') }} </span>
         </div>
 
@@ -51,7 +51,7 @@
                                         <div class="mb-1 bbb_deals_content">
                                             <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
                                                 <div class="mb-5 bbb_deals_item_name"
-                                                    style="color: #031c77;font-size: {{ strlen($item['product']->nom_pro) < 12
+                                                    style="color: #0033cc;font-size: {{ strlen($item['product']->nom_pro) < 12
                                                         ? '30px'
                                                         : (strlen($item['product']->nom_pro) < 20
                                                             ? '20px'
