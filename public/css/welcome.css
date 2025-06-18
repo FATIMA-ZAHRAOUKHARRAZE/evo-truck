@@ -241,24 +241,24 @@
     width: 102%;
 }
 
-.carousel-item>img {
+.carousel-item > img {
     height: auto !important;
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.ab-content>h1 {
+.ab-content > h1 {
     padding-bottom: 40px;
 }
 
-.ab-div>h2 {
+.ab-div > h2 {
     font-size: 40px;
     font-weight: bold;
     color: #0033cc;
 }
 
-.ab-div>p {
+.ab-div > p {
     font-size: 16px;
     color: black;
     line-height: 1.6;
@@ -274,21 +274,19 @@
     border-radius: 15px;
 }
 
-.lastdiv>h4 {
+.lastdiv > h4 {
     font-size: 18px;
     font-weight: bold;
     color: #0033cc;
-
 }
 
 .cardStyle {
     position: relative;
     overflow: visible;
-
 }
 
 .cardStyle::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 46%;
     left: 70%;
@@ -308,7 +306,6 @@
     border-radius: 8px;
     height: 200px;
     width: auto;
-
 }
 
 /* Styles pour la section Services */
@@ -346,7 +343,8 @@
 .service-icon {
     width: 7vw !important;
     margin-bottom: 20px;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+        brightness(100%) contrast(100%);
 }
 
 .service-card h3 {
@@ -379,7 +377,7 @@
 
 .why-list li {
     color: #0033cc;
-    font-size: .7rem;
+    font-size: 0.7rem;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -390,7 +388,6 @@
     margin-right: 15px;
     font-size: 1.4rem;
 }
-
 
 .about-evo {
     margin-top: 60px;
@@ -538,7 +535,7 @@
     border: none;
     border-radius: 5px;
     padding: 15px 0;
-    font-size: .7rem;
+    font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s;
@@ -564,7 +561,6 @@
     }
 }
 
-
 /* categorie */
 .product-card {
     background: #fff;
@@ -576,14 +572,12 @@
     align-items: center;
     padding-bottom: 32px;
     transition: box-shadow 0.2s;
-    min-height: 380px;}
-
+    min-height: 380px;
+}
 
 .product-card:hover {
     box-shadow: 0 8px 32px rgba(32, 66, 190, 0.15);
 }
-
-
 
 .product-img {
     width: 100%;
@@ -645,13 +639,13 @@
     }
 
     .product-btn {
-        font-size: .9rem;
+        font-size: 0.9rem;
         padding: 10px 24px;
     }
     .product-btn {
-        display:inline-block;
+        display: inline-block;
         width: 30vw;
-      }
+    }
 }
 
 .carousel-caption h1 {
@@ -663,10 +657,9 @@
 }
 
 @media (max-width: 768px) {
-
     .carousel-caption h1 {
         font-size: 20px;
         margin-bottom: 5px;
-        margin: 0
+        margin: 0;
     }
 }
