@@ -668,7 +668,7 @@ body {
     display: block;
     /* Keep it block for transition effects */
     position: absolute;
-    top: 75%;
+    top: 70%;
     opacity: 0;
     /* Hidden by default */
     visibility: hidden;
