@@ -748,7 +748,7 @@ body {
 
     #nav:hover #menuList li a,
     #nav.scrolled #menuList li a {
-        color: #2042be;
+        color: #0033cc;
         /* Change the color of list items */
         transition: color 0.5s ease;
         /* Smooth transition */
@@ -756,7 +756,7 @@ body {
 
     #nav:hover .pc-lang span,
     #nav.scrolled .pc-lang span {
-        color: #2042be !important;
+        color: #0033cc !important;
         /* Change the color of list items */
         transition: color 0.5s ease;
         /* Smooth transition */
@@ -770,7 +770,7 @@ body {
 
     #nav:hover .web-products .pro,
     #nav.scrolled .web-products .pro {
-        color: #2042be !important;
+        color: #0033cc !important;
         /* Change the color of list items */
         transition: color 0.5s ease;
         /* Smooth transition */
@@ -824,7 +824,7 @@ body {
 }
 
 .bbb_deals:hover {
-    border: 2px solid #2042be;
+    border: 2px solid #0033cc;
     /* Border color change on hover */
     box-shadow: 0 4px 12px rgba(32, 66, 190, 0.5);
     /* Add a soft shadow for a 3D effect */

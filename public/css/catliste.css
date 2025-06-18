@@ -9,7 +9,7 @@
 
 .category-item {
     padding: 15px; /* Rembourrage autour de chaque élément de catégorie */
-    color: #2042be; /* Couleur du texte par défaut */
+    color: #0033cc; /* Couleur du texte par défaut */
     cursor: pointer; /* Change le curseur au survol */
     margin: 0 10px; /* Espace entre les éléments */
 }
@@ -21,7 +21,7 @@
 }
 
 .category-item:hover {
-    color: #2042be; /* Change la couleur du texte au survol */
+    color: #0033cc; /* Change la couleur du texte au survol */
 }
 
 .category-item:hover a {
@@ -38,7 +38,7 @@ border-radius: 15px 15px 0 0;
 .card-titlee{
     font-size: 18px;
         font-weight: bold;
-        color: #2042be;;
+        color: #0033cc;
 }
 .card{
     border-radius: 15px;
@@ -69,7 +69,7 @@ border-radius: 15px 15px 0 0;
          /* 2 colonnes sur les petits écrans */
      }
 
-    
+
  }
 
  @media (max-width: 576px) {

@@ -1,7 +1,7 @@
 /* Style de la barre latérale */
 .sidebar {
     background-color: rgba(255, 255, 255, 0.89); /* Fond blanc avec transparence légère */
-    color: #001b91; /* Couleur de texte bleu foncé */
+    color: #0033cc; /* Couleur de texte bleu foncé */
     border: 1px solid #fffffff9; /* Bordure blanche avec légère transparence */
     border-radius: 3px; /* Coins arrondis */
     padding: 10px; /* Espacement interne */
@@ -19,7 +19,7 @@
 /* Style pour les titres h2 dans la barre latérale */
 .sidebar h2 {
     font-weight: bold; /* Texte en gras */
-    color: #3a3ad4; /* Couleur bleu clair */
+    color: #0033cc; /* Couleur bleu clair */
     font-size: 25px; /* Taille de police plus grande */
     text-align: center; /* Centrer le texte */
     padding-top: 12px; /* Espacement en haut du titre */
