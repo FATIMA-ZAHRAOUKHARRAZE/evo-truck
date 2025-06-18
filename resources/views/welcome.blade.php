@@ -152,10 +152,10 @@
                 <img class="d-block" src="{{ asset('images\banner site EVO.jpg') }}" alt="evo Slide 1">
 
             </div>
-            <div class="carousel-item">
+            {{-- <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\LOADERS 1.png') }}" alt="evo Slide 1">
 
-            </div>
+            </div> --}}
             {{-- <div class="carousel-item">
                 <img class="d-block" src="{{ asset('images\PECIAL VEUICLE.png') }}" alt="evo Slide 1">
 
