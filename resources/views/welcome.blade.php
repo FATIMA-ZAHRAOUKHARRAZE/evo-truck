@@ -19,13 +19,13 @@
         <div class="popup-blur-area">
             <div class="popup-content">
                 <button class="close-btn" id="closePopupBtn">&times;</button>
-                <h2>Subscribe to Our Newsletter</h2>
-                <p>Stay updated with our latest products and news!</p>
+                <h2>Inscrivez-vous à notre newsletter</h2>
+                <p>Restez à jour avec nos derniers produits et nouvelles!</p>
                 <form action="{{ url('/subscribe') }}" method="post" class="subscribe-form" id="subscribeForm">
                     @csrf
-                    <input type="email" name="email" class="email-input" placeholder="Enter your email address"
+                    <input type="email" name="email" class="email-input" placeholder="Entrez votre adresse e-mail"
                         required>
-                    <button type="submit" class="btn subscribe-button ">Subscribe</button>
+                    <button type="submit" class="btn subscribe-button ">S'abonner</button>
                     <div id="formMessage" style="margin-top: 10px; display: none;"></div>
                 </form>
             </div>
