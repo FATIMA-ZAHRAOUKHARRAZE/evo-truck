@@ -137,9 +137,9 @@
                                                     class="btn"  style="background: #0033cc;">
                                                     {{ translate('PLUS') }}
                                                 </a>
-                                                <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
+                                                <a href="{{ route('contact') }}"
                                                     class="btn"  style="background: #0033cc;">
-                                                    {{ translate('LE DEVIS') }}
+                                                    {{ translate('CONTACT') }}
                                                 </a>
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>

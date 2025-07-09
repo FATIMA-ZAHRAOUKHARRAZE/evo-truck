@@ -71,7 +71,7 @@
                         placeholder="{{ translate('Entrer une partie de produit') }}">
                 </div>
                 <!-- Filter Link Button -->
-                <a href="#" id="filter-link" class="mb-3 btn btn-primary">
+                <a href="#" id="filter-link" class="mb-3 btn btn-primary" style="background-color:#0033cc;">
                     {{ translate('Filtrer') }}
                 </a>
                 <script>
@@ -137,12 +137,12 @@
                                             <div class="mt-2 available">
                                                 <div class="flex-row available_line d-flex justify-content-between">
                                                     <a href="{{ route('ProductDetail', $item['product']->id) }}"
-                                                        class="btn">
+                                                        class="btn"  style="background: #0033cc;">
                                                         {{ translate('PLUS') }}
                                                     </a>
-                                                    <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
-                                                        class="btn">
-                                                        {{ translate('LE DEVIS') }}
+                                                    <a href="{{ route('contact') }}"
+                                                        class="btn"  style="background: #0033cc;">
+                                                        {{ translate('CONTACT') }}
                                                     </a>
                                                 </div>
                                                 <div class="available_bar"><span style="width:17%"></span></div>

@@ -22,13 +22,12 @@
 @endsection
 @section('content')
     <!-- Page Image -->
-    <div class="sss" style="position: relative; width: 100%;">
-        <img style="width: 100%; max-height: 400px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo logo">
-        <div
-            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #0033cc; font-size: 24px; padding: 10px;">
-            <span style="font-size: 50px;"> {{ translate('PRODUITS') }} </span>
+    <div class="solution_container">
+        <img src="{{ asset('images/Original.png') }}" alt="evo image">
+        <div class="image-desktop-only">
+            <h1>{{ translate('PRODUITS ') }}</h1>
         </div>
+    </div>
 
     <div class="container">
         @if ($products->isEmpty())
@@ -81,11 +80,11 @@
                                             <div class="mt-2 available">
                                                 <div class="flex-row available_line d-flex justify-content-between">
                                                     <a href="{{ route('ProductDetail', $item['product']->id) }}"
-                                                        class="btn" data-aos="flip-left">
+                                                        class="btn" data-aos="flip-left" style="background-color:#0033cc;">
                                                         {{ translate('PLUS') }}
                                                     </a>
                                                     <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
-                                                        class="btn" data-aos="flip-right">
+                                                        class="btn" data-aos="flip-right" style="background-color:#0033cc;">
                                                         {{ translate('LE DEVIS') }}
                                                     </a>
                                                 </div>

@@ -148,9 +148,9 @@
                         <hr style="margin-top: 30px" />
                     @endif
                     <br>
-                    <a href="{{ route('order', [$product->category_id, $product->nom_pro]) }}"
+                    <a href="{{ route('contact') }}"
                         class="btn btn-warning shadow-0">
-                        <i class="me-1 fa fa-shopping-basket"></i>{{ translate('Demander un devis') }}
+                        <i class="me-1 fa fa-shopping-basket"></i>{{ translate('Contacter') }}
                     </a>
             </div>
             </main>
@@ -177,11 +177,18 @@
             <span class="mt-2 ">{{ translate($product->dec_pro ?? ($product->cacteristique ?? '   ')) }}</span>
             @if ($product->pdf !== null)
                 <div class="mt-3">
-                    <a href="{{ route('product.download', ['pdf' => $product->pdf]) }}" class="btn">
-                        <i class="fas fa-download"></i>Téléchargement de la fiche technique
+                    <a href="{{ route('product.download', ['pdf' => $product->pdf]) }}" class="btn" style="background-color:#0033cc;font-size: 18px;">
+                        <i class="fas fa-download"></i>  Fiche technique
                     </a>
                 </div>
             @endif
+                 @if ($product->tpms !== null)
+            <div class="mt-3">
+                <a href="{{ route('product.download', ['pdf' => $product->tpms]) }}" class="btn" style="background-color:#0033cc;font-size: 18px;">
+                    <i class="fas fa-download"></i>  Système TPMS
+                </a>
+            </div>
+        @endif
         </div>
         <div id="parameter" class="mt-5 text-white">margin</div>
         {{-- parametre --}}

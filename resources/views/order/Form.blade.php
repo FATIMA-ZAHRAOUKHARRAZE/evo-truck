@@ -19,12 +19,10 @@
 @endsection
 @section('content')
     <!-- Page Image -->
-    <div style="position: relative; width: 100%;"class="image-desktop-only">
-        <img style="width: 100%; max-height: 500px; object-fit: cover; opacity: .4;"
-            src="{{ asset('images/Original.png') }}" alt="">
-        <div class="image-desktop-only"
-            style="font-weight: bold; position: absolute; top: 20%; left:40%;  color: #2042be; font-size: 24px; padding: 10px;">
-            <span style="font-size: 50px;">{{ 'PRODUITS' }}</span>
+   <div class="solution_container">
+        <img src="{{ asset('images/Original.png') }}" alt="evo image">
+        <div class="image-desktop-only">
+            <h1>{{ translate('Devis gratuit') }}</h1>
         </div>
     </div>
     <section>

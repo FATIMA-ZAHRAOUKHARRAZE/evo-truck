@@ -40,6 +40,10 @@ border-radius: 15px 15px 0 0;
         font-weight: bold;
         color: #0033cc;
 }
+
+.btn{
+    background: #0033cc;
+}
 .card{
     border-radius: 15px;
 }

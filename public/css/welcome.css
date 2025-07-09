@@ -16,7 +16,7 @@
 .popup-blur-area {
     position: relative;
     /* padding: 20px; */
-    background: #00000021;
+    background: #00000030;
     backdrop-filter: blur(10px);
     border-radius: 20px;
 }
@@ -186,8 +186,9 @@
 }
 
 .why-evo-section {
-    margin-right: 0 !important;
+  
     margin-top: 50px;
+    margin-right:100px;
     /* Supprime la marge à droite des lignes pour un alignement précis. */
 }
 
@@ -355,14 +356,11 @@
 }
 
 /* Styles pour la section Pourquoi EVO-MACHINERY */
-.why-evo-section {
-    margin: 3rem, 0 0;
-    padding: 20px 0;
-}
+
 
 .why-title {
     color: #0033cc;
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 1.2;
     margin-left: 150px;

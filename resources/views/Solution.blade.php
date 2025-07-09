@@ -73,7 +73,7 @@
                         <p>
                             {{ translate('Depuis plus de 25 ans, Evo machinery est un pionnier de l’industrie en matière de fabrication de véhicules blindés, de systèmes de verre et de châssis balistiques ainsi que diverses fournitures de blindage.
 
-                            En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, vehiculeblinde.com se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.
+                            En plus d’une vaste gamme de véhicules blindés, dont une sélection croissante de véhicules blindés civils, de véhicules blindés de transport de troupes et de MRAP, se spécialise également dans un assortiment d’autres produits à usage spécial tels que les boucliers balistiques mobiles, les cabines de garde et de sentinelle, les systèmes d’entrée tactiques et bien d’autres.
 
                             Par ailleurs, l’entreprise réalise également des systèmes d’entrée tactique qui sont spécialement conçus pour répondre aux exigences des forces spéciales, des premiers intervenants et de diverses autres unités tactiques au sein de l’armée.
 

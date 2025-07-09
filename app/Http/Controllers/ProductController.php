@@ -152,7 +152,7 @@ public function googleTranslateChange(Request $request)
         }
 
         // Optional: clean filename if needed
-        $downloadName = 'fiche_technique_' . pathinfo($pdf, PATHINFO_FILENAME) . '.pdf';
+        $downloadName = pathinfo($pdf, PATHINFO_FILENAME) . '.pdf';
 
         return response()->download($file, $downloadName);
     }

@@ -145,7 +145,7 @@
             <div class="carousel-item active">
                 <img class="d-block" src="{{ asset('images\banner p2 EVO.jpg') }}" alt="evo Slide 1">
                 <div class="carousel-caption">
-                    <h1>{{ translate("EVO MACHINERY Specialiste en enguins industrielles poids lourds et solutions industrielles") }}</h1>
+                    <h1>{{ translate("EVO MACHINERY Specialiste en engins industrielles et poids lourds.") }}</h1>
                 </div>
             </div>
             <div class="carousel-item">
@@ -290,7 +290,7 @@
         </div>
     </div>
     <!-- Section Demande de Devis -->
-    <div class="devis-section">
+    <!-- <div class="devis-section">
         <div class="container-fluid">
             <div class="row align-items-center devis-row">
                 <div class="col-md-6">
@@ -310,5 +310,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 @endsection
