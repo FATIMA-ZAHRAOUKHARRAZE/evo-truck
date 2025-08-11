@@ -16,7 +16,7 @@ class DetailController extends Controller
         $parametres=Parametre::where('product_id', $product->id)->get();
         // Liste de toutes les colonnes de la table
            $columns = [
-               'Modèle','Essieu avant','Marque de batterie','Tension et capacité'
+               'Modèle','Essieu avant','Marque de batterie','Tension et capacité','Modèle de conduite','Nom du produit','Direction','Cabine','Nom de la remorque','Fonction','Application'
 ];
 
 

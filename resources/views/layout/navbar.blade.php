@@ -206,34 +206,7 @@
                         <p>
                             {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                         </p>
-                         <!-- Newsletter -->
-                        <h6 class="mb-3 text-uppercase font-weight-bold">Newsletter</h6>
-                        <p class="mb-3 small">
-                            {{ translate('Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités') }}
-                        </p>
-                        <form action="{{ url('/subscribe') }}" method="post">
-                            @csrf
-                            <div class="input-group">
-                                <input type="email" class="form-control" name="email"
-                                    placeholder="{{ translate('Votre email') }}" required
-                                    style="border-radius: 20px 0 0 20px; border: none;">
-                                <button class="btn btn-primary" type="submit"
-                                    style="border-radius: 0 20px 20px 0; padding: 0.375rem 1.5rem;">
-                                    {{ translate('S\'inscrire') }}
-                                </button>
-                                @if (session()->has('error'))
-                                    <div class="alert alert-danger">
-                                        {{ session()->get('error') }}
-                                    </div>
-                                @endif
-
-                                @if (session()->has('success'))
-                                    <div class="alert alert-success">
-                                        {{ session()->get('success') }}
-                                    </div>
-                                @endif
-                            </div>
-                        </form>
+                      
 
                     </div>
 

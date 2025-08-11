@@ -4,5 +4,5 @@
 <h3>Sujet:{{ $data['Sujet'] }}</h3>
 <h3>Email:{{ $data['Email'] }}</h3>
 <h3>Message:{{ $data['Message'] }}</h3>
-EVO MACHINERY<br>
+EVO TRUCK<br>
 </x-mail::message>

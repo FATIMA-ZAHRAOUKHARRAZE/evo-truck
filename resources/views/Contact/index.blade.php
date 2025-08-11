@@ -83,7 +83,7 @@
             <div class="col-md-6">
                 <div data-aos="fade-left" class="google-map-error">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23833.342562569213!2d114.16067339999999!3d22.317164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040f0fd9c3a4bb%3A0x8834f38ba0db80ed!2sHollywood%20Mongkok%2C%20Kowloon%2C%20Hong%20Kong!5e0!3m2!1sfr!2sfr!4v1674292797912!5m2!1sfr!2sfr"
+  src="https://www.google.com/maps?q=Industrial+Zone+1,+No.26+Tuolanshan+Road,+Economic+And+Technological+Development+Zone,+Xuzhou,+Jiangsu,+221004,+China&output=embed"
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
