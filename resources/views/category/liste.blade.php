@@ -4,21 +4,21 @@
     <link rel="stylesheet" href="{{ asset('css/catliste.css') }}">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Catalogue des Catégories d'Équipements</title>
+    <title>EVO TRUCK - Catalogue des Catégories d'Équipements</title>
     <meta name="description"
-        content="Explorez le catalogue complet d'EVO Machinery : équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc, Découvrez notre gamme complète d'équipements de construction et demandez un devis personnalisé.">
+        content="Explorez le catalogue complet d'EVO TRUCK : équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc, Découvrez notre gamme complète d'équipements de construction et demandez un devis personnalisé.">
     <meta name="keywords"
-        content="catalogue EVO Machinery, équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc">
+        content="catalogue EVO TRUCK, équipements de construction, machines industrielles, Bulldozer, Chargeuses, Niveleuses, Excavatrices, Grues mobiles, Grues à tour, Engins routiers, Machines à béton, Machines portuaires, Véhicules spéciaux, Machines d'assainissement, Machines pour les tunnels, Machines de battage de pieux, Équipement de travail aérien, Station de concassage et criblage, Matériel de lutte contre l'incendie,maroc">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="EVO MACHINERY">
-    <link rel="canonical" href="https://evo-machinery.com/category">
-    <meta property="og:title" content="EVO MACHINERY - Catalogue des Équipements de Construction">
+    <meta name="author" content="EVO TRUCK">
+    <link rel="canonical" href="https://evo-TRUCK.com/category">
+    <meta property="og:title" content="EVO TRUCK - Catalogue des Équipements de Construction">
     <meta property="og:description"
         content="Découvrez notre gamme complète d'équipements de construction : Bulldozers, Chargeuses, Excavatrices et plus. Solutions professionnelles pour tous vos projets.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ asset('images/Original.png') }}">
-    <meta property="og:url" content="https://evo-machinery.com/category">
+    <meta property="og:url" content="https://evo-TRUCK.com/category">
     <meta name="category-page" content="true">
 @endsection
 @section('content')
@@ -31,7 +31,7 @@
     </div>
     <div class="container mb-5">
         <!-- Barre de recherche -->
-        <div class="search-bar col-12 text-center mt-4 mb-4">
+        <div class="mt-4 mb-4 text-center search-bar col-12">
             <form action="{{ route('category.search') }}" method="GET" class="d-inline-flex">
                 <input type="text" class="form-control form-control-lg search-input" name="query"
                     placeholder= "{{ translate('Entrer le modèle de produit...') }}" aria-label="Search"

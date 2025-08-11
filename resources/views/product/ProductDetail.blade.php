@@ -3,18 +3,18 @@
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 @endsection
 @section('seo')
-    <title>{{ $product->nom_pro }} - EVO MACHINERY</title>
+    <title>{{ $product->nom_pro }} - EVO TRUCK</title>
     <meta name="description"
-        content="Découvrez {{ $product->nom_pro }} par EVO Machinery. Spécifications techniques détaillées, caractéristiques et paramètres. Demandez un devis personnalisé pour ce produit de qualité.">
+        content="Découvrez {{ $product->nom_pro }} par EVO TRUCK. Spécifications techniques détaillées, caractéristiques et paramètres. Demandez un devis personnalisé pour ce produit de qualité.">
     <meta name="keywords"
-        content="{{ $product->nom_pro }}, EVO Machinery, équipements de construction, spécifications techniques, caractéristiques produit, paramètres techniques, devis personnalisé, machines de construction, qualité industrielle,maroc">
+        content="{{ $product->nom_pro }}, EVO TRUCK, équipements de construction, spécifications techniques, caractéristiques produit, paramètres techniques, devis personnalisé, machines de construction, qualité industrielle,maroc">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="EVO MACHINERY">
-    <link rel="canonical" href="https://evo-machinery.com/ProductDetail/{{ $product->id }}">
-    <meta property="og:title" content="EVO MACHINERY - {{ $product->nom_pro }}">
+    <meta name="author" content="EVO TRUCK">
+    <link rel="canonical" href="https://evo-trucl.com/ProductDetail/{{ $product->id }}">
+    <meta property="og:title" content="EVO TRUCK - {{ $product->nom_pro }}">
     <meta property="og:description"
-        content="Découvrez les spécifications techniques et caractéristiques de {{ $product->nom_pro }} - EVO Machinery">
+        content="Découvrez les spécifications techniques et caractéristiques de {{ $product->nom_pro }} - EVO TRUCK">
     <meta property="og:type" content="product">
     <meta property="og:image" content="{{ asset('/images/' . $product->img_pro) }}">
 @endsection

@@ -4,16 +4,16 @@
     <link rel="stylesheet" href="{{ asset('css/order.css') }}">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Demande de devis pour {{ $name }}</title>
+    <title>EVO TRUCK - Demande de devis pour {{ $name }}</title>
     <meta name="description"
-        content="Demandez un devis gratuit pour {{ $name }} ({{ $spesificcat }}) par EVO Machinery. Remplissez notre formulaire et recevez une réponse sous 24h. Service client professionnel et personnalisé.">
+        content="Demandez un devis gratuit pour {{ $name }} ({{ $spesificcat }}) par EVO TRUCK. Remplissez notre formulaire et recevez une réponse sous 24h. Service client professionnel et personnalisé.">
     <meta name="keywords"
-        content="devis {{ $name }}, demande de prix, {{ $spesificcat }}, EVO Machinery, formulaire de contact, devis gratuit, machines de construction, service client, réponse sous 24h,maroc">
+        content="devis {{ $name }}, demande de prix, {{ $spesificcat }}, EVO TRUCK, formulaire de contact, devis gratuit, machines de construction, service client, réponse sous 24h,maroc">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="EVO MACHINERY">
-    <link rel="canonical" href="https://evo-machinery.com/form/order/">
-    <meta property="og:title" content="EVO MACHINERY - Demande de devis pour {{ $name }}">
+    <meta name="author" content="EVO TRUCK">
+    <link rel="canonical" href="https://evo-TRUCK.com/form/order/">
+    <meta property="og:title" content="EVO TRUCK - Demande de devis pour {{ $name }}">
     <meta property="og:description" content="Demandez un devis gratuit pour {{ $name }} - Réponse sous 24h">
     <meta property="og:type" content="website">
 @endsection
@@ -39,7 +39,7 @@
             <form method="post" action="{{ route('order.inser') }}" class="w-75 formulaire"
                 style="margin-left: 120px;margin-top:40px">
                 @csrf
-                <div class="row mb-4">
+                <div class="mb-4 row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fname">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="mb-4 row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fname">{{ translate(' Votre nom complete:') }}</label>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="mb-4 row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="fname"> {{ translate('Email:') }}</label>
@@ -123,7 +123,7 @@
                         @endif
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block mt-4">{{ translate('Soumettre') }}</button>
+                <button type="submit" class="mt-4 btn btn-primary btn-block">{{ translate('Soumettre') }}</button>
             </form>
         </div>
     </section>

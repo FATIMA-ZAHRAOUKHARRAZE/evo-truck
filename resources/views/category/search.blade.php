@@ -4,18 +4,18 @@
     <link rel="stylesheet" href="{{ asset('css/catliste.css') }}">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Résultats de recherche pour "{{ $query }}"</title>
+    <title>EVO TRUCK - Résultats de recherche pour "{{ $query }}"</title>
     <meta name="description"
-        content="Trouvez les produits EVO Machinery correspondant à votre recherche '{{ $query }}'. Explorez notre catalogue d'équipements de construction et demandez un devis personnalisé.">
+        content="Trouvez les produits EVO TRUCK correspondant à votre recherche '{{ $query }}'. Explorez notre catalogue d'équipements de construction et demandez un devis personnalisé.">
     <meta name="keywords"
-        content="{{ $query }}, recherche produits, EVO Machinery,maroc, équipements de construction, machines industrielles, spécifications techniques, devis personnalisé, catalogue machines, qualité industrielle">
+        content="{{ $query }}, recherche produits, EVO TRUCK,maroc, équipements de construction, machines industrielles, spécifications techniques, devis personnalisé, catalogue machines, qualité industrielle">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="EVO MACHINERY">
-    <link rel="canonical" href="https://evo-machinery.com/category/search?query={{ $query }}">
-    <meta property="og:title" content="EVO MACHINERY - Résultats pour '{{ $query }}'">
+    <meta name="author" content="EVO TRUCK">
+    <link rel="canonical" href="https://evo-TRUCK.com/category/search?query={{ $query }}">
+    <meta property="og:title" content="EVO TRUCK - Résultats pour '{{ $query }}'">
     <meta property="og:description"
-        content="Découvrez les produits EVO Machinery correspondant à votre recherche '{{ $query }}'">
+        content="Découvrez les produits EVO TRUCK correspondant à votre recherche '{{ $query }}'">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ asset('images/Original.png') }}">
     <meta name="search-query" content="{{ $query }}">
@@ -101,7 +101,7 @@
             </div>
         @endif
     </div>
-    <div class="pagination-wrapper px-5">
+    <div class="px-5 pagination-wrapper">
         {{ $products->appends(['query' => $query])->links('pagination::bootstrap-5') }}
     </div>
 

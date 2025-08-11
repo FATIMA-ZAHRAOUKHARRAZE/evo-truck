@@ -7,16 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 @endsection
 @section('seo')
-    <title>EVO MACHINERY - Contactez-nous</title>
+    <title>EVO TRUCK - Contactez-nous</title>
     <meta name="description"
-        content="Contactez EVO Machinery à Hong Kong. Notre équipe est à votre disposition pour répondre à vos questions sur nos équipements de construction. Adresse : Hollywood Mongkok, Kowloon, Hong Kong. Téléphone : +86 19 826 086 894">
+        content="Contactez EVO TRUCK à Hong Kong. Notre équipe est à votre disposition pour répondre à vos questions sur nos équipements de construction. Adresse : Hollywood Mongkok, Kowloon, Hong Kong. Téléphone : +86 19 826 086 894">
     <meta name="keywords"
-        content="contact EVO Machinery, support client, service après-vente, équipements de construction,maroc, assistance technique, demande d'information, service client">
+        content="contact EVO TRUCK, support client, service après-vente, équipements de construction,maroc, assistance technique, demande d'information, service client">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="EVO MACHINERY">
-    <link rel="canonical" href="https://evo-machinery.com/contact">
-    <meta property="og:title" content="EVO MACHINERY - Contactez-nous">
+    <meta name="author" content="EVO TRUCK">
+    <link rel="canonical" href="https://evo-TRUCK.com/contact">
+    <meta property="og:title" content="EVO TRUCK - Contactez-nous">
     <meta property="og:description"
         content="Contactez notre équipe à Hong Kong pour toute question sur nos équipements de construction">
     <meta property="og:type" content="website">
@@ -25,13 +25,13 @@
     <meta property="og:locality" content="Kowloon">
     <meta property="og:region" content="Hong Kong">
     <meta property="og:phone_number" content="+86 19 826 086 894">
-    <meta property="og:email" content="contact@evo-machinery.com">
+    <meta property="og:email" content="contact@evo-TRUCK.com">
 @endsection
 @section('content')
     <div class="container contact-section">
         <h1 data-aos="fade-down" class="text-center1">{{ translate('CONTACTEZ-NOUS') }}</h1>
         <p data-aos="fade-down" class="text-center">
-            {{ translate("Vous avez des questions ou besoin d'aide ? Contactez-nous en utilisant le formulaire de contact ci-dessous.Notre équipe du Groupe EVO MACHINERY est là pour vous aider.") }}
+            {{ translate("Vous avez des questions ou besoin d'aide ? Contactez-nous en utilisant le formulaire de contact ci-dessous.Notre équipe du Groupe EVO TRUCK est là pour vous aider.") }}
         </p>
         <div class="mt-4 row">
             <!-- Formulaire de contact -->
@@ -92,10 +92,19 @@
                     <p data-aos="fade-left"><i class="bi bi-geo-alt"></i> {{ translate('Address') }}:  Industrial Zone 1, No.26 Tuolanshan Road, Economic And Technological Development Zone, Xuzhou, Jiangsu, 221004, China
                     <p data-aos="fade-left"><i class="bi bi-telephone"></i> {{ translate('Téléphone') }}:+86 189 1781 5301</p>
                     <p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a
+<<<<<<< HEAD
+                            href="mailto:contact@evo-TRUCK.com"
+                            style="text-decoration:none; color: black;">contact@evo-TRUCK.com</a></p>
+                    <p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a
+                            href="mailto:sales@evo-TRUCK.com"
+                            style="text-decoration:none; color:black;">sales@evo-TRUCK.com</a></p>
+                    <p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-TRUCK.com</p>
+=======
                             href="mailto:contact@evo-machinery.com"
                             style="text-decoration:none; color: black;">contact@evo-truck.com</a></p>
 
                     <p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-truck.com</p>
+>>>>>>> 81bce3aaacc14b3e7ece20dc16e7cffa59d29e0d
                 </div>
             </div>
         </div>

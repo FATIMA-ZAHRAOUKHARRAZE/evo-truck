@@ -155,32 +155,7 @@
                     </div>
                 </li>
             </ul>
-            {{-- <div class="pc-lang" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="col-md-4 w-100 change">
-                    <select id="languageSelect"
-                        style="color:#ffd700; cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
-                        class="form-select pe-5 changeLanguage" aria-label="Language select">
-                        <option class="changeoption"
-                            style="background-color:#000099; >
-                {{ translate('Sélectionner la langue') }}
-            </option>
-            <option
-                style="
-                            background-color:#000099;" class="changeoption" value="fr"
-                            {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
-                            Français
-                        </option>
-                        <option style="background-color:#000099;" class="changeoption" value="en"
-                            {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
-                            English
-                        </option>
-                        <option style="background-color:#000099;" class="changeoption" value="ar"
-                            {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
-                            Arabe
-                        </option>
-                    </select>
-                </div>
-            </div> --}}
+
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -206,8 +181,12 @@
                         <p>
                             {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                         </p>
+<<<<<<< HEAD
+                       
+=======
                       
 
+>>>>>>> 81bce3aaacc14b3e7ece20dc16e7cffa59d29e0d
                     </div>
 
                     <hr class="clearfix w-100 d-md-none" />

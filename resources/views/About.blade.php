@@ -1,16 +1,16 @@
 @extends('layout.navbar')
 
 @section('seo')
-    <title>EVO MACHINERY - À Propos</title>
+    <title>EVO TRUCK - À Propos</title>
     <meta name="description"
-        content="Découvrez EVO Machinery, leader mondial depuis 2000 dans les équipements de construction et engins de levage. Notre engagement envers l'innovation, l'excellence et la qualité nous positionne comme un acteur majeur du secteur.">
+        content="Découvrez EVO TRUCK, leader mondial depuis 2000 dans les équipements de construction et engins de levage. Notre engagement envers l'innovation, l'excellence et la qualité nous positionne comme un acteur majeur du secteur.">
     <meta name="keywords"
-        content="EVO Machinery, leader construction, équipements de construction, engins de levage, innovation industrielle, excellence qualité, machines de construction, chargeuses, chariots élévateurs, excavatrices, R&D, contrôle qualité, service client, diversité produits,maroc">
+        content="EVO TRUCK, leader construction, équipements de construction, engins de levage, innovation industrielle, excellence qualité, machines de construction, chargeuses, chariots élévateurs, excavatrices, R&D, contrôle qualité, service client, diversité produits,maroc">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="EVO MACHINERY">
-    <link rel="canonical" href="https://evo-machinery.com/about">
-    <meta property="og:title" content="EVO MACHINERY - À Propos">
+    <meta name="author" content="EVO TRUCK">
+    <link rel="canonical" href="https://evo-TRUCK.com/about">
+    <meta property="og:title" content="EVO TRUCK - À Propos">
     <meta property="og:description"
         content="Leader mondial en équipements de construction depuis 2000 - Innovation, Excellence, Qualité">
     <meta property="og:type" content="website">
@@ -39,7 +39,7 @@
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ translate(
-                                    "Depuis sa création en 2000, EVO machinery s'est rapidement
+                                    "Depuis sa création en 2000, EVO TRUCK s'est rapidement
                                                                                                                                                                                                                                                                                                                                 imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
                                                                                                                                                                                                                                                                                                                                 engins de levage. Notre parcours a été caractérisé par une recherche incessante de
                                                                                                                                                                                                                                                                                                                                 l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
@@ -81,7 +81,7 @@
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ translate(
-                                    "EVO machinery est fier de figurer parmi les plus grandes entreprises de machines de construction au monde. Nos contributions nous ont valu d'être reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
+                                    "EVO TRUCK est fier de figurer parmi les plus grandes entreprises de machines de construction au monde. Nos contributions nous ont valu d'être reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
                                     \App::getLocale(),
                                 ) }}
                             </p>
@@ -100,7 +100,7 @@
                         <div class="timeline-body">
                             <p class="text-muted">
                                 {{ translate(
-                                    "Chez EVO machinery, notre chemin est éclairé par une vision
+                                    "Chez EVO TRUCK, notre chemin est éclairé par une vision
                                                                                                                                                                                                                                                                     claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
                                                                                                                                                                                                                                                                                                                                 de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
                                                                                                                                                                                                                                                                                                                                 pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
@@ -159,7 +159,7 @@
                         <h4>{{ translate('DIVERSITÉ') }}</h4>
                         <p class="text-muted">
                             {{ translate(
-                                "EVO machinery une large gamme d'équipements de construction et de levage,
+                                "EVO TRUCK une large gamme d'équipements de construction et de levage,
                                                                                         notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
                                 \App::getLocale(),
                             ) }}
