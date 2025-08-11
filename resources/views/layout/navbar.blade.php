@@ -155,32 +155,7 @@
                     </div>
                 </li>
             </ul>
-            {{-- <div class="pc-lang" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="col-md-4 w-100 change">
-                    <select id="languageSelect"
-                        style="color:#ffd700; cursor:pointer; padding-bottom:10px; background-color: rgba(255, 255, 255, 0); border:none; font-size:20px;"
-                        class="form-select pe-5 changeLanguage" aria-label="Language select">
-                        <option class="changeoption"
-                            style="background-color:#000099; >
-                {{ translate('Sélectionner la langue') }}
-            </option>
-            <option
-                style="
-                            background-color:#000099;" class="changeoption" value="fr"
-                            {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
-                            Français
-                        </option>
-                        <option style="background-color:#000099;" class="changeoption" value="en"
-                            {{ session()->get('locale') == 'en' ? 'selected' : '' }}>
-                            English
-                        </option>
-                        <option style="background-color:#000099;" class="changeoption" value="ar"
-                            {{ session()->get('locale') == 'ar' ? 'selected' : '' }}>
-                            Arabe
-                        </option>
-                    </select>
-                </div>
-            </div> --}}
+
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -206,35 +181,7 @@
                         <p>
                             {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                         </p>
-                         <!-- Newsletter -->
-                        <h6 class="mb-3 text-uppercase font-weight-bold">Newsletter</h6>
-                        <p class="mb-3 small">
-                            {{ translate('Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités') }}
-                        </p>
-                        <form action="{{ url('/subscribe') }}" method="post">
-                            @csrf
-                            <div class="input-group">
-                                <input type="email" class="form-control" name="email"
-                                    placeholder="{{ translate('Votre email') }}" required
-                                    style="border-radius: 20px 0 0 20px; border: none;">
-                                <button class="btn btn-primary" type="submit"
-                                    style="border-radius: 0 20px 20px 0; padding: 0.375rem 1.5rem;">
-                                    {{ translate('S\'inscrire') }}
-                                </button>
-                                @if (session()->has('error'))
-                                    <div class="alert alert-danger">
-                                        {{ session()->get('error') }}
-                                    </div>
-                                @endif
-
-                                @if (session()->has('success'))
-                                    <div class="alert alert-success">
-                                        {{ session()->get('success') }}
-                                    </div>
-                                @endif
-                            </div>
-                        </form>
-
+                       
                     </div>
 
                     <hr class="clearfix w-100 d-md-none" />
@@ -354,7 +301,7 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-        
+
           gtag('config', 'AW-17143810638');
         </script>
 
