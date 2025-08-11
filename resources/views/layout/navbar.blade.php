@@ -258,25 +258,20 @@
                         <h6 class="mb-4 font-weight-bold">
                             {{ translate('CONTACTEZ-NOUS') }}</h6>
                         <p><i class="mr-3 fas fa-home"></i>
-                            <a href="https://www.google.com/maps/search/HOLLYWOOD+MONGKOK+,+KOWLOON+,+HONG+KONG/@22.317164,114.170363,20z?hl=fr-FR&entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D"
+                            <a href="#"
                                 style="text-decoration: none; color: inherit;" target="_blank">
-                                HOLLYWOOD MONGKOK , KOWLOON , HONG KONG
+                               Industrial Zone 1, No.26 Tuolanshan Road, Economic And Technological Development Zone, Xuzhou, Jiangsu, 221004, China
                             </a>
                         </p>
 
                         <p><i class="mr-3 fas fa-envelope"></i>
                             <a href="mailto:contact@evo-machinery.com"
-                                style="color:white;text-decoration: none">contact@evo-machinery.com</a>
-                        </p>
-                        <p><i class="mr-3 fas fa-envelope"></i>
-                            <a href="mailto:sales@evo-machinery.com"
-                                style="color:white;text-decoration: none">sales@evo-machinery.com</a>
+                                style="color:white;text-decoration: none">contact@evo-truck.com</a>
                         </p>
 
+
                         <p><i class="mr-3 fas fa-phone"></i>
-                            <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 19 826
-                                086
-                                894</a>
+                            <a href="tel:+8619826086894" style="text-decoration: none; color: inherit;">+86 189 1781 5301</a>
                         </p>
                     </div>
 
@@ -289,7 +284,7 @@
                         <div class="col-md-4 text-md-start">
                             <div class="p-3">
                                 © 2025 Copyright: <a class="text-white"
-                                    href="https://evo-machinery.com">evo-machinery.com</a>
+                                    href="https://evo-truck.com/">evo-truck.com</a>
                             </div>
                         </div>
                         <!-- Réseaux sociaux -->
@@ -300,7 +295,7 @@
                                     style="font-size: 1.5rem; transition: all 0.3s ease;text-decoration: none;">
                                     <i class="fab fa-facebook"></i>
                                 </a>
-                                <a href="https://www.tiktok.com/@evomachinery?lang=fr" class="text-white social-icon"
+                                <a href="#" class="text-white social-icon"
                                     style="font-size: 1.5rem; transition: all 0.3s ease;text-decoration: none;">
                                     <i class="fab fa-tiktok"></i>
                                 </a>
@@ -308,7 +303,7 @@
                                     style="font-size: 1.5rem; transition: all 0.3s ease;text-decoration: none;">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://www.youtube.com/@EVO-MACHINERY" class="text-white social-icon"
+                                <a href="#" class="text-white social-icon"
                                     style="font-size: 1.5rem; transition: all 0.3s ease;text-decoration: none;">
                                     <i class="fab fa-youtube"></i>
                                 </a>
@@ -354,7 +349,7 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-        
+
           gtag('config', 'AW-17143810638');
         </script>
 

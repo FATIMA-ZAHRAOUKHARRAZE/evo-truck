@@ -24,15 +24,15 @@ class ContactController extends Controller
             'Message' => 'required|string',
             'Sujet'=>'required|string',
              'g-recaptcha-response' => 'required',
-            
-        ],[ 
+
+        ],[
             'Nom' => 'please enter your name',
             'Email' => 'please enter your email',
             'Message' => 'please add message',
             'Sujet'=>'please add subject',
              'g-recaptcha-response' => 'The reCAPTCHA is invalid, please try again.',// Custom invalid reCAPTCHA error message
    ]);
-        Mail::to('contact@evo-machinery.com')->send(new ContactUs($data));
+        Mail::to('contact@evo-truck.com')->send(new ContactUs($data));
         // Here you can handle the validated data, for example, send an email or save to the database
 
         return redirect()->back()->with('success', 'Votre message a été envoyé avec succès');

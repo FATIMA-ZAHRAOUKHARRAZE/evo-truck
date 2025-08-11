@@ -89,17 +89,13 @@
                     </iframe>
                 </div>
                 <div class="mt-4 contact-details">
-                    <p data-aos="fade-left"><i class="bi bi-geo-alt"></i> {{ translate('Address') }}: HOLLYWOOD MONGKOK ,
-                        KOWLOON , HONG KONG</p>
-                    <p data-aos="fade-left"><i class="bi bi-telephone"></i> {{ translate('Téléphone') }}: +86 19 826 086
-                        894</p>
+                    <p data-aos="fade-left"><i class="bi bi-geo-alt"></i> {{ translate('Address') }}:  Industrial Zone 1, No.26 Tuolanshan Road, Economic And Technological Development Zone, Xuzhou, Jiangsu, 221004, China
+                    <p data-aos="fade-left"><i class="bi bi-telephone"></i> {{ translate('Téléphone') }}:+86 189 1781 5301</p>
                     <p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a
                             href="mailto:contact@evo-machinery.com"
-                            style="text-decoration:none; color: black;">contact@evo-machinery.com</a></p>
-                    <p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a
-                            href="mailto:sales@evo-machinery.com"
-                            style="text-decoration:none; color:black;">sales@evo-machinery.com</a></p>
-                    <p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-machinery.com</p>
+                            style="text-decoration:none; color: black;">contact@evo-truck.com</a></p>
+
+                    <p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-truck.com</p>
                 </div>
             </div>
         </div>
