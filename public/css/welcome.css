@@ -186,7 +186,7 @@
 }
 
 .why-evo-section {
-  
+
     margin-top: 50px;
     margin-right:100px;
     /* Supprime la marge à droite des lignes pour un alignement précis. */
@@ -542,7 +542,96 @@
 .devis-btn:hover {
     background: #16308a;
 }
+.evo-services-section {
+    background: linear-gradient(120deg, #23272b 70%, #1e88e5 100%);
+    padding: 60px 0 40px 0;
+    border-radius: 32px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(30, 40, 60, 0.18);
+}
 
+.evo-services-title {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 36px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.evo-service-card {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(30, 40, 60, 0.10);
+    padding: 36px 18px 28px 18px;
+    margin: 0 12px 24px 12px;
+    transition: transform 0.18s, box-shadow 0.18s;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.evo-service-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(30, 40, 60, 0.22);
+    border-color: #ffb300;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.evo-service-icon-bg {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px auto;
+    box-shadow: 0 2px 12px rgba(30, 40, 60, 0.12);
+}
+
+.evo-service-icon-bg img {
+    width: 44px;
+    height: 44px;
+    filter: drop-shadow(0 2px 4px rgba(30, 40, 60, 0.12));
+}
+
+.evo-service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 18px 0 10px 0;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.evo-service-desc {
+    font-size: 1rem;
+    color: #e0e0e0;
+    min-height: 48px;
+}
+
+.evo-service-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #ffb300;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #ffb300;
+    transition: color 0.2s, border-color 0.2s;
+    font-size: 1.05rem;
+}
+
+.evo-service-link:hover {
+    color: #fff;
+    border-color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .evo-service-card {
+        margin: 0 0 24px 0;
+    }
+}
 @media (max-width: 991px) {
     .devis-title {
         font-size: 2.2rem;

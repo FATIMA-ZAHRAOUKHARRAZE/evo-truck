@@ -145,7 +145,7 @@
             <div class="carousel-item active">
                 <img class="d-block" src="{{ asset('images\banner p2 EVO.jpg') }}" alt="evo Slide 1">
                 <div class="carousel-caption">
-                    <h1>{{ translate("EVO MACHINERY Specialiste en engins industrielles et poids lourds.") }}</h1>
+                    <h1>{{ translate('EVO MACHINERY Specialiste en engins industrielles et poids lourds.') }}</h1>
                 </div>
             </div>
             <div class="carousel-item">
@@ -178,49 +178,72 @@
     </div>
 
     <!-- Section Services -->
-    <div class="mt-5 text-center row justify-content-center">
-        <div class="col-md-3 service-item">
-            <div class="service-card">
-                {{-- <i class="fas fa-tractor service-icon"></i> --}}
-                <img src="{{ asset('images/icons/engin industrielle.svg') }}" alt="engin industrielle" class="service-icon">
-                <h3>{{ translate("ENGINS") }}<br>{{ translate("INDUSTRIELLES") }}</h3>
+ <div class="container evo-services-section">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="evo-services-title">{{ translate('Nos univers EVO TRUCK') }}</div>
             </div>
         </div>
-        <div class="col-md-3 service-item">
-            <div class="service-card">
-                {{-- <i class="fas fa-truck service-icon"></i> --}}
-                <img src="{{ asset('images/icons/semi-remorque.svg') }}" alt="camion semi remorque" class="service-icon">
-                <h3>{{ translate("CAMIONS") }}<br>{{ translate("SEMI-REMORQUES") }}</h3>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-3 d-flex">
+                <div class="evo-service-card flex-fill text-center">
+                    <div class="evo-service-icon-bg">
+                        <img src="{{ asset('images/icons/engin industrielle.svg') }}" alt="engin industrielle">
+                    </div>
+                    <div class="evo-service-title">{{ translate('Tracteur') }}</div>
+                    <div class="evo-service-desc">
+                        {{ translate("Matériels robustes pour l'industrie lourde, chantiers et logistique.") }}
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 service-item">
-            <div class="service-card">
-                {{-- <i class="fas fa-cogs service-icon"></i> --}}
-                <img src="{{ asset('images/icons/engrenage.svg') }}" alt="pieces detachees" class="service-icon">
-                <h3>{{ translate("PIECES") }}<br>{{ translate("DÉTACHÉES") }}</h3>
+            <div class="col-12 col-sm-6 col-md-3 d-flex">
+                <div class="evo-service-card flex-fill text-center">
+                    <div class="evo-service-icon-bg">
+                        <img src="{{ asset('images/icons/semi-remorque.svg') }}" alt="camion semi remorque">
+                    </div>
+                    <div class="evo-service-title">{{ translate('Camion Bande-annonce') }}</div>
+                    <div class="evo-service-desc">
+                        {{ translate('Transportez plus loin, plus sûr : tracteurs, porteurs et remorques.') }}
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 service-item">
-            <div class="service-card">
-                {{-- <i class="fas fa-tools service-icon"></i> --}}
-                <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance" class="service-icon">
-                <h3>{{ translate("SERVICES") }}/<br>{{ translate("MAINTENANCE") }}</h3>
+            <div class="col-12 col-sm-6 col-md-3 d-flex">
+                <div class="evo-service-card flex-fill text-center">
+                    <div class="evo-service-icon-bg">
+                        <img src="{{ asset('images/icons/engrenage.svg') }}" alt="pieces detachees">
+                    </div>
+                    <div class="evo-service-title">{{ translate('Camion mélangeur') }}</div>
+                    <div class="evo-service-desc">
+                        {{ translate('Toutes pièces d’origine et adaptables pour vos véhicules et engins.') }}
+                    </div>
+                </div>
             </div>
-        </div>
 
+             <div class="col-12 col-sm-6 col-md-3 d-flex">
+                <div class="evo-service-card flex-fill text-center">
+                    <div class="evo-service-icon-bg">
+                        <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance">
+                    </div>
+                    <div class="evo-service-title">{{ translate('Camions électriques') }}</div>
+                    <div class="evo-service-desc">
+                        {{ translate('Entretien, réparation, diagnostic : l’expertise EVO TRUCK à votre service.') }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Section Pourquoi EVO-MACHINERY -->
     <div class="container why-evo-section">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h2 class="why-title">{{ translate("POURQUOI") }}<br>{{ translate("EVO-MACHINERY?") }}</h2>
+                <h2 class="why-title">{{ translate('POURQUOI') }}<br>{{ translate('EVO-MACHINERY?') }}</h2>
             </div>
             <div class="col-md-6">
                 <ul class="why-list">
-                    <li><i class="fas fa-check"></i> {{ translate("Fiabilité des machines") }}</li>
-                    <li><i class="fas fa-check"></i> {{ translate("Produits verifiés et testés") }}</li>
-                    <li><i class="fas fa-check"></i> {{ translate("Accompagnement technique") }}</li>
-                    <li><i class="fas fa-check"></i> {{ translate("Livraison rapide et SAV") }}</li>
+                    <li><i class="fas fa-check"></i> {{ translate('Fiabilité des machines') }}</li>
+                    <li><i class="fas fa-check"></i> {{ translate('Produits verifiés et testés') }}</li>
+                    <li><i class="fas fa-check"></i> {{ translate('Accompagnement technique') }}</li>
+                    <li><i class="fas fa-check"></i> {{ translate('Livraison rapide et SAV') }}</li>
                 </ul>
             </div>
         </div>
@@ -228,14 +251,14 @@
     <div class="container my-5 about-evo">
         <div class="mb-5 row align-items-center">
             <div class="col-md-5">
-                <h2 class="about-title-2"> {{ translate("EVO - MACHINERY") }}</h2>
+                <h2 class="about-title-2"> {{ translate('EVO - MACHINERY') }}</h2>
                 <p>
-                     {{ translate("Depuis 2000, Evo-Machinery fournit des engins de chantier, camions industriels et équipements lourds
-                    fiables pour les secteurs du BTP, du transport et de l'industrie. Notre expertise permet aux
-                    professionnels de s'équiper avec des machines performantes, robustes et prêtes à affronter les
-                    conditions les plus exigeantes.") }}
+                    {{ translate("Depuis 2000, Evo-Machinery fournit des engins de chantier, camions industriels et équipements lourds
+                                        fiables pour les secteurs du BTP, du transport et de l'industrie. Notre expertise permet aux
+                                        professionnels de s'équiper avec des machines performantes, robustes et prêtes à affronter les
+                                        conditions les plus exigeantes.") }}
                 </p>
-                <a href="/about" class="about-btn">{{ translate("En savoir plus sur nous &rarr;") }}</a>
+                <a href="/about" class="about-btn">{{ translate('En savoir plus sur nous &rarr;') }}</a>
             </div>
             <div class="text-center col-md-7">
                 <img src="{{ asset('images\banner p2 EVO.jpg') }}" alt="EVO Machinery" class="about-img img-fluid">
@@ -246,12 +269,12 @@
                 <h2 class="about-title-2">{{ translate("L'innovation au cœur de notre évolution ") }}</h2>
                 <p>
                     {{ translate("Chez Evo-Machinery, l'innovation est le moteur de notre évolution. En intégrant les dernières
-                    technologies aux engins de chantier et camions industriels, nous anticipons les besoins des
-                    professionnels du BTP, du transport et de l'industrie lourde. Notre ambition : offrir des solutions
-                    durables, performantes et intelligentes, conçues pour faire évoluer vos projets et relever vos défis
-                    techniques.") }}
+                                        technologies aux engins de chantier et camions industriels, nous anticipons les besoins des
+                                        professionnels du BTP, du transport et de l'industrie lourde. Notre ambition : offrir des solutions
+                                        durables, performantes et intelligentes, conçues pour faire évoluer vos projets et relever vos défis
+                                        techniques.") }}
                 </p>
-                <a href="/solution" class="about-btn"> {{ translate("Découvrir nos solutions &rarr;") }}</a>
+                <a href="/solution" class="about-btn"> {{ translate('Découvrir nos solutions &rarr;') }}</a>
             </div>
             <div class="text-center col-md-7">
                 <img src="{{ asset('images\banner p2 EVO.jpg') }}" alt="Innovation EVO" class="about-img img-fluid">
@@ -280,7 +303,8 @@
                                 {{ translate($categorie->nom_cat) }}
                             </h4>
                             <div class="mt-auto ">
-                                <a href="{{ url('product/' . $categorie->id) }}" class="product-btn ">{{ translate("VOIR PLUS") }}</a>
+                                <a href="{{ url('product/' . $categorie->id) }}"
+                                    class="product-btn ">{{ translate('VOIR PLUS') }}</a>
                             </div>
                         </div>
                     </div>
@@ -291,24 +315,25 @@
     </div>
     <!-- Section Demande de Devis -->
     <!-- <div class="devis-section">
-        <div class="container-fluid">
-            <div class="row align-items-center devis-row">
-                <div class="col-md-6">
-                    <h2 class="devis-title">DEMANDE RAPIDE<br>DE DEVIS</h2>
-                </div>
-                <div class="col-md-6">
-                    <form class="devis-form" method="post" action="{{ route('order.inser') }}">
-                         @csrf
-                        <input type="text" class="devis-input" placeholder="Nom" required name="name">
-                        <input type="text" class="devis-input" placeholder="Société" required name="société">
-                        <input type="text" class="devis-input" placeholder="Le pays" required name="country">
-                        <input type="tel" class="devis-input" placeholder="Téléphone" required name="phone">
-                        <input type="email" class="devis-input" placeholder="E-Mail" required name="email">
-                        <textarea class="devis-input" rows="4" placeholder="Message" required name="message"></textarea>
-                        <button type="submit" class="devis-btn">Envoyer</button>
-                    </form>
+            <div class="container-fluid">
+                <div class="row align-items-center devis-row">
+                    <div class="col-md-6">
+                        <h2 class="devis-title">DEMANDE RAPIDE<br>DE DEVIS</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <form class="devis-form" method="post" action="{{ route('order.inser') }}">
+                             @csrf
+                            <input type="text" class="devis-input" placeholder="Nom" required name="name">
+                            <input type="text" class="devis-input" placeholder="Société" required name="société">
+                            <input type="text" class="devis-input" placeholder="Le pays" required name="country">
+                            <input type="tel" class="devis-input" placeholder="Téléphone" required name="phone">
+                            <input type="email" class="devis-input" placeholder="E-Mail" required name="email">
+                            <textarea class="devis-input" rows="4" placeholder="Message" required name="message"></textarea>
+                            <button type="submit" class="devis-btn">Envoyer</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>-->
+        </div>-->
+
 @endsection
