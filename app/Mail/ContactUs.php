@@ -34,7 +34,7 @@ class ContactUs extends Mailable
     {
         return new Envelope(
             subject: 'Contact Us',
-            from: new Address('contact@evo-machinery.com', 'Contact Us'),
+            from: new Address('contact@evo-truck.com', 'Contact Us'),
         );
     }
 
