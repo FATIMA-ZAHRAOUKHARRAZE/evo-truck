@@ -181,12 +181,8 @@
                         <p>
                             {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                         </p>
-<<<<<<< HEAD
-                       
-=======
-                      
+            
 
->>>>>>> 81bce3aaacc14b3e7ece20dc16e7cffa59d29e0d
                     </div>
 
                     <hr class="clearfix w-100 d-md-none" />
