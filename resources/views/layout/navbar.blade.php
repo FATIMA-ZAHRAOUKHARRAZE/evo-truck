@@ -52,9 +52,7 @@
                     <select id="languageSelect"
                         style=" cursor:pointer; padding-bottom:10px; background-color: white; border:none; font-size:20px;"
                         class="form-select pe-5 changeLanguage" aria-label="Language select">
-
-            <option
-                style="
+            <option style="
                             background-color:whitec;" class="changeoption" value="fr"
                             {{ session()->get('locale') == 'fr' || !session()->has('locale') ? 'selected' : '' }}>
                             Français
@@ -124,9 +122,6 @@
                         @endforeach
                     </ul>
                 </li>
-
-                {{-- solution --}}
-                <li><a href="{{ url('/solution') }}">{{ translate('Solution') }}</a></li>
                 <li> <a href="{{ url('/about') }}" class="menu-item">{{ translate('Qui Sommes Nous') }}</a></li>
                 {{-- contact --}}
                 <li><a href="{{ route('contact') }}">{{ translate('Contact') }}</a>
@@ -181,12 +176,8 @@
                         <p>
                             {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
                         </p>
-<<<<<<< HEAD
-                       
-=======
-                      
 
->>>>>>> 81bce3aaacc14b3e7ece20dc16e7cffa59d29e0d
+
                     </div>
 
                     <hr class="clearfix w-100 d-md-none" />

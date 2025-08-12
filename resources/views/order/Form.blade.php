@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO TRUCK">
-    <link rel="canonical" href="https://evo-TRUCK.com/form/order/">
+    <link rel="canonical" href="https://evo-truck.com/form/order/">
     <meta property="og:title" content="EVO TRUCK - Demande de devis pour {{ $name }}">
     <meta property="og:description" content="Demandez un devis gratuit pour {{ $name }} - Réponse sous 24h">
     <meta property="og:type" content="website">

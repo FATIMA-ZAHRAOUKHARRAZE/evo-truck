@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO TRUCK">
-    <link rel="canonical" href="https://evo-TRUCK.com/category/search?query={{ $query }}">
+    <link rel="canonical" href="https://evo-truck.com/category/search?query={{ $query }}">
     <meta property="og:title" content="EVO TRUCK - Résultats pour '{{ $query }}'">
     <meta property="og:description"
         content="Découvrez les produits EVO TRUCK correspondant à votre recherche '{{ $query }}'">

@@ -9,181 +9,128 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO TRUCK">
-    <link rel="canonical" href="https://evo-TRUCK.com/about">
+    <link rel="canonical" href="https://evo-truck.com/about">
     <meta property="og:title" content="EVO TRUCK - À Propos">
     <meta property="og:description"
         content="Leader mondial en équipements de construction depuis 2000 - Innovation, Excellence, Qualité">
     <meta property="og:type" content="website">
 @endsection
+
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
-    <!-- Page Image -->
-    <div class="about_container">
+
+
+    <!-- Hero Section -->
+    <div class="about-hero">
         <img src="{{ asset('images/Original.png') }}" alt="evo image">
-        <div class="image-desktop-only">
-            <h1>{{ translate('À propos ') }}</h1>
+        <h1>{{ translate('À propos de EVO TRUCK') }}</h1>
+        <p>
+            {{ translate("Leader mondial depuis 2000 dans les équipements de construction et engins de levage, EVO TRUCK s'engage à innover et à fournir des solutions fiables et performantes pour tous les professionnels du secteur.") }}
+        </p>
+    </div>
+
+    <!-- Timeline Section (Histoire & Vision) -->
+    <div class="about-timeline-section">
+        <div class="about-timeline">
+            <div class="about-timeline-block">
+                <img src="{{ asset('images/Original.png') }}" alt="evo ...">
+                <h2>{{ translate('Bienvenue chez EVO') }}</h2>
+                <p>{{ translate("Depuis sa création en 2000, EVO TRUCK s'est imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage. Notre parcours est guidé par l'innovation et l'excellence.") }}
+                </p>
+            </div>
+            <div class="about-timeline-block">
+                <img src="{{ asset('images/Original.png') }}" alt="evo ...">
+                <h2>{{ translate('Dévoiler notre héritage') }}</h2>
+                <p>{{ translate("Notre engagement envers l'excellence nous a propulsés au rang des acteurs mondiaux les plus influents du secteur des machines de construction.") }}
+                </p>
+            </div>
+            <div class="about-timeline-block">
+                <img src="{{ asset('images/Original.png') }}" alt="evo ...">
+                <h2>{{ translate('Impact mondial') }}</h2>
+                <p>{{ translate('EVO TRUCK est fier de figurer parmi les plus grandes entreprises de machines de construction au monde, reconnue pour ses contributions majeures au secteur.') }}
+                </p>
+            </div>
+            <div class="about-timeline-block">
+                <img src="{{ asset('images/Original.png') }}" alt="evo ...">
+                <h2>{{ translate('Notre vision & nos valeurs') }}</h2>
+                <p>{{ translate('Notre vision : devenir une entreprise mondiale de référence, créatrice de valeur, portée par la rigueur, le pragmatisme et la créativité.') }}
+                </p>
+            </div>
         </div>
     </div>
-    <section class="page-section" id="about">
-        <div class="container">
-            <ul class="timeline">
-                <li data-aos="fade-left">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." />
-                    </div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h2 class="subheading">{{ translate('BIENVENUE CHEZ EVO') }}
-                            </h2>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">
-                                {{ translate(
-                                    "Depuis sa création en 2000, EVO TRUCK s'est rapidement
-                                                                                                                                                                                                                                                                                                                                imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des
-                                                                                                                                                                                                                                                                                                                                engins de levage. Notre parcours a été caractérisé par une recherche incessante de
-                                                                                                                                                                                                                                                                                                                                l'innovation, un engagement indéfectible envers l'excellence et la fourniture de solutions
-                                                                                                                                                                                                                                                                                                                                de qualité supérieure à notre clientèle mondiale.",
-                                    \App::getLocale(),
-                                ) }}
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted" data-aos="fade-left">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h2 class="subheading">
-                                {{ translate('DÉVOILER NOTRE HÉRITAGE') }}</h2>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">
-                                {{ translate(
-                                    "Dans un monde où le progrès se mesure à la robustesse des fondations et à
-                                                                                                                                                                                                                                                                                                                                la portée des grues, nous sommes un acteur incontournable depuis notre création. Notre
-                                                                                                                                                                                                                                                                                                                                engagement indéfectible envers l'excellence nous a propulsés au rang des acteurs mondiaux
-                                                                                                                                                                                                                                                                                                                                les plus importants et les plus influents du secteur des machines de construction.",
-                                    \App::getLocale(),
-                                ) }}
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li  data-aos="fade-left">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h2 class="subheading">{{ translate('IMPACT MONDIAL') }}</h2>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">
-                                {{ translate(
-                                    "EVO TRUCK est fier de figurer parmi les plus grandes entreprises de machines de construction au monde. Nos contributions nous ont valu d'être reconnus comme un acteur clé dans l'avancement du secteur mondial de la construction.",
-                                    \App::getLocale(),
-                                ) }}
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted" data-aos="fade-left">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid"
-                            src="{{ asset('images/Original.png') }}" loading="lazy" alt="evo ..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
 
-                            <h2 class="subheading">
-                                {{ translate('NOTRE VISION ET NOS VALEURS') }}</h2>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">
-                                {{ translate(
-                                    "Chez EVO TRUCK, notre chemin est éclairé par une vision
-                                                                                                                                                                                                                                                                    claire : émerger en tant qu'entreprise mondiale de premier plan, compétente dans la création
-                                                                                                                                                                                                                                                                                                                                de valeur tangible. Nos principes fondamentaux sont profondément ancrés dans la rigueur, le
-                                                                                                                                                                                                                                                                                                                                pragmatisme, la progressivité et la créativité. Ces valeurs directrices nous poussent à
-                                                                                                                                                                                                                                                                                                                                élever continuellement nos performances, en établissant de nouvelles références au sein de
-                                                                                                                                                                                                                                                                                                                                l'industrie.",
-                                    \App::getLocale(),
-                                ) }}
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="container" data-aos="fade-left">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase " style="color: #2042be">
-                    {{ translate('CE QUE NOUS OFFRONS') }}</h2>
-
+    <!-- Valeurs & Offres Section -->
+    <div class="about-values-section">
+        <div class="about-values-title">{{ translate('Ce que nous offrons') }}</div>
+        <div class="about-values-list">
+            <div class="about-value-card">
+                <img src="{{ asset('images/Original.png') }}" alt="Qualité">
+                <h4>{{ translate('Qualité') }}</h4>
+                <p>{{ translate('Contrôle qualité rigoureux, chaque étape supervisée par des experts et des équipements de pointe.') }}
+                </p>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="team-member" data-aos="fade-left">
-                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="evo ..." />
-                        <h4>{{ translate('QUALITÉ') }}</h4>
-                        <p class="text-muted">
-                            {{ translate(
-                                "Nous garantissons l'excellence de nos produits grâce à un contrôle qualité
-                                                                                                                    rigoureux, des experts supervisant méticuleusement chaque étape à l'aide d'équipements de pointe
-                                                                                                                    conformes aux normes de l'industrie.",
-                                \App::getLocale(),
-                            ) }}
-                        </p>
+            <div class="about-value-card">
+                <img src="{{ asset('images/Original.png') }}" alt="Conception et R&D">
+                <h4>{{ translate('Conception & R&D') }}</h4>
+                <p>{{ translate('Des conceptions innovantes et ergonomiques, portées par un investissement continu dans la recherche et le développement.') }}
+                </p>
+            </div>
+            <div class="about-value-card">
+                <img src="{{ asset('images/Original.png') }}" alt="Diversité">
+                <h4>{{ translate('Diversité') }}</h4>
+                <p>{{ translate("Une gamme complète d'équipements de construction et de levage pour répondre à tous les besoins.") }}
+                </p>
+            </div>
+            <div class="about-value-card">
+                <img src="{{ asset('images/Original.png') }}" alt="Service">
+                <h4>{{ translate('Service') }}</h4>
+                <p>{{ translate('Un accompagnement client de qualité, de la sélection à la maintenance, pour garantir votre satisfaction.') }}
+                </p>
+            </div>
+        </div>
+    </div>
 
-                    </div>
+    <!-- Section Pourquoi EVO-TRUCK (Design Créatif & Moderne) -->
+    <div class="container why-evo-section">
+        <div class="row align-items-center">
+            <div class="col-md-5 text-center text-md-start mb-4 mb-md-0">
+                <h2 class="why-title">{{ translate('Pourquoi choisir EVO TRUCK ?') }}</h2>
+                <div class="why-subtitle">
+                    {{ translate('Bien plus qu’un fournisseur, un partenaire de confiance pour vos projets industriels, BTP et logistique.') }}
                 </div>
-                <div class="col-lg-3">
-                    <div class="team-member"data-aos="fade-left">
-                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="evo ..." />
-                        <h4>{{ translate('CONCEPTION ET R&D') }}</h4>
-                        <p class="text-muted">
-                            {{ translate(
-                                "Nos conceptions uniques et ergonomiques évoluent grâce à des investissements
-                                                                                        continus dans l'amélioration et l'innovation des produits.",
-                                \App::getLocale(),
-                            ) }}
-                        </p>
-
+            </div>
+            <div class="col-md-7">
+                <div class="why-evo-cards">
+                    <div class="why-evo-card">
+                        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="why-card-title">{{ translate('Fiabilité & Sécurité') }}</div>
+                        <div class="why-card-desc">
+                            {{ translate('Des machines robustes, testées et certifiées pour garantir la sécurité de vos équipes et la réussite de vos chantiers.') }}
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="team-member"data-aos="fade-left">
-                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="evo ..." />
-                        <h4>{{ translate('DIVERSITÉ') }}</h4>
-                        <p class="text-muted">
-                            {{ translate(
-                                "EVO TRUCK une large gamme d'équipements de construction et de levage,
-                                                                                        notamment des chargeuses, des chariots élévateurs, des excavatrices et bien plus encore.",
-                                \App::getLocale(),
-                            ) }}
-                        </p>
-
+                    <div class="why-evo-card">
+                        <div class="why-icon"><i class="fas fa-tools"></i></div>
+                        <div class="why-card-title">{{ translate('Support technique expert') }}</div>
+                        <div class="why-card-desc">
+                            {{ translate('Une équipe technique dédiée pour l’accompagnement, la formation et la maintenance de vos équipements.') }}
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="team-member"data-aos="fade-left">
-                        <img class="mx-auto rounded-circle" src="{{ asset('images/Original.png') }}" loading="lazy"
-                            alt="evo ..." />
-                        <h4>{{ translate('SERVICE') }}</h4>
-                        <p class="text-muted">
-                            {{ translate(
-                                "Nous maintenons un contrôle de qualité strict en utilisant des équipements de
-                                                                                        pointe conformes aux normes de l'industrie, avec des professionnels supervisant chaque processus
-                                                                                        pour garantir une qualité de produit de premier ordre.",
-                                \App::getLocale(),
-                            ) }}
-                        </p>
-
+                    <div class="why-evo-card">
+                        <div class="why-icon"><i class="fas fa-shipping-fast"></i></div>
+                        <div class="why-card-title">{{ translate('Livraison rapide & SAV') }}</div>
+                        <div class="why-card-desc">
+                            {{ translate('Des délais respectés, un service après-vente réactif et des pièces toujours disponibles.') }}
+                        </div>
+                    </div>
+                    <div class="why-evo-card">
+                        <div class="why-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="why-card-title">{{ translate('Innovation continue') }}</div>
+                        <div class="why-card-desc">
+                            {{ translate('Des solutions technologiques de pointe pour anticiper les besoins de demain.') }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection

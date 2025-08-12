@@ -18,7 +18,7 @@
         content="Découvrez notre gamme complète d'équipements de construction : Bulldozers, Chargeuses, Excavatrices et plus. Solutions professionnelles pour tous vos projets.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ asset('images/Original.png') }}">
-    <meta property="og:url" content="https://evo-TRUCK.com/category">
+    <meta property="og:url" content="https://evo-truck.com/category">
     <meta name="category-page" content="true">
 @endsection
 @section('content')
