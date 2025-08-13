@@ -238,26 +238,26 @@
             </div>
             <!-- Section Demande de Devis -->
             <!-- <div class="devis-section">
-                                    <div class="container-fluid">
-                                        <div class="row align-items-center devis-row">
-                                            <div class="col-md-6">
-                                                <h2 class="devis-title">DEMANDE RAPIDE<br>DE DEVIS</h2>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <form class="devis-form" method="post" action="{{ route('order.inser') }}">
-                                                     @csrf
-                                                    <input type="text" class="devis-input" placeholder="Nom" required name="name">
-                                                    <input type="text" class="devis-input" placeholder="Société" required name="société">
-                                                    <input type="text" class="devis-input" placeholder="Le pays" required name="country">
-                                                    <input type="tel" class="devis-input" placeholder="Téléphone" required name="phone">
-                                                    <input type="email" class="devis-input" placeholder="E-Mail" required name="email">
-                                                    <textarea class="devis-input" rows="4" placeholder="Message" required name="message"></textarea>
-                                                    <button type="submit" class="devis-btn">Envoyer</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
+                                                <div class="container-fluid">
+                                                    <div class="row align-items-center devis-row">
+                                                        <div class="col-md-6">
+                                                            <h2 class="devis-title">DEMANDE RAPIDE<br>DE DEVIS</h2>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <form class="devis-form" method="post" action="{{ route('order.inser') }}">
+                                                                 @csrf
+                                                                <input type="text" class="devis-input" placeholder="Nom" required name="name">
+                                                                <input type="text" class="devis-input" placeholder="Société" required name="société">
+                                                                <input type="text" class="devis-input" placeholder="Le pays" required name="country">
+                                                                <input type="tel" class="devis-input" placeholder="Téléphone" required name="phone">
+                                                                <input type="email" class="devis-input" placeholder="E-Mail" required name="email">
+                                                                <textarea class="devis-input" rows="4" placeholder="Message" required name="message"></textarea>
+                                                                <button type="submit" class="devis-btn">Envoyer</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>-->
 
             <!-- Section Contactez-nous / Demandez une offre (Appel à action spécifique camions) -->
             <style>
