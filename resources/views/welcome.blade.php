@@ -29,9 +29,7 @@
             <div class="carousel-item">
                 <img class="d-block" src="{{ asset('https://evo-machinery.com/images/banner%20site%20EVO.jpg') }}"
                     alt="evo Slide 1">
-
             </div>
-
         </div>
         <a class="carousel-control-prev custom-control" href="#carousel" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -261,7 +259,7 @@
 
         <!-- Section Contactez-nous / Demandez une offre (Appel à action spécifique camions) -->
         <style>
-           
+
         </style>
         <div class="container evo-contact-section">
             <div class="evo-contact-title">{{ translate('Contactez-nous / Demandez une offre camion') }}</div>
@@ -283,4 +281,159 @@
                 </div>
             </div>
         </div>
-        @endsection
+
+        <!-- Section Partenariat & Infos (inspiré du design fourni) -->
+        <style>
+.evo-partner-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 56px auto 48px auto;
+    max-width: 1100px;
+    align-items: stretch;
+}
+.evo-partner-img-block {
+    flex: 1 1 340px;
+    min-width: 320px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(30,40,60,0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+.evo-partner-img-block img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.evo-partner-img-content {
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    background: linear-gradient(0deg,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.10) 100%);
+    color: #fff;
+    padding: 32px 24px 24px 24px;
+}
+.evo-partner-img-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.evo-partner-img-content p {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+.evo-partner-img-content .evo-partner-btn {
+    background: #0033cc;
+    color: #fff;
+    border: none;
+    border-radius: 32px;
+    padding: 12px 32px;
+    font-weight: 700;
+    font-size: 1.08rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 6px;
+    transition: background 0.18s;
+}
+.evo-partner-img-content .evo-partner-btn:hover {
+    background: #0033cc;
+}
+.evo-partner-info-block {
+    flex: 1 1 340px;
+    min-width: 320px;
+    background: #fafbfc;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(30,40,60,0.07);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    justify-content: center;
+}
+.evo-partner-info-item {
+    margin-bottom: 0;
+}
+.evo-partner-info-title {
+    color: #0033cc;
+    font-weight: 700;
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.evo-partner-info-title i {
+    font-size: 1.2rem;
+}
+.evo-partner-info-desc {
+    font-size: 1.05rem;
+    color: #23272b;
+    margin-bottom: 8px;
+}
+.evo-partner-info-list {
+    margin: 0 0 0 18px;
+    padding: 0;
+    font-size: 1rem;
+    color: #23272b;
+}
+.evo-partner-info-plus {
+    color: #0033cc;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+@media (max-width: 991px) {
+    .evo-partner-section { flex-direction: column; gap: 24px; }
+    .evo-partner-img-block, .evo-partner-info-block { min-width: 0; }
+    .evo-partner-img-block img { height: 180px; }
+}
+</style>
+<div class="evo-partner-section">
+    <div class="evo-partner-img-block">
+        <img src="https://evo-machinery.com/images/EVO_WEB_Bleu.svg" alt="Partenariat EVO">
+        <div class="evo-partner-img-content">
+            <h2>{{ translate("Nous collaborons avec les leaders mondiaux du secteur") }}</h2>
+            <p>
+                {{ translate("EVO TRUCK s’associe avec les plus grands acteurs pour garantir à ses clients innovation, fiabilité et expertise internationale dans chaque projet.") }}
+            </p>
+            <a href="/about" class="evo-partner-btn">{{ translate('EN SAVOIR PLUS') }}</a>
+        </div>
+    </div>
+      <div class="evo-partner-info-block">
+        <div class="evo-partner-info-item">
+            <div class="evo-partner-info-title">
+                <i class="fas fa-truck"></i>
+                {{ translate('Evo - Camion') }}
+                <span class="evo-partner-info-plus">+</span>
+            </div>
+            <div class="evo-partner-info-desc">
+                {{ translate("Depuis 2000, Evo-TRUCK fournit des engins de chantier, camions industriels et équipements lourds fiables pour les secteurs du BTP, du transport et de l'industrie. Notre expertise permet aux professionnels de s'équiper avec des machines performantes, robustes et prêtes à affronter les conditions les plus exigeantes.") }}
+            </div>
+            <ul class="evo-partner-info-list">
+                <li><i class="fas fa-industry"></i>
+                    {{ translate('Expertise industrielle depuis 2000') }}</li>
+                <li><i class="fas fa-cogs"></i>
+                    {{ translate('Solutions sur-mesure pour chaque secteur') }}</li>
+                <li><i class="fas fa-users"></i> {{ translate('Accompagnement personnalisé') }}</li>
+            </ul>
+        </div>
+        <div class="evo-partner-info-item">
+            <div class="evo-partner-info-title">
+                <i class="fas fa-leaf"></i>
+                {{ translate('Gestion durable des projets') }}
+                <span class="evo-partner-info-plus">+</span>
+            </div>
+            <div class="evo-partner-info-desc">
+                {{ translate("Nous intégrons des pratiques responsables et des technologies vertes pour garantir la durabilité de vos projets et réduire l'impact environnemental.") }}
+            </div>
+            <ul class="evo-partner-info-list">
+                <li><i class="fas fa-recycle"></i> {{ translate('Solutions éco-responsables') }}</li
+</div>
+@endsection
