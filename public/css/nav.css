@@ -395,9 +395,7 @@ body {
     }
 }
 
-.container {
-    width: 95% !important;
-}
+
 
 .bbb_deals_item_detail {
     display: flex;
@@ -919,13 +917,16 @@ body {
     border: none;
 }
 
+
 .input-group .btn-primary:hover {
     background: #e8ad1d;
 }
 
+
 .social-icon {
     padding: 0 5px;
 }
+
 
 @media (max-width: 768px) {
     .col-md-4 {
@@ -933,6 +934,7 @@ body {
         margin-bottom: 2rem;
     }
 }
+
 /* carousel caption h1  */
 .carousel-caption h1 {
     text-align: center;

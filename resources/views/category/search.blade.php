@@ -80,11 +80,13 @@
                                             <div class="mt-2 available">
                                                 <div class="flex-row available_line d-flex justify-content-between">
                                                     <a href="{{ route('ProductDetail', $item['product']->id) }}"
-                                                        class="btn" data-aos="flip-left" style="background-color:#0033cc;">
+                                                        class="btn" data-aos="flip-left"
+                                                        style="background-color:#0033cc;">
                                                         {{ translate('PLUS') }}
                                                     </a>
                                                     <a href="{{ route('order', [$item['product']->category_id, $item['product']->nom_pro]) }}"
-                                                        class="btn" data-aos="flip-right" style="background-color:#0033cc;">
+                                                        class="btn" data-aos="flip-right"
+                                                        style="background-color:#0033cc;">
                                                         {{ translate('LE DEVIS') }}
                                                     </a>
                                                 </div>
@@ -109,16 +111,16 @@
         // Select the <nav> element inside .pagination-wrapper
         const navElement = document.querySelector('.pagination-wrapper nav');
 
-                // Copy attributes from the <nav> to the <div>
-                Array.from(navElement.attributes).forEach(attr => {
-                    divElement.setAttribute(attr.name, attr.value);
-                });
+        // Copy attributes from the <nav> to the <div>
+        Array.from(navElement.attributes).forEach(attr => {
+            divElement.setAttribute(attr.name, attr.value);
+        });
 
-                // Copy the content of the <nav> to the <div>
-                divElement.innerHTML = navElement.innerHTML;
+        // Copy the content of the <nav> to the <div>
+        divElement.innerHTML = navElement.innerHTML;
 
-                // Replace the <nav> with the <div>
-                navElement.parentNode.replaceChild(divElement, navElement);
-            }
-        </script>
-    @endsection
+        // Replace the <nav> with the <div>
+        navElement.parentNode.replaceChild(divElement, navElement);
+        }
+    </script>
+@endsection
