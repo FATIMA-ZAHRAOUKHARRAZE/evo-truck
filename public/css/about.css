@@ -16,7 +16,7 @@
     text-align: center;
     color: white;
     overflow: hidden;
-    background: darkblue;
+    background-image: url('../images/camion.jpg');
     margin-top: 100px;
     padding-bottom: 40px;
 }
@@ -26,7 +26,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e88e5 100%);
     z-index: -2;
 }
 
@@ -138,7 +137,6 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #1e88e5, #ffd700);
     border-radius: 2px;
 }
 
@@ -149,59 +147,7 @@
     margin: 0 auto;
 }
 
-/* Mission Section */
-.mission-section {
-    padding: 100px 0;
-    background: #f8f9fa;
-}
 
-.mission-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.mission-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e9ecef;
-}
-
-.mission-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.mission-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #1e88e5, #42a5f5);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-    color: white;
-    font-size: 2rem;
-    box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
-}
-
-.mission-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1e3c72;
-    margin-bottom: 15px;
-}
-
-.mission-card p {
-    color: #666;
-    line-height: 1.7;
-}
 
 /* Timeline Section */
 .timeline-section {
@@ -423,20 +369,19 @@
 /* CTA Section */
 .cta-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
     text-align: center;
 }
 
 .cta-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1e3c72;
+    color: #0033cc;
     margin-bottom: 20px;
 }
 
 .cta-content p {
     font-size: 1.2rem;
-    color: #1e3c72;
+    color: #0033cc;
     margin-bottom: 40px;
     opacity: 0.8;
 }
@@ -456,6 +401,333 @@
 
 .stat-number.animate {
     transform: scale(1.05);
+}
+
+.evo-offers-section {
+background: #fff;
+border-radius: 18px;
+padding: 56px 0 40px 0;
+margin-bottom: 40px;
+box-shadow: 0 2px 12px rgba(30, 40, 60, 0.07);
+}
+
+.evo-offers-title {
+font-size: 2.4rem;
+font-weight: 700;
+color: #0033cc;
+text-align: center;
+margin-bottom: 44px;
+letter-spacing: 1px;
+}
+
+.evo-offers-desc {
+text-align: center;
+color: #23272b;
+font-size: 1.15rem;
+margin-bottom: 38px;
+}
+
+.evo-offers-cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colonnes */
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.evo-offer-card {
+    max-width: 100%;
+background: #fff;
+border-radius: 18px;
+box-shadow: 0 1px 8px rgba(30, 40, 60, 0.07);
+padding: 38px 28px 28px 28px;
+max-width: 300px;
+min-width: 240px;
+text-align: center;
+border: 2px solid #e3e7ed;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: box-shadow 0.18s, border-color 0.18s;
+}
+
+.evo-offer-card:hover {
+box-shadow: 0 4px 18px rgba(30, 40, 60, 0.13);
+border-color: #e8ad1d;
+}
+
+.evo-offer-icon {
+width: 56px;
+height: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 18px;
+border-radius: 50%;
+background: #eaf2ff;
+border: 2.5px solid #0033cc;
+font-size: 2.2rem;
+color: #e8ad1d;
+}
+
+.evo-offer-card-title {
+font-size: 1.35rem;
+font-weight: 700;
+color: #0033cc;
+margin-bottom: 14px;
+}
+
+.evo-offer-card-desc {
+font-size: 1.08rem;
+color: #23272b;
+line-height: 1.5;
+}
+
+.mission-section {
+    border-radius: 24px;
+    margin: 56px auto 48px auto;
+    max-width: 1200px;
+    padding: 56px 0 48px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0033cc;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.section-header p {
+    font-size: 1.18rem;
+    color: #23272b;
+    margin-bottom: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mission-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.mission-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 1px 8px rgba(30, 40, 60, 0.07);
+    padding: 38px 28px 28px 28px;
+    max-width: 300px;
+    min-width: 220px;
+    text-align: center;
+    border: 2px solid #e3e7ed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.18s, border-color 0.18s;
+}
+
+.mission-card:hover {
+    box-shadow: 0 4px 18px rgba(30, 40, 60, 0.13);
+    border-color: #0033cc;
+}
+
+.mission-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #eaf2ff;
+    border: 2.5px solid #e8ad1d;
+    font-size: 2.2rem;
+    color: #0033cc;
+}
+
+.mission-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0033cc;
+    margin-bottom: 14px;
+}
+
+.mission-card p {
+    font-size: 1.08rem;
+    color: #23272b;
+    line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+    .mission-grid {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .mission-card {
+        min-width: 160px;
+        padding: 18px 8px 14px 8px;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Base section */
+.hero-scroll-section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    /* pleine hauteur, hero immersif */
+    min-height: 520px;
+    margin-bottom: 48px;
+    overflow: clip;
+    /* masque propre au scroll */
+    display: grid;
+    place-items: center;
+}
+
+/* Overlay (optionnel: dégradé lisibilité du texte) */
+.hero-scroll-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  
+}
+
+/* Image en <img> */
+.hero-scroll-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    transform: translateY(-12vh) scale(1.08);
+    /* état initial (haut + léger zoom) */
+}
+
+/* Texte */
+.hero-scroll-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    
+}
+
+/* --- Parallaxe pur CSS (scroll-linked) --- */
+@supports (animation-timeline: scroll()) {
+
+    /* timeline liée au défilement de la section */
+    @scroll-timeline hero-parallax {
+        source: selector(.hero-scroll-section);
+        orientation: block;
+        /* vertical */
+        scroll-offsets: start 0%, end 100%;
+    }
+
+    .hero-scroll-img {
+        animation: heroImgParallax 1 both linear;
+        animation-timeline: hero-parallax;
+        animation-range: 0% 100%;
+    }
+
+    .hero-scroll-text {
+        animation: heroTextReveal 1 both ease-out;
+        animation-timeline: hero-parallax;
+        animation-range: 10% 60%;
+        /* texte arrive un peu après */
+    }
+
+    @keyframes heroImgParallax {
+
+        /* L’image “entre” doucement du haut vers le bas et dézoome un peu */
+        0% {
+            transform: translateY(-12vh) scale(1.08);
+        }
+
+        100% {
+            transform: translateY(12vh) scale(1.00);
+        }
+    }
+
+    @keyframes heroTextReveal {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Fallback (navigateurs sans scroll-timeline) : image visible + petit fade du texte au chargement */
+@supports not (animation-timeline: scroll()) {
+    .hero-scroll-text {
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out 0.2s forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-scroll-section {
+        height: 60vh;
+        min-height: 320px;
+    }
+
+    .hero-scroll-text {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media (max-width: 991px) {
+.evo-offers-cards-row {
+    gap: 14px;
+}
+
+.evo-offer-card {
+    min-width: 160px;
+    padding: 18px 8px 14px 8px;
+}
+
+.evo-offers-title {
+    font-size: 2rem;
+}
 }
 
 /* Responsive Design */

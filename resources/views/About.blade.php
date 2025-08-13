@@ -22,15 +22,16 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-background">
+
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
             <div class="hero-logo">
-                <img src="{{ asset('images/Original.png') }}" alt="EVO TRUCK Logo">
+
             </div>
             <h1 class="hero-title">{{ translate('À propos de EVO TRUCK') }}</h1>
             <p class="hero-subtitle">
-                {{ translate("EVO TRACK – Depuis 2000, spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.") }}
+                {{ translate('EVO TRACK – Depuis 2000, spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.') }}
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -49,36 +50,36 @@
 
         </div>
     </section>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const counters = document.querySelectorAll(".stat-number");
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".stat-number");
 
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute("data-target"));
-            const addPlus = counter.getAttribute("data-plus") === "true";
-            const duration = 2000; // total time in ms
-            const frameRate = 1000 / 60; // 60 FPS
-            const totalFrames = Math.round(duration / frameRate);
-            let frame = 0;
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute("data-target"));
+                const addPlus = counter.getAttribute("data-plus") === "true";
+                const duration = 2000; // total time in ms
+                const frameRate = 1000 / 60; // 60 FPS
+                const totalFrames = Math.round(duration / frameRate);
+                let frame = 0;
 
-            const easeOutQuad = t => t * (2 - t); // easing function
+                const easeOutQuad = t => t * (2 - t); // easing function
 
-            const counterInterval = setInterval(() => {
-                frame++;
-                const progress = easeOutQuad(frame / totalFrames);
-                const current = Math.round(target * progress);
+                const counterInterval = setInterval(() => {
+                    frame++;
+                    const progress = easeOutQuad(frame / totalFrames);
+                    const current = Math.round(target * progress);
 
-                counter.innerText = current + (addPlus ? "+" : "");
+                    counter.innerText = current + (addPlus ? "+" : "");
 
-                if (frame === totalFrames) {
-                    clearInterval(counterInterval);
-                }
-            }, frameRate);
+                    if (frame === totalFrames) {
+                        clearInterval(counterInterval);
+                    }
+                }, frameRate);
+            });
         });
-    });
-</script>
+    </script>
 
-    <!-- Mission & Vision Section -->
+    <!-- Mission & Vision Section - Design harmonisé bleu/jaune -->
     <section class="mission-section">
         <div class="container">
             <div class="section-header">
@@ -113,6 +114,38 @@
             </div>
         </div>
     </section>
+
+<section class="hero-scroll-section">
+  <div class="hero-scroll-overlay"></div>
+
+  <!-- Image réelle -->
+  <img src="../images/camion.jpg" alt="Camion EVO" class="hero-scroll-img" />
+
+  <div class="hero-scroll-text">
+    NOUS CRÉONS<br>L’AVENIR<br>DEPUIS 2000
+  </div>
+</section>
+
+
+    {{--  <script>
+        document.addEventListener("scroll", function() {
+            const scrollText = document.getElementById("scrollText");
+            const scrollBg = document.getElementById("scrollBg");
+            if (!scrollText || !scrollBg) return;
+            const section = scrollText.closest('.hero-scroll-section');
+            const rect = section.getBoundingClientRect();
+            // Texte qui remonte
+            if (rect.top < 60) {
+                scrollText.style.top = "18%";
+            } else {
+                scrollText.style.top = "60%";
+            }
+            // Effet parallax sur l'image
+            let offset = Math.max(0, -rect.top * 0.3);
+            scrollBg.style.transform = `translateY(${offset}px)`;
+        });
+    </script>  --}}
+
 
     {{-- <!-- Timeline Section -->
     <section class="timeline-section">
@@ -159,95 +192,43 @@
     </section> --}}
 
     <!-- Services Section -->
-    <section class="services-section">
+    <section class="services-section evo-offers-section">
         <div class="container">
-            <div class="section-header">
-                <h2>{{ translate('Ce que nous offrons') }}</h2>
-                <p>{{ translate('Des solutions complètes pour tous vos besoins') }}</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-award"></i>
+            <div class="evo-offers-title">{{ translate('Ce que nous offrons') }}</div>
+            <div class="evo-offers-desc">{{ translate('Des solutions complètes pour tous vos besoins') }}</div>
+            <div class="evo-offers-cards-row">
+                <div class="evo-offer-card">
+                    <span class="evo-offer-icon"><i class="fas fa-award"></i></span>
+                    <div class="evo-offer-card-title">{{ translate('Qualité Premium') }}</div>
+                    <div class="evo-offer-card-desc">
+                        {{ translate('Chaque camion et pièce est soumis à un contrôle qualité rigoureux, avec une supervision experte et l’utilisation d’équipements de pointe pour garantir fiabilité et performance.') }}
                     </div>
-                    <h3>{{ translate('Qualité Premium') }}</h3>
-                    <p>{{ translate('Chaque camion et pièce est soumis à un contrôle qualité rigoureux, avec une supervision experte et l’utilisation d’équipements de pointe pour garantir fiabilité et performance.') }}
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="evo-offer-card">
+                    <span class="evo-offer-icon"><i class="fas fa-lightbulb"></i></span>
+                    <div class="evo-offer-card-title">{{ translate('Conception & R&D') }}</div>
+                    <div class="evo-offer-card-desc">
+                        {{ translate('Des conceptions innovantes et ergonomiques, issues d’un investissement continu en recherche et développement, pour offrir des véhicules toujours plus performants et économiques.') }}
                     </div>
-                    <h3>{{ translate('Conception & R&D') }}</h3>
-                    <p>{{ translate('Des conceptions innovantes et ergonomiques, issues d’un investissement continu en recherche et développement, pour offrir des véhicules toujours plus performants et économiques.') }}
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-th-large"></i>
+                <div class="evo-offer-card">
+                    <span class="evo-offer-icon"><i class="fas fa-th-large"></i></span>
+                    <div class="evo-offer-card-title">{{ translate('Diversité Produits') }}</div>
+                    <div class="evo-offer-card-desc">
+                        {{ translate('Une large gamme de camions, poids lourds et équipements adaptés à tous les secteurs d’activité, répondant à chaque besoin de transport et de logistique.') }}
                     </div>
-                    <h3>{{ translate('Diversité Produits') }}</h3>
-                    <p>{{ translate("Une large gamme de camions, poids lourds et équipements adaptés à tous les secteurs d’activité, répondant à chaque besoin de transport et de logistique.") }}
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
+                <div class="evo-offer-card">
+                    <span class="evo-offer-icon"><i class="fas fa-headset"></i></span>
+                    <div class="evo-offer-card-title">{{ translate('Service Client') }}</div>
+                    <div class="evo-offer-card-desc">
+                        {{ translate('Un accompagnement client de qualité, de la sélection à la maintenance, pour garantir votre satisfaction.') }}
                     </div>
-                    <h3>{{ translate('Service Client') }}</h3>
-                    <p>{{ translate('Un accompagnement personnalisé à chaque étape, de la sélection à la maintenance, afin de garantir la satisfaction et la fidélité de nos clients.') }}
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-section">
-        <div class="container">
-            <div class="why-choose-content">
-                <div class="why-choose-text">
-                    <h2>{{ translate('Pourquoi choisir EVO TRUCK ?') }}</h2>
-                    <p>{{ translate('Bien plus qu\'un fournisseur, un partenaire de confiance pour vos projets industriels, BTP et logistique.') }}
-                    </p>
-                </div>
-                <div class="why-choose-cards">
-                    <div class="why-card">
-                        <div class="why-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4>{{ translate('Fiabilité & Sécurité') }}</h4>
-                        <p>{{ translate('Des machines robustes, testées et certifiées pour garantir la sécurité de vos équipes.') }}
-                        </p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h4>{{ translate('Support technique expert') }}</h4>
-                        <p>{{ translate('Une équipe technique dédiée pour l\'accompagnement et la maintenance de vos équipements.') }}
-                        </p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        <h4>{{ translate('Livraison rapide & SAV') }}</h4>
-                        <p>{{ translate('Des délais respectés, un service après-vente réactif et des pièces toujours disponibles.') }}
-                        </p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4>{{ translate('Innovation continue') }}</h4>
-                        <p>{{ translate('Des solutions technologiques de pointe pour anticiper les besoins de demain.') }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
@@ -259,4 +240,7 @@
             </div>
         </div>
     </section>
+<script> 
+
+</script>
 @endsection
