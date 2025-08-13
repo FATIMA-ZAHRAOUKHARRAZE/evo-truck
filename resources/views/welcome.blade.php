@@ -38,7 +38,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
     </div>
-    <!-- Section Services -->
+    {{-- <!-- Section Services -->
     <div class="container evo-services-section">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Section Pourquoi EVO-TRUCK -->
     {{-- <div class="container why-evo-section">
@@ -146,27 +146,7 @@
                     </div>
                 </div>
             </div>
-    <div class="container evo-sectors-section">
-        <div class="evo-sectors-title">{{ translate('Secteurs d’application') }}</div>
-        <div class="evo-sector-list">
-            <div class="evo-sector-item">
-                <div class="evo-sector-icon"><i class="fas fa-truck-moving"></i></div>
-                <div class="evo-sector-name">{{ translate('Transport & Logistique') }}</div>
-            </div>
-            <div class="evo-sector-item">
-                <div class="evo-sector-icon"><i class="fas fa-hard-hat"></i></div>
-                <div class="evo-sector-name">{{ translate('BTP & Construction') }}</div>
-            </div>
-            <div class="evo-sector-item">
-                <div class="evo-sector-icon"><i class="fas fa-industry"></i></div>
-                <div class="evo-sector-name">{{ translate('Industrie lourde') }}</div>
-            </div>
-            <div class="evo-sector-item">
-                <div class="evo-sector-icon"><i class="fas fa-recycle"></i></div>
-                <div class="evo-sector-name">{{ translate('Environnement & Recyclage') }}</div>
-            </div>
-        </div>
-    </div>
+
     <div class="container my-5 about-evo">
         {{-- <div class="row align-items-center mb-5">
             <div class="col-md-6 order-2 order-md-1">
@@ -250,6 +230,27 @@
         </div>
     </div>
 </div>
+<div class="container evo-sectors-section">
+        <div class="evo-sectors-title">{{ translate('Secteurs d’application') }}</div>
+        <div class="evo-sector-list">
+            <div class="evo-sector-item">
+                <div class="evo-sector-icon"><i class="fas fa-truck-moving"></i></div>
+                <div class="evo-sector-name">{{ translate('Transport & Logistique') }}</div>
+            </div>
+            <div class="evo-sector-item">
+                <div class="evo-sector-icon"><i class="fas fa-hard-hat"></i></div>
+                <div class="evo-sector-name">{{ translate('BTP & Construction') }}</div>
+            </div>
+            <div class="evo-sector-item">
+                <div class="evo-sector-icon"><i class="fas fa-industry"></i></div>
+                <div class="evo-sector-name">{{ translate('Industrie lourde') }}</div>
+            </div>
+            <div class="evo-sector-item">
+                <div class="evo-sector-icon"><i class="fas fa-recycle"></i></div>
+                <div class="evo-sector-name">{{ translate('Environnement & Recyclage') }}</div>
+            </div>
+        </div>
+    </div>
         <!-- Section About EVO-TRUCK -->
 
         <div class="my-5 text-center ab-div">
