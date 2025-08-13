@@ -146,15 +146,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-    <div class="container my-5 about-evo">
-        {{-- <div class="row align-items-center mb-5">
-            <div class="col-md-6 order-2 order-md-1">
-                <h2 class="about-title-2">{{ translate('EVO - TRUCK') }}</h2>
-                <p class="about-desc">
-                    {{ translate("Depuis 2000, Evo-TRUCK fournit des engins de chantier, camions industriels et équipements lourds fiables pour les secteurs du BTP, du transport et de l'industrie. Notre expertise permet aux professionnels de s'équiper avec des machines performantes, robustes et prêtes à affronter les conditions les plus exigeantes.") }}
-=======
         <div class="container evo-sectors-section">
             <div class="evo-sectors-title">{{ translate('Secteurs d’application') }}</div>
             <div class="evo-sector-list">
@@ -219,103 +210,8 @@
                 </h2>
                 <p data-aos="fade-up">
                     {{ translate('EVO TRUCK est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
->>>>>>> f497af66e3c7e4af59aecc26040a74087b1f8c49
                 </p>
             </div>
-<<<<<<< HEAD
-            <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
-                <img src="{{ asset('images/banner p2 EVO.jpg') }}" alt="EVO TRUCK" class="about-img img-fluid">
-            </div>
-        </div>
-        <div class="row align-items-center flex-md-row-reverse">
-            <div class="col-md-6">
-                <h2 class="about-title-2">{{ translate("L'innovation au cœur de notre évolution") }}</h2>
-                <p class="about-desc">
-                    {{ translate("Chez Evo-TRUCK, l'innovation est le moteur de notre évolution. En intégrant les dernières technologies aux engins de chantier et camions industriels, nous anticipons les besoins des professionnels du BTP, du transport et de l'industrie lourde. Notre ambition : offrir des solutions durables, performantes et intelligentes, conçues pour faire évoluer vos projets et relever vos défis techniques.") }}
-                </p>
-                <div class="about-feature"><i class="fas fa-lightbulb"></i>
-                    {{ translate('Technologies de pointe intégrées') }}</div>
-                <div class="about-feature"><i class="fas fa-leaf"></i>
-                    {{ translate('Engagement pour des solutions durables') }}</div>
-                <a href="/solution" class="about-btn mt-3">{{ translate('Découvrir nos solutions &rarr;') }}</a>
-            </div>
-            <div class="col-md-6 text-center mb-4 mb-md-0">
-                <img src="{{ asset('images/banner p2 EVO.jpg') }}" alt="Innovation EVO" class="about-img img-fluid">
-            </div>
-        </div> --}}
-
-        <!-- Section Partenariat & Infos (inspiré du design fourni) -->
-
-<div class="evo-partner-section">
-    <div class="evo-partner-img-block">
-        <img src="../images/camion.jpg" alt="Partenariat EVO">
-        <div class="evo-partner-img-content">
-            <h2>{{ translate("Nous travaillons avec les plus grands acteurs du transport et de la logistique") }}</h2>
-            <a href="/about" class="evo-partner-btn">{{ translate('EN SAVOIR PLUS') }}</a>
-        </div>
-    </div>
-
-    <div class="evo-partner-info-block">
-        <div class="evo-partner-info-item">
-            <div class="evo-partner-info-title">
-                <i class="fas fa-truck"></i>
-                {{ translate('EVO TRUCK – Spécialiste poids lourds') }}
-                <span class="evo-partner-info-plus">+</span>
-            </div>
-            <div class="evo-partner-info-desc">
-                {{ translate("Depuis 2000, EVO TRUCK fournit des camions, poids lourds et équipements de transport robustes, performants et adaptés aux besoins des secteurs du BTP, de la logistique et de l’industrie. Notre savoir-faire assure à nos clients des solutions durables, fiables et prêtes à relever tous les défis du terrain.") }}
-            </div>
-            <ul class="evo-partner-info-list">
-                <li class="evo-partner-info-icon"><i class="fas fa-industry" ></i>
-                    {{ translate('Plus de 20 ans d’expérience dans le transport industriel') }}</li>
-                <li class="evo-partner-info-icon"><i class="fas fa-cogs" ></i>
-                    {{ translate('Solutions adaptées à chaque métier et environnement') }}</li>
-                <li class="evo-partner-info-icon"><i class="fas fa-users" ></i>
-                    {{ translate('Accompagnement client sur-mesure') }}</li>
-            </ul>
-        </div>
-
-        <div class="evo-partner-info-item">
-            <div class="evo-partner-info-title">
-                <i class="fas fa-lightbulb"></i>
-                {{ translate("L’innovation au service de la performance") }}
-                <span class="evo-partner-info-plus">+</span>
-            </div>
-            <div class="evo-partner-info-desc">
-                {{ translate("Chez EVO TRUCK, l’innovation est au cœur de notre stratégie. Nous intégrons les dernières avancées technologiques dans nos camions et équipements afin d’améliorer la sécurité, la productivité et la durabilité des opérations de nos clients.") }}
-            </div>
-            <ul class="evo-partner-info-list">
-                <li class="evo-partner-info-icon"><i class="fas fa-microchip" ></i> {{ translate('Technologies avancées intégrées aux véhicules') }}</li>
-                <li class="evo-partner-info-icon"><i class="fas fa-leaf" ></i> {{ translate('Engagement pour un transport plus durable') }}</li>
-            </ul>
-        </div>
-    </div>
-</div>
-        <!-- Section About EVO-TRUCK -->
-
-        <div class="my-5 text-center ab-div">
-            <h2 data-aos="fade-up">{{ translate('Nos produits') }}
-            </h2>
-            <p data-aos="fade-up">
-                {{ translate('EVO TRUCK est l\'un des principaux fabricants et fournisseurs d\'équipements d\'ingénierie de construction au Maroc.', app()->getLocale()) }}
-            </p>
-        </div>
-        <!-- Code pour la partie produit -->
-        <div class="container w-product">
-            <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
-                @forelse ($categories as $categorie)
-                    <div data-aos="fade-up" class="mb-4 col-6 col-sm-6 col-md-4 col-lg-3 card-iteam">
-                        <div class="product-card">
-                            <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
-                                alt="evo Product Image">
-                            <div class="product-body d-flex flex-column flex-grow-1">
-                                <h4 class="product-title">
-                                    {{ translate($categorie->nom_cat) }}
-                                </h4>
-                                <div class="mt-auto ">
-                                    <a href="{{ url('product/' . $categorie->id) }}"
-                                        class="product-btn ">{{ translate('VOIR PLUS') }}</a>
-=======
             <!-- Code pour la partie produit -->
             <div class="container w-product">
                 <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
@@ -332,7 +228,6 @@
                                         <a href="{{ url('product/' . $categorie->id) }}"
                                             class="product-btn ">{{ translate('VOIR PLUS') }}</a>
                                     </div>
->>>>>>> f497af66e3c7e4af59aecc26040a74087b1f8c49
                                 </div>
                             </div>
                         </div>
@@ -557,43 +452,6 @@
                             <li><i class="fas fa-users"></i> {{ translate('Accompagnement personnalisé') }}</li>
                         </ul>
                     </div>
-<<<<<<< HEAD
-                </div>-->
-
-        <!-- Section Contactez-nous / Demandez une offre (Appel à action spécifique camions) -->
-        <style>
-
-        </style>
-        <div class="container evo-contact-section">
-            <div class="evo-contact-title">{{ translate('Contactez-nous / Demandez une offre camion') }}</div>
-            <div class="evo-contact-desc">
-                {{ translate("Notre équipe commerciale et technique est à votre écoute pour toute demande d’information ou d’offre sur nos camions et solutions de transport.") }}
-            </div>
-            <div class="evo-contact-infos">
-                <div class="evo-contact-info">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Zone Industrielle, Casablanca, Maroc</span>
-                </div>
-                <div class="evo-contact-info">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+212 5 22 00 00 00</span>
-                </div>
-                <div class="evo-contact-info">
-                    <i class="fas fa-envelope"></i>
-                    <span>contact@evo-truck.com</span>
-                </div>
-            </div>
-        </div>
-<script>
-    document.querySelectorAll('.evo-partner-info-title').forEach(title => {
-    title.addEventListener('click', () => {
-        title.parentElement.classList.toggle('active');
-    });
-});
-</script>
-
-@endsection
-=======
                     <div class="evo-partner-info-item">
                         <div class="evo-partner-info-title">
                             <i class="fas fa-leaf"></i>
@@ -606,4 +464,3 @@
                         <ul class="evo-partner-info-list">
                             <li><i class="fas fa-recycle"></i> {{ translate('Solutions éco-responsables') }}</li </div>
                         @endsection
->>>>>>> f497af66e3c7e4af59aecc26040a74087b1f8c49
