@@ -140,16 +140,15 @@
                         @foreach ($filteredDetails as $detail)
                             <div class="row" style="margin-top: 40px;margin-right: 20px !important;">
                                 @foreach ($detail as $column => $value)
-                                    <dt class="col-10 ">{{ translate(ucfirst($column)) }}</dt>
-                                    <dd class="col-1 ">{{ $value }}</dd>
+                                    <dt class="col-5 ">{{ translate(ucfirst($column)) }}</dt>
+                                    <dd class="col-5 ">{{ $value }}</dd>
                                 @endforeach
                             </div>
                         @endforeach
                         <hr style="margin-top: 30px" />
                     @endif
                     <br>
-                    <a href="{{ route('contact') }}"
-                        class="btn btn-warning shadow-0">
+                    <a href="{{ route('contact') }}" class="btn btn-warning shadow-0">
                         <i class="me-1 fa fa-shopping-basket"></i>{{ translate('Contacter') }}
                     </a>
             </div>
@@ -177,45 +176,22 @@
             <span class="mt-2 ">{{ translate($product->dec_pro ?? ($product->cacteristique ?? '   ')) }}</span>
             @if ($product->pdf !== null)
                 <div class="mt-3">
-                    <a href="{{ route('product.download', ['pdf' => $product->pdf]) }}" class="btn" style="background-color:#0033cc;font-size: 18px;">
-                        <i class="fas fa-download"></i>  Fiche technique
+                    <a href="{{ route('product.download', ['pdf' => $product->pdf]) }}" class="btn"
+                        style="background-color:#0033cc;font-size: 18px;">
+                        <i class="fas fa-download"></i> Fiche technique
                     </a>
                 </div>
             @endif
-                 @if ($product->tpms !== null)
-            <div class="mt-3">
-                <a href="{{ route('product.download', ['pdf' => $product->tpms]) }}" class="btn" style="background-color:#0033cc;font-size: 18px;">
-                    <i class="fas fa-download"></i>  Système TPMS
-                </a>
-            </div>
-        @endif
+            @if ($product->tpms !== null)
+                <div class="mt-3">
+                    <a href="{{ route('product.download', ['pdf' => $product->tpms]) }}" class="btn"
+                        style="background-color:#0033cc;font-size: 18px;">
+                        <i class="fas fa-download"></i> Système TPMS
+                    </a>
+                </div>
+            @endif
         </div>
         <div id="parameter" class="mt-5 text-white">margin</div>
-        {{-- parametre --}}
-        {{-- <div style="margin-top: 10px" class="container mt-3 ">
-            <h1 style=" font-size:30px;font-weight: bold;color:#0033cc ">{{ translate('PARAMÈTRES') }}</h1>
-            <span class="mt-2 ">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">{{ translate('Article') }}</th>
-                            <th scope="col">{{ translate('Unité') }}</th>
-                            <th scope="col">{{ translate('Paramètre') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($parametres as $parametre)
-                            <tr>
-                                <th scope="row">{{ translate($parametre->Article) }}
-                                </th>
-                                <td>{{ $parametre->Unité }}</td>
-                                <td>{{ $parametre->Paramètre }}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </span>
-        </div> --}}
     </section>
     <br>
     <script>
