@@ -242,6 +242,11 @@
     width: 102%;
 }
 
+.col-6 {
+  width: 48% !important; // ✅ correct
+}
+
+
 .carousel-item > img {
     height: auto !important;
     width: 100%;

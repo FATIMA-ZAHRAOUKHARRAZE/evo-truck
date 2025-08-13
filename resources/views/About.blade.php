@@ -30,7 +30,7 @@
             </div>
             <h1 class="hero-title">{{ translate('À propos de EVO TRUCK') }}</h1>
             <p class="hero-subtitle">
-                {{ translate("Leader mondial depuis 2000 dans les équipements de construction et engins de levage, EVO TRUCK s'engage à innover et à fournir des solutions fiables et performantes pour tous les professionnels du secteur.") }}
+                {{ translate("EVO TRACK – Depuis 2000, spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.") }}
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -91,7 +91,7 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>{{ translate('Notre Mission') }}</h3>
-                    <p>{{ translate('Fournir des équipements de construction innovants et fiables qui transforment l\'industrie et permettent à nos clients de réaliser leurs projets avec excellence.') }}
+                    <p>{{ translate('Fournir des camions et poids lourds fiables, performants et adaptés aux besoins des professionnels, afin de garantir efficacité, sécurité et rentabilité dans leurs activités quotidiennes.') }}
                     </p>
                 </div>
                 <div class="mission-card">
@@ -99,7 +99,7 @@
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3>{{ translate('Notre Vision') }}</h3>
-                    <p>{{ translate('Devenir une entreprise mondiale de référence, créatrice de valeur, portée par la rigueur, le pragmatisme et la créativité.') }}
+                    <p>{{ translate('Devenir une référence mondiale dans le domaine des véhicules industriels, en alliant innovation, durabilité et excellence opérationnelle pour anticiper les besoins du transport de demain.') }}
                     </p>
                 </div>
                 <div class="mission-card">
@@ -107,14 +107,14 @@
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3>{{ translate('Nos Valeurs') }}</h3>
-                    <p>{{ translate('Innovation, Excellence, Qualité, Fiabilité et Engagement client sont les piliers de notre succès depuis plus de deux décennies.') }}
+                    <p>{{ translate('Fiabilité, Qualité, Innovation, Sécurité et Engagement client : des principes qui guident chaque livraison, chaque service et chaque relation depuis plus de deux décennies.') }}
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Timeline Section -->
+    {{-- <!-- Timeline Section -->
     <section class="timeline-section">
         <div class="container">
             <div class="section-header">
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Services Section -->
     <section class="services-section">
@@ -171,7 +171,7 @@
                         <i class="fas fa-award"></i>
                     </div>
                     <h3>{{ translate('Qualité Premium') }}</h3>
-                    <p>{{ translate('Contrôle qualité rigoureux, chaque étape supervisée par des experts et des équipements de pointe.') }}
+                    <p>{{ translate('Chaque camion et pièce est soumis à un contrôle qualité rigoureux, avec une supervision experte et l’utilisation d’équipements de pointe pour garantir fiabilité et performance.') }}
                     </p>
                 </div>
                 <div class="service-card">
@@ -179,7 +179,7 @@
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>{{ translate('Conception & R&D') }}</h3>
-                    <p>{{ translate('Des conceptions innovantes et ergonomiques, portées par un investissement continu dans la recherche et le développement.') }}
+                    <p>{{ translate('Des conceptions innovantes et ergonomiques, issues d’un investissement continu en recherche et développement, pour offrir des véhicules toujours plus performants et économiques.') }}
                     </p>
                 </div>
                 <div class="service-card">
@@ -187,7 +187,7 @@
                         <i class="fas fa-th-large"></i>
                     </div>
                     <h3>{{ translate('Diversité Produits') }}</h3>
-                    <p>{{ translate("Une gamme complète d'équipements de construction et de levage pour répondre à tous les besoins.") }}
+                    <p>{{ translate("Une large gamme de camions, poids lourds et équipements adaptés à tous les secteurs d’activité, répondant à chaque besoin de transport et de logistique.") }}
                     </p>
                 </div>
                 <div class="service-card">
@@ -195,7 +195,7 @@
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>{{ translate('Service Client') }}</h3>
-                    <p>{{ translate('Un accompagnement client de qualité, de la sélection à la maintenance, pour garantir votre satisfaction.') }}
+                    <p>{{ translate('Un accompagnement personnalisé à chaque étape, de la sélection à la maintenance, afin de garantir la satisfaction et la fidélité de nos clients.') }}
                     </p>
                 </div>
             </div>
