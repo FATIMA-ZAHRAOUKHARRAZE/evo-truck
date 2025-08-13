@@ -358,33 +358,89 @@
 /* Styles pour la section Pourquoi EVO-MACHINERY */
 
 
-.why-title {
-    color: #0033cc;
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-left: 150px;
+.why-evo-section {
+
+    border-radius: 18px;
+    padding: 44px 0 32px 0;
+    margin-bottom: 40px;
+
+    color: #23272b;
 }
 
-.why-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-left: 220px;
+.why-evo-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0033cc;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
-.why-list li {
-    color: #0033cc;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+.why-evo-subtitle {
+    font-size: 1.08rem;
+    color: #444;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.why-evo-advantages {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
 }
 
-.why-list li i {
+.why-evo-advantage {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 18px 18px 18px;
+    min-width: 180px;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(30, 40, 60, 0.07);
+    border: 1px solid #e3e7ed;
+    transition: box-shadow 0.15s, border-color 0.15s;
+    position: relative;
+}
+
+.why-evo-advantage:hover {
+    box-shadow: 0 4px 16px rgba(30, 40, 60, 0.13);
+    border-color: #0033cc;
+}
+
+.why-evo-icon {
+    font-size: 2rem;
     color: #0033cc;
-    margin-right: 15px;
-    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.why-evo-adv-title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #0033cc;
+    margin-bottom: 7px;
+}
+
+.why-evo-adv-desc {
+    font-size: 0.98rem;
+    color: #23272b;
+    min-height: 44px;
+}
+
+@media (max-width: 991px) {
+    .why-evo-section {
+        padding: 24px 0 16px 0;
+    }
+
+    .why-evo-advantages {
+        gap: 10px;
+    }
+
+    .why-evo-advantage {
+        min-width: 120px;
+        padding: 14px 4px;
+    }
 }
 
 .about-evo {
@@ -543,10 +599,11 @@
     background: #16308a;
 }
 .evo-services-section {
-    background: linear-gradient(120deg, #23272b 70%, #1e88e5 100%);
+    background: #0033cc;
     padding: 60px 0 40px 0;
     border-radius: 32px;
     margin-bottom: 40px;
+    margin-top: 100px;
     box-shadow: 0 8px 32px rgba(30, 40, 60, 0.18);
 }
 
@@ -647,7 +704,91 @@
         margin-top: 30px;
     }
 }
+         .about-evo {
+             border-radius: 32px;
+             padding: 60px 0 40px 0;
+             margin-bottom: 40px;
 
+         }
+
+         .about-evo .about-title-2 {
+             font-size: 2.1rem;
+             font-weight: 700;
+             letter-spacing: 2px;
+             margin-bottom: 18px;
+             color: #0033cc;
+             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
+         }
+
+         .about-evo .about-desc {
+             font-size: 1.08rem;
+             color: black;
+             margin-bottom: 28px;
+             line-height: 1.7;
+         }
+
+         .about-evo .about-btn {
+             background: #0033cc;
+             color: white;
+             font-weight: 600;
+             border-radius: 24px;
+             padding: 12px 32px;
+             text-decoration: none;
+             font-size: 1.08rem;
+             box-shadow: 0 2px 12px rgba(30, 40, 60, 0.10);
+             transition: background 0.18s, color 0.18s;
+             border: none;
+             display: inline-block;
+         }
+
+         .about-evo .about-btn:hover {
+             background: #fff;
+             color: #1e88e5;
+         }
+
+         .about-evo .about-img {
+             border-radius: 24px;
+             box-shadow: 0 4px 24px rgba(30, 40, 60, 0.18);
+             max-width: 90%;
+             margin: 0 auto;
+             transition: transform 0.18s;
+         }
+
+         .about-evo .about-img:hover {
+             transform: scale(1.03) rotate(-2deg);
+         }
+
+         .about-evo .about-feature {
+             display: flex;
+             align-items: center;
+             gap: 14px;
+             margin-bottom: 12px;
+             font-size: 1.03rem;
+             color: black;
+         }
+
+         .about-evo .about-feature i {
+             color: #ffb300;
+             font-size: 1.3rem;
+             background: #fff;
+             border-radius: 50%;
+             width: 28px;
+             height: 28px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             box-shadow: 0 2px 8px rgba(30, 40, 60, 0.10);
+         }
+
+         @media (max-width: 991px) {
+             .about-evo {
+                 padding: 36px 0 24px 0;
+             }
+
+             .about-evo .about-title-2 {
+                 font-size: 1.4rem;
+             }
+         }
 /* categorie */
 .product-card {
     background: #fff;
@@ -750,3 +891,147 @@
         margin: 0;
     }
 }
+.evo-sectors-section {
+    border-radius: 18px;
+    padding: 40px 0 30px 0;
+    margin-bottom: 40px;
+    color: #23272b;
+}
+
+.evo-sectors-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #0033cc;
+    margin-bottom: 28px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.evo-sector-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.evo-sector-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    min-width: 160px;
+    max-width: 220px;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(30, 40, 60, 0.07);
+    border: 1px solid #e3e7ed;
+    transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.evo-sector-item:hover {
+    box-shadow: 0 4px 16px rgba(30, 40, 60, 0.13);
+    border-color: #0033cc;
+}
+
+.evo-sector-icon {
+    font-size: 1.7rem;
+    color: #0033cc;
+    margin-bottom: 8px;
+}
+
+.evo-sector-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #23272b;
+}
+
+.evo-testimonials-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0033cc;
+    margin-bottom: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.evo-testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+
+@media (max-width: 991px) {
+    .evo-sectors-section {
+        padding: 24px 0 16px 0;
+    }
+
+    .evo-sector-list,
+    .evo-testimonials-list {
+        gap: 8px;
+    }
+
+    .evo-sector-item{
+        min-width: 120px;
+        padding: 12px 4px;
+    }
+}
+
+ .evo-contact-section {
+     background: #0033cc;
+     color: #fff;
+     border-radius: 16px;
+     padding: 36px 0 28px 0;
+     margin: 48px 0 32px 0;
+     box-shadow: 0 2px 12px rgba(30, 40, 60, 0.10);
+     text-align: center;
+ }
+
+ .evo-contact-title {
+     font-size: 1.6rem;
+     font-weight: 700;
+     margin-bottom: 12px;
+     letter-spacing: 1px;
+ }
+
+ .evo-contact-desc {
+     font-size: 1.08rem;
+     margin-bottom: 24px;
+     color: #e0e7fa;
+ }
+
+ .evo-contact-infos {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 32px;
+     margin-bottom: 0;
+ }
+
+ .evo-contact-info {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     font-size: 1.08rem;
+     background: rgba(255, 255, 255, 0.07);
+     border-radius: 8px;
+     padding: 12px 22px;
+     margin: 6px 0;
+ }
+
+ .evo-contact-info i {
+     font-size: 1.3rem;
+     color: #ffb300;
+ }
+
+ @media (max-width: 767px) {
+     .evo-contact-infos {
+         flex-direction: column;
+         gap: 10px;
+     }
+
+     .evo-contact-section {
+         padding: 22px 0 14px 0;
+     }
+ }

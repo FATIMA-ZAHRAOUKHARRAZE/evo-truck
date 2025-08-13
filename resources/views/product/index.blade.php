@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO MACHINERY">
-    <link rel="canonical" href="https://evo-machinery.com/product/{{ $id }}">
+    <link rel="canonical" href="https://evo-truck.com/product/{{ $id }}">
     <meta property="og:title" content="EVO MACHINERY - {{ translate($categorie->nom_cat) }}">
     <meta property="og:description"
         content="Explorez notre catalogue de {{ translate($categorie->nom_cat) }} - EVO Machinery">

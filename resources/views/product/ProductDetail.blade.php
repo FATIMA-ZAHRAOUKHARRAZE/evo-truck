@@ -11,7 +11,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="EVO TRUCK">
-    <link rel="canonical" href="https://evo-trucl.com/ProductDetail/{{ $product->id }}">
+    <link rel="canonical" href="https://evo-truck.com/ProductDetail/{{ $product->id }}">
     <meta property="og:title" content="EVO TRUCK - {{ $product->nom_pro }}">
     <meta property="og:description"
         content="Découvrez les spécifications techniques et caractéristiques de {{ $product->nom_pro }} - EVO TRUCK">
@@ -165,8 +165,8 @@
                     <div class="logo" style="font-size: 20px;">{{ $product->nom_pro }}</div>
                     <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
                             href="#Product_facture">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</a></li>
-                    <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
-                            href="#parameter">{{ translate('PARAMÈTRES') }}</a></li>
+                    {{-- <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
+                            href="#parameter">{{ translate('PARAMÈTRES') }}</a></li> --}}
                 </ul>
             </div>
         </div>
@@ -192,7 +192,7 @@
         </div>
         <div id="parameter" class="mt-5 text-white">margin</div>
         {{-- parametre --}}
-        <div style="margin-top: 10px" class="container mt-3 ">
+        {{-- <div style="margin-top: 10px" class="container mt-3 ">
             <h1 style=" font-size:30px;font-weight: bold;color:#0033cc ">{{ translate('PARAMÈTRES') }}</h1>
             <span class="mt-2 ">
                 <table class="table table-striped">
@@ -215,7 +215,7 @@
                     </tbody>
                 </table>
             </span>
-        </div>
+        </div> --}}
     </section>
     <br>
     <script>
