@@ -56,7 +56,7 @@
 <div class="container w-product">
         <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
             @forelse ($categories as $categorie)
-                <div data-aos="fade-up" class="mb-4 col-6 col-sm-6 col-md-4 col-lg-3 card-iteam">
+                <div data-aos="fade-up" class="mb-4 col-12 col-sm-6 col-md-4 col-lg-3 card-iteam">
                     <div class="product-card">
                         <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
                             alt="evo Product Image">

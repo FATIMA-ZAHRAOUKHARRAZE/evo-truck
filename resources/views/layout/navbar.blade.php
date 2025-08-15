@@ -174,7 +174,7 @@
                         <h6 class="mb-4 text-uppercase font-weight-bold">
                             {{ translate('À propos') }}</h6>
                         <p>
-                            {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
+                            {{ translate(" Depuis sa création en 2000, EVO TRUCK spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.") }}
                         </p>
 
 

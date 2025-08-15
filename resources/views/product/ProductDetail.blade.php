@@ -164,6 +164,8 @@
                     <div class="logo" style="font-size: 20px;">{{ $product->nom_pro }}</div>
                     <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
                             href="#Product_facture">{{ translate('CARACTÉRISTIQUE DU PRODUIT') }}</a></li>
+                            <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
+                            href="#parameter">{{ translate("L'intérieur ") }}</a></li>
                     {{-- <li class="parali" style="font-size: 18px;"><a style="color: white; text-decoration: none"
                             href="#parameter">{{ translate('PARAMÈTRES') }}</a></li> --}}
                 </ul>

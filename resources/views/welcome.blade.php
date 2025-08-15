@@ -41,13 +41,13 @@
     {{-- <!-- Section Services -->
     <div class="container evo-services-section">
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
+            <div class="text-center col-12">
                 <div class="evo-services-title">{{ translate('Nos univers EVO TRUCK') }}</div>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-sm-6 col-md-3 d-flex">
-                <div class="evo-service-card flex-fill text-center">
+                <div class="text-center evo-service-card flex-fill">
                     <div class="evo-service-icon-bg">
                         <img src="{{ asset('images/icons/engin industrielle.svg') }}" alt="engin industrielle">
                     </div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 d-flex">
-                <div class="evo-service-card flex-fill text-center">
+                <div class="text-center evo-service-card flex-fill">
                     <div class="evo-service-icon-bg">
                         <img src="{{ asset('images/icons/semi-remorque.svg') }}" alt="camion semi remorque">
                     </div>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 d-flex">
-                <div class="evo-service-card flex-fill text-center">
+                <div class="text-center evo-service-card flex-fill">
                     <div class="evo-service-icon-bg">
                         <img src="{{ asset('images/icons/engrenage.svg') }}" alt="pieces detachees">
                     </div>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="col-12 col-sm-6 col-md-3 d-flex">
-                <div class="evo-service-card flex-fill text-center">
+                <div class="text-center evo-service-card flex-fill">
                     <div class="evo-service-icon-bg">
                         <img src="{{ asset('images/icons/toolbox.svg') }}" alt="maintenance">
                     </div>
@@ -148,8 +148,8 @@
             </div>
 
     <div class="container my-5 about-evo">
-        {{-- <div class="row align-items-center mb-5">
-            <div class="col-md-6 order-2 order-md-1">
+        {{-- <div class="mb-5 row align-items-center">
+            <div class="order-2 col-md-6 order-md-1">
                 <h2 class="about-title-2">{{ translate('EVO - TRUCK') }}</h2>
                 <p class="about-desc">
                     {{ translate("Depuis 2000, Evo-TRUCK fournit des engins de chantier, camions industriels et équipements lourds fiables pour les secteurs du BTP, du transport et de l'industrie. Notre expertise permet aux professionnels de s'équiper avec des machines performantes, robustes et prêtes à affronter les conditions les plus exigeantes.") }}
@@ -160,9 +160,9 @@
                     {{ translate('Solutions sur-mesure pour chaque secteur') }}</div>
                 <div class="about-feature"><i class="fas fa-users"></i> {{ translate('Accompagnement personnalisé') }}
                 </div>
-                <a href="/about" class="about-btn mt-3">{{ translate('En savoir plus sur nous &rarr;') }}</a>
+                <a href="/about" class="mt-3 about-btn">{{ translate('En savoir plus sur nous &rarr;') }}</a>
             </div>
-            <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
+            <div class="order-1 mb-4 text-center col-md-6 order-md-2 mb-md-0">
                 <img src="{{ asset('images/banner p2 EVO.jpg') }}" alt="EVO TRUCK" class="about-img img-fluid">
             </div>
         </div>
@@ -176,9 +176,9 @@
                     {{ translate('Technologies de pointe intégrées') }}</div>
                 <div class="about-feature"><i class="fas fa-leaf"></i>
                     {{ translate('Engagement pour des solutions durables') }}</div>
-                <a href="/solution" class="about-btn mt-3">{{ translate('Découvrir nos solutions &rarr;') }}</a>
+                <a href="/solution" class="mt-3 about-btn">{{ translate('Découvrir nos solutions &rarr;') }}</a>
             </div>
-            <div class="col-md-6 text-center mb-4 mb-md-0">
+            <div class="mb-4 text-center col-md-6 mb-md-0">
                 <img src="{{ asset('images/banner p2 EVO.jpg') }}" alt="Innovation EVO" class="about-img img-fluid">
             </div>
         </div> --}}
@@ -264,7 +264,7 @@
         <div class="container w-product">
             <div class="row justify-content-center mt-[50px]" data-aos="fade-up">
                 @forelse ($categories as $categorie)
-                    <div data-aos="fade-up" class="mb-4 col-12  col-md-4 col-lg-3 card-iteam">
+                    <div data-aos="fade-up" class="mb-4 col-12 col-md-4 col-lg-3 card-iteam">
                         <div class="product-card">
                             <img src="{{ asset('images/' . $categorie->img_cat) }}" class="product-img"
                                 alt="evo Product Image">
@@ -318,11 +318,11 @@
             <div class="evo-contact-infos">
                 <div class="evo-contact-info">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Zone Industrielle, Casablanca, Maroc</span>
+                    <span>Adresse: Industrial Zone 1, No.26 Tuolanshan Road, Economic And Technological Development Zone, Xuzhou, Jiangsu, 221004, China</span>
                 </div>
                 <div class="evo-contact-info">
                     <i class="fas fa-phone-alt"></i>
-                    <span>+212 5 22 00 00 00</span>
+                    <span>+86 189 1781 5301</span>
                 </div>
                 <div class="evo-contact-info">
                     <i class="fas fa-envelope"></i>

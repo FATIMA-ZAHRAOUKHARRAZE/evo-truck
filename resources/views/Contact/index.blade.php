@@ -93,11 +93,9 @@
                     <p data-aos="fade-left"><i class="bi bi-telephone"></i> {{ translate('Téléphone') }}:+86 189 1781 5301</p>
                     <p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a
                             href="mailto:contact@evo-TRUCK.com"
-                            style="text-decoration:none; color: black;">contact@evo-TRUCK.com</a></p>
-                    <p data-aos="fade-left"><i class="bi bi-envelope"></i> Email: <a
-                            href="mailto:sales@evo-TRUCK.com"
-                            style="text-decoration:none; color:black;">sales@evo-TRUCK.com</a></p>
-                    <p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-TRUCK.com</p>
+                            style="text-decoration:none; color: black;">contact@evo-truck.com</a></p>
+
+                    <p data-aos="fade-left"><i class="bi bi-globe"></i> Site web: evo-truck.com</p>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section " style="z-index:4">
         <div class="hero-background">
 
             <div class="hero-overlay"></div>
@@ -31,7 +31,7 @@
             </div>
             <h1 class="hero-title">{{ translate('À propos de EVO TRUCK') }}</h1>
             <p class="hero-subtitle">
-                {{ translate('EVO TRACK – Depuis 2000, spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.') }}
+                {{ translate('EVO TRUCK – Depuis 2000, spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.') }}
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -80,7 +80,7 @@
     </script>
 
     <!-- Mission & Vision Section - Design harmonisé bleu/jaune -->
-    <section class="mission-section">
+    <section class="mission-section" style="z-index: 4 !important">
         <div class="container">
             <div class="section-header">
                 <h2>{{ translate('Notre Mission & Vision') }}</h2>
@@ -115,16 +115,19 @@
         </div>
     </section>
 
+  <!-- Hero Scroll Section -->
 <section class="hero-scroll-section">
-  <div class="hero-scroll-overlay"></div>
+    <div class="hero-scroll-overlay"></div>
 
-  <!-- Image réelle -->
-  <img src="../images/camion.jpg" alt="Camion EVO" class="hero-scroll-img" />
-
-  <div class="hero-scroll-text">
-    NOUS CRÉONS<br>L’AVENIR<br>DEPUIS 2000
-  </div>
+    <div class="hero-scroll-content">
+        <h1 class="hero-scroll-text">
+            {{ translate('NOUS CRÉONS') }}<br>
+            {{ translate('L’AVENIR') }}<br>
+            {{ translate('DEPUIS 2000') }}
+        </h1>
+    </div>
 </section>
+
 
 
     {{--  <script>
@@ -231,16 +234,13 @@
 
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cta-section" style="z-index: 4">
         <div class="container">
             <div class="cta-content">
                 <h2>{{ translate('Prêt à travailler avec nous ?') }}</h2>
                 <p>{{ translate('Découvrez nos solutions et commencez votre projet dès aujourd\'hui') }}</p>
-
             </div>
         </div>
     </section>
-<script> 
-
-</script>
+    <script></script>
 @endsection
