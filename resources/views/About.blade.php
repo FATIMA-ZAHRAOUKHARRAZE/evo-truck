@@ -31,7 +31,7 @@
             </div>
             <h1 class="hero-title">{{ translate('À propos de EVO TRUCK') }}</h1>
             <p class="hero-subtitle">
-                {{ translate('EVO TRACK – Depuis 2000, spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.') }}
+                {{ translate('EVO TRUCK – Depuis 2000, spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.') }}
             </p>
             <div class="hero-stats">
                 <div class="stat-item">

@@ -318,11 +318,11 @@
             <div class="evo-contact-infos">
                 <div class="evo-contact-info">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Zone Industrielle, Casablanca, Maroc</span>
+                    <span>Adresse: Industrial Zone 1, No.26 Tuolanshan Road, Economic And Technological Development Zone, Xuzhou, Jiangsu, 221004, China</span>
                 </div>
                 <div class="evo-contact-info">
                     <i class="fas fa-phone-alt"></i>
-                    <span>+212 5 22 00 00 00</span>
+                    <span>+86 189 1781 5301</span>
                 </div>
                 <div class="evo-contact-info">
                     <i class="fas fa-envelope"></i>

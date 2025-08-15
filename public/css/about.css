@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero-section {
     position: relative;
-    min-height: 80vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +12,7 @@
     margin-top: 100px;
     padding-bottom: 40px;
 }
+
 .hero-background {
     position: absolute;
     top: 0;
@@ -560,6 +561,7 @@
     .mission-grid {
         flex-direction: column;
         gap: 18px;
+        align-content: center;
     }
 
     .mission-card {
@@ -571,6 +573,7 @@
         font-size: 1.5rem;
     }
 }
+
 /* Base section */
 .hero-scroll-section {
     min-height: 520px;
@@ -616,6 +619,7 @@
 
 /* --- Parallaxe pur CSS (scroll-linked) --- */
 @supports (animation-timeline: scroll()) {
+
     /* timeline liée au défilement de la section */
     @scroll-timeline hero-parallax {
         source: selector(.hero-scroll-section);
@@ -638,6 +642,7 @@
     }
 
     @keyframes heroImgParallax {
+
         /* L’image “entre” doucement du haut vers le bas et dézoome un peu */
         0% {
             transform: translateY(-12vh) scale(1.08);
@@ -789,8 +794,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url("../images/Design sans titre (4).png") center center / cover
-        no-repeat fixed;
+    background: url("../images/Design sans titre (4).png") center center / cover no-repeat fixed;
     z-index: -2;
 }
 

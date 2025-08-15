@@ -10,7 +10,7 @@
         <!-- style -->
         <link rel="stylesheet" href={{ asset('css/nav.css') }}>
         @yield('url')
-        <link rel="icon" href="{{ asset('images/iconFichier 2.svg') }}">
+        <link rel="icon" href="{{ asset('images/EVO_WEB_Bleu.svg') }}">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -174,7 +174,7 @@
                         <h6 class="mb-4 text-uppercase font-weight-bold">
                             {{ translate('À propos') }}</h6>
                         <p>
-                            {{ translate(" Depuis sa création en 2000, EVO machinery s'est rapidement imposé comme l'un des leaders mondiaux du secteur des équipements de construction et des engins de levage.") }}
+                            {{ translate(" Depuis sa création en 2000, EVO TRUCK spécialiste mondial des camions et poids lourds, offrant des solutions de transport fiables, performantes et adaptées aux besoins des professionnels.") }}
                         </p>
 
 
