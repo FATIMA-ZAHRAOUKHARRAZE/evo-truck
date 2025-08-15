@@ -870,7 +870,7 @@
         border-radius: 50%;
         width: 28px;
         height: 28px;
-       
+
         box-shadow: 0 2px 8px rgba(30, 40, 60, 0.10);
 }
 .evo-partner-img-block {
@@ -887,7 +887,8 @@
 }
 
 .evo-partner-img-block img {
-    width: 120%;
+    width: 100%;
+    height:auto;
 
 }
 

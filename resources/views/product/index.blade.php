@@ -101,7 +101,6 @@
                                             href="{{ route('ProductDetail', $item['product']->id) }}">
                                             <img src="{{ asset('images/' . $item['product']->img_pro) }}"
                                                 alt="evo ">
-
                                         </a>
                                     </div>
                                     <div class="mb-1 bbb_deals_content" data-aos="fade-up" data-aos-delay="300">
