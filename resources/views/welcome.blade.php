@@ -187,7 +187,7 @@
 
 <div class="evo-partner-section">
     <div class="evo-partner-img-block">
-        <img src="../images/EVO H9 WEB 2.0.webp" alt="Partenariat EVO">
+        <img src="../images/EVO H9 WEB.webp" alt="Partenariat EVO">
         <div class="evo-partner-img-content">
             <h2>{{ translate("Nous travaillons avec les plus grands acteurs du transport et de la logistique") }}</h2>
             <a href="/about" class="evo-partner-btn">{{ translate('EN SAVOIR PLUS') }}</a>
