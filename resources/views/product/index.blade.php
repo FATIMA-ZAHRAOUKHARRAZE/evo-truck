@@ -3,7 +3,7 @@
 @section('seo')
     <title>{{ translate($categorie->nom_cat) }} - EVO MACHINERY</title>
     <meta name="description"
-      content="Explorez nos {{ translate($categorie->nom_cat) }} robustes et performantes, idéales pour les travaux publics et privés. EVO Machinery, votre partenaire au Maroc.">
+        content="Explorez nos {{ translate($categorie->nom_cat) }} robustes et performantes, idéales pour les travaux publics et privés. EVO Machinery, votre partenaire au Maroc.">
     <meta name="keywords"
         content="{{ translate($categorie->nom_cat) }}, EVO Machinery, équipements de construction, machines industrielles, spécifications techniques, devis personnalisé, filtrage produits, catalogue machines, qualité industrielle,maroc">
     <meta name="robots" content="index, follow">
@@ -37,25 +37,28 @@
                 {{ translate('Filtrer les Produits') }}
             </h2>
             <!-- Category Selection -->
-            <div class="mb-3">
-                <label for="category-select" class="form-label">
-                    {{ translate('Sélectionner une catégorie') }}
-                </label>
-                <select class="form-select" id="category-select">
-                    <option disabled>
+            @if ($scategories->isEmpty())
+            @else
+                <div class="mb-3">
+                    <label for="category-select" class="form-label">
                         {{ translate('Sélectionner une catégorie') }}
-                    </option>
-                    @forelse ($scategories as $categorie)
-                        <option value="{{ $categorie->id }}">
-                            {{ translate($categorie->name) }}
-                        </option>
-                    @empty
+                    </label>
+                    <select class="form-select" id="category-select">
                         <option disabled>
-                            {{ translate("Aucune catégorie n'existe.") }}
+                            {{ translate('Sélectionner une catégorie') }}
                         </option>
-                    @endforelse
-                </select>
-            </div>
+                        @forelse ($scategories as $categorie)
+                            <option value="{{ $categorie->id }}">
+                                {{ translate($categorie->name) }}
+                            </option>
+                        @empty
+                            <option disabled>
+                                {{ translate("Aucune catégorie n'existe.") }}
+                            </option>
+                        @endforelse
+                    </select>
+                </div>
+            @endif
             <!-- Product Name Input -->
             <div class="mb-3">
                 <label for="product-name" class="form-label">{{ translate('Le nom de produit') }}</label>
@@ -86,10 +89,10 @@
             </script>
         </div>
         <!-- Content Column -->
-        <div class="col-md-9 col-12">
+        <div class="col-md-9 col-12 ">
             <div class="row g-3">
                 @foreach ($filteredDetails as $item)
-                    <div class="col-12 col-md-6 col-lg-4 product-item" data-aos="fade-up">
+                    <div class="col-12 col-md-6 col-lg-4 product-item " data-aos="fade-up">
                         <div class="overflow-hidden bbb_deals">
                             <div class="bbb_deals_slider_container">
                                 <div class="bbb_deals_item" data-aos="zoom-in">
@@ -101,8 +104,7 @@
 
                                         </a>
                                     </div>
-                                    <div class="mb-1 bbb_deals_content" data-aos="fade-up"
-                                    data-aos-delay="300">
+                                    <div class="mb-1 bbb_deals_content" data-aos="fade-up" data-aos-delay="300">
                                         <div class="flex-row bbb_deals_info_line d-flex justify-content-between">
                                             <div class="mb-5 bbb_deals_item_name"
                                                 style="color: #0033cc;font-size: {{ strlen($item['product']->nom_pro) < 12
@@ -134,11 +136,11 @@
                                         <div class="mt-2 available">
                                             <div class="flex-row available_line d-flex justify-content-between">
                                                 <a href="{{ route('ProductDetail', $item['product']->id) }}"
-                                                    class="btn"  style="background: #0033cc;">
+                                                    class="btn" style="background: #0033cc;">
                                                     {{ translate('PLUS') }}
                                                 </a>
-                                                <a href="{{ route('contact') }}"
-                                                    class="btn"  style="background: #0033cc;">
+                                                <a href="{{ route('contact') }}" class="btn"
+                                                    style="background: #0033cc;">
                                                     {{ translate('CONTACT') }}
                                                 </a>
                                             </div>

@@ -724,7 +724,7 @@
     }
 
     .mission-grid {
-        grid-template-columns: 1fr;
+        align-content: center;
         gap: 30px;
     }
 
